@@ -1,27 +1,6 @@
 ROM0
 	org $0000
 	"rst 00"
-
-	org $0008
-	"rst 08"
-
-	org $0010
-	"rst 10"
-
-	org $0018
-	"rst 18"
-
-	org $0020
-	"rst 20"
-
-	org $0028
-	"rst 28"
-
-	org $0030
-	"rst 30"
-	
-	org $0038
-	"rst 38"
 	
 	org $0040
 	"vblank"
@@ -316,7 +295,41 @@ ROMX $3E
 ROMX $3F
 	org $4000
 	"bank3F"
+	
+ROMX $40
+	org $4000
+	"bank40"
+	org $5000
+	"bank40_fnt"
+	
+ROMX $41
+	org $4000
+	"bank41"
+	
+ROMX $42
+	org $4000
+	"bank42"
+	
+;ROMX $43
+;	org $4000
+;	"bank43"
 
+ROMX $50
+	org $4000
+	"bank50"
+
+ROMX $60
+	org $4000
+	"code-extend"
+	
+ROMX $68
+	org $4000
+	"gbc_only"
+	
+ROMX $70
+	org $4000
+	"naming_screen"
+	
 WRAM0
 	org $c000
 	"WRAM Bank 0"
