@@ -4,6 +4,8 @@ This is a disassembly of Pokémon Yellow.
 
 To set up the repository, see [**INSTALL.md**](INSTALL.md).
 
+일부 코드를 잘못 붙여넣었을수도 있습니다.
+혹시 컴파일 하시고 버그를 발견하시면 알려주세요.
 
 ## See also
 
