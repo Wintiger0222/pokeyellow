@@ -35,7 +35,7 @@ OptionMenuJumpTable:
 	dw OptionsMenu_BattleAnimations
 	dw OptionsMenu_BattleStyle
 	dw OptionsMenu_SpeakerSettings
-	dw OptionsMenu_GBPrinterBrightness
+	dw OptionsMenu_Dummy
 	dw OptionsMenu_Dummy
 	dw OptionsMenu_Dummy
 	dw OptionsMenu_Cancel
@@ -79,7 +79,7 @@ OptionsMenu_TextSpeed:
 	ld e, [hl]
 	inc hl
 	ld d, [hl]
-	coord hl, 14, 2
+	coord hl, 11, 2
 	call PlaceString
 	and a
 	ret
@@ -90,11 +90,11 @@ TextSpeedStringsPointerTable:
 	dw SlowText
 
 FastText:
-	db "FAST@"
+	db $05,$6C,$04,$33,$01,$34,$50
 MidText:
-	db "MID @"
+	db $05,$18,$09,$BB,$0B,$6D,$50
 SlowText:
-	db "SLOW@"
+	db $02,$C0,$04,$3E,$01,$34,$50
 
 Func_41d07:
 	ld a, [wOptions]
@@ -137,7 +137,7 @@ OptionsMenu_BattleAnimations:
 	ld e, [hl]
 	inc hl
 	ld d, [hl]
-	coord hl, 14, 4
+	coord hl, 11, 4
 	call PlaceString
 	and a
 	ret
@@ -147,9 +147,9 @@ AnimationOptionStringsPointerTable:
 	dw AnimationOffText
 
 AnimationOnText:
-	db "ON @"
+	db $05,$18,$02,$D9,$0B,$6D,$0B,$6D,$50
 AnimationOffText:
-	db "OFF@"
+	db $06,$C8,$0B,$6D,$05,$18,$02,$D9,$50
 
 OptionsMenu_BattleStyle:
 	ld a, [hJoy5]
@@ -173,7 +173,7 @@ OptionsMenu_BattleStyle:
 	ld e, [hl]
 	inc hl
 	ld d, [hl]
-	coord hl, 14, 6
+	coord hl, 11, 6
 	call PlaceString
 	and a
 	ret
@@ -183,9 +183,9 @@ BattleStyleOptionStringsPointerTable:
 	dw BattleStyleSetText
 
 BattleStyleShiftText:
-	db "SHIFT@"
+	db $01,$83,$08,$BC,$0B,$6D,$09,$88,$07,$A4,$0B,$6D,$0B,$6D,$0B,$6D,$50
 BattleStyleSetText:
-	db "SET  @"
+	db $06,$62,$07,$AA,$0B,$6D,$01,$48,$06,$03,$0B,$6D,$09,$88,$07,$A4,$50
 
 OptionsMenu_SpeakerSettings:
 	ld a, [wOptions]
@@ -225,7 +225,7 @@ OptionsMenu_SpeakerSettings:
 	ld e, [hl]
 	inc hl
 	ld d, [hl]
-	coord hl, 8, 8
+	coord hl, 11, 8
 	call PlaceString
 	and a
 	ret
@@ -237,13 +237,13 @@ SpeakerOptionStringsPointerTable:
 	dw Earphone3SoundText
 
 MonoSoundText:
-	db "MONO     @"
+	db $04,$90,$02,$8B,$0B,$6D,$7F,$50
 Earphone1SoundText:
-	db "EARPHONE1@"
+	db $0A,$8C,$03,$45,$0A,$29,$F7,$50
 Earphone2SoundText:
-	db "EARPHONE2@"
+	db $0A,$8C,$03,$45,$0A,$29,$F8,$50
 Earphone3SoundText:
-	db "EARPHONE3@"
+	db $0A,$8C,$03,$45,$0A,$29,$F9,$50
 
 OptionsMenu_GBPrinterBrightness:
 	call Func_41e7b
@@ -281,7 +281,7 @@ OptionsMenu_GBPrinterBrightness:
 	ld e, [hl]
 	inc hl
 	ld d, [hl]
-	coord hl, 8, 10
+	coord hl, 11, 10
 	call PlaceString
 	and a
 	ret
@@ -294,15 +294,15 @@ GBPrinterOptionStringsPointerTable:
 	dw DarkestPrintText
 
 LightestPrintText:
-	db "LIGHTEST@"
+	db $01,$01,$07,$B5,$0B,$6D,$04,$E0,$01,$34,$0B,$6D,$50
 LighterPrintText:
-	db "LIGHTER @"
+	db $04,$E0,$01,$34,$0B,$6D,$0B,$6D,$0B,$6D,$0B,$6D,$50
 NormalPrintText:
-	db "NORMAL  @"
+	db $05,$18,$09,$BB,$0B,$6D,$0B,$6D,$0B,$6D,$0B,$6D,$50
 DarkerPrintText:
-	db "DARKER  @"
+	db $06,$EE,$03,$33,$01,$34,$0B,$6D,$0B,$6D,$0B,$6D,$50
 DarkestPrintText:
-	db "DARKEST @"
+	db $01,$01,$07,$B5,$0B,$6D,$06,$EE,$03,$33,$01,$34,$50
 
 Func_41e7b:
 	ld a, [wPrinterSettings]
@@ -365,7 +365,7 @@ Func_41eb7:
 	scf
 	ret
 .doNotWrapAround
-	cp $4
+	cp $3
 	jr c, .regularIncrement
 	ld [hl], $6
 .regularIncrement
@@ -376,7 +376,7 @@ Func_41eb7:
 	ld a, [hl]
 	cp $7
 	jr nz, .doNotMoveCursorToPrintOption
-	ld [hl], $4
+	ld [hl], $3
 	scf
 	ret
 .doNotMoveCursorToPrintOption
@@ -433,11 +433,11 @@ Func_41f06:
 	ret
 
 AllOptionsText:
-	db "TEXT SPEED :"
-	next "ANIMATION  :"
-	next "BATTLESTYLE:"
-	next "SOUND:"
-	next "PRINT:@"
+	db $07,$9C,$06,$DF,$01,$B2,$07,$97,$7F,$06,$03,$03,$15
+	next $07,$CC,$09,$C5,$7F,$06,$D6,$02,$CF,$04,$7E,$07,$9C,$05,$F7
+	next $06,$63,$0A,$75,$07,$97,$7F,$04,$1A
+	next $05,$B7,$07,$4E,$03,$45,"@"
 
 OptionMenuCancelText:
-	db "CANCEL@"
+	db $02,$31,$50,$0A,$71,$01,$AB,$0A,$AD,$0B,$68,$96,$A8,$AD,$A3,$AE,$B6,$B2,$93,$A8,$A6,$A4,$B1,$F3,$02,$9A,$06,$BE
+

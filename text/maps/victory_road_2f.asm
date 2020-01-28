@@ -1,85 +1,79 @@
 _MoltresBattleText::
-	text "Gyaoo!@@"
+	text "갸오오!@@"
 
 _VictoryRoad2BattleText1::
-	text "VICTORY ROAD is"
-	line "the final test"
-	cont "for trainers!"
+	text "챔피언로드는"
+	line "트레이너를 위한"
+	cont "최종관문!"
 	done
 
 _VictoryRoad2EndBattleText1::
-	text "Aiyah!"
+	text "아얏!"
 	prompt
 
 _VictoryRoad2AfterBattleText1::
-	text "If you get stuck,"
-	line "try moving some"
-	cont "boulders around!"
+	text "길이 막힌다 싶으면"
+	line "바위같은걸 움직여봐!"
 	done
 
 _VictoryRoad2BattleText2::
-	text "Ah, so you wish"
-	line "to challenge the"
-	cont "ELITE FOUR?"
+	text "그 실력으로"
+	line "사천왕한테 도전할려고?"
 	done
 
 _VictoryRoad2EndBattleText2::
-	text "You"
-	line "got me!"
+	text "납득할"
+	line "실력이다!"
 	prompt
 
 _VictoryRoad2AfterBattleText2::
-	text $53, " also came"
-	line "through here!"
+	text $52, " 넌 이제"
+	line "여길 지나도록 해!"
 	done
 
 _VictoryRoad2BattleText3::
-	text "Come on!"
-	line "I'll whip you!"
+	text "어서와!"
+	line "긴장 좀 하라고!"
 	done
 
 _VictoryRoad2EndBattleText3::
-	text "I got"
-	line "whipped!"
+	text "긴장할건"
+	line "내쪽이였네!"
 	prompt
 
 _VictoryRoad2AfterBattleText3::
-	text "You earned the"
-	line "right to be on"
-	cont "VICTORY ROAD!"
+	text "챔피언 로드를 지날수 있는"
+	line "자격은 충분해!"
 	done
 
 _VictoryRoad2BattleText4::
-	text "If you can get"
-	line "through here, you"
-	cont "can go meet the"
-	cont "ELITE FOUR!"
+	text "네 녀석이 지날수만 있다면"
+	line "사천왕하고 만날수야 있겠지!"
 	done
 
 _VictoryRoad2EndBattleText4::
-	text "No!"
-	line "Unbelievable!"
+	text "이럴수가!"
+	line "언빌리버블!"
 	prompt
 
 _VictoryRoad2AfterBattleText4::
-	text "I can beat you"
-	line "when it comes to"
-	cont "knowledge about"
-	cont "#MON!"
+	text "내쪽에서"
+	line "너를 이기는건"
+	cont "포켓몬 지식으로"
+	cont "겨룰때겠네!"
 	done
 
 _VictoryRoad2BattleText5::
-	text "Is VICTORY ROAD"
-	line "too tough?"
+	text "챔피언로드가"
+	line "힘겹니?"
 	done
 
 _VictoryRoad2EndBattleText5::
-	text "Well"
-	line "done!"
+	text "아주"
+	line "좋았어!"
 	prompt
 
 _VictoryRoad2AfterBattleText5::
-	text "Many trainers give"
-	line "up the challenge"
-	cont "here."
+	text "많은 트레이너들이"
+	line "이곳에서 도전을 포기해"
 	done

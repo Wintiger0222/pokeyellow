@@ -3,6 +3,10 @@ Serial::
 	push bc
 	push de
 	push hl
+	ld a,[rSVBK]
+	ld [H_LOADEDWRAMBANK],a
+	ld a,$01
+	ld [rSVBK],a
 	ld a, [wPrinterConnectionOpen]
 	bit 0, a
 	jp nz, PrinterSerial__
@@ -46,6 +50,9 @@ Serial::
 	ld [hSerialReceivedNewData], a
 	ld a, SERIAL_NO_DATA_BYTE
 	ld [hSerialSendData], a
+	
+	ld a,[H_LOADEDWRAMBANK]
+	ld [rSVBK],a
 	pop hl
 	pop de
 	pop bc
@@ -316,6 +323,9 @@ Serial_TryEstablishingExternallyClockedConnection::
 
 PrinterSerial__::
 	call PrinterSerial
+	
+	ld a,[H_LOADEDWRAMBANK]
+	ld [rSVBK],a
 	pop hl
 	pop de
 	pop bc

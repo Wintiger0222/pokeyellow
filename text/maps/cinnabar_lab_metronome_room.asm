@@ -1,63 +1,63 @@
 _TM35PreReceiveText::
-	text "Tch-tch-tch!"
-	line "I made a cool TM!"
+	text "휙-휙-휙!"
+	line "이 멋진 기술머신을 보라구!"
 
-	para "It can cause all"
-	line "kinds of fun!"
+ 
+
+	para "정말 끝내주게 재밌을거야!"
 	prompt
 
+
+
 _ReceivedTM35Text::
-	text $52, " received "
+	text $52, "는(은)"
 	line "@"
 	TX_RAM wcf4b
-	text "!@@"
+	text "를(을) 얻었다!@@"
 
 _TM35ExplanationText::
-	text "Tch-tch-tch!"
-	line "That's the sound"
-	cont "of a METRONOME!"
+	text "휙-휙-휙!"
+	line "그건 손가락 흔들기!"
 
-	para "It tweaks your"
-	line "#MON's brain"
-	cont "into using moves"
-	cont "it doesn't know!"
+ 
+
+	para "포켓몬이 자신도 모르는"
+	line "기술을 사용하게 하지!"
 	done
 
 _TM35NoRoomText::
-	text "Your pack is"
-	line "crammed full!"
+	text "가방이 잡동사니로"
+	line "가득해!"
 	done
 
 _Lab3Text2::
-	text "EEVEE can evolve"
-	line "into 1 of 3 kinds"
-	cont "of #MON."
+	text "이브이는 세종류의 포켓몬중"
+	line "한종으로 진화할수있어"
 	done
 
+ 
+
 _Lab3Text3::
-	text "There's an e-mail"
-	line "message!"
+	text "컴퓨터에"
+	line "전자메일이 와 있다!"
 
-	para "..."
+	para "…… …… ……"
 
-	para "The 3 legendary"
-	line "bird #MON are"
-	cont "ARTICUNO, ZAPDOS"
-	cont "and MOLTRES."
+	para "세마리의 전설의 새 포켓몬"
+	line "프리져 썬더 파이어"
 
-	para "Their whereabouts"
-	line "are unknown."
+	para "그들의 서식지는 불명"
 
-	para "We plan to explore"
-	line "the cavern close"
-	cont "to CERULEAN."
+	para "우리는 블루시티 근처의"
+	line "동굴을 탐색할 계획입니다"
 
-	para "From: #MON"
-	line "RESEARCH TEAM"
+	para "……포켓몬 연구팀으로부터"
 
-	para "..."
+	para "…… …… ……"
 	done
 
 _Lab3Text5::
-	text "An amber pipe!"
+	text "호박 파이프이다!"
 	done
+
+

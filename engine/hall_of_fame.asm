@@ -60,7 +60,7 @@ AnimateHallOfFame:
 	coord hl, 2, 13
 	lb bc, 3, 14
 	call TextBoxBorder
-	coord hl, 4, 15
+	coord hl, 3, 15
 	ld de, HallOfFameText
 	call PlaceString
 	ld c, 180
@@ -91,7 +91,7 @@ AnimateHallOfFame:
 	ret
 
 HallOfFameText:
-	db "HALL OF FAME@"
+	db "전당 등록을 축하합니다!!@"
 
 HoFShowMonOrPlayer:
 	call ClearScreen
@@ -179,22 +179,22 @@ HoFDisplayMonInfo:
 	coord hl, 2, 6
 	ld de, HoFMonInfoText
 	call PlaceString
-	coord hl, 1, 4
+	coord hl, 2, 4
 	ld de, wcd6d
 	call PlaceString
 	ld a, [wHoFMonLevel]
-	coord hl, 8, 7
+	coord hl, 6, 6
 	call PrintLevelCommon
 	ld a, [wHoFMonSpecies]
 	ld [wd0b5], a
-	coord hl, 3, 9
+	coord hl, 6, 8
 	predef PrintMonType
 	ret
 
 HoFMonInfoText:
-	db   "LEVEL/"
-	next "TYPE1/"
-	next "TYPE2/@"
+	db   "레벨/"
+	next "타입1/"
+	next "타입2/@"
 
 HoFLoadPlayerPics:
 	ld de, RedPicFront
@@ -266,10 +266,10 @@ HoFPrintTextAndDelay:
 	jp DelayFrames
 
 HoFPlayTimeText:
-	db "PLAY TIME@"
+	db "플레이 시간@"
 
 HoFMoneyText:
-	db "MONEY@"
+	db "용돈@"
 
 DexSeenOwnedText:
 	TX_FAR _DexSeenOwnedText

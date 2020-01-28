@@ -1,6 +1,6 @@
 PrintWaitingText:
-	coord hl, 3, 10
-	lb bc, 1, 11
+	coord hl, 3, 9
+	lb bc, 2, 11
 	ld a, [wIsInBattle]
 	and a
 	jr z, .asm_4b9a
@@ -16,4 +16,4 @@ PrintWaitingText:
 	jp DelayFrames
 
 WaitingText:
-	db "Waiting...!@"
+	db "  통신 준비중!@"

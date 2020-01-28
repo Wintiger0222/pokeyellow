@@ -18,10 +18,10 @@ PewterGymScript_5c3a4:
 	ret
 
 Gym1CityName:
-	db "PEWTER CITY@"
+	db "회색시티@"
 
 Gym1LeaderName:
-	db "BROCK@"
+	db "웅@"
 
 PewterGymScript_5c3bf:
 	xor a

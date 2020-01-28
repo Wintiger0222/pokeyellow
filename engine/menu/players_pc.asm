@@ -240,10 +240,10 @@ PlayerPCToss:
 	jp .loop
 
 PlayersPCMenuEntries:
-	db   "WITHDRAW ITEM"
-	next "DEPOSIT ITEM"
-	next "TOSS ITEM"
-	next "LOG OFF@"
+	db   "도구를 꺼내다"
+	next "도구를 맡기다"
+	next "도구를 버리다"
+	next "접속을 끊다@"
 
 TurnedOnPC2Text:
 	TX_FAR _TurnedOnPC2Text

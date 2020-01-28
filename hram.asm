@@ -206,6 +206,7 @@ H_AUTOBGTRANSFERDEST EQU $FFBC ; 2 bytes
 ; temporary storage for stack pointer during memory transfers that use pop
 ; to increase speed
 H_SPTEMP EQU $FFBF ; 2 bytes
+H_2TEMP EQU $FFBF
 
 ; source address for VBlankCopyBgMap function
 ; the first byte doubles as the byte that enabled the transfer.
@@ -321,6 +322,8 @@ hLCDCPointer EQU $FFF4
 
 hJoyInput EQU $FFF5
 
+hBGTransferDelay EQU $FFF7
+
 hDisableJoypadPolling EQU $FFF8 ; non-zero value disables polling of joypad
 
 ; bit 0: draw HP fraction to the right of bar instead of below (for party menu)
@@ -330,5 +333,12 @@ hFlags_0xFFFA EQU $FFFA
 hFieldMoveMonMenuTopMenuItemX EQU $FFFB
 
 h_0xFFFC EQU $FFFC
+
+hTemp EQU $FFDF ;확정
+hTemp2 EQU $FFFD ;확정
+hVEnable EQU $FFF6 ;확정
+H_LOADEDWRAMBANK EQU $FFF0 ; WRAM을 잠시 저장
+H_FONTBANK EQU $FFF1 ;폰트가 위치한 뱅크
+H_FONTCOUNT EQU $FFF2 ;폰트의 카운트
 
 hGBC EQU $FFFE ; 0 if DMG, != 0 if GBC

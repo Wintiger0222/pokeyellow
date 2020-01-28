@@ -69,44 +69,44 @@ TrainerNamePointers:
 	dw wTrainerName
 
 YoungsterName:
-	db "YOUNGSTER@"
+	db "반바지 꼬마@"
 BugCatcherName:
-	db "BUG CATCHER@"
+	db "곤충채집 소년@"
 LassName:
-	db "LASS@"
+	db "짧은치마@"
 JrTrainerMName:
-	db "JR.TRAINER♂@"
+	db "캠프보이@"
 JrTrainerFName:
-	db "JR.TRAINER♀@"
+	db "피크닉 걸@"
 PokemaniacName:
-	db "POKéMANIAC@"
+	db "포켓몬 매니아@"
 SuperNerdName:
-	db "SUPER NERD@"
+	db "이과계의 남자@"
 BurglarName:
-	db "BURGLAR@"
+	db "불난집 전문털이범@"
 EngineerName:
-	db "ENGINEER@"
+	db "엔지니어@"
 JugglerXName:
-	db "JUGGLER@"
+	db "집시저글러@"
 SwimmerName:
-	db "SWIMMER@"
+	db "수영팬티 소년@"
 BeautyName:
-	db "BEAUTY@"
+	db "아가씨@"
 RockerName:
-	db "ROCKER@"
+	db "폭주족@"
 JugglerName:
-	db "JUGGLER@"
+	db "집시저글러@"
 BlackbeltName:
-	db "BLACKBELT@"
+	db "태권왕@"
 ProfOakName:
-	db "PROF.OAK@"
+	db "오박사@"
 ChiefName:
-	db "CHIEF@"
+	db "쉬프@"
 ScientistName:
-	db "SCIENTIST@"
+	db "과학자@"
 RocketName:
-	db "ROCKET@"
+	db "로켓단@"
 CooltrainerMName:
-	db "COOLTRAINER♂@"
+	db "엘리트트레이너@"
 CooltrainerFName:
-	db "COOLTRAINER♀@"
+	db "엘리트트레이너@"

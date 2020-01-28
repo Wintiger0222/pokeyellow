@@ -1,68 +1,59 @@
 _CeruleanHouse2Text_74e77::
-	text "#MON BADGEs"
-	line "are owned only by"
-	cont "skilled trainers."
+	text "포켓몬 배지는 오직"
+	line "숙련된 트레이너만 가질수 있단다"
+	
+	para "너는 포켓몬 배지를"
+	line "가지고 있는거 같구나"
 
-	para "I see you have"
-	line "at least one."
-
-	para "Those BADGEs have"
-	line "amazing secrets!"
+	para "배지들은 전부"
+	line "엄청난 비밀이 있단다!"
 	prompt
 
 _CeruleanHouse2Text_74e7c::
-	text "Now then..."
+	text "그러면……"
 
-	para "Which of the 8"
-	line "BADGEs should I"
-	cont "describe?"
+	para "8개의 배지중에서"
+	line "어떤 것의 설명을 듣고싶니?"
 	done
 
 _CeruleanHouse2Text_74e81::
-	text "Come visit me any-"
-	line "time you wish."
+	text "나중에 또 오렴"
 	done
 
 _CeruleanHouse2Text_74e96::
-	text "The ATTACK of all"
-	line "#MON increases"
-	cont "a little bit."
+	text "모든 포켓몬의 공격력이"
+	line "조금 상승한단다"
 
-	para "It also lets you"
-	line "use FLASH any-"
-	cont "time you desire."
+	para "또 플래시를 언제든지"
+	line "사용가능하지!"
 	prompt
 
 _CeruleanHouse2Text_74e9b::
-	text "#MON up to L30"
-	line "will obey you."
+	text "레벨 30까지의 포켓몬이"
+	line "너를 따를 것이란다"
 
-	para "Any higher, they"
-	line "become unruly!"
+	para "만약 그보다 높으면"
+	line "너를 안따를 것이야!"
 
-	para "It also lets you"
-	line "use CUT outside"
-	cont "of battle."
+	para "또 풀베기를 언제든지"
+	line "사용가능하지!"
 	prompt
 
 _CeruleanHouse2Text_74ea0::
-	text "The SPEED of all"
-	line "#MON increases"
-	cont "a little bit."
+	text "모든 포켓몬의 스피드가"
+	line "조금 상승한단다"
 
-	para "It also lets you"
-	line "use FLY outside"
-	cont "of battle."
+	para "또 공중날기를 언제든지"
+	line "사용가능하지!"
 	prompt
 
 _CeruleanHouse2Text_74ea5::
-	text "#MON up to L50"
-	line "will obey you."
+	text "레벨 50까지의 포켓몬이"
+	line "너를 따를 것이란다"
 
-	para "Any higher, they"
-	line "become unruly!"
+	para "만약 그보다 높으면"
+	line "너를 안따를 것이야!"
 
-	para "It also lets you"
-	line "use STRENGTH out-"
-	cont "side of battle."
+	para "또 괴력을 언제든지"
+	line "사용가능하지!"
 	prompt

@@ -23,6 +23,61 @@ CableClub_DoBattleOrTrade:
 
 ; This is called after completing a trade.
 CableClub_DoBattleOrTradeAgain:
+	ld hl, wPlayerName
+	ld c, NAME_LENGTH
+.modifyplayernameloop
+	ld a, [hl]
+	cp a,$FE
+	jr nz, .notFE
+	ld a,$51
+.notFE
+	cp a,$FF
+	ld [hl], a
+	inc hl
+	dec c
+	jr nz, .modifyplayernameloop
+
+	ld hl, wLinkEnemyTrainerName
+	ld c, NAME_LENGTH
+.modifyplayernameloop4
+	ld a, [hl]
+	cp a,$FE
+	jr nz, .notFE12
+	ld a,$51
+.notFE12
+	ld [hl], a
+	inc hl
+	dec c
+	jr nz, .modifyplayernameloop4
+	
+	
+	ld hl,wPartyMonOT
+	ld c, NAME_LENGTH * PARTY_LENGTH *2
+.modifyOTnameloop
+	ld a, [hl]
+	cp a,$FE
+	jr nz, .notFE2
+	ld a,$51
+.notFE2
+	ld [hl], a
+	inc hl
+	dec c
+	jr nz, .modifyOTnameloop
+
+	ld hl,wEnemyMonOT
+	ld c, NAME_LENGTH * PARTY_LENGTH *2
+.modifyOTnameloop4
+	ld a, [hl]
+	cp a,$FE
+	jr nz, .notFE3
+	ld a,$51
+.notFE3
+	ld [hl], a
+	inc hl
+	dec c
+	jr nz, .modifyOTnameloop4
+
+
 	ld hl, wSerialPlayerDataBlock
 	ld a, SERIAL_PREAMBLE_BYTE
 	ld b, 6
@@ -253,6 +308,61 @@ CableClub_DoBattleOrTradeAgain:
 	ld hl, wEnemyMons + (SERIAL_PREAMBLE_BYTE - 1)
 	dec c
 	jr nz, .unpatchEnemyMonsLoop
+
+	ld hl, wPlayerName
+	ld c, NAME_LENGTH
+.modifyplayernameloop2
+	ld a, [hl]
+	cp a,$51
+	jr nz, .not51_2
+	ld a,$FE
+.not51_2
+	ld [hl], a
+	inc hl
+	dec c
+	jr nz, .modifyplayernameloop2
+
+	ld hl,wPartyMonOT
+	ld c, NAME_LENGTH * PARTY_LENGTH *2
+.modifyOTnameloop2
+	ld a, [hl]
+	cp a,$51
+	jr nz, .not51_3
+	ld a,$FE
+.not51_3
+	ld [hl], a
+	inc hl
+	dec c
+	jr nz, .modifyOTnameloop2
+
+	ld hl,wEnemyMonOT
+	ld c, NAME_LENGTH * PARTY_LENGTH *2
+.modifyEOTnameloop
+	ld a, [hl]
+	cp a,$51
+	jr nz, .not51_4
+	ld a,$FE
+.not51_4
+	ld [hl], a
+	inc hl
+	dec c
+	jr nz, .modifyEOTnameloop
+
+	ld hl,wLinkEnemyTrainerName
+	ld c, NAME_LENGTH
+.modifyEO3Tnameloop
+	ld a, [hl]
+	cp a,$51
+	jr nz, .not51_44
+	ld a,$FE
+.not51_44
+	ld [hl], a
+	inc hl
+	dec c
+	jr nz, .modifyEO3Tnameloop
+
+
+	
 	ld a, wEnemyMonOT % $100
 	ld [wUnusedCF8D], a
 	ld a, wEnemyMonOT / $100
@@ -295,7 +405,7 @@ CableClub_DoBattleOrTradeAgain:
 	jr CallCurrentTradeCenterFunction
 
 PleaseWaitString:
-	db "PLEASE WAIT!@"
+	db "   통신 준비중!@"
 
 CallCurrentTradeCenterFunction:
 	ld hl, TradeCenterPointerTable
@@ -341,13 +451,13 @@ TradeCenter_SelectMon:
 	ld [wMenuWatchedKeys], a
 	ld a, [wEnemyPartyCount]
 	ld [wMaxMenuItem], a
-	ld a, 9
+	ld a, $03
 	ld [wTopMenuItemY], a
-	ld a, 1
+	ld a, $0c
 	ld [wTopMenuItemX], a
 .enemyMonMenu_HandleInput
 	ld hl, hFlags_0xFFFA
-	set 1, [hl]
+	res 1, [hl]
 	call HandleMenuInput
 	ld hl, hFlags_0xFFFA
 	res 1, [hl]
@@ -403,16 +513,15 @@ TradeCenter_SelectMon:
 	ld [wMenuWatchedKeys], a
 	ld a, [wPartyCount]
 	ld [wMaxMenuItem], a
-	ld a, 1
+	ld a, $03
 	ld [wTopMenuItemY], a
-	ld a, 1
+	ld a, $02
 	ld [wTopMenuItemX], a
 	coord hl, 1, 1
 	lb bc, 6, 1
-	call ClearScreenArea
 .playerMonMenu_HandleInput
 	ld hl, hFlags_0xFFFA
-	set 1, [hl]
+	res 1, [hl]
 	call HandleMenuInput
 	ld hl, hFlags_0xFFFA
 	res 1, [hl]
@@ -540,7 +649,7 @@ TradeCenter_SelectMon:
 	ld [wTradeCenterPointerTableIndex], a
 	jp CallCurrentTradeCenterFunction
 .statsTrade
-	db "STATS     TRADE@"
+	db "스테이터스를 보다 교환에 내놓다@"
 .selectedCancelMenuItem
 	ld a, [wCurrentMenuItem]
 	ld b, a
@@ -603,24 +712,24 @@ ReturnToCableClubRoom:
 	ret
 
 TradeCenter_DrawCancelBox:
-	coord hl, 11, 15
+	coord hl, $00, $0f
 	ld a, $7e
-	ld bc, 2 * SCREEN_WIDTH + 9
+	ld bc, 3 * SCREEN_WIDTH
 	call FillMemory
-	coord hl, 0, 15
-	lb bc, 1, 9
+	coord hl, 0, 14
+	lb bc, 2, 5
 	call CableClub_TextBoxBorder
 	coord hl, 2, 16
 	ld de, CancelTextString
 	jp PlaceString
 
 CancelTextString:
-	db "CANCEL@"
+	db "교환중지@"
 
 TradeCenter_PlaceSelectedEnemyMonMenuCursor:
 	ld a, [wSerialSyncAndExchangeNybbleReceiveData]
-	coord hl, 1, 9
-	ld bc, SCREEN_WIDTH
+	coord hl, 12, 3
+	ld bc, SCREEN_WIDTH*2
 	call AddNTimes
 	ld [hl], $ec ; cursor
 	ret
@@ -639,22 +748,22 @@ TradeCenter_DisplayStats:
 	jp TradeCenter_DrawCancelBox
 
 TradeCenter_DrawPartyLists:
-	coord hl, 0, 0
-	lb bc, 6, 18
+	coord hl, 0, 1
+	lb bc, 12, 8
 	call CableClub_TextBoxBorder
-	coord hl, 0, 8
-	lb bc, 6, 18
+	coord hl, 10, 1
+	lb bc, 12, 8
 	call CableClub_TextBoxBorder
-	coord hl, 5, 0
+	coord hl, 3, 1
 	ld de, wPlayerName
 	call PlaceString
-	coord hl, 5, 8
+	coord hl, $0d, 1
 	ld de, wLinkEnemyTrainerName
 	call PlaceString
-	coord hl, 2, 1
+	coord hl, 3, 3
 	ld de, wPartySpecies
 	call TradeCenter_PrintPartyListNames
-	coord hl, 2, 9
+	coord hl, $0d, 3
 	ld de, wEnemyPartyMons
 	; fall through
 
@@ -677,7 +786,7 @@ TradeCenter_PrintPartyListNames:
 	pop de
 	inc de
 	pop hl
-	ld bc, 20
+	ld bc, 20*2
 	add hl, bc
 	pop bc
 	inc c
@@ -718,8 +827,8 @@ TradeCenter_Trade:
 	coord bc, 1, 14
 	call TextCommandProcessor
 	call SaveScreenTilesToBuffer1
-	coord hl, 10, 7
-	lb bc, 8, 11
+	coord hl, 10, 6
+	lb bc, 7, 11
 	ld a, TRADE_CANCEL_MENU
 	ld [wTwoOptionMenuID], a
 	ld a, TWO_OPTION_MENU
@@ -883,11 +992,11 @@ WillBeTradedText:
 	db "@"
 
 TradeCompleted:
-	db "Trade completed!@"
+	db "교환 종료!@"
 
 TradeCanceled:
-	db   "Too bad! The trade"
-	next "was canceled!@"
+	db   "유감입니다만"
+	next "교환은 캔슬되었습니다@"
 
 TradeCenterPointerTable:
 	dw TradeCenter_SelectMon
@@ -939,6 +1048,22 @@ Diploma_TextBoxBorder:
 ; b = height
 ; c = width
 CableClub_TextBoxBorder:
+	ld a,$03
+	ld [hBGTransferDelay],a
+	ld a,[H_AUTOBGTRANSFERENABLED]
+	ld [hTemp],a
+	xor a
+	ld [H_AUTOBGTRANSFERENABLED],a ;업데이트하는동안 타일 깨지는거 방지
+	push hl
+	push bc
+	inc b
+	inc b
+	inc c
+	inc c
+	call ClearScreenArea;타일뱅크 및 영역 초기화
+	pop bc
+	pop hl
+	
 	push hl
 	ld a, $78 ; border upper left corner tile
 	ld [hli], a
@@ -966,15 +1091,15 @@ CableClub_TextBoxBorder:
 	ld a, $76 ; border bottom horizontal line tile
 	call CableClub_DrawHorizontalLine
 	ld [hl], $7d ; border lower right corner tile
+	ld a,[hTemp]
+	and a
+	ret z
+	ld [H_AUTOBGTRANSFERENABLED],a
 	ret
 
 ; c = width
 CableClub_DrawHorizontalLine:
-	ld d, c
-.loop
-	ld [hli], a
-	dec d
-	jr nz, .loop
+	call NPlaceChar
 	ret
 
 LoadTrainerInfoTextBoxTiles:

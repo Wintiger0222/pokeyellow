@@ -1,12 +1,9 @@
 _CeladonPrizeRoomText1::
-	text "I sure do fancy"
-	line "that PORYGON!"
-
-	para "But, it's hard to"
-	line "win at slots!"
+	text "폴리곤을 가지고 싶었는데……"
+	line "슬롯머신은 어렵기만 하구나!"
 	done
 
 _CeladonPrizeRoomText2::
-	text "I had a major"
-	line "haul today!"
+	text "오늘 중요한 약속이"
+	line "있었는데!"
 	done

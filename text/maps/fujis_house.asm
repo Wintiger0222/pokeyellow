@@ -1,85 +1,81 @@
 _LavenderHouse1Text_1d8d1::
-	text "That's odd, MR.FUJI"
-	line "isn't here."
-	cont "Where'd he go?"
+	text "그거참 이상하네"
+	line "등나무 할아버지는 여기 안 계셔"
+	cont "어디가신거지?"
 	done
 
 _LavenderHouse1Text_1d8d6::
-	text "MR.FUJI had been"
-	line "praying alone for"
-	cont "CUBONE's mother."
+	text "등나무 노인은"
+	line "탕구리 어미를 위해"
+	cont "혼자서 기도해왔어요"
 	done
 
 _LavenderHouse1Text_1d8f4::
-	text "This is really"
-	line "MR.FUJI's house."
+	text "이곳이 등나무 할아버지의"
+	line "진짜 집이라구"
 
-	para "He's really kind!"
+	para "그는 정말 인정이 많아!"
 
-	para "He looks after"
-	line "abandoned and"
-	cont "orphaned #MON!"
+	para "그는 버려지거나 고아가 된"
+	line "포켓몬들을 데려와 돌보아줘!"
 	done
 
 _LavenderHouse1Text_1d8f9::
-	text "It's so warm!"
-	line "#MON are so"
-	cont "nice to hug!"
+	text "와 따뜻해!"
+	line "포켓몬은 껴안는게 정말 좋아!"
 	done
 
 _LavenderHouse1Text3::
-	text "PSYDUCK: Gwappa!@@"
+	text "고라파덕『파더억-!@@"
 
 _LavenderHouse1Text4::
-	text "NIDORINO: Gaoo!@@"
+	text "니드리노『니드니드!@@"
 
 _LavenderHouse1Text_1d94c::
-	text "MR.FUJI: ", $52, "."
+	text "등나무 할아버지『"
+	db $52, "군"
 
-	para "Your #DEX quest"
-	line "may fail without"
-	cont "love for your"
-	cont "#MON."
+	para "포켓몬 도감 채우기가"
+	line "실패하게 된다면"
+	cont "그건 아마 사랑받지 못한"
+	cont "포켓몬때문일게다."
 
-	para "I think this may"
-	line "help your quest."
+	para "내 생각에는 이게"
+	line "도움이 될거 같구나"
 	prompt
 
 _ReceivedFluteText::
-	text $52, " received"
-	line "a @"
+	text $52, "는(은)"
+	line "@"
 	TX_RAM wcf4b
-	text "!@@"
+	text "를(을) 얻었다!@@"
 
 _FluteExplanationText::
 	db $0
-	para "Upon hearing #"
-	line "FLUTE, sleeping"
-	cont "#MON will"
-	cont "spring awake."
-
-	para "It works on all"
-	line "sleeping #MON."
+	para "포켓몬피리를 불면"
+	line "자고있던 포켓몬이 일어난단다"
+	
+	para "자고있는 포켓몬에게"
+	line "불어보렴"
 	done
 
 _FluteNoRoomText::
-	text "You must make"
-	line "room for this!"
+	text "이 이상 들 수 없어!"
 	done
 
 _MrFujiAfterFluteText::
-	text "MR.FUJI: Has my"
-	line "FLUTE helped you?"
+	text "등나무 할아버지『내 피리가"
+	line "도움이 되던?"
 	done
 
 _LavenderHouse1Text6::
-	text "#MON Monthly"
-	line "Grand Prize"
-	cont "Drawing!"
+	text "포켓몬을"
+	line "주제로 이번달"
+	cont "최우수작 그림!"
 
-	para "The application"
-	line "form is..."
+	para "이 신청서 양식을"
+	line "마저……"
 
-	para "Gone! It's been"
-	line "clipped out!"
+	para "됐다!"
+	line "다 오렸어!"
 	done

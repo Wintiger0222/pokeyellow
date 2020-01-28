@@ -1,113 +1,135 @@
 _SSAnne9Text_61bf2::
-	text "In all my travels,"
-	line "I've never seen"
-	cont "any #MON sleep"
-	cont "like this one!"
+	text "많은 여행을 해왔지만 이녀석처럼"
+	line "자는 포켓몬은 본적이 없어!"
 
-	para "It was something"
-	line "like this!"
+ 
+
+	para "이렇게 생긴 녀석이야!"
 	prompt
 
+
+
 _SSAnne9Text_61c01::
-	text "Ah yes, I have"
-	line "seen some #MON"
-	cont "ferry people"
-	cont "across the water!"
+	text "아 맞아예전에 몇몇"
+	line "포켓몬이 사람을 태우고"
+	cont "물을 건너는걸 본적이있어"
 	done
 
+ 
+
 _SSAnne9Text_61c10::
-	text "#MON can CUT"
-	line "down small bushes."
+	text "작은 나무에는"
+	line "풀베기를 쓸 수 있어"
 	done
 
 _SSAnne9BattleText1::
-	text "Competing against"
-	line "the young keeps"
-	cont "me youthful."
+	text "젊은이들과 겨루고있으면"
+	line "나도 젊어지는 느낌이라네"
 	done
 
+ 
+
 _SSAnne9EndBattleText1::
-	text "Good"
-	line "fight! Ah, I feel"
-	cont "young again!"
+	text "좋은 싸움이었네!"
+	line "한층 젊어진 기분이군!"
 	prompt
 
 _SSAnne9AfterBattleText1::
-	text "15 years ago, I"
-	line "would have won!"
+	text "15년만 젊었어도"
+	line "이길만 했을텐데!"
 	done
+
+ 
 
 _SSAnne9BattleText2::
-	text "Check out what I"
-	line "fished up!"
+	text "내가 낚은것좀 보라구!"
 	done
 
+
+
 _SSAnne9EndBattleText2::
-	text "I'm"
-	line "all out!"
+	text "나가 떨어졌다!"
 	prompt
 
-_SSAnne9AfterBattleText2::
-	text "Party?"
 
-	para "The cruise ship's"
-	line "party should be"
-	cont "over by now."
+
+_SSAnne9AfterBattleText2::
+	text "파티?"
+
+
+
+	para "여객선의 파티라면"
+	line "이제 끝났을 텐데"
 	done
 
 _SSAnne9BattleText3::
-	text "Which do you like,"
-	line "a strong or a"
-	cont "rare #MON?"
+	text "자넨 강한 포켓몬이 좋은가"
+	line "희귀한 포켓몬이 좋은가?"
 	done
+
+ 
 
 _SSAnne9EndBattleText3::
-	text "I must"
-	line "salute you!"
+	text "경의를 표해야겠군!"
 	prompt
+
+
 
 _SSAnne9AfterBattleText3::
-	text "I prefer strong"
-	line "and rare #MON."
+	text "난 강하고 희귀한 포켓몬이 좋다네"
 	done
+
+
 
 _SSAnne9BattleText4::
-	text "I never saw you"
-	line "at the party."
+	text "파티에서 "
+	line "본적없는 얼굴인걸"
 	done
+
+
 
 _SSAnne9EndBattleText4::
-	text "Take"
-	line "it easy!"
+	text "워워"
+	line "진정해!"
 	prompt
 
+ 
+
 _SSAnne9AfterBattleText4::
-	text "Oh, I adore your"
-	line "strong #MON!"
+	text "너의 그 강한포켓몬들"
+	line "정말 맘에 드는걸!"
 	done
+
+ 
 
 _SSAnne9Text_61c1f::
-	text "Have you gone to"
-	line "the SAFARI ZONE"
-	cont "in FUCHSIA CITY?"
+	text "연분홍시티의 사파리존에"
+	line "가본적 있나?"
 
-	para "It had many rare"
-	line "kinds of #MON!!"
+ 
+	para "거긴 정말 많은 종류의"
+	line "희귀한 포켓몬이 있다네!!"
 	done
+
+ 
 
 _SSAnne9Text_61c2e::
-	text "Me and my Daddy"
-	line "think the SAFARI"
-	cont "ZONE is awesome!"
+	text "나랑 아빠는 사파리존이"
+	line "정말 멋지다고 생각해!"
 	done
+
+ 
 
 _SSAnne9Text_61c3d::
-	text "The CAPTAIN looked"
-	line "really sick and"
-	cont "pale!"
+	text "아까 보니까 선장얼굴이"
+	line "창백하고 아파보이던데"
 	done
 
+ 
+
 _SSAnne9Text_61c4c::
-	text "I hear many people"
-	line "get seasick!"
+	text "많은 사람들이"
+	line "뱃멀미를 한다고 들었어"
 	done
+
+ 

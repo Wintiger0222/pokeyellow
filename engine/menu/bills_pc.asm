@@ -82,12 +82,12 @@ DisplayPCMainMenu::
 	ld [H_AUTOBGTRANSFERENABLED], a
 	ret
 
-SomeonesPCText:   db "SOMEONE's PC@"
-BillsPCText:      db "BILL's PC@"
-PlayersPCText:    db "'s PC@"
-OaksPCText:       db "PROF.OAK's PC@"
-PKMNLeaguePCText: db $4a, "LEAGUE@"
-LogOffPCText:     db "LOG OFF@"
+SomeonesPCText:   db "누군가의 컴퓨터@"
+BillsPCText:      db "이수재의 컴퓨터@"
+PlayersPCText:    db "의 컴퓨터@"
+OaksPCText:       db "오박사의 컴퓨터@"
+PKMNLeaguePCText: db "전당 등록@"
+LogOffPCText:     db "스위치를 끄다F@"
 
 BillsPC_::
 	ld hl, wd730
@@ -120,7 +120,7 @@ BillsPCMenu:
 	lb bc, 4, 18
 	call TextBoxBorder
 	coord hl, 0, 0
-	lb bc, 12, 12
+	lb bc, 10, 12
 	call TextBoxBorder
 	call UpdateSprites
 	coord hl, 2, 2
@@ -133,7 +133,7 @@ BillsPCMenu:
 	ld [hli], a ; wTopMenuItemX
 	inc hl
 	inc hl
-	ld a, 5
+	ld a, 4
 	ld [hli], a ; wMaxMenuItem
 	ld a, A_BUTTON | B_BUTTON
 	ld [hli], a ; wMenuWatchedKeys
@@ -181,8 +181,8 @@ BillsPCMenu:
 	jp z, BillsPCRelease ; release
 	cp $3
 	jp z, BillsPCChangeBox ; change box
-	cp $4
-	jp z, BillsPCPrintBox
+;	cp $4
+;	jp z, BillsPCPrintBox
 
 ExitBillsPC:
 	ld a, [wFlags_0xcd60]
@@ -379,16 +379,15 @@ DisplayMonListMenu:
 	ret
 
 BillsPCMenuText:
-	db   "WITHDRAW ", $4a
-	next "DEPOSIT ",  $4a
-	next "RELEASE ",  $4a
-	next "CHANGE BOX"
-	next "PRINT BOX"
-	next "SEE YA!"
+	db   "포켓몬을 데리고 간다"
+	next "포켓몬을 맡기다"
+	next "포켓몬을 놓아주다"
+	next "박스를 바꾸다"
+	next "그럼 안녕"
 	db "@"
 
 BoxNoPCText:
-	db "BOX No.@"
+	db "지금의 박스@"
 
 KnowsHMMove::
 ; returns whether mon with party index [wWhichPokemon] knows an HM move
@@ -491,11 +490,11 @@ DisplayDepositWithdrawMenu:
 	call LoadGBPal
 	jr .loop
 
-DepositPCText:  db "DEPOSIT@"
-WithdrawPCText: db "WITHDRAW@"
+DepositPCText:  db "맡기다@"
+WithdrawPCText: db "찾다@"
 StatsCancelPCText:
-	db   "STATS"
-	next "CANCEL@"
+	db   "상태를 보다"
+	next "그만두다@"
 
 SwitchOnText:
 	TX_FAR _SwitchOnText

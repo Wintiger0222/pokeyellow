@@ -1,119 +1,115 @@
 _MtMoon1BattleText2::
-	text "WHOA! You shocked"
-	line "me! Oh, you're"
-	cont "just a kid!"
+	text "으악!"
+	line "완전 충격이야!"
+	cont "순 어린애잖아!"
 	done
 
 _MtMoon1EndBattleText2::
-	text "Wow!"
-	line "Shocked again!"
+	text "맙소사!"
+	line "이건 이거대로 충격이다!"
 	prompt
 
 _MtMoon1AfterBattleText2::
-	text "Kids like you"
-	line "shouldn't be"
-	cont "here!"
+	text "어린애는 이런곳에"
+	line "오지않는게 좋을걸!"
 	done
 
 _MtMoon1BattleText3::
-	text "Did you come to"
-	line "explore too?"
+	text "너도 폭발할게 있어서"
+	line "왔니?"
 	done
 
 _MtMoon1EndBattleText3::
-	text "Losing"
-	line "stinks!"
+	text "패배의"
+	line "쓴맛!"
 	prompt
 
 _MtMoon1AfterBattleText3::
-	text "I came down here"
-	line "to show off to"
-	cont "girls."
+	text "내가 여기 온건 사실"
+	line "여자들에게 뽐내려고 한거야"
 	done
 
 _MtMoon1BattleText4::
-	text "Wow! It's way"
-	line "bigger in here"
-	cont "than I thought!"
+	text "이야!"
+	line "여긴 내 예상보다"
+	cont "큰 곳인걸!"
 	done
 
 _MtMoon1EndBattleText4::
-	text "Oh!"
-	line "I lost it!"
+	text "어!"
+	line "졌다!"
 	prompt
 
 _MtMoon1AfterBattleText4::
-	text "How do you get"
-	line "out of here?"
+	text "여기 어떡게"
+	line "빠져 나가?"
 	done
 
 _MtMoon1BattleText5::
-	text "What! Don't sneak"
-	line "up on me!"
+	text "뭐야!"
+	line "살금살금 오지마!"
 	done
 
 _MtMoon1EndBattleText5::
-	text "My"
-	line "#MON won't do!"
+	text "무능한"
+	line "포켓몬 같으니라고!"
 	prompt
 
 _MtMoon1AfterBattleText5::
-	text "I have to find"
-	line "stronger #MON."
+	text "더 강한 포켓몬을"
+	line "찾겠어"
 	done
 
 _MtMoon1BattleText6::
-	text "What? I'm waiting"
-	line "for my friends to"
-	cont "find me here."
+	text "무슨일이니?"
+	line "나는 여기서 그저"
+	cont "내 친구 기다리는 중인데"
 	done
 
 _MtMoon1EndBattleText6::
-	text "I lost?"
+	text "내가"
+	line "졌다니?"
 	prompt
 
 _MtMoon1AfterBattleText6::
-	text "I heard there are"
-	line "some very rare"
-	cont "fossils here."
+	text "여기에 희귀 화석이"
+	line "몇개 있다고 얼핏 들었어"
 	done
 
 _MtMoon1BattleText7::
-	text "Suspicious men"
-	line "are in the cave."
-	cont "What about you?"
+	text "수상쩍은 사람들이"
+	line "이 동굴에 있어"
+	cont "혹시 봤니?"
 	done
 
 _MtMoon1EndBattleText7::
-	text "You"
-	line "got me!"
+	text "이거"
+	line "된통당했네!"
 	prompt
 
 _MtMoon1AfterBattleText7::
-	text "I saw them! I'm"
-	line "sure they're from"
-	cont "TEAM ROCKET!"
+	text "내가 그런 사람들을 봤어!"
+	line "그사람들 분명 로켓단이야!"
 	done
 
 _MtMoon1BattleText8::
-	text "Go through this"
-	line "cave to get to"
-	cont "CERULEAN CITY!"
+	text "이 동굴을"
+	line "지나면 블루시티가 나와!"
 	done
 
 _MtMoon1EndBattleText8::
-	text "I"
-	line "lost."
+	text "내가"
+	line "졌다"
 	prompt
 
 _MtMoon1AfterBattleText8::
-	text "ZUBAT is tough!"
-	line "But, it can be"
-	cont "useful if you"
-	cont "catch one."
+	text "주뱃은 사나운 녀석이야!"
+	line "그렇지만 1마리 잡아두면"
+	cont "꽤나 유용해!"
 	done
 
 _MtMoon1Text14::
-	text "Beware! ZUBAT is"
-	line "a bloodsucker!"
+	text "조심해!"
+	line "쥬뱃은 흡혈종이야!"
 	done
+

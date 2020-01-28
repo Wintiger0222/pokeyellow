@@ -1,103 +1,94 @@
 _SurfinDudeText1::
-	text "Whoa!"
+	text "우와!"
 
-	para "Your PIKACHU knows"
-	line "how to SURF! So,"
-	cont "I'm not alone..."
+	para "네 피카츄도 파도타기를"
+	line "할 수 있구나!"
 
-	para "Great! You earned"
-	line "the right to SURF"
-	cont "with the DUDE!"
+	para "멋지다!"
+	
+	para "너는 피카츄하고 서핑를"
+	line "할 수 있어!"
 
-	para "Give it a go?"
+	para "한번 해볼래?"
 	done
 
 _SurfinDudeText2::
-	text "Come SURF anytime,"
-	line "my friend!"
+	text "언제건 파도타기하러 오라고!"
 	done
 
 _SurfinDudeText3::
-	text "Wanna go SURF?"
+	text "서핑 할래?"
 	done
 
 _SurfinDudeText4::
-	text "Dogs and burgers"
-	line "on special today!"
+	text "특별한 날에는"
+	line "핫도그와 햄버거를!"
 	done
 
 _BeachHousePikachuText::
-	text "PIKACHU: Pikaa"
+	text "피카츄『피카-"
 	done
 
 _BeachHouseSign1Text1::
-	text "SURFIN' DUDE's"
-	line "scribbles..."
+	text "파도타기 장인의"
+	line "낙서들이다…"
 
-	para "When I shoot the"
-	line "tube, the tunes"
-	cont "hit the groove!"
+	para "파도 튜브속에서 파도의"
+	line "멜로디로 리듬을 타라"
 	done
 
 _BeachHouseSign1Text2::
-	text "30 years of waves!"
-	line "SURFIN' DUDE"
+	text "30년간의 파도들"
+	line "파도타기 장인"
 	done
 
 _BeachHouseSign2Text1::
-	text "SURFING TIP 1!"
+	text "파도타기 팁 1!"
 
-	para "After flips, line"
-	line "the board up with"
-	cont "a wave for a cool"
-	cont "effect!"
+	para "공중제비후 보드를 치켜세워서"
+	line "파도를 타면 효과가 좋다"
 	done
 
 _BeachHouseSign2Text2::
-	text "SUMMER BEACH HOUSE"
-	line "#MON welcome!"
+	text "여름 해변 하우스"
+	line "포켓몬 환영"
 	done
 
 _BeachHouseSign3Text1::
-	text "SURFING TIP 2!"
+	text "파도타기 팁 2!"
 
-	para "Pulling flips in"
-	line "a jump is totally"
-	cont "rad!"
+	para "점프상태에서 밀어 젖히는건"
+	line "엄청 멋지다!"
 	done
 
 _BeachHouseSign3Text2::
-	text "The sea unites"
-	line "all in surfdom!"
+	text "바다는"
+	line "모든 서퍼를 포용한다!"
 	done
 
 _BeachHousePrinterText1::
-	text "It's some sort of"
-	line "a machine...@@"
+	text "기계의 일종이다…@@"
 
 _BeachHousePrinterText2::
-	text "SUMMER BEACH HOUSE"
-	line "PRINTER, it says.@@"
+	text "여름 해변 하우스"
+	line "프린터『@@"
 
 _BeachHousePrinterText3::
-	text "The Hi-Score is"
-	line "shown."
+	text "최고기록을"
+	line "보고있습니다."
 
-	para "PRINT it out?"
+	para "프린트하시겠습니까?"
 	done
 
 _BeachHousePrinterText4::
-	text "SUMMER BEACH HOUSE"
-	line "PRINTER, it says."
+	text "여름 해변 하우스"
+	line "프린터"
 
-	para "The Hi-Score is"
-	line "shown."
-
-	para "PRINT it out?"
+	para "최고기록을 보시겠습니까?"
 	done
 
 _BeachHousePrinterText5::
-	text "PRINT completed.@@"
+	text "프린트가 완료됐습니다@@"
 
 _BeachHousePrinterText6::
-	text "PRINT error!@@"
+	text "프린트 에러 발생@@"

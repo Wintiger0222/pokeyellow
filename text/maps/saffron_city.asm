@@ -1,151 +1,133 @@
 _SaffronCityText1::
-	text "What do you want?"
-	line "Get lost!"
+	text "나한테 볼일 있냐?"
+	line "썩 꺼져!"
 	done
 
 _SaffronCityText2::
-	text "BOSS said he'll"
-	line "take this town!"
+	text "보스께서 말하시길"
+	line "이 도시를 점령하신댔어!"
 	done
 
 _SaffronCityText3::
-	text "Get out of the"
-	line "way!"
+	text "방해하지 말고 비켜!"
 	done
 
 _SaffronCityText4::
-	text "SAFFRON belongs"
-	line "to TEAM ROCKET!"
+	text "노랑시티는 이제"
+	line "로켓단이 차지하겠다!"
 	done
 
 _SaffronCityText5::
-	text "Being evil makes"
-	line "me feel so alive!"
+	text "악마가 되간다는 건"
+	line "살아 있음을 느끼는것!"
 	done
 
 _SaffronCityText6::
-	text "Ow! Watch where"
-	line "you're walking!"
+	text "으악!"
+	line "똑바로 보고 걸어!"
 	done
 
 _SaffronCityText7::
-	text "With SILPH under"
-	line "control, we can"
-	cont "exploit #MON"
-	cont "around the world!"
+	text "실프주식회사의 시설덕에"
+	line "암흑의 세력을 넓히는데"
+	cont "포켓몬을 이용할 수 있지!"
 	done
 
 _SaffronCityText8::
-	text "You beat TEAM"
-	line "ROCKET all alone?"
-	cont "That's amazing!"
+	text "혼자서 로켓단을 궤멸시켰다고?"
+	line "굉장하다!"
 	done
 
 _SaffronCityText9::
-	text "Yeah! TEAM ROCKET"
-	line "is gone!"
-	cont "It's safe to go"
-	cont "out again!"
+	text "이얏호!"
+	line "로켓단이 사라졌다!"
+	cont "여긴 다시 안전해졌어!"
 	done
 
 _SaffronCityText10::
-	text "People should be"
-	line "flocking back to"
-	cont "SAFFRON now."
+	text "노랑시티로 사람들이"
+	line "다시 돌아와야 할텐데 말이지"
 	done
 
 _SaffronCityText11::
-	text "I flew here on my"
-	line "PIDGEOT when I"
-	cont "read about SILPH."
+	text "실프주식회사의 소식을 읽고서"
+	line "이곳에 피존투를 타고 왔어"
 
-	para "It's already over?"
-	line "I missed the"
-	cont "media action."
+	para "이미 상황종료인가?"
+	line "특종을 놓쳐버렸네"
 	done
 
 _SaffronCityText12::
-	text "PIDGEOT: Bi bibii!@@"
+	text "피존투『피존!@@"
 
 _SaffronCityText13::
-	text "I saw ROCKET"
-	line "BOSS escaping"
-	cont "SILPH's building."
+	text "실프주식회사 빌딩에서"
+	line "로켓단 두목이 빠져나오는걸 봤어"
 	done
 
 _SaffronCityText14::
-	text "I'm a security"
-	line "guard."
+	text "나는야 보안 경비원"
 
-	para "Suspicious kids I"
-	line "don't allow in!"
+	para "수상쩍은 꼬마는"
+	line "출입허가 안 해준다!"
 	done
 
 _SaffronCityText15::
-	text "..."
-	line "Snore..."
+	text "쿨쿨……"
 
-	para "Hah! He's taking"
-	line "a snooze!"
+	para "핫!"
+	line "깜박 졸았다!"
 	done
 
 _SaffronCityText16::
-	text "SAFFRON CITY"
-	line "Shining, Golden"
-	cont "Land of Commerce"
+	text "이곳은 노랑시티"
+	line "노랑은 금빛으로 빛나는 색깔"
 	done
 
 _SaffronCityText17::
-	text "FIGHTING DOJO"
+	text "누구든지 오세요"
+	line "격투 도장!"
 	done
 
 _SaffronCityText18::
-	text "SAFFRON CITY"
-	line "#MON GYM"
-	cont "LEADER: SABRINA"
+	text "노랑시티 포켓몬 체육관"
+	line "관장 초련"
+	cont "에스퍼 레이디"
 
-	para "The Master of"
-	line "Psychic #MON!"
 	done
 
 _SaffronCityText20::
-	text "TRAINER TIPS"
+	text "트레이너 팁"
 
-	para "FULL HEAL cures"
-	line "all ailments like"
-	cont "sleep and burns."
+	para "만병통치제는"
+	line "수면이나 화상같은 상태이상을"
+	cont "모두 치료할수 있습니다"
 
-	para "It costs a bit"
-	line "more, but it's"
-	cont "more convenient."
+	para "가격이 좀더"
+	line "높겠지만"
+	cont "그만한 편리함이 있습니다"
 	done
 
 _SaffronCityText21::
-	text "TRAINER TIPS"
+	text "…… 득이 되는 게시판!"
 
-	para "New GREAT BALL"
-	line "offers improved"
-	cont "capture rates."
+	para "슈퍼볼은 향상된"
+	line "포획성능을 발휘합니다"
 
-	para "Try it on those"
-	line "hard-to-catch"
-	cont "#MON."
+	para "이걸로 잡기힘든"
+	line "포켓몬을 잡아보세요!"
 	done
 
 _SaffronCityText22::
-	text "SILPH CO."
-	line "OFFICE BUILDING"
+	text "실프주식회사"
+	line "본사 빌딩"
 	done
 
 _SaffronCityText24::
-	text "MR.PSYCHIC's"
-	line "HOUSE"
+	text "에스퍼 아저씨의 집"
 	done
 
 _SaffronCityText25::
-	text "SILPH's latest"
-	line "product!"
-
-	para "Release to be"
-	line "determined..."
+	text "실프주식회사 최신 상품!"
+	line "곧 공개됩니다……"
 	done

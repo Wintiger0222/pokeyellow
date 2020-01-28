@@ -1,96 +1,106 @@
 _CopycatsHouse2FText_5ccd4::
-	text $52, ": Hi! Do"
-	line "you like #MON?"
+	text $52, "『안녕!"
+	line "포켓몬 좋아해?"
 
-	para $52, ": Uh no, I"
-	line "just asked you."
+	para $52, "『응?"
+	line "너한테 물어봤잖아"
 
-	para $52, ": Huh?"
-	line "You're strange!"
+	para $52, "『하아?"
+	line "너 참 이상하다!"
 
-	para "COPYCAT: Hmm?"
-	line "Quit mimicking?"
 
-	para "But, that's my"
-	line "favorite hobby!"
+	para "흉내내기아가씨『응?"
+	line "그만 따라하라고?"
+
+	para "그치만 이게 내 취미인걸!"
 	prompt
+
+
 
 _TM31PreReceiveText::
-	text "Oh wow!"
-	line "A # DOLL!"
+	text "우와!"
+	line "삐삐 인형이다!"
 
-	para "For me?"
-	line "Thank you!"
+	para "나 주는거야?"
+	line "고마워!"
 
-	para "You can have"
-	line "this, then!"
+	para "그럼 너도 이거 가져!"
 	prompt
 
+
+
 _ReceivedTM31Text::
-	text $52, " received"
+	text $52, "는(은)"
 	line "@"
 	TX_RAM wcf4b
-	text "!@@"
+	text "를(을) 얻었다!@@"
 
 _TM31ExplanationText1::
 	db $0
-	para "TM31 contains my"
-	line "favorite, MIMIC!"
+	para "기술머신 31은 내가 가장"
+	line "좋아하는 흉내내기!"
 
-	para "Use it on a good"
-	line "#MON!@@"
+
+
+	para "어울릴만한 포켓몬에게"
+	line "사용해봐!@@"
+
+
 
 _TM31ExplanationText2::
-	text $52, ": Hi!"
-	line "Thanks for TM31!"
+	text $52, "『안녕!"
+	line "기술머신 31 고마웠어!"
 
-	para $52, ": Pardon?"
 
-	para $52, ": Is it"
-	line "that fun to mimic"
-	cont "my every move?"
+	para $52, "『응?"
 
-	para "COPYCAT: You bet!"
-	line "It's a scream!"
+	para $52, "『내 행동 하나하나"
+	line "흉내내고다니면 재밌어?"
+
+
+	para "흉내내기아가씨『당연하지!"
+	line "짜릿하다구!"
 	done
 
 _TM31NoRoomText::
-	text "Don't you want"
-	line "this?@@"
+	text "혹시 필요없는거야?@@"
 
 _CopycatsHouse2FText2::
-	text "DODUO: Giiih!"
+	text "두두『두두두!"
 
-	para "MIRROR MIRROR ON"
-	line "THE WALL, WHO IS"
-	cont "THE FAIREST ONE"
-	cont "OF ALL?"
+	para "…… 거울아 거울아!"
+	line "세계에서 제일 예쁜"
+	cont "여자아이는 누구?"
 	done
 
 _CopycatsHouse2FText3::
-	text "This is a rare"
-	line "#MON! Huh?"
-	cont "It's only a doll!"
+	text "이것은 희귀한 포켓몬!?"
+	line "…… 얼라리? 인형이였군"
 	done
 
 _CopycatsHouse2FText6::
-	text "A game with MARIO"
-	line "wearing a bucket"
-	cont "on his head!"
+	text "머리에 양동이를 쓴"
+	line "마리오가 안는 게임이다!"
 	done
 
 _CopycatsHouse2FText_5cd17::
-	text "..."
+	text "……"
 
-	para "My Secrets!"
+	para "내 비밀들!"
 
-	para "Skill: Mimicry!"
-	line "Hobby: Collecting"
-	cont "dolls!"
-	cont "Favorite #MON:"
-	cont "CLEFAIRY!"
+
+	para "기술 …… 흉내내기!"
+	line "취미 …… 인형 모으기!"
+	cont "좋아하는 포켓몬 …… 삐삐!"
 	done
+
+
+
+
 
 _CopycatsHouse2FText_5cd1c::
-	text "Huh? Can't see!"
+	text "어라? 안보여!"
 	done
+
+
+

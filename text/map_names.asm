@@ -1,107 +1,107 @@
 MapNames:
 PalletTownName:
-	db "PALLET TOWN@"
+	db "태초마을@"
 ViridianCityName:
-	db "VIRIDIAN CITY@"
+	db"상록시티@"
 PewterCityName:
-	db "PEWTER CITY@"
+	db"회색시티@"
 CeruleanCityName:
-	db "CERULEAN CITY@"
+	db"블루시티@"
 LavenderTownName:
-	db "LAVENDER TOWN@"
+	db"보라타운@"
 VermilionCityName:
-	db "VERMILION CITY@"
+	db"갈색시티@"
 CeladonCityName:
-	db "CELADON CITY@"
+	db"무지개시티@"
 FuchsiaCityName:
-	db "FUCHSIA CITY@"
+	db"연분홍시티@"
 CinnabarIslandName:
-	db "CINNABAR ISLAND@"
+	db"홍련섬@"
 IndigoPlateauName:
-	db "INDIGO PLATEAU@"
+	db"석영고원@"
 SaffronCityName:
-	db "SAFFRON CITY@"
+	db"노랑시티@"
 Route1Name:
-	db "ROUTE 1@"
+	db"1번 도로@"
 Route2Name:
-	db "ROUTE 2@"
+	db"2번 도로@"
 Route3Name:
-	db "ROUTE 3@"
+	db"3번 도로@"
 Route4Name:
-	db "ROUTE 4@"
+	db"4번 도로@"
 Route5Name:
-	db "ROUTE 5@"
+	db"5번 도로@"
 Route6Name:
-	db "ROUTE 6@"
+	db"6번 도로@"
 Route7Name:
-	db "ROUTE 7@"
+	db"7번 도로@"
 Route8Name:
-	db "ROUTE 8@"
+	db"8번 도로@"
 Route9Name:
-	db "ROUTE 9@"
+	db"9번 도로@"
 Route10Name:
-	db "ROUTE 10@"
+	db"10번 도로@"
 Route11Name:
-	db "ROUTE 11@"
+	db"11번 도로@"
 Route12Name:
-	db "ROUTE 12@"
+	db"12번 도로@"
 Route13Name:
-	db "ROUTE 13@"
+	db"13번 도로@"
 Route14Name:
-	db "ROUTE 14@"
+	db"14번 도로@"
 Route15Name:
-	db "ROUTE 15@"
+	db"15번 도로@"
 Route16Name:
-	db "ROUTE 16@"
+	db"16번 도로@"
 Route17Name:
-	db "ROUTE 17@"
+	db"17번 도로@"
 Route18Name:
-	db "ROUTE 18@"
+	db"18번 도로@"
 Route19Name:
-	db "SEA ROUTE 19@"
+	db"19번 도로@"
 Route20Name:
-	db "SEA ROUTE 20@"
+	db"20번 도로@"
 Route21Name:
-	db "SEA ROUTE 21@"
+	db"21번 도로@"
 Route22Name:
-	db "ROUTE 22@"
+	db"22번 도로@"
 Route23Name:
-	db "ROUTE 23@"
+	db"23번 도로@"
 Route24Name:
-	db "ROUTE 24@"
+	db"24번 도로@"
 Route25Name:
-	db "ROUTE 25@"
+	db"25번 도로@"
 ViridianForestName:
-	db "VIRIDIAN FOREST@"
+	db"상록숲@"
 MountMoonName:
-	db "MT.MOON@"
+	db"달맞이산@"
 RockTunnelName:
-	db "ROCK TUNNEL@"
+	db"돌산터널@"
 SeaCottageName:
-	db "SEA COTTAGE@"
+	db"호수공원의 오두막@"
 SSAnneName:
-	db "S.S.ANNE@"
+	db"상트안느호@"
 PokemonLeagueName:
-	db "#MON LEAGUE@"
+	db"포켓몬리그@"
 UndergroundPathName:
-	db "UNDERGROUND PATH@"
+	db"지하통로@"
 PokemonTowerName:
-	db "#MON TOWER@"
+	db"포켓몬타워@"
 SeafoamIslandsName:
-	db "SEAFOAM ISLANDS@"
+	db"쌍둥이섬@"
 VictoryRoadName:
-	db "VICTORY ROAD@"
+	db"챔피언로드@"
 DiglettsCaveName:
-	db "DIGLETT's CAVE@"
+	db"디그다의 굴@"
 RocketHQName:
-	db "ROCKET HQ@"
+	db"로켓단아지트@"
 SilphCoName:
-	db "SILPH CO.@"
+	db"실프주식회사@"
 PokemonMansionName:
-	db "<pkmn> MANSION@"
+	db"포켓몬저택@"
 SafariZoneName:
-	db "SAFARI ZONE@"
+	db"사파리존@"
 CeruleanCaveName:
-	db "CERULEAN CAVE@"
+	db"남색동굴@"
 PowerPlantName:
-	db "POWER PLANT@"
+	db"발전소@"

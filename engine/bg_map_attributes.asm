@@ -68,6 +68,9 @@ LoadBGMapAttributes::
 	ld [rHDMA3], a
 	ld a, e
 	ld [rHDMA4], a
+	ld a,[hVEnable]
+	bit 1,a
+	jr nz, .nolegacymode
 ; LCD check again
 	ld a, [rLCDC]
 	and rLCDC_ENABLE_MASK ; is LCD off?
@@ -83,7 +86,11 @@ LoadBGMapAttributes::
 	jr nz, .waitForAccessibleVRAMLoop2 ; loop until we're in a safe period to transfer to VRAM
 .lcdOff2
 	ld a, c
-	ld [rHDMA5], a
+	ld [rHDMA5], a ;
+.nolegacymode
+	ld a, c
+	call BGMapToWRAM
+.completetransfer
 	pop af
 	dec a
 	dec a
@@ -185,9 +192,14 @@ ZeroOutCurrentBadgeAttributes:
 	ret
 
 HandlePartyHPBarAttributes:
+	ld a,[wPartyMenuTypeOrMessageID] ; menu type
+	cp a,TMHM_PARTY_MENU
+	ret z
+	ld a,$02
+	ld [rSVBK],a
 ; hp bars require 3 (green, orange, red) colours, when there are only 2 "free" colours per palette
 ; therefore, we must transfer individual bg attributes where the locations of the hp bars are in vram
-	ld hl, vBGMap1 + $25 ; location of start of the HP bar in vram
+	ld hl, $D800 + $0C ; location of start of the HP bar in vram
 	ld de, wPartyHPBarAttributes
 	ld c, PARTY_LENGTH
 .loop
@@ -199,7 +211,7 @@ HandlePartyHPBarAttributes:
 	ld [hli], a
 	endr
 	pop hl
-	ld bc, $40 ; get 2nd party location
+	ld bc, 20*2 ; get 2nd party location
 	add hl, bc
 	push hl
 
@@ -216,4 +228,75 @@ HandlePartyHPBarAttributes:
 	pop bc
 	dec c
 	jr nz, .loop
+	ld a,$01
+	ld [rSVBK],a
+	ret
+BGMapToVRAM:
+	push hl
+	push de
+	push af
+	ld a,$98
+	ld [H_AUTOBGTRANSFERDEST + 1],a
+	pop af
+	pop de
+	pop hl
+.loop
+	push af
+	rept $10
+	ld a,[de]
+	and $08
+	or [hl]
+	inc hl
+	ld [de],a
+	inc de
+	endr
+	pop af
+	dec a
+	and a
+	ret z
+	jp .loop
+BGMapToWRAM:
+	rra
+	inc a
+	ld [hTemp],a
+	ld a,$02
+	ld [rSVBK],a
+	ld de,$D800
+.loop ;hl : source de : destination
+	rept 20/2
+	ld a,[de]
+	and $08
+	or [hl]
+	inc hl
+	;ld a,[hli]
+	ld [de],a
+	inc de
+	ld a,[de]
+	and $08
+	or [hl]
+	inc hl
+	ld [de],a
+	inc de
+	endr
+	inc hl
+	inc hl
+	inc hl
+	inc hl
+	inc hl
+	inc hl
+	inc hl
+	inc hl
+	inc hl
+	inc hl
+	inc hl
+	inc hl
+	ld a,[hTemp]
+	dec a
+	ld [hTemp],a
+	and a
+	jp nz,.loop
+.memoryback
+	ld a,$01
+	;ld [H_LOADEDWRAMBANK],a
+	ld [rSVBK],a
 	ret

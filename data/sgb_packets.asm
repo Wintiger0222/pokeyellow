@@ -84,8 +84,8 @@ BlkPacket_Slots:
 
 BlkPacket_Titlescreen:
 	ATTR_BLK 3
-	ATTR_BLK_DATA %011, 0,0,0, 00,00, 19,07
-	ATTR_BLK_DATA %011, 2,2,0, 00,08, 19,17
+	ATTR_BLK_DATA %010, 0,0,0, 00,00, 19,07
+	ATTR_BLK_DATA %011, 1,1,0, 00,08, 19,17
 	ATTR_BLK_DATA %010, 0,0,0, 09,08, 10,08
 	ds 12
 
@@ -99,12 +99,12 @@ BlkPacket_NidorinoIntro:
 BlkPacket_PartyMenu:
 	ATTR_BLK 7
 	ATTR_BLK_DATA %110, 0,0,1, 01,00, 02,12 ; mon sprites: pal 0, everything else: pal 1
-	ATTR_BLK_DATA %010, 0,0,0, 05,01, 11,01 ; HP bar 0: pal set dynamically
-	ATTR_BLK_DATA %010, 0,0,0, 05,03, 11,03 ; HP bar 1: pal set dynamically
-	ATTR_BLK_DATA %010, 0,0,0, 05,05, 11,05 ; HP bar 2: pal set dynamically
-	ATTR_BLK_DATA %010, 0,0,0, 05,07, 11,07 ; HP bar 3: pal set dynamically
-	ATTR_BLK_DATA %010, 0,0,0, 05,09, 11,09 ; HP bar 4: pal set dynamically
-	ATTR_BLK_DATA %010, 0,0,0, 05,11, 11,11 ; HP bar 5: pal set dynamically
+	ATTR_BLK_DATA %010, 0,0,0, 11,00, 17,00 ; HP bar 0: pal set dynamically
+	ATTR_BLK_DATA %010, 0,0,0, 11,02, 17,02 ; HP bar 1: pal set dynamically
+	ATTR_BLK_DATA %010, 0,0,0, 11,04, 17,04 ; HP bar 2: pal set dynamically
+	ATTR_BLK_DATA %010, 0,0,0, 11,06, 17,06 ; HP bar 3: pal set dynamically
+	ATTR_BLK_DATA %010, 0,0,0, 11,08, 17,08 ; HP bar 4: pal set dynamically
+	ATTR_BLK_DATA %010, 0,0,0, 11,10, 17,10 ; HP bar 5: pal set dynamically
 	ds 4
 
 BlkPacket_TrainerCard:

@@ -1,62 +1,76 @@
 _SilphCo9Text_5d8e5::
-	text "You look tired!"
-	line "You should take a"
-	cont "quick nap!"
+	text "피곤해 보이네!"
+	line "잠깐 쉬고가!"
 	prompt
+
+ 
 
 _SilphCo9Text_5d8ea::
-	text "Don't give up!"
+	text "포기하지마!"
 	done
+
+
 
 _SilphCo9Text_5d8ef::
-	text "Thank you so"
-	line "much!"
+	text "정말 고마워!"
 	done
+
+
 
 _SilphCo9BattleText1::
-	text "Your #MON seem"
-	line "to adore you, kid!"
+	text "네 포켓몬이 널 좋아하는 것"
+	line "같구나 꼬맹아!"
 	done
 
+ 
+
 _SilphCo9EndBattleText1::
-	text "Ghaaah!"
+	text "갸아아악!"
 	prompt
 
+
+
 _SilphCo9AfterBattleText1::
-	text "If I had started"
-	line "as a trainer at"
-	cont "your age..."
+	text "내가 너만했을때"
+	line "트레이너가 되었다면……"
 	done
 
 _SilphCo9BattleText2::
-	text "Your #MON have"
-	line "weak points! I"
-	cont "can nail them!"
+	text "네 포켓몬에겐 약점이 있어!"
+	line "내가 못박아주지!"
 	done
 
+ 
+
 _SilphCo9EndBattleText2::
-	text "You"
-	line "hammered me!"
+	text "날 망치질하다니!"
 	prompt
 
+
+
 _SilphCo9AfterBattleText2::
-	text "Exploiting weak"
-	line "spots does work!"
-	cont "Think about"
-	cont "element types!"
+	text "약점을 이용하는건"
+	line "효과적인 전략이야!"
+	cont "타입을 생각해!"
 	done
 
 _SilphCo9BattleText3::
-	text "I am one of the 4"
-	line "ROCKET BROTHERS!"
+	text "나는 로켓 브라더스"
+	line "4인방중 한명!"
 	done
+
+ 
 
 _SilphCo9EndBattleText3::
-	text "Warg!"
-	line "Brothers, I lost!"
+	text "우왁! 형제여!"
+	line "난 져버렸다네!"
 	prompt
 
+ 
+
 _SilphCo9AfterBattleText3::
-	text "My brothers will"
-	line "avenge me!"
+	text "내 형제들이"
+	line "널 용서치 않을거다!"
 	done
+
+ 

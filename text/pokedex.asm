@@ -1,1508 +1,905 @@
 _BulbasaurDexEntry::
-	text "It can go for days"
-	next "without eating a"
-	next "single morsel."
-
-	page "In the bulb on"
-	next "its back, it"
-	next "stores energy"
+	text "며칠 동안 아무것도 먹지 않아도"
+	next "건강  등의 씨앗에 많은"
+	next "영양이 있기에 괜찮다"
 	dex
 
 _IvysaurDexEntry::
-	text "The bulb on its"
-	next "back grows by"
-	next "drawing energy."
-
-	page "It gives off an"
-	next "aroma when it is"
-	next "ready to bloom"
+	text "양분을 받고 커져가는 꽃봉오리에서"
+	next "향기가 퍼지면 곧바로"
+	next "꽃이 핀다는 증거이다"
 	dex
 
 _VenusaurDexEntry::
-	text "The flower on its"
-	next "back catches the"
-	next "sun's rays."
-
-	page "The sunlight is"
-	next "then absorbed and"
-	next "used for energy"
+	text "등에 생긴 큰 꽃은"
+	next "태양 빛을 흡수해서"
+	next "에너지로 변환할 수 있다"
 	dex
 
 _CharmanderDexEntry::
-	text "The flame at the"
-	next "tip of its tail"
-	next "makes a sound as"
-
-	page "it burns. You can"
-	next "only hear it in"
-	next "quiet places"
+	text "조용한 곳에 데리고 가면"
+	next "꼬리가 불타는"
+	next "작은 소리가 들린다고 한다"
 	dex
 
 _CharmeleonDexEntry::
-	text "Tough fights could"
-	next "excite this"
-	next "#MON. When"
-
-	page "excited, it may"
-	next "blow out bluish-"
-	next "white flames"
+	text "강적과 계속 싸우다가"
+	next "흥분하면 희푸른 불꽃을"
+	next "내뿜기도 한다" 
 	dex
 
 _CharizardDexEntry::
-	text "When expelling a"
-	next "blast of super"
-	next "hot fire, the red"
-
-	page "flame at the tip"
-	next "of its tail burns"
-	next "more intensely"
+	text "입에서 작렬하는 불꽃을 토해낼 때"
+	next "꼬리의 끝이 더욱 붉고"
+	next "격렬하게 타오른다"
 	dex
 
 _SquirtleDexEntry::
-	text "Shoots water at"
-	next "prey while in the"
-	next "water."
-
-	page "Withdraws into"
-	next "its shell when in"
-	next "danger"
+	text "물을 분사하여 먹이를 잡는다"
+	next "위험해지면 등껍질에"
+	next "손발을 감추고 몸을 지킨다 "
 	dex
 
 _WartortleDexEntry::
-	text "When tapped, this"
-	next "#MON will pull"
-	next "in its head, but"
-
-	page "its tail will"
-	next "still stick out a"
-	next "little bit"
+	text "딱 하고 머리를 맞을 때 등껍질로"
+	next "숨어서 피한다  하지만 꼬리가"
+	next "살짝 삐져나와 있다 "
 	dex
 
 _BlastoiseDexEntry::
-	text "Once it takes aim"
-	next "at its enemy, it"
-	next "blasts out water"
-
-	page "with even more"
-	next "force than a fire"
-	next "hose"
+	text "상대에게 겨냥하면"
+	next "소방수의 호스보다 강한 기세로"
+	next "물을 내뿜는다 "
 	dex
 
 _CaterpieDexEntry::
-	text "If you touch the"
-	next "feeler on top of"
-	next "its head, it will"
-
-	page "release a horrible"
-	next "stink to protect"
-	next "itself"
+	text "머리 끝에 있는 더듬이에 닿으면"
+	next "강렬한 냄새를 내뿜어"
+	next "몸을 보호하려 한다 "
 	dex
 
 _MetapodDexEntry::
-	text "Hardens its shell"
-	next "to protect itself."
-	next "However, a large"
-
-	page "impact may cause"
-	next "it to pop out of"
-	next "its shell"
+	text "몸을 지키기 위해 단지 껍질을"
+	next "단단하게 해도 강한 충격을"
+	next "받으면 알맹이가 나와버린다"
 	dex
 
 _ButterfreeDexEntry::
-	text "Its wings, covered"
-	next "with poisonous"
-	next "powders, repel"
-
-	page "water. This"
-	next "allows it to fly"
-	next "in the rain"
+	text "날개의 맹독 날개가루에는 물을"
+	next "튕겨내는 성질이 있어서 비 오는"
+	next "날에도 날아다닐 수 있다 "
 	dex
 
 _WeedleDexEntry::
-	text "Beware of the"
-	next "sharp stinger on"
-	next "its head. It"
-
-	page "hides in grass"
-	next "and bushes where"
-	next "it eats leaves"
+	text "머리에 날카로운 침을 가졌다"
+	next "숲이나 풀밭의 우거진 곳에"
+	next "숨어서 오직 나뭇잎을 먹고 있다"
 	dex
 
 _KakunaDexEntry::
-	text "Able to move only"
-	next "slightly. When"
-	next "endangered, it"
-
-	page "may stick out its"
-	next "stinger and poison"
-	next "its enemy"
+	text "스스로는 거의 움직이지 못 하지만"
+	next "위험해지면 바늘을 쏘아 독을"
+	next "퍼지게 하는 일도 있는 듯 하다 "
 	dex
 
 _BeedrillDexEntry::
-	text "It has 3 poisonous"
-	next "stingers on its"
-	next "forelegs and its"
-
-	page "tail. They are"
-	next "used to jab its"
-	next "enemy repeatedly"
+	text "양손과 엉덩이에 있는 3개의"
+	next "독침으로 상대를 찌르고 찌르고"
+	next "또 찌르며 공격한다 "
 	dex
 
 _PidgeyDexEntry::
-	text "Very docile. If"
-	next "attacked, it will"
-	next "often kick up"
-
-	page "sand to protect"
-	next "itself rather"
-	next "than fight back"
+	text "얌전한 성격으로 공격받아도"
+	next "반격하지 않고 모래를 뿌려"
+	next "몸을 지키는 경우가 많다 "
 	dex
 
 _PidgeottoDexEntry::
-	text "This #MON is"
-	next "full of vitality."
-	next "It constantly"
-
-	page "flies around its"
-	next "large territory in"
-	next "search of prey"
+	text "남아도는 체력의 소유자로"
+	next "넓은 세력권을 날아다니며"
+	next "멀리까지 먹이를 찾아다닌다 "
 	dex
 
 _PidgeotDexEntry::
-	text "This #MON flies"
-	next "at Mach 2 speed,"
-	next "seeking prey."
-
-	page "Its large talons"
-	next "are feared as"
-	next "wicked weapons"
+	text "마하2로 비행하며 먹잇감을 찾는다"
+	next "그 큰 발톱은 무기로 해서"
+	next "두려워하고 있다 "
 	dex
 
 _RattataDexEntry::
-	text "Will chew on any-"
-	next "thing with its"
-	next "fangs. If you see"
-
-	page "one, it is certain"
-	next "that 40 more live"
-	next "in the area"
+	text "송곳니가 2개  여하튼 무엇이라도"
+	next "갉고 본다  한마리를 발견하면"
+	next "40마리가 그곳에 살고 있을것임"
 	dex
 
 _RaticateDexEntry::
-	text "Its hind feet are"
-	next "webbed. They act"
-	next "as flippers, so"
-
-	page "it can swim in"
-	next "rivers and hunt"
-	next "for prey"
+	text "뒷발에 있는 작은 물갈퀴로"
+	next "강을 헤엄치는 것은 물 안의"
+	next "먹이를 잡기 위해서이다"
 	dex
 
 _SpearowDexEntry::
-	text "Inept at flying"
-	next "high. However, it"
-	next "can fly around"
-
-	page "very fast to"
-	next "protect its ter-"
-	next "ritory"
+	text "높이 나는 것이 서투르다"
+	next "세력권을 지키기 위해"
+	next "맹스피드로 날아다니고 있다"
 	dex
 
 _FearowDexEntry::
-	text "A #MON that"
-	next "dates back many"
-	next "years. If it"
-
-	page "senses danger, it"
-	next "flies high and"
-	next "away, instantly"
+	text "옛날부터 살고 있는 포켓몬"
+	next "조금이라도 위험을 감지하면"
+	next "하늘 높이 날아 올라가고 만다 "
 	dex
 
 _EkansDexEntry::
-	text "The older it gets,"
-	next "the longer it"
-	next "grows. At night,"
-
-	page "it wraps its long"
-	next "body around tree"
-	next "branches to rest"
+	text "성장할수록 점점 길어진다"
+	next "밤에는 나뭇가지에"
+	next "몸을 돌돌 말고 쉰다 "
 	dex
 
 _ArbokDexEntry::
-	text "The frightening"
-	next "patterns on its"
-	next "belly have been"
-
-	page "studied. Six"
-	next "variations have"
-	next "been confirmed"
+	text "무서운 듯한 배의 문양은"
+	next "연구의 결과 6종류 정도의"
+	next "패턴이 확인되었다 "
 	dex
 
 _PikachuDexEntry::
-	text "It keeps its tail"
-	next "raised to monitor"
-	next "its surroundings."
-
-	page "If you yank its"
-	next "tail, it will try"
-	next "to bite you"
+	text "꼬리를 세워서 주변의 기척을"
+	next "느낀다고 한다  그래서 무턱대고"
+	next "꼬리를 잡아당기면 물어버린다 "
 	dex
 
 _RaichuDexEntry::
-	text "When electricity"
-	next "builds up inside"
-	next "its body, it"
-
-	page "becomes feisty."
-	next "It also glows in"
-	next "the dark"
+	text "몸에 전기가 모여 있으면"
+	next "공격적인 성격으로 바뀐다"
+	next "어두운 곳에서 밝게 보인다 "
 	dex
 
 _SandshrewDexEntry::
-	text "Its body is dry."
-	next "When it gets cold"
-	next "at night, its"
-
-	page "hide is said to"
-	next "become coated with"
-	next "a fine dew"
+	text "몸은 바짝 말라 있다  하지만"
+	next "한밤중에 기온이 떨어질 때에는"
+	next "피부에 물방울이 맺힌다고 한다 "
 	dex
 
 _SandslashDexEntry::
-	text "It is skilled at"
-	next "slashing enemies"
-	next "with its claws."
-
-	page "If broken, they"
-	next "start to grow back"
-	next "in a day"
+	text "손톱으로 할퀴는 것이 특기이나"
+	next "싸울 때 부러지는 경우도"
+	next "다음날에는 다시 자라나 있다고 "
 	dex
 
 _NidoranFDexEntry::
-	text "A mild-mannered"
-	next "#MON that does"
-	next "not like to"
-
-	page "fight. Beware, its"
-	next "small horns"
-	next "secrete venom"
+	text "상냥한 성격으로 싸움은 좋아하지"
+	next "않으나 작은 뿔에서"
+	next "독이 나오므로 요주의 "
 	dex
 
 _NidorinaDexEntry::
-	text "When resting deep"
-	next "in its burrow, its"
-	next "thorns always"
-
-	page "retract."
-	next "This is proof that"
-	next "it is relaxed"
+	text "모래구멍 안에 있을 때에는 반드시"
+	next "삐죽삐죽한 가시가 쑥 들어간다"
+	next "진정시키고 있다는 증거이다 "
 	dex
 
 _NidoqueenDexEntry::
-	text "Tough scales cover"
-	next "the sturdy body"
-	next "of this #MON."
-
-	page "It appears that"
-	next "the scales grow"
-	next "in cycles"
+	text "딱딱한 비늘로 뒤덮인"
+	next "옹골찬 몸을 지녔다"
+	next "비늘은 다시 돋아나는 것 같다 "
 	dex
 
 _NidoranMDexEntry::
-	text "Its large ears"
-	next "are always kept"
-	next "upright. If it"
-
-	page "senses danger, it"
-	next "will attack with a"
-	next "poisonous sting"
+	text "항상 큰 귀를 세워 주위의"
+	next "기척을 살핀다  위험을 감지했을"
+	next "때에는 독침을 쓴다 "
 	dex
 
 _NidorinoDexEntry::
-	text "Its horns contain"
-	next "venom. If they"
-	next "are stabbed into"
-
-	page "an enemy, the"
-	next "impact makes the"
-	next "poison leak out"
+	text "머리에 있는 뿔의 독소는"
+	next "깊이 찔렀을 때의 충격으로"
+	next "스며 나오는 구조이다 "
 	dex
 
 _NidokingDexEntry::
-	text "Its steel-like"
-	next "hide adds to its"
-	next "powerful tackle."
-
-	page "Its horns are so"
-	next "hard, they can"
-	next "pierce a diamond"
+	text "강철과도 같은 피부를 살린"
+	next "몸통박치기는 강력"
+	next "뿔은 다이아몬드도 꿰뚫는다 "
 	dex
 
 _ClefairyDexEntry::
-	text "Adored for their"
-	next "cute looks and"
-	next "playfulness. They"
-
-	page "are thought to be"
-	next "rare, as they do"
-	next "not appear often"
+	text "모습과 몸짓이 깜찍하고"
+	next "인기가 있지만 수가 적은지"
+	next "좀처럼 발견할 수 없다 "
 	dex
 
 _ClefableDexEntry::
-	text "They appear to be"
-	next "very protective of"
-	next "their own world."
-
-	page "It is a kind of"
-	next "fairy, rarely seen"
-	next "by people"
+	text "자신들의 세계를 중요하게 생각하고"
+	next "있는 듯해 좀처럼 사람 앞에"
+	next "나타나지 않는 요정의 동료 "
 	dex
 
 _VulpixDexEntry::
-	text "Both its fur and"
-	next "its tails are"
-	next "beautiful. As it"
-
-	page "grows, the tails"
-	next "split and form"
-	next "more tails"
+	text "털과 꼬리가 아름답다"
+	next "자라면 꼬리 끝이 갈라져서"
+	next "늘어난다 "
 	dex
 
 _NinetalesDexEntry::
-	text "According to an"
-	next "enduring legend,"
-	next "9 noble saints"
-
-	page "were united and"
-	next "reincarnated as"
-	next "this #MON"
+	text "9명의 성자가 굳은 의지로"
+	next "이 포켓몬으로 다시 태어났다는"
+	next "전설이 있다 "
 	dex
 
 _JigglypuffDexEntry::
-	text "Uses its alluring"
-	next "eyes to enrapture"
-	next "its foe. It then"
-
-	page "sings a pleasing"
-	next "melody that lulls"
-	next "the foe to sleep"
+	text "동그란 눈동자로 상대를 쳐다본 후"
+	next "신기하고 기분 좋은 노래를"
+	next "들려줘서 잠들게 만들어버린다 "
 	dex
 
 _WigglytuffDexEntry::
-	text "Its body is full"
-	next "of elasticity. By"
-	next "inhaling deeply,"
-
-	page "it can continue"
-	next "to inflate itself"
-	next "without limit"
+	text "탄력성이 뛰어난 몸은"
+	next "크게 숨을 들이마시면"
+	next "한없이 부풀어 오른다 "
 	dex
 
 _ZubatDexEntry::
-	text "Emits ultrasonic"
-	next "cries while it"
-	next "flies. They act"
-
-	page "as a sonar used"
-	next "to check for ob-"
-	next "jects in its way"
+	text "입에서 초음파를 내뿜으면서"
+	next "나는 것은 앞에 뭐가 있는지"
+	next "탐색하면서 날고 있기 때문이다 "
 	dex
 
 _GolbatDexEntry::
-	text "It attacks in a"
-	next "stealthy manner,"
-	next "without warning."
-
-	page "Its sharp fangs"
-	next "are used to bite"
-	next "and suck blood"
+	text "어디선가 소리 없이 다가온다"
+	next "날카로운 이빨을 써서 깨무는"
+	next "동시에 피를 빨아댄다 "
 	dex
 
 _OddishDexEntry::
-	text "It may be mistaken"
-	next "for a clump of"
-	next "weeds. If you try"
-
-	page "to yank it out of"
-	next "the ground, it"
-	next "shrieks horribly"
+	text "그냥 풀이라고 생각해"
+	next "뽑아내려고 하면 울음소리를 낸다"
+	next "왠지 아주 무시무시한 기분 "
 	dex
 
 _GloomDexEntry::
-	text "Smells incredibly"
-	next "foul! However,"
-	next "around 1 out of"
-
-	page "1,000 people enjoy"
-	next "sniffing its nose-"
-	next "bending stink"
+	text "맹렬하게 고약한 냄새!"
+	next "그런데 천 명 중에 한 명 꼴로"
+	next "이 냄새를 즐겨 맡는 사람이 있다"
 	dex
 
 _VileplumeDexEntry::
-	text "Flaps its broad"
-	next "flower petals to"
-	next "scatter its"
-
-	page "poisonous pollen."
-	next "The flapping sound"
-	next "is very loud"
+	text "독 꽃가루를 뿌려대기 위해서"
+	next "커다란 꽃잎을 흔들면"
+	next "굉장한 소리도 울려퍼진다 "
 	dex
 
 _ParasDexEntry::
-	text "Burrows under the"
-	next "ground to gnaw on"
-	next "tree roots. The"
-
-	page "mushrooms on its"
-	next "back absorb most"
-	next "of the nutrition"
+	text "구멍을 파서 나무뿌리로부터"
+	next "영양을 섭취하지만 대부분은"
+	next "등에 있는 버섯에게 빼앗긴다 "
 	dex
 
 _ParasectDexEntry::
-	text "The bug host is"
-	next "drained of energy"
-	next "by the mushrooms"
-
-	page "on its back. They"
-	next "appear to do all"
-	next "the thinking"
+	text "계속 진액을 빨아먹혀서"
+	next "더 이상 벌레가 아니라"
+	next "등의 버섯이 사고하는 듯 하다 "
 	dex
 
 _VenonatDexEntry::
-	text "Its large eyes act"
-	next "as radars. In a"
-	next "bright place, you"
-
-	page "can see that they"
-	next "are clusters of"
-	next "many tiny eyes"
+	text "레이더인 큰 눈을 밝은 곳에서"
+	next "보면 작은 눈이 모여 형성된"
+	next "것임을 알 수 있다 "
 	dex
 
 _VenomothDexEntry::
-	text "The powdery scales"
-	next "on its wings are"
-	next "hard to remove."
-
-	page "They also contain"
-	next "poison that leaks"
-	next "out on contact"
+	text "날개의 가루는 몸에 붙으면"
+	next "좀처럼 떨어지지 않는다"
+	next "게다가 거기서 독 성분이 스며든다"
 	dex
 
 _DiglettDexEntry::
-	text "It prefers dark"
-	next "places. It spends"
-	next "most of its time"
-
-	page "underground,"
-	next "though it may pop"
-	next "up in caves"
+	text "어두운 곳을 좋아한다"
+	next "거의 땅속에서 지내지만"
+	next "동굴에서는 자주 얼굴을 내민다 "
 	dex
 
 _DugtrioDexEntry::
-	text "A team of triplets"
-	next "that can burrow"
-	next "over 60 MPH."
-
-	page "Due to this, some"
-	next "people think it's"
-	next "an earthquake"
+	text "세 쌍둥이의 파워로 지하"
+	next "100km까지 파들어 가기에 지진의"
+	next "원인이 된다는 보고도 있다 "
 	dex
 
 _MeowthDexEntry::
-	text "Appears to be more"
-	next "active at night."
-	next "It loves round"
-
-	page "and shiny things."
-	next "It can't stop from"
-	next "picking them up"
+	text "밤에 더 활기 넘치는 모양이다"
+	next "둥글고 빛나는 것을 좋아해서"
+	next "발견하면 줍지 않고 못 배긴다 "
 	dex
 
 _PersianDexEntry::
-	text "The gem in its"
-	next "forehead glows on"
-	next "its own! It walks"
-
-	page "with all the grace"
-	next "and elegance of a"
-	next "proud queen"
+	text "이마의 보석이 빛난다!"
+	next "걷는 모습도 유연하여"
+	next "아가씨와도 같은 화려함이 있다 "
 	dex
 
 _PsyduckDexEntry::
-	text "Always tormented"
-	next "by headaches."
-	next "It uses psychic"
-
-	page "powers, but it is"
-	next "not known if it"
-	next "intends to do so"
+	text "항상 두통에 시달린다"
+	next "염동력을 쓰지만 자신의"
+	next "의지인지 아닌지 알 수 없다 "
 	dex
 
 _GolduckDexEntry::
-	text "Its slim and long"
-	next "limbs end in broad"
-	next "flippers. They"
-
-	page "are used for swim-"
-	next "ming gracefully"
-	next "in lakes"
+	text "날씬하고 긴 손발과 발달한"
+	next "큰 물갈퀴로 호수를"
+	next "우아하게 헤엄친다 "
 	dex
 
 _MankeyDexEntry::
-	text "An agile #MON"
-	next "that lives in"
-	next "trees. It angers"
-
-	page "easily and will"
-	next "not hesitate to"
-	next "attack anything"
+	text "날렵하여 나무 위에서 생활한다"
+	next "사소한 일로 기분이 나빠져서"
+	next "주위에 있는 것에 덤벼든다 "
 	dex
 
 _PrimeapeDexEntry::
-	text "It stops being"
-	next "angry only when"
-	next "nobody else is"
-
-	page "around. To view"
-	next "this moment is"
-	next "very difficult"
+	text "주위에 아무도 없을 때만은"
+	next "화를 내지 않고 있다"
+	next "그러나 그 모습을 보기가 어렵다 "
 	dex
 
 _GrowlitheDexEntry::
-	text "A #MON with a"
-	next "friendly nature."
-	next "However, it will"
-
-	page "bark fiercely at"
-	next "anything invading"
-	next "its territory"
+	text "사람과 쉽게 친해지는 성격이지만"
+	next "영역에 들어온 적에게는"
+	next "거칠게 짖는다 "
 	dex
 
 _ArcanineDexEntry::
-	text "A legendary #-"
-	next "MON in China."
-	next "Many people are"
-
-	page "charmed by its"
-	next "grace and beauty"
-	next "while running"
+	text "중국 전설의 포켓몬"
+	next "가뿐하게 달리는 그 모습에"
+	next "사로잡힌 자도 많다 "
 	dex
 
 _PoliwagDexEntry::
-	text "The direction of"
-	next "the spiral on the"
-	next "belly differs by"
-
-	page "area. It is more"
-	next "adept at swimming"
-	next "than walking"
+	text "배의 소용돌이 방향은"
+	next "태어난 지방에 따라 다른 듯하다"
+	next "걷기보다 헤엄치기를 잘한다 "
 	dex
 
 _PoliwhirlDexEntry::
-	text "Under attack, it"
-	next "uses its belly "
-	next "spiral to put the"
-
-	page "foe to sleep. It"
-	next "then makes its"
-	next "escape"
+	text "공격받으면 배의 소용돌이를 써서"
+	next "상대를 잠들게 만들고"
+	next "그 틈에 도망치는 듯 하다 "
 	dex
 
 _PoliwrathDexEntry::
-	text "Swims powerfully"
-	next "using all the"
-	next "muscles in its"
-
-	page "body. It can even"
-	next "overtake champion"
-	next "swimmers"
+	text "온몸의 근육을 쓰는"
+	next "힘찬 수영으로 올림픽 선수도"
+	next "앞지른다 "
 	dex
 
 _AbraDexEntry::
-	text "Sleeps 18 hours a"
-	next "day. If it senses"
-	next "danger, it will"
-
-	page "teleport itself to"
-	next "safety even as it"
-	next "sleeps"
+	text "하루에 18시간을 잔다"
+	next "위험이 닥치면 자는 상태로"
+	next "순간이동해서 도망친다 "
 	dex
 
 _KadabraDexEntry::
-	text "Many odd things"
-	next "happen if this"
-	next "#MON is close"
-
-	page "by. For example,"
-	next "it makes clocks"
-	next "run backwards"
+	text "윤겔라가 가까이에 있으면"
+	next "시계가 거꾸로 회전하거나"
+	next "이상한 일이 벌어지는 듯 하다 "
 	dex
 
 _AlakazamDexEntry::
-	text "A #MON that can"
-	next "memorize anything."
-	next "It never forgets"
-
-	page "what it learns--"
-	next "that's why this"
-	next "#MON is smart"
+	text "무엇이든 기억할 수 있다"
+	next "경험했던 모든 것을"
+	next "기억할 정도로 머리가 좋다 "
 	dex
 
 _MachopDexEntry::
-	text "Very powerful in"
-	next "spite of its small"
-	next "size. Its mastery"
-
-	page "of many types of"
-	next "martial arts makes"
-	next "it very tough"
+	text "몸은 작지만 힘은 장사"
+	next "게다가 다양한 격투기를"
+	next "마스터해서 매우 강하다 "
 	dex
 
 _MachokeDexEntry::
-	text "The belt around"
-	next "its waist holds"
-	next "back its energy."
-
-	page "Without it, this"
-	next "#MON would be"
-	next "unstoppable"
+	text "허리의 파워 세이브 벨트를"
+	next "벗은 근육몬의 힘을 막는 건"
+	next "아무도 불가능하다 "
 	dex
 
 _MachampDexEntry::
-	text "One arm alone can"
-	next "move mountains."
-	next "Using all four"
-
-	page "arms, this #MON"
-	next "fires off awesome"
-	next "punches"
+	text "4개의 팔을 사용해 강력한"
+	next "펀치를 날린다  한 팔로도"
+	next "산을 움직이게 할 수 있다 "
 	dex
 
 _BellsproutDexEntry::
-	text "Prefers hot and"
-	next "humid places."
-	next "It ensnares tiny"
-
-	page "insects with its"
-	next "vines and devours"
-	next "them"
+	text "온도가 높고 습기가 있는 곳을"
+	next "좋아한다  덩굴을 써서 자그만"
+	next "벌레를 잡아 먹는다 "
 	dex
 
 _WeepinbellDexEntry::
-	text "When hungry, it"
-	next "swallows anything"
-	next "that moves. Its"
-
-	page "hapless prey is"
-	next "melted inside by"
-	next "strong acids"
+	text "배가 고프면 닥치는 대로"
+	next "움직이는 것을 집어삼키고는"
+	next "용해액으로 숨통을 끊는다 "
 	dex
 
 _VictreebelDexEntry::
-	text "Lures prey with"
-	next "the sweet aroma of"
-	next "honey. Swallowed"
-
-	page "whole, the prey is"
-	next "melted in a day,"
-	next "bones and all"
+	text "꿀냄새로 먹잇감을 유혹한다"
+	next "입 안에 들어온 것은 하루만에"
+	next "뼈까지 녹여버린다고 한다 "
 	dex
 
 _TentacoolDexEntry::
-	text "It can sometimes"
-	next "be found all dry"
-	next "and shriveled up"
-
-	page "on a beach. Toss"
-	next "it back into the"
-	next "sea to revive it"
+	text "모래 해변에서 바싹 마른 모습이"
+	next "발견되기도 하지만 물에 적시면"
+	next "부활한다 "
 	dex
 
 _TentacruelDexEntry::
-	text "Its 80 tentacles"
-	next "can stretch and"
-	next "contract freely."
-
-	page "They wrap around"
-	next "prey and weaken"
-	next "it with poison"
+	text "80개의 촉수를 자유롭게"
+	next "신축시켜서 먹잇감에 휘감아"
+	next "독으로 약하게 만든다 "
 	dex
 
 _GeodudeDexEntry::
-	text "Commonly found"
-	next "near mountain"
-	next "trails, etc."
-
-	page "If you step on"
-	next "one by accident,"
-	next "it gets angry"
+	text "산길 등에 많이 서식"
+	next "무심코 밟으면"
+	next "화를 내니 요주의다 "
 	dex
 
 _GravelerDexEntry::
-	text "Often seen rolling"
-	next "down mountain"
-	next "trails. Obstacles"
-
-	page "are just things to"
-	next "roll straight"
-	next "over, not avoid"
+	text "산길을 자주 굴러다닌다"
+	next "지나가는 길에 뭔가가 있어도"
+	next "전혀 신경쓰지 않는다 "
 	dex
 
 _GolemDexEntry::
-	text "Once it sheds its"
-	next "skin, its body"
-	next "turns tender and"
-
-	page "whitish. Its hide"
-	next "hardens when it's"
-	next "exposed to air"
+	text "탈피한 후에는 전체가 하얗고"
+	next "부드럽지만 금방 공기에 닿아"
+	next "단단해진다 "
 	dex
 
 _PonytaDexEntry::
-	text "Capable of jumping"
-	next "incredibly high."
-	next "Its hooves and"
-
-	page "sturdy legs absorb"
-	next "the impact of a"
-	next "hard landing"
+	text "매우 높이 점프한 후"
+	next "착지할 때의 충격은 발굽과"
+	next "다리의 근육으로 완화시킨다 "
 	dex
 
 _RapidashDexEntry::
-	text "Just loves to run."
-	next "If it sees some-"
-	next "thing faster than"
-
-	page "itself, it will"
-	next "give chase at top"
-	next "speed"
+	text "여하튼 달리기를 매우 좋아해서"
+	next "자기보다 빠른 것을 발견하면"
+	next "전속력으로 뒤쫓는다 "
 	dex
 
 _SlowpokeDexEntry::
-	text "Incredibly slow"
-	next "and sluggish. It"
-	next "is quite content"
-
-	page "to loll about"
-	next "without worrying"
-	next "about the time"
+	text "엄청난 얼간이인데다가 움직임도"
+	next "굼뜨다  시간이 흘러가는 줄도"
+	next "모르고 한가롭게 산다 "
 	dex
 
 _SlowbroDexEntry::
-	text "Lives lazily by"
-	next "the sea. If the"
-	next "SHELLDER on its"
-
-	page "tail comes off,"
-	next "it becomes a"
-	next "SLOWPOKE again"
+	text "바다 근처에서 한가롭게 산다"
+	next "만약 꼬리의 셀러가 떨어져버리면"
+	next "야돈으로 돌아간다 "
 	dex
 
 _MagnemiteDexEntry::
-	text "It is born with"
-	next "the ability to"
-	next "defy gravity. It"
-
-	page "floats in air on"
-	next "powerful electro-"
-	next "magnetic waves"
+	text "선천적으로 중력을 차단하는"
+	next "능력을 가졌고 전자파를"
+	next "내뿜으면서 공중을 이동 "
 	dex
 
 _MagnetonDexEntry::
-	text "Generates strange"
-	next "radio signals. It"
-	next "raises the tem-"
-
-	page "perature by 3.6F"
-	next "degrees within"
-	next "3,300 feet"
+	text "알 수 없는 전파를 발신하고"
+	next "있어 반경 1km 범위는 "
+	next "기온이 2도 오른다 "
 	dex
 
 _FarfetchdDexEntry::
-	text "Lives where reedy"
-	next "plants grow. They"
-	next "are rarely seen,"
-
-	page "so it's thought"
-	next "their numbers are"
-	next "decreasing"
+	text "줄기가 자라는 곳에 산다"
+	next "이상하게 수가 적어서 파오리의"
+	next "수도 줄어들기 시작한 모양이다 "
 	dex
 
 _DoduoDexEntry::
-	text "Its short wings"
-	next "make flying dif-"
-	next "ficult. Instead,"
-
-	page "this #MON runs"
-	next "at high speed on"
-	next "developed legs"
+	text "날개는 짧고 하늘을 나는 것은"
+	next "서툴지만 그 대신 발달한 다리로"
+	next "빠르게 달릴 수 있다 "
 	dex
 
 _DodrioDexEntry::
-	text "One of DODUO's 2"
-	next "heads splits to"
-	next "form a unique"
-
-	page "species. It runs"
-	next "close to 40 MPH"
-	next "in prairies"
+	text "두두의 머리 중"
+	next "하나가 분열한 변종"
+	next "초원을 시속 60km로 달린다 "
 	dex
 
 _SeelDexEntry::
-	text "Loves freezing"
-	next "cold conditions."
-	next "Relishes swimming"
-
-	page "in a frigid cli-"
-	next "mate of around 14F"
-	next "degrees"
+	text "얼어붙을 정도로 추운 곳을"
+	next "좋아한다  영하 10도 정도"
+	next "일 때 기분 좋게 헤엄친다 "
 	dex
 
 _DewgongDexEntry::
-	text "Its entire body is"
-	next "a snowy-white."
-	next "Unharmed by even"
-
-	page "intense cold, it"
-	next "swims powerfully"
-	next "in icy waters"
+	text "온몸이 눈처럼 새하얗다"
+	next "추위에 강하고 얼음이 떠다니는"
+	next "바다도 가분좋게 헤엄쳐 다닌다 "
 	dex
 
 _GrimerDexEntry::
-	text "Made of hardened"
-	next "sludge. It smells"
-	next "too putrid to"
-
-	page "touch."
-	next "Even weeds won't"
-	next "grow in its path"
+	text "진흙이 굳어져서 태어났다  냄새가"
+	next "고약해서 만질 수 없고 지나간"
+	next "자리에는 잡초도 안 생긴다 "
 	dex
 
 _MukDexEntry::
-	text "Smells so awful,"
-	next "it can cause"
-	next "fainting. Through"
-
-	page "degeneration, it"
-	next "lost its sense of"
-	next "smell"
+	text "냄새가 아주 고약하다"
+	next "기절할 정도로 강렬하지만 질뻐기는"
+	next "코가 퇴화해서 냄새를 못 맡는다 "
 	dex
 
 _ShellderDexEntry::
-	text "The shell can"
-	next "withstand any"
-	next "attack. However,"
-
-	page "when it is open,"
-	next "the tender body"
-	next "is exposed"
+	text "어떠한 공격에도 견디는"
+	next "딱딱한 껍질이지만 벌어지면"
+	next "말랑한 몸이 노출된다 "
 	dex
 
 _CloysterDexEntry::
-	text "For protection, it"
-	next "uses its harder-"
-	next "than-diamonds"
-
-	page "shell. It also"
-	next "shoots spikes from"
-	next "the shell"
+	text "다이아몬드보다 딱딱한 껍질로"
+	next "방어할 뿐 아니라 몸에 붙은"
+	next "가시를 발사하므로 꽤나 벅차다 "
 	dex
 
 _GastlyDexEntry::
-	text "Said to appear in"
-	next "decrepit, deserted"
-	next "buildings. It has"
-
-	page "no real shape as"
-	next "it appears to be"
-	next "made of a gas"
+	text "낡아서 아무도 살지 않던"
+	next "건물에서 발생하는 듯 하다"
+	next "형체는 애매모호한 가스 같다 "
 	dex
 
 _HaunterDexEntry::
-	text "By licking, it"
-	next "saps the victim's"
-	next "life. It causes"
-
-	page "shaking that won't"
-	next "stop until the"
-	next "victim's demise"
+	text "혀로 핥아서 목숨을 빨아간다"
+	next "몸의 떨림이 멈추지 않게 되고"
+	next "이윽고 죽음에 이르게 된다고 한다"
 	dex
 
 _GengarDexEntry::
-	text "A GENGAR is close"
-	next "by if you feel a"
-	next "sudden chill."
-
-	page "It may be trying"
-	next "to lay a curse"
-	next "on you"
+	text "갑자기 한기를 느낄 때면"
+	next "팬텀이 가까이에 있다"
+	next "혹시 저주를 걸지도 모른다 "
 	dex
 
 _OnixDexEntry::
-	text "Burrows at high"
-	next "speed in search"
-	next "of food. The"
-
-	page "tunnels it leaves"
-	next "are used as homes"
-	next "by DIGLETTs"
+	text "땅속을 엄청난 기세로 뚫고"
+	next "나아가며 먹이를 찾는다  지나간"
+	next "곳은 디그다의 보금자리가 된다 "
 	dex
 
 _DrowzeeDexEntry::
-	text "If you sleep by"
-	next "it all the time,"
-	next "it will sometimes"
-
-	page "show you dreams"
-	next "it has eaten in"
-	next "the past"
+	text "항상 같이 잠을 자 보면"
+	next "때때로 옛날에 먹었던 꿈을"
+	next "보여주는 경우가 있다 "
 	dex
 
 _HypnoDexEntry::
-	text "Avoid eye contact"
-	next "if you come across"
-	next "one. It will try"
-
-	page "to put you to"
-	next "sleep by using"
-	next "its pendulum"
+	text "무심코 마주쳤을 때 눈을"
+	next "돌리지 않으면 위험하다"
+	next "손에 든 추로 잠재워 버린다 "
 	dex
 
 _KrabbyDexEntry::
-	text "Its pincers are"
-	next "superb weapons."
-	next "They sometimes"
-
-	page "break off during"
-	next "battle, but they"
-	next "grow back fast"
+	text "강력한 무기인 집게는 공격할 때"
+	next "아주 가끔씩 떨어져 나가지만"
+	next "나중에 금방 자라난다 "
 	dex
 
 _KinglerDexEntry::
-	text "One claw grew"
-	next "massively and as"
-	next "hard as steel."
-
-	page "It has 10,000-HP"
-	next "strength. However,"
-	next "it is too heavy"
+	text "한쪽만 거대해진 집게는"
+	next "강철처럼 단단하고 1만 마력을"
+	next "지녔으나 너무 무겁다 "
 	dex
 
 _VoltorbDexEntry::
-	text "It is said to"
-	next "camouflage itself"
-	next "as a # BALL. It"
-
-	page "will self-destruct"
-	next "with very little"
-	next "stimulus"
+	text "몬스터볼과 똑 닮은 이유는"
+	next "보호색을 위해서라고 일컬어지지만"
+	next "의외로 간단히 자폭한다 "
 	dex
 
 _ElectrodeDexEntry::
-	text "Stores electrical"
-	next "energy inside its"
-	next "body. Even the"
-
-	page "slightest shock"
-	next "could trigger a"
-	next "huge explosion"
+	text "조금이라도 충격을 받으면"
+	next "체내의 전기 에너지가 넘쳐서"
+	next "폭발해 버린다 "
 	dex
 
 _ExeggcuteDexEntry::
-	text "The heads attract"
-	next "each other and"
-	next "spin around."
-
-	page "There must be 6"
-	next "heads for it to"
-	next "maintain balance"
+	text "알 하나하나가 서로를"
+	next "끌어당겨서 회전하고 있다"
+	next "6개가 아니면 안정되지 않는다 "
 	dex
 
 _ExeggutorDexEntry::
-	text "Its cries are very"
-	next "noisy. This is"
-	next "because each of"
-
-	page "the 3 heads thinks"
-	next "about whatever it"
-	next "likes"
+	text "울음소리가 명랑한 이유는"
+	next "머리 3개가 각자 좋아하는 일을"
+	next "생각하고 있기 때문이다 "
 	dex
 
 _CuboneDexEntry::
-	text "Wears the skull"
-	next "of its deceased"
-	next "mother. Its cries"
-
-	page "echo inside the"
-	next "skull and come out"
-	next "as a sad melody"
+	text "죽은 어머니의 뼈를 썼다"
+	next "울음소리는 뼈 안에서 울려서"
+	next "구슬픈 멜로디가 된다 "
 	dex
 
 _MarowakDexEntry::
-	text "Small and weak,"
-	next "this #MON is"
-	next "adept with its"
-
-	page "bone club. It has"
-	next "grown more vicious"
-	next "over the ages"
+	text "몸집은 작고 약했었지만 뼈를"
+	next "능숙하게 다루며 싸우는"
+	next "흉포한 성격이 되었다 "
 	dex
 
 _HitmonleeDexEntry::
-	text "When kicking, the"
-	next "sole of its foot"
-	next "turns as hard as"
-
-	page "a diamond on im-"
-	next "pact and destroys"
-	next "its enemy"
+	text "킥이 맞은 순간!"
+	next "발바닥이 다이아몬드처럼"
+	next "단단해져 상대를 파괴한다 "
 	dex
 
 _HitmonchanDexEntry::
-	text "Punches in cork-"
-	next "screw fashion. It"
-	next "can punch its way"
-
-	page "through a concrete"
-	next "wall in the same"
-	next "way as a drill"
+	text "비틀어 넣는 듯한 펀치 공격!"
+	next "콘크리트 벽이 드릴 모양으로"
+	next "깎여나가 구멍이 뚫린다 "
 	dex
 
 _LickitungDexEntry::
-	text "Its tongue spans"
-	next "almost 7 feet and"
-	next "moves more freely"
-
-	page "than its forelegs."
-	next "Its licks can"
-	next "cause paralysis"
+	text "2미터나 되는 긴 혀는 앞발보다"
+	next "자유자재로 움직일 수 있다"
+	next "핥이면 어째선지 마비된다 "
 	dex
 
 _KoffingDexEntry::
-	text "In hot places, its"
-	next "internal gases"
-	next "could expand and"
-
-	page "explode without"
-	next "any warning. Be"
-	next "very careful!@@"
+	text "더울 때에는 몸 안의"
+	next "가스가 팽창해서 파열할"
+	next "위험성도 있으니 주의하자 "
+	dex
 
 _WeezingDexEntry::
-	text "It lives and grows"
-	next "by absorbing dust,"
-	next "germs and poison"
-
-	page "gases that are"
-	next "contained in toxic"
-	next "waste and garbage"
+	text "쓰레기 속에 함유된"
+	next "독가스 세균 먼지를"
+	next "흡수하며 살아간다 "
 	dex
 
 _RhyhornDexEntry::
-	text "A #MON with a"
-	next "one-track mind."
-	next "Once it charges, "
-
-	page "it won't stop"
-	next "running until it"
-	next "falls asleep"
+	text "단세포라서 한 가지 일밖에"
+	next "생각할 수 없다  돌진을 시작하면"
+	next "잠들 때까지 멈추지 않는다 "
 	dex
 
 _RhydonDexEntry::
-	text "Walks on its hind"
-	next "legs. Shows signs"
-	next "of intelligence."
-
-	page "Its armor-like"
-	next "hide even repels"
-	next "molten lava"
+	text "뒷다리만으로 걸을 수 있게"
+	next "되어 지능이 발달했다  갑옷같은"
+	next "피부는 마그마도 견딜 수 있다 "
 	dex
 
 _ChanseyDexEntry::
-	text "A gentle and kind-"
-	next "hearted #MON"
-	next "that shares its"
-
-	page "nutritious eggs"
-	next "if it sees an"
-	next "injured #MON"
+	text "상처입은 자를 발견하면"
+	next "영양 만점의 알을 나누어"
+	next "주는 다정한 포켓몬 "
 	dex
 
 _TangelaDexEntry::
-	text "Its identity is"
-	next "obscured by masses"
-	next "of thick, blue"
-
-	page "vines. The vines"
-	next "are said to never"
-	next "stop growing"
+	text "몸이 파란 덩굴로 뒤덮여서"
+	next "정체를 알 수 없다"
+	next "덩굴은 평생 자라난다고 한다 "
 	dex
 
 _KangaskhanDexEntry::
-	text "Raises its young"
-	next "in its belly"
-	next "pouch. Won't run"
-
-	page "from any fight"
-	next "to keep its young"
-	next "protected"
+	text "배의 주머니에서 새끼를 기른다"
+	next "새끼를 지키기 위해서라면"
+	next "어떤 상대라도 맞서 싸운다 "
 	dex
 
 _HorseaDexEntry::
-	text "If it senses any"
-	next "danger, it will"
-	next "vigorously spray"
-
-	page "water or a special"
-	next "type of ink from"
-	next "its mouth"
+	text "신변에 위험을 느꼈을 때에는"
+	next "입에서 물이나 특수한 먹물을"
+	next "힘차게 내뱉는다 "
 	dex
 
 _SeadraDexEntry::
-	text "Touching the back"
-	next "fin causes numb-"
-	next "ness. It hooks"
-
-	page "its tail to coral"
-	next "to stay in place"
-	next "while sleeping"
+	text "등지느러미를 건드리면 마비돼버린다"
+	next "잘 때에는 떠내려가지 않도록"
+	next "꼬리를 산호에 휘감는다 "
 	dex
 
 _GoldeenDexEntry::
-	text "When it is time"
-	next "for them to lay"
-	next "eggs, they can be"
-
-	page "seen swimming up"
-	next "rivers and falls"
-	next "in large groups"
+	text "알을 낳는 시기가 되면"
+	next "강이나 폭포를 오르는"
+	next "콘치 집단의 모습이 발견된다 "
 	dex
 
 _SeakingDexEntry::
-	text "It is the male's"
-	next "job to make a"
-	next "nest by carving"
-
-	page "out boulders in a"
-	next "stream using the"
-	next "horn on its head"
+	text "머리의 뿔로 강바닥에 있는"
+	next "바위를 파헤쳐 집을 만드는 것은"
+	next "수컷의 역할이다 "
 	dex
 
 _StaryuDexEntry::
-	text "As long as the"
-	next "center section is"
-	next "unharmed, it can"
-
-	page "grow back fully"
-	next "even if it is"
-	next "chopped to bits"
+	text "몸의 중심 부분만 남아있으면"
+	next "아무리 잘게 썰려도"
+	next "재생한다고 한다 "
 	dex
 
 _StarmieDexEntry::
-	text "The center section"
-	next "is named the core."
-	next "People think it"
-
-	page "is communicating"
-	next "when it glows in"
-	next "7 colors"
+	text "코어라고 불리는 중심부분이 일곱"
+	next "빛깔로 빛나는 이유는 통신하고"
+	next "있기 때문이라고 일컬어진다 "
 	dex
 
 _MrMimeDexEntry::
-	text "Always practices"
-	next "its pantomime act."
-	next "It makes enemies"
-
-	page "believe something"
-	next "exists that"
-	next "really doesn't"
+	text "팬터마임이 특기로 항상 연습한다 "
+	next "없는 것이라도 그곳에"
+	next "있다고 믿어버리게 만든다 "
 	dex
 
 _ScytherDexEntry::
-	text "Leaps out of tall"
-	next "grass and slices"
-	next "prey with its"
-
-	page "scythes. The move-"
-	next "ment looks like"
-	next "that of a ninja"
+	text "풀숲에서 갑자기 튀어나와"
+	next "날카로운 낫으로 베는 모습은"
+	next "마치 닌자 같다 "
 	dex
 
 _JynxDexEntry::
-	text "Appears to move"
-	next "to a rhythm of"
-	next "its own, as if it"
-
-	page "were dancing. It"
-	next "wiggles its hips"
-	next "as it walks"
+	text "독특한 리듬을 띤 것처럼 춤추듯"
+	next "경쾌하게 움직이며 허리를"
+	next "흔들듯이 걷는다 "
 	dex
 
 _ElectabuzzDexEntry::
-	text "If a major power"
-	next "outage occurs, it"
-	next "is certain that"
-
-	page "this #MON has"
-	next "eaten electricity"
-	next "at a power plant"
+	text "큰 정전이 일어났을 때에는"
+	next "에레브가 발전소의 전기를"
+	next "먹은 게 틀림없다 "
 	dex
 
 _MagmarDexEntry::
-	text "Born in an active"
-	next "volcano. Its body"
-	next "is always cloaked"
-
-	page "in flames, so it"
-	next "looks like a big"
-	next "ball of fire"
+	text "화산의 분화구에서 태어났다"
+	next "온몸이 불타고 있기 때문에"
+	next "불덩어리와 구분이 안 된다 "
 	dex
 
 _PinsirDexEntry::
-	text "Grips its prey in"
-	next "its pincers and"
-	next "squeezes hard! It"
-
-	page "can't move if it's"
-	next "cold, so it lives"
-	next "in warm places"
+	text "뿔로 끼워서 파워 전개!"
+	next "추워지면 움직일 수 없게 되기"
+	next "때문에 따뜻한 곳에 살고 있다 "
 	dex
 
 _TaurosDexEntry::
-	text "A rowdy #MON"
-	next "with a lot of"
-	next "stamina. Once"
-
-	page "running, it won't"
-	next "stop until it hits"
-	next "something"
+	text "스태미너가 넘쳐나는 난봉꾼"
+	next "한번 달리기 시작하면 몸통박치기를"
+	next "할 때까지 끝없이 돌진한다 "
 	dex
 
 _MagikarpDexEntry::
-	text "Famous for being"
-	next "very unreliable."
-	next "It can be found"
-
-	page "swimming in seas,"
-	next "lakes, rivers and"
-	next "shallow puddles"
+	text "도움이 안 되기로 유명한 포켓몬 "
+	next "바다 강 연못 물웅덩이"
+	next "가는 곳마다 헤엄치고 있다 "
 	dex
 
 _GyaradosDexEntry::
-	text "Brutally vicious"
-	next "and enormously"
-	next "destructive."
-
-	page "Known for totally"
-	next "destroying cities"
-	next "in ancient times"
+	text "야만적이고 파괴성을 띈 성격"
+	next "먼 옛날 마을을 불태웠다는"
+	next "기록이 있는 공포의 포켓몬 "
 	dex
 
 _LaprasDexEntry::
-	text "A gentle soul that"
-	next "can read the minds"
-	next "of people. It can"
-
-	page "ferry people"
-	next "across the sea on"
-	next "its back"
+	text "인간의 말을 이해하는 다정한"
+	next "성격의 포켓몬이다  사람을 등에"
+	next "태우고 바다를 나아간다 "
 	dex
 
 _DittoDexEntry::
-	text "When it spots an"
-	next "enemy, its body"
-	next "transfigures into"
-
-	page "an almost perfect"
-	next "copy of its oppo-"
-	next "nent"
+	text "상대를 본 순간 몸이 녹는"
+	next "것처럼 변화하기 시작한다"
+	next "거의 똑같은 모습으로 변신한다 "
 	dex
 
 _EeveeDexEntry::
-	text "Its genetic code"
-	next "is unstable, so it"
-	next "could evolve in"
-
-	page "a variety of ways."
-	next "There are only a"
-	next "few alive"
+	text "언밸런스한 유전자에 의해"
+	next "진화의 가능성이 넘쳐흐른다"
+	next "단 생존한 수가 적다 "
 	dex
 
 _VaporeonDexEntry::
-	text "Its cell structure"
-	next "is similar to"
-	next "water molecules."
-
-	page "It will melt away"
-	next "and become invis-"
-	next "ible in water"
+	text "세포조직이 물 분자와 비슷하기"
+	next "때문에 물에 녹아들면 모습이"
+	next "보이지 않게 돼버린다 "
 	dex
 
 _JolteonDexEntry::
-	text "A sensitive #-"
-	next "MON that easily"
-	next "becomes sad or"
-
-	page "angry. Every time"
-	next "its mood changes,"
-	next "it charges power"
+	text "약간의 자극으로 울거나"
+	next "화내거나 한다  또한 감정이"
+	next "바뀔 때마다 전기가 모인다 "
 	dex
 
 _FlareonDexEntry::
-	text "It has a flame"
-	next "chamber inside its"
-	next "body. It inhales,"
-
-	page "then blows out"
-	next "fire that is over"
-	next "3,000F degrees"
+	text "체내에 불꽃 주머니가 있어서"
+	next "들이마신 숨을 1700도의"
+	next "불꽃으로 바꿔 입에서 내뿜는다 "
 	dex
 
 _PorygonDexEntry::
-	text "The only #MON"
-	next "people anticipate"
-	next "can fly into"
-
-	page "space. None has"
-	next "managed the feat"
-	next "yet, however"
+	text "유일하게 우주까지 날아갈"
+	next "포켓몬으로 기대되고 있지만"
+	next "성공 사례는 아직 없다 "
 	dex
 
 _OmanyteDexEntry::
-	text "An ancient #MON"
-	next "that was recovered"
-	next "from a fossil. It"
-
-	page "swims by cleverly"
-	next "twisting its 10"
-	next "tentacles about"
+	text "10개의 다리를 능숙하게 굽히며"
+	next "고대의 바다를 헤엄친 포켓몬의"
+	next "화석을 복원시켰다 "
 	dex
 
 _OmastarDexEntry::
-	text "Sharp beaks ring"
-	next "its mouth. Its"
-	next "shell was too big"
-
-	page "for it to move"
-	next "freely, so it"
-	next "became extinct"
+	text "날카로운 이빨을 지녔으나"
+	next "껍질이 너무 커서 움직이지"
+	next "못하고 멸종한 듯 싶다 "
 	dex
 
 _KabutoDexEntry::
-	text "A #MON that was"
-	next "recovered from a"
-	next "fossil. It uses"
-
-	page "the eyes on its"
-	next "back while hiding"
-	next "on the sea floor"
+	text "화석에서 되살아난 포켓몬"
+	next "해저에 숨은 뒤에는 등에 달린"
+	next "눈으로 주변을 살폈던 듯싶다 "
 	dex
 
 _KabutopsDexEntry::
-	text "A slim and fast"
-	next "swimmer. It slices"
-	next "its prey with its"
-
-	page "sharp sickles and"
-	next "drinks the body"
-	next "fluids"
+	text "날렵한 몸으로 재빠르게 헤엄친다"
+	next "잡은 먹이는 낫으로 베어"
+	next "체액을 빨아들이는 듯하다 "
 	dex
 
 _AerodactylDexEntry::
-	text "A savage #MON"
-	next "that died out in"
-	next "ancient times. It"
-
-	page "was resurrected"
-	next "using DNA taken"
-	next "from amber"
+	text "호박에서 추출한 유전자를"
+	next "연구해서 부활시킨 오랜 옛날의"
+	next "사나운 포켓몬 "
 	dex
 
 _SnorlaxDexEntry::
-	text "Will eat anything,"
-	next "even if the food"
-	next "happens to be a"
-
-	page "little moldy. It"
-	next "never gets an"
-	next "upset stomach"
+	text "다소 곰팡이가 펴 있어도"
+	next "신경쓰지 않고 계속 먹는다"
+	next "배탈 나지도 않는다 "
 	dex
 
 _ArticunoDexEntry::
-	text "A legendary bird"
-	next "#MON. It"
-	next "freezes water"
-
-	page "that is contained"
-	next "in winter air and"
-	next "makes it snow"
+	text "겨울 하늘의 공기 중에 있는"
+	next "수분을 얼려 눈을 내리게"
+	next "만드는 전설의 새 포켓몬 "
 	dex
 
 _ZapdosDexEntry::
-	text "This legendary"
-	next "bird #MON is"
-	next "said to appear"
-
-	page "when the sky turns"
-	next "dark and lightning"
-	next "showers down"
+	text "하늘이 어두워지고 벼락이"
+	next "연속으로 떨어진 뒤에야"
+	next "전설의 포켓몬은 나타난다 "
 	dex
 
 _MoltresDexEntry::
-	text "A legendary bird"
-	next "#MON. As it"
-	next "flaps its flaming"
-
-	page "wings, even the"
-	next "night sky will"
-	next "turn red"
+	text "밤하늘마저 빨갛게 물들일 만큼"
+	next "세차게 타오르는 날개로"
+	next "나는 전설의 새 포켓몬 "
 	dex
 
 _DratiniDexEntry::
-	text "The existence of"
-	next "this mythical"
-	next "#MON was only"
-
-	page "recently confirmed"
-	next "by a fisherman"
-	next "who caught one"
+	text "오랫동안 환상이라고 여겨졌지만"
+	next "최근 낚시로 잡혀서"
+	next "그 존재가 확인되었다 "
 	dex
 
 _DragonairDexEntry::
-	text "According to a"
-	next "witness, its body"
-	next "was surrounded by"
-
-	page "a strange aura"
-	next "that gave it a"
-	next "mystical look"
+	text "목격한 사람의 말에 따르면"
+	next "몸에서 오라가 나와서"
+	next "신비적이라고 한다 "
 	dex
 
 _DragoniteDexEntry::
-	text "It is said that"
-	next "this #MON lives"
-	next "somewhere in the"
-
-	page "sea and that it"
-	next "flies. However, it"
-	next "is only a rumor"
+	text "넓은 바다 어딘가를 거처로 삼아"
+	next "날아 이동한다고 하지만"
+	next "어디까지나 소문에 지나지 않는다 "
 	dex
 
 _MewtwoDexEntry::
-	text "Its DNA is almost"
-	next "the same as MEW's."
-	next "However, its size"
-
-	page "and disposition"
-	next "are vastly dif-"
-	next "ferent"
+	text "뮤와 유전자가 완전 같다"
+	next "하지만 크기도 성격도"
+	next "무서울 정도로 다르다 "
 	dex
 
 _MewDexEntry::
-	text "When viewed"
-	next "through a micro-"
-	next "scope, this"
-
-	page "#MON's short,"
-	next "fine, delicate"
-	next "hair can be seen"
+	text "현미경으로 관찰하면"
+	next "짧고 잘 정돈됐으며"
+	next "우아한 털을 볼 수 있다 "
 	dex

@@ -1,32 +1,30 @@
 _ViridianMartText1::
-	text "Okay! Say hi to"
-	line "PROF.OAK for me!"
+	text "좋았어!"
+	line "오박사님에게 안부 좀 전해주렴!"
 	done
 
 _ViridianMartText4::
-	text "Hey! You came from"
-	line "PALLET TOWN?"
+	text "이봐!"
+	line "태초마을에서 온거야?"
 	done
 
 ViridianMartParcelQuestText::
-	text "You know PROF."
-	line "OAK, right?"
+	text "너 오박사님하고"
+	line "아는사이 맞지?"
 
-	para "His order came in."
-	line "Will you take it"
-	cont "to him?"
+	para "오박사님 주문하신건데"
+	line "이걸 전달해줄수 있겠니?"
 
-	para $52, " got"
-	line "OAK's PARCEL!@@"
+	para $52, "는(은)"
+	line "오박사의 소포를 얻었다!@@"
 
 _ViridianMartText2::
-	text "This shop sells a"
-	line "lot of PARLYZ"
-	cont "HEALs."
+	text "이 프렌들리숍에서는"
+	line "각종 상태이상 치료제를"
+	cont "팔고 있어"
 	done
 
 _ViridianMartText3::
-	text "The shop finally"
-	line "has some POTIONs"
-	cont "in stock."
+	text "프렌들리숍에 마침"
+	line "상처약 재고가 약간 있네"
 	done

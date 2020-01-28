@@ -22,7 +22,7 @@ _DisplayDiploma:
 	ld [hl], a
 
 	ld de, String_e9a73
-	coord hl, 5, 2
+	coord hl, 7, 2
 	call PlaceString
 
 	ld de, String_e9a7d
@@ -30,11 +30,11 @@ _DisplayDiploma:
 	call PlaceString
 
 	ld de, wPlayerName
-	coord hl, 10, 4
+	coord hl, 8, 4
 	call PlaceString
 
 	ld de, String_e9a84
-	coord hl, 2, 6
+	coord hl, 3, 6
 	call PlaceString
 
 	ld de, String_e9ac8
@@ -50,20 +50,19 @@ _DisplayDiploma:
 	ret
 
 String_e9a73:
-	db $10, "Diploma", $10, "@"
+	db $10, "표창장", $10, "@"
 
 String_e9a7d:
-	db "Player@"
+	db "플레이어 님@"
 
 String_e9a84:
-	db   "Congrats! This"
-	next "diploma certifies"
-	next "that you have"
-	next "completed your"
-	next "#DEX.@"
+	db   "포켓몬 도감을"
+	next "훌륭하게 완성시킨"
+	next "위대한 공로를 칭찬하며"
+	next "여기에 증명하겠습니다@"
 
 String_e9ac8:
-	db "GAME FREAK@"
+	db "게임 프리크@"
 
 Func_e9ad3:
 	call ClearScreen
@@ -140,7 +139,7 @@ TileMap_e9bc1:
 	db $7f, $78, $11, $12, $13
 	db $7f, $7f, $14, $15, $7f
 
-String_e9bd5:  db "PLAY TIME@"
+String_e9bd5:  db "플레이 시간@"
 
 Func_e9bdf:
 	ld c, 10

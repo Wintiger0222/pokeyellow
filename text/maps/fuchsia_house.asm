@@ -1,27 +1,25 @@
 _FuchsiaHouse1Text1::
-	text "SAFARI ZONE's"
-	line "WARDEN is old,"
-	cont "but still active!"
+	text "사파리존의 관리인은"
+	line "그 연세에도 불구하고"
+	cont "정말 정정해!"
 
-	para "All his teeth are"
-	line "false, though."
+	para "이빨이 몽땅"
+	line "빠지긴 했지만"
 	done
 
 _FuchsiaHouse1Text2::
-	text "Hmm? You've met"
-	line "BILL?"
+	text "흠? 자네"
+	line "이수재를 만난적이 있는겐가?"
 
-	para "He's my grandson!"
+	para "걔는 내 손자라네!"
 
-	para "He always liked"
-	line "collecting things"
-	cont "even as a child!"
+	para "언제나 수집하는걸 좋아해서"
+	line "그럴때는 정말 아이같지!"
 	done
 
 _FuchsiaHouse1Text3::
-	text "BILL files his"
-	line "own #MON data"
-	cont "on his PC!"
+	text "이수재는 자신의"
+	line "포켓몬을 컴퓨터에 쌓아두지!"
 
-	para "Did he show you?"
+	para "그 애가 너한테 보여줬니?"
 	done

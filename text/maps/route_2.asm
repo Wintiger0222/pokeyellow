@@ -1,9 +1,9 @@
 _Route2Text3::
-	text "ROUTE 2"
-	line "VIRIDIAN CITY -"
-	cont "PEWTER CITY"
+	text "이곳은 2번 도로"
+	line "상록시티 …… 회색시티"
 	done
 
 _Route2Text4::
-	text "DIGLETT's CAVE"
+	text "디그다의 굴"
 	done
+

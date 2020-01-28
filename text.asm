@@ -8,35 +8,35 @@ INCLUDE "hram.asm"
 SECTION "Text 1", ROMX ; BANK $26
 
 _CardKeySuccessText1::
-	text "Bingo!@@"
+	text "딩동!@@"
 
 _CardKeySuccessText2::
 	text ""
-	line "The CARD KEY"
-	cont "opened the door!"
+	line "카드키로"
+	cont "문을 열었다!"
 	done
 
 _CardKeyFailText::
-	text "Darn! It needs a"
-	line "CARD KEY!"
+	text "이런!"
+	line "카드키가 필요한것 같다!"
 	done
 
 _TrainerNameText::
 	TX_RAM wcd6d
-	text ": @@"
+	text $0B,$62,"@@"
 
 _NoNibbleText::
-	text "Not even a nibble!"
+	text "아무것도 잡히지 않는다!";낚시관련 시스템 문장
 	prompt
 
 _NothingHereText::
-	text "Looks like there's"
-	line "nothing here."
+	text "이곳에는 아무것도"
+	line "없는 것 같다"
 	prompt
 
 _ItsABiteText::
-	text "Oh!"
-	line "It's a bite!"
+	text "어!"
+	line "뭔가 물었다!"
 	prompt
 
 _ExclamationText::
@@ -44,118 +44,115 @@ _ExclamationText::
 	done
 
 _GroundRoseText::
-	text "Ground rose up"
-	line "somewhere!"
+	text "어디선가"
+	line "지면이 솟아올랐다!"
 	done
 
 _BoulderText::
-	text "This requires"
-	line "STRENGTH to move!"
+	text "커다란 바위지만……"
+	line "포켓몬의 기술로 밀 수 있을지도?"
 	done
 
 _MartSignText::
-	text "All your item"
-	line "needs fulfilled!"
-	cont "#MON MART"
+	text "포켓몬 상품이라면"
+	line "프렌들리숍"
 	done
 
 _PokeCenterSignText::
-	text "Heal Your #MON!"
-	line "#MON CENTER"
+	text "포켓몬의 체력회복!"
+	line "포켓몬 센터"
 	done
 
 _FoundItemText::
-	text "<PLAYER> found"
-	line "@"
+	text $52,"는(은)"
+	line $50; RAW DATA : 	line "@"
 	TX_RAM wcf4b
-	text "!@@"
+	text "를(을)"
+	cont "발견했다!@@"
 
 _NoMoreRoomForItemText::
-	text "No more room for"
-	line "items!"
+	text "이 이상은 들 수"
+	line "없어!"
 	done
 
 _OaksAideHiText::
-	text "Hi! Remember me?"
-	line "I'm PROF.OAK's"
-	cont "AIDE!"
+	text "안녕하세요! 기억하시나요?"
+	line "전 오박사님의 조수예요!"
 
-	para "If you caught @"
+	para "현재 @"
 	TX_NUM hOaksAideRequirement, 1, 3
-	text ""
-	line "kinds of #MON,"
-	cont "I'm supposed to"
-	cont "give you an"
+	text "종류의"
+	line "포켓몬을 잡으셨네요"
+	cont "그런 당신에게!"
+	cont "제가 줄 물건은!"
 	cont "@"
 	TX_RAM wOaksAideRewardItemName
-	text "!"
+	text "입니다!"
 
-	para "So, <PLAYER>! Have"
-	line "you caught at"
-	cont "least @"
+	para $52,"군!"
+	line "이제 당신이 잡아야 할 포켓몬은"
+	cont "@"
 	TX_NUM hOaksAideRequirement, 1, 3
-	text " kinds of"
-	cont "#MON?"
+	text "종류네요!"
 	done
 
 _OaksAideUhOhText::
-	text "Let's see..."
-	line "Uh-oh! You have"
-	cont "caught only @"
+	text "어디보자……"
+	line "오호라!"
+	cont "당신 잡은건 @"
 	TX_NUM hOaksAideNumMonsOwned, 1, 3
-	text ""
-	cont "kinds of #MON!"
+	text "종류의"
+	line "포켓몬이군요!"
 
-	para "You need @"
+	para "제가 물건을 주기 위해서는"
+	line "@"
 	TX_NUM hOaksAideRequirement, 1, 3
-	text " kinds"
-	line "if you want the"
+	text "종류의 포켓몬이"
+	cont "더 필요할거 같네요"
+	cont "그러면 제가"
 	cont "@"
 	TX_RAM wOaksAideRewardItemName
-	text "."
+	text "를(을) 드리죠"
 	done
 
 _OaksAideComeBackText::
-	text "Oh. I see."
+	text "네 알겠습니다"
 
-	para "When you get @"
+	para "@"
 	TX_NUM hOaksAideRequirement, 1, 3
-	text ""
-	line "kinds, come back"
-	cont "for @"
+	text "종류을 도감에 채우면"
+	line "다시 와서"
+	cont "@"
 	TX_RAM wOaksAideRewardItemName
-	text "."
+	text "를(을) 받아가세요"
 	done
 
 _OaksAideHereYouGoText::
-	text "Great! You have"
-	line "caught @"
+	text "놀라워!"
+	line "@"
 	TX_NUM hOaksAideNumMonsOwned, 1, 3
-	text " kinds "
-	cont "of #MON!"
-	cont "Congratulations!"
+	text "종류의 포켓몬을 잡으셨군요!"
+	cont "축하해요!"
 
-	para "Here you go!"
+	para "이걸 받으세요!"
 	prompt
 
 _OaksAideGotItemText::
-	text "<PLAYER> got the"
+	text $52, "은(는)"
 	line "@"
 	TX_RAM wOaksAideRewardItemName
-	text "!@@"
+	text "를(을) 받았다!@@"
 
 _OaksAideNoRoomText::
-	text "Oh! I see you"
-	line "don't have any"
-	cont "room for the"
+	text "아이고!"
+	line "그 이상은 지닐수 없어서"
 	cont "@"
 	TX_RAM wOaksAideRewardItemName
-	text "."
+	text "를(을) 못 받겠는데요"
 	done
 
 _NurseChanseyText::
-	text "CHANSEY: Chaaan"
-	line "sey!"
+	text "럭키『러어어어키!"
 	done
 
 INCLUDE "text/maps/viridian_forest.asm"
@@ -216,1131 +213,1069 @@ INCLUDE "text/maps/seafoam_islands_b4f.asm"
 
 _AIBattleWithdrawText::
 	TX_RAM wTrainerName
-	text " with-"
-	line "drew @"
+	text "는(은)"
+	line "@"
 	TX_RAM wEnemyMonNick
-	text "!"
+	text "를(을)"
+	cont "차례로 꺼냈다"
 	prompt
-
+	
 _AIBattleUseItemText::
 	TX_RAM wTrainerName
-	text ""
-	line "used @"
-	TX_RAM wcd6d
-	text ""
-	cont "on @"
+	text "는(은)"
+	line "@"
 	TX_RAM wEnemyMonNick
-	text "!"
+	text "에게"
+	
+	para "@"
+	TX_RAM wcd6d
+	text "를(을)"
+	line "사용했다!"
 	prompt
 
 _BoxFullTest::
-	text "The BOX is full!"
+	text "박스가 가득찼습니다!"
 	done
 
 _BoxWillBeClearedText::
-	text "The BOX will be"
-	line "cleared."
+	text "박스가 비워집니다"
 	done
 
 _TradeWentToText::
 	TX_RAM wcf4b
-	text " went"
-	line "to @"
+	text "는(은) 무사히"
+	line "@"
 	TX_RAM wGrassRate
-	text "."
+	text "에게 맡겨졌습니다"
 	done
 
 _TradeForText::
-	text "For <PLAYER>'s"
+	text $52,"(이)가"
 	line "@"
 	TX_RAM wcf4b
-	text ","
+	text "를(을) 보내는 대신"
 	done
 
 _TradeSendsText::
 	TX_RAM wGrassRate
-	text " sends"
+	text "는(은)"
 	line "@"
 	TX_RAM wcd6d
-	text "."
+	text "를(을) 줍니다"
 	done
 
 _TradeWavesFarewellText::
 	TX_RAM wGrassRate
-	text " waves"
-	line "farewell as"
+	text "이(가)"
+	line "석별의 정을 아쉬워하며"
 	done
 
 _TradeTransferredText::
 	TX_RAM wcd6d
-	text " is"
-	line "transferred."
+	text "를(을)"
+	line "보냅니다"
 	done
 
 _TradeTakeCareText::
-	text "Take good care of"
-	line "@"
+	text "@"
 	TX_RAM wcd6d
-	text "."
+	text "를(을)"
+	line "귀여워해 주세요"
 	done
 
 _TradeWillTradeText::
+	text "이제부터"
+	line "@"
 	TX_RAM wGrassRate
-	text " will"
-	line "trade @"
+	text "의 @"
 	TX_RAM wcd6d
-	text ""
+	text "과(와)"
 	done
 
 _TradeforText::
-	text "for <PLAYER>'s"
-	line "@"
+	text $52, "의 @"
 	TX_RAM wcf4b
-	text "."
+	text "를(을)"
+	line "교환합니다!"
 	done
 
 _PlaySlotMachineText::
-	text "A slot machine!"
-	line "Want to play?"
+	text "슬롯머신이다!"
+	line "한번 해볼까?"
 	done
 
+
 _OutOfCoinsSlotMachineText::
-	text "Darn!"
-	line "Ran out of coins!"
+	text "동전이"
+	line "다 떨어져버렸다……"
 	done
 
 _BetHowManySlotMachineText::
-	text "Bet how many"
-	line "coins?"
+	text "동전을"
+	line "몇 개 걸겠습니까?"
 	done
 
 _StartSlotMachineText::
-	text "Start!"
+	text "스타트!"
 	done
 
 _NotEnoughCoinsSlotMachineText::
-	text "Not enough"
-	line "coins!"
+	text "동전이 부족합니다!"
 	prompt
 
 _OneMoreGoSlotMachineText::
-	text "One more "
-	line "go?"
+	text "다시한번"
+	line "하겠습니까?"
 	done
 
 _LinedUpText::
-	text " lined up!"
-	line "Scored @"
+	text " (이)가 모였다!"
+	line "동전 @"
 	TX_RAM wcf4b
-	text " coins!"
+	text "개 확보!"
 	done
 
 _NotThisTimeText::
-	text "Not this time!"
+	text "꽝-"
 	prompt
 
 _YeahText::
-	text "Yeah!@@"
+	text "아싸!@@"
 
 _DexSeenOwnedText::
-	text "#DEX   Seen:@"
+	text "발견한 포켓몬 @"
 	TX_NUM wDexRatingNumMonsSeen, 1, 3
 	text ""
-	line "         Owned:@"
+	line "잡은 포켓몬 @"
 	TX_NUM wDexRatingNumMonsOwned, 1, 3
 	db "@"
 
 _DexRatingText::
-	text "#DEX Rating", $6d
+	text "포켓몬 도감의"
+	line "현재 완성도"
+	db	$6d
 	done
 
 _GymStatueText1::
 	TX_RAM wGymCityName
-	text ""
-	line "#MON GYM"
-	cont "LEADER: @"
+	text "포켓몬 체육관"
+	line "관장 @"
 	TX_RAM wGymLeaderName
 	text ""
 
-	para "WINNING TRAINERS:"
-	line "<RIVAL>"
+	para "이긴 트레이너"
+	line $53
 	done
 
 _GymStatueText2::
 	TX_RAM wGymCityName
-	text ""
-	line "#MON GYM"
-	cont "LEADER: @"
+	text "포켓몬 체육관"
+	line "관장 @"
 	TX_RAM wGymLeaderName
 	text ""
 
-	para "WINNING TRAINERS:"
-	line "<RIVAL>"
-	cont "<PLAYER>"
+	para "이긴 트레이너"
+	line $53
+	cont $52
 	done
 
 _ViridianCityPokecenterGuyText::
-	text "#MON CENTERs"
-	line "heal your tired,"
-	cont "hurt or fainted"
-	cont "#MON!"
+	text "포켓몬센터는"
+	line "지치고 다치고 기절한"
+	cont "포켓몬을 치료해줘!"
 	done
 
 _PewterCityPokecenterGuyText::
-	text "Yawn!"
+	text "흐아암!"
 
-	para "When JIGGLYPUFF"
-	line "sings, #MON"
-	cont "get drowsy..."
+	para "푸린이 노래하면"
+	line "포켓몬은 잠들게 되……"
+	cont "……"
 
-	para "...Me too..."
-	line "Snore..."
+	para "……나 역시……"
+	line "드르렁……"
 	done
 
 _CeruleanPokecenterGuyText::
-	text "BILL has lots of"
-	line "#MON!"
+	text "이수재는 많은 포켓몬을"
+	line "가지고 있어"
 
-	para "He collects rare"
-	line "ones too!"
-	done
+	para "희귀 포켓몬도"
+	line "수집하고 있지!"
+	done 
 
 _LavenderPokecenterGuyText::
-	text "CUBONEs wear"
-	line "skulls, right?"
+	text "탕구리가 해골"
+	line "뒤집어 쓰는거 알지 그치?"
 
-	para "People will pay a"
-	line "lot for one!"
+	para "이걸로 대가를 치를"
+	line "사람들이 있지!"
 	done
 
 _MtMoonPokecenterBenchGuyText::
-	text "If you have too"
-	line "many #MON, you"
-	cont "should store them"
-	cont "via PC!"
+	text "데리고 있는 포켓몬이"
+	line "너무 많으면"
+	cont "컴퓨터에 보관해봐!"
 	done
 
 _RockTunnelPokecenterGuyText::
-	text "I heard that"
-	line "GHOSTs haunt"
-	cont "LAVENDER TOWN!"
+	text "보라타운에 유령이"
+	line "나온다고 들었어!"
 	done
 
 _UnusedBenchGuyText1::
-	text "I wish I could"
-	line "catch #MON."
+	text "포켓몬 잡을수 있으면"
+	line "더는 소원이 없겠어"
 	done
 
 _UnusedBenchGuyText2::
-	text "I'm tired from"
-	line "all the fun..."
+	text "신나게 놀다가"
+	line "진 다 빠졌어……"
 	done
 
 _UnusedBenchGuyText3::
-	text "SILPH's manager"
-	line "is hiding in the"
-	cont "SAFARI ZONE."
+	text "실프 주식회사 매니저가"
+	line "사파리존에 숨었다지"
 	done
 
 _VermilionPokecenterGuyText::
-	text "It is true that a"
-	line "higher level"
-	cont "#MON will be"
-	cont "more powerful..."
+	text "포켓몬의 레벨이 높을수록"
+	line "더 강한건 사실이야……"
 
-	para "But, all #MON"
-	line "will have weak"
-	cont "points against"
-	cont "specific types."
+	para "하지만 모든 포켓몬에겐"
+	line "반드시 타입별로 약점이 있어!"
 
-	para "So, there is no"
-	line "universally"
-	cont "strong #MON."
+	para "즉!"
+	line "무적 포켓몬 같은건 없어!"
 	done
 
 _CeladonCityPokecenterGuyText::
-	text "If I had a BIKE,"
-	line "I would go to"
-	cont "CYCLING ROAD!"
+	text "자전거가 생기면,"
+	line "자전거 도로에 갈테야!"
 	done
 
 _FuchsiaCityPokecenterGuyText::
-	text "If you're studying "
-	line "#MON, visit"
-	cont "the SAFARI ZONE."
+	text "포켓몬에 대해서 알고싶으면"
+	line "사파리존에 가보렴"
 
-	para "It has all sorts"
-	line "of rare #MON."
+	para "온갖 희귀 포켓몬들이 있단다"
 	done
 
 _CinnabarPokecenterGuyText::
-	text "#MON can still"
-	line "learn techniques"
-	cont "after canceling"
-	cont "evolution."
+	text "포켓몬은"
+	line "진화를 하지 않아도"
+	cont "기술을 배우는게 가능하단다"
 
-	para "Evolution can wait"
-	line "until new moves"
-	cont "have been learned."
+	para "즉 새로운 기술을 배울때까지"
+	line "진화를 미룰수도 있지"
 	done
 
 _SaffronCityPokecenterGuyText1::
-	text "It would be great"
-	line "if the ELITE FOUR"
-	cont "came and stomped"
-	cont "TEAM ROCKET!"
+	text "사천왕이 와서"
+	line "로켓단 녀석들 짓밟아주면"
+	cont "통쾌할텐데 말이야!"
 	done
 
 _SaffronCityPokecenterGuyText2::
-	text "TEAM ROCKET took"
-	line "off! We can go"
-	cont "out safely again!"
-	cont "That's great!"
+	text "로켓단이 물러났어!"
+	line "전처럼 다시 조용히"
+	cont "지낼수 있다고!!"
+	para "만세!"
 	done
 
 _CeladonCityHotelText::
-	text "My sis brought me"
-	line "on this vacation!"
+	text "누나가 이번 휴가에"
+	line "끌고 와버렸어!"
 	done
 
 _BookcaseText::
-	text "Crammed full of"
-	line "#MON books!"
+	text "포케몬 책들로"
+	line "빼곡하게 박혀있다!"
 	done
 
 _NewBicycleText::
-	text "A shiny new"
-	line "BICYCLE!"
+	text "반짝반짝한"
+	line "새 자전거!"
 	done
 
 _PushStartText::
-	text "Push START to"
-	line "open the MENU!"
+	text "스타트 버튼을 누르자!"
+	line "누르면 메뉴가 뜬다"
 	done
 
 _SaveOptionText::
-	text "The SAVE option is"
-	line "on the MENU"
-	cont "screen."
+	text "세이브를 함에는 포켓몬 레포트"
+	line "자주 쓰면 좋다"
 	done
 
 _StrengthsAndWeaknessesText::
-	text "All #MON types"
-	line "have strong and"
-	cont "weak points"
-	cont "against others."
+	text "모든 타입들은"
+	line "강점뿐만 아니라"
+	cont "다른 타입에 대한"
+	cont "약점이 있습니다"
 	done
 
 _TimesUpText::
-	text "PA: Ding-dong!"
+	text "안내방송『딩동!"
 
-	para "Time's up!"
+	para "시간이 다 됐습니다.!"
 	prompt
 
 _GameOverText::
-	text "PA: Your SAFARI"
-	line "GAME is over!"
+	text "안내방송『사파리 게임이"
+	line "종료됐습니다!"
 	done
 
 _CinnabarGymQuizDummyIntroText::
-	text "#MON Quiz!"
+	text "포켓몬 퀴즈!"
 
-	para "Get it right and"
-	line "the door opens to"
-	cont "the next room!"
+	para "문제를 맞추면 다음방으로"
+	line "가는 문이 열립니다!"
 
-	para "Get it wrong and"
-	line "face a trainer!"
+	para "틀리면"
+	line "트레이너와 마주칩니다!"
 
-	para "If you want to"
-	line "conserve your"
-	cont "#MON for the"
-	cont "GYM LEADER..."
+	para "체육관 관장을 대비해서"
+	line "포켓몬을 아끼고 싶다면……"
 
-	para "Then get it right!"
-	line "Here we go!"
+	para "잘 맞춰서 가면 됩니다!"
+	line "이제 가보세요!"
 	prompt
 
 _CinnabarGymQuizIntroText::
-	text "#MON Quiz!"
+	text "포켓몬 퀴즈!"
 
-	para "Get it right and"
-	line "the door opens to"
-	cont "the next room!"
+	para "문제를 맞추면 다음방으로"
+	line "가는 문이 열립니다!"
 
-	para "Get it wrong and"
-	line "face the trainer"
-	cont "blocking the way!"
+	para "틀리면"
+	line "트레이너와 마주칩니다!"
 
-	para "If you want to"
-	line "conserve your"
-	cont "#MON for the"
-	cont "GYM LEADER..."
+	para "체육관 관장을 대비해서"
+	line "포켓몬을 아끼고 싶다면……"
 
-	para "Then get it right!"
-	line "Here we go!"
+	para "잘 맞춰서 가면 됩니다!"
+	line "이제 가볼까요!"
 	para ""
 	done
 
 _CinnabarGymQuizShortIntroText::
-	text "#MON Quiz!"
+	text "포켓몬 퀴즈!"
 
-	line "Test your skill!"
+	line "스킬 테스트!"
 	para ""
 	done
 
 _CinnabarQuizQuestionsText1::
-	text "CATERPIE evolves"
-	line "into BUTTERFREE?"
+	text "캐터피는"
+	line "버터플로 진화할까요?"
 	done
 
 _CinnabarQuizQuestionsText2::
-	text "There are 9"
-	line "certified #MON"
-	cont "LEAGUE BADGEs?"
+	text "포켓몬 리그에 인증된 배지는"
+	line "9개일까요?"
 	done
 
 _CinnabarQuizQuestionsText3::
-	text "POLIWAG evolves 3"
-	line "times?"
+	text "발챙이가 진화하는건"
+	line "3종류 일까요?"
 	done
 
 _CinnabarQuizQuestionsText4::
-	text "Are thunder moves"
-	line "effective against"
-	cont "ground element-"
-	cont "type #MON?"
+	text "공격기술인 번개는 땅타입"
+	line "포켓몬에게 효과가 있을까요?"
 	done
 
 _CinnabarQuizQuestionsText5::
-	text "#MON of the"
-	line "same kind and"
-	cont "level are not"
-	cont "identical?"
+	text "포켓몬 종류와 레벨이 같으면"
+	line "힘도 똑같을까요?"
 	done
 
 _CinnabarQuizQuestionsText6::
-	text "TM28 contains"
-	line "TOMBSTONER?"
+	text "기술머신28에 있는 기술은"
+	line "툼스토너 인가요?"
 	done
 
 _CinnabarGymQuizCorrectText::
-	text "You're absolutely"
-	line "correct!"
+	text "누가 뭐라해도"
+	line "정답입니다!"
 
-	para "Go on through!@@"
+	para "이쪽으로!@@"
 
 _CinnabarGymQuizIncorrectText::
-	text "Sorry! Bad call!"
+	text "죄송합니다!"
+	line "오답입니다!"
 	prompt
 
 _MagazinesText::
-	text "#MON magazines!"
+	text "포켓몬 잡지들!"
 
-	para "#MON notebooks!"
+	para "포켓몬 노트북들!"
 
-	para "#MON graphs!"
+	para "포켓몬 도표들!"
 	done
 
 _BillsHouseMonitorText::
-	text "TELEPORTER is"
-	line "displayed on the"
-	cont "PC monitor."
+	text "컴퓨터 모니터에"
+	line "전송장치가 켜져있다"
 	done
 
 _BillsHouseInitiatedText::
-	text "<PLAYER> initiated"
-	line "TELEPORTER's Cell"
-	cont "Separator!@@"
+	text $52, "는(은)"
+	line "전송장치의 세포 분리기를"
+	cont "작동시켰다!@@"
 
 _BillsHousePokemonListText1::
-	text "BILL's favorite"
-	line "#MON list!"
+	text "이수재가 좋아하는"
+	line "포켓몬 리스트!"
 	prompt
 
 _BillsHousePokemonListText2::
-	text "Which #MON do"
-	line "you want to see?"
+	text "어떤 포켓몬을"
+	line "보시겠습니까?"
 	done
 
 _OakLabEmailText::
-	text "There's an e-mail"
-	line "message here!"
+	text "이메일 메시지가"
+	line "있다!"
 
-	para "..."
+	para "…… …… ……"
 
-	para "Calling all"
-	line "#MON trainers!"
+	para "모든 포켓몬 트레이너들의 소명!"
+	;calling이 소명이긴 한데 문맥상 소망으로 선택했습니다. 
 
-	para "The elite trainers"
-	line "of #MON LEAGUE"
-	cont "are ready to take"
-	cont "on all comers!"
+	para "포켓몬 리그의 엘리트 트레이너들은"
+	line "어떤 도전가든지 기다리고 있다!"
 
-	para "Bring your best"
-	line "#MON and see"
-	cont "how you rate as a"
-	cont "trainer!"
 
-	para "#MON LEAGUE HQ"
-	line "INDIGO PLATEAU"
+	para "최정예 포켓몬을 데려가서"
+	line "트레이너로써 어떻게 각성할지 볼것!"
 
-	para "PS: PROF.OAK,"
-	line "please visit us!"
-	cont "..."
+
+	para "포켓몬 리그"
+	line "석영고원"
+
+	para "추신. 우리한테 좀 들릴것!"
+	line "오박사가……"
 	done
 
 _GameCornerCoinCaseText::
-	text "A COIN CASE is"
-	line "required!"
+	text "동전케이스가"
+	line "필요합니다!"
 	done
 
 _GameCornerNoCoinsText::
-	text "You don't have"
-	line "any coins!"
+	text "동전이"
+	line "하나도 없습니다!"
 	done
 
 _GameCornerOutOfOrderText::
-	text "OUT OF ORDER"
-	line "This is broken."
+	text "한정가챠"
+	line "이건 망가졌다"
 	done
 
 _GameCornerOutToLunchText::
-	text "OUT TO LUNCH"
-	line "This is reserved."
+	text "점심식사 중이예요"
+	line "이 자리는 예약이 되었다."
 	done
 
 _GameCornerSomeonesKeysText::
-	text "Someone's keys!"
-	line "They'll be back."
+	text "누군가의 열쇠다!"
+	line "곧 돌아올것 같다"
 	done
 
 _JustAMomentText::
-	text "Just a moment."
+	text "잠시만요"
 	done
 
 TMNotebookText::
-	text "It's a pamphlet"
-	line "on TMs."
+	text "기술머신"
+	line "팜플렛입니다"
 
-	para "..."
+	para "…… …… …… ……"
 
-	para "There are 50 TMs"
-	line "in all."
+	para "기술머신은 모두"
+	line "50종이 있습니다"
 
-	para "There are also 5"
-	line "HMs that can be"
-	cont "used repeatedly."
+	para "5개의 비전머신들은"
+	line "몇번이고 사용이 가능합니다"
 
-	para "SILPH CO.@@"
+	para "실프주식회사@@"
 
 _TurnPageText::
-	text "Turn the page?"
+	text "페이지를 넘기겠습니까?"
 	done
 
 _ViridianSchoolNotebookText5::
-	text "GIRL: Hey! Don't"
-	line "look at my notes!@@"
+	text "소녀『거기 너!"
+	line "내 노트 보면 안 돼!@@"
 
 _ViridianSchoolNotebookText1::
-	text "Looked at the"
-	line "notebook!"
+	text "노트를"
+	line "들여다 보았다!"
 
-	para "First page..."
+	para "……첫번째 페이지"
 
-	para "# BALLs are"
-	line "used to catch"
-	cont "#MON."
+	para "몬스터볼은"
+	line "포켓몬을 잡을때 쓴다"
 
-	para "Up to 6 #MON"
-	line "can be carried."
+	para "최대 6마리까지"
+	line "데리고 다닐수 있다"
 
-	para "People who raise"
-	line "and make #MON"
-	cont "fight are called"
-	cont "#MON trainers."
+	para "포켓몬을 키우며 싸우는"
+	line "사람들은 포켓몬 트레이너라 한다"
 	prompt
 
 _ViridianSchoolNotebookText2::
-	text "Second page..."
+	text "……두번째 페이지"
 
-	para "A healthy #MON"
-	line "may be hard to"
-	cont "catch, so weaken"
-	cont "it first!"
+	para "쌩쌩한 포켓몬은 잡기 어려우니"
+	line "먼저 힘을 빼두어야 한다!"
 
-	para "Poison, burns and"
-	line "other damage are"
-	cont "effective!"
+	para "독 화상 그리고 그 외의"
+	line "데미지들이 효과적이다!"
 	prompt
 
 _ViridianSchoolNotebookText3::
-	text "Third page..."
+	text "……세번째 페이지"
 
-	para "#MON trainers"
-	line "seek others to"
-	cont "engage in #MON"
-	cont "fights."
+	para "포켓몬 트레이너들은"
+	line "#MON배틀을 하려고"
+	cont "다른 트레이너들을 찾는다"
 
-	para "Battles are"
-	line "constantly fought"
-	cont "at #MON GYMs."
+	para "포켓몬 체육관에서는"
+	line "배틀이 끊이질 않는다"
 	prompt
 
 _ViridianSchoolNotebookText4::
-	text "Fourth page..."
+	text "……네번째 페이지"
 
-	para "The goal for"
-	line "#MON trainers"
-	cont "is to beat the "
-	cont "top 8 #MON"
-	cont "GYM LEADERs."
+	para "포켓몬 트레이너들의 목표는"
+	line "8명의 체육관관장들을 이기는것!"
 
-	para "Do so to earn the"
-	line "right to face..."
+	para "이걸 통해"
+	line "얻게되는 자격은……"
 
-	para "The ELITE FOUR of"
-	line "#MON LEAGUE!"
+	para "포켓몬 리그"
+	line "사천왕과의 대면!"
 	prompt
 
 _EnemiesOnEverySideText::
-	text "Enemies on every"
-	line "side!"
+	text "적은 곳곳에"
+	line "있다!"
 	done
 
 _WhatGoesAroundComesAroundText::
-	text "What goes around"
-	line "comes around!"
+	text "뿌린만큼"
+	line "거두기 마련!"
 	done
 
 _FightingDojoText::
-	text "FIGHTING DOJO"
+	text "격투 도장"
 	done
 
 _IndigoPlateauHQText::
-	text "INDIGO PLATEAU"
-	line "#MON LEAGUE HQ"
+	text "석영고원"
+	line "포켓몬 리그"
 	done
 
 _RedBedroomSNESText::
-	text "<PLAYER> is"
-	line "playing the SNES!"
-	cont "...Okay!"
-	cont "It's time to go!"
+	text "<PLAYER>는(은)"
+	line "현대 슈퍼컴보이를 하고 있다!"
+	cont "…… …… 좋아!"
+	cont "이제 슬슬 나가볼까!"
 	done
 
 _Route15UpstairsBinocularsText::
-	text "Looked into the"
-	line "binoculars..."
+	text "쌍안경을"
+	line "들여다보았다!"
 
-	para "A large, shining"
-	line "bird is flying"
-	cont "toward the sea."
+	para "바닷가쪽으로 크고 빛나는 새가"
+	line "날아가고 있다"
 	done
 
 _AerodactylFossilText::
-	text "AERODACTYL Fossil"
-	line "A primitive and"
-	cont "rare #MON."
+	text "프테라 화석"
+	line "원시시대의 희귀 포켓몬"
 	done
 
 _KabutopsFossilText::
-	text "KABUTOPS Fossil"
-	line "A primitive and"
-	cont "rare #MON."
+	text "투쿠푸스 화석"
+	line "원시시대의 희귀 포켓몬"
 	done
 
 _FanClubPicture1Text::
-	text "My cute RAPIDASH."
+	text "내 귀여운 날쌩마"
 	done
 
 _FanClubPicture2Text::
-	text "My beloved FEAROW."
+	text "우리 귀염둥이 깨비드릴조"
 	done
 
 _LinkCableHelpText1::
-	text "TRAINER TIPS"
-
-	para "Using a Game Link"
-	line "Cable"
+	text "……득이 되는 게시판!"
+	para "통신 케이블을 이용하세요!"
+	
+	;para "Using a Game Link"
+	;line "Cable"
 	prompt
 
 _LinkCableHelpText2::
-	text "Which heading do"
-	line "you want to read?"
+	text "어느 항목을"
+	line "읽으시겠습니까?"
 	done
 
 _LinkCableInfoText1::
-	text "When you have"
-	line "linked your GAME"
-	cont "BOY with another"
-	cont "GAME BOY, talk to"
-	cont "the attendant on"
-	cont "the right in any"
-	cont "#MON CENTER."
+	text "게임보이를 "
+	line "다른 게임보이와 연결한 후에"
+	cont "포켓몬 센터의 안내원에게"
+	cont "말을거세요!"
 	prompt
 
 _LinkCableInfoText2::
-	text "COLOSSEUM lets"
-	line "you play against"
-	cont "a friend."
+	text "콜로세움에서"
+	line "친구와 함께 즐겨요!"
 	prompt
 
 _LinkCableInfoText3::
-	text "TRADE CENTER is"
-	line "used for trading"
-	cont "#MON."
+	text "교환센터에서"
+	line "포켓몬을 교환해요!"
 	prompt
 
 _ViridianSchoolBlackboardText1::
-	text "The blackboard"
-	line "describes #MON"
-	cont "STATUS changes"
-	cont "during battles."
+	text "칠판에 상태이상에 대한"
+	line "설명이 쓰여져 있다!"
 	prompt
 
 _ViridianSchoolBlackboardText2::
-	text "Which heading do"
-	line "you want to read?"
+	text "어느 항목을"
+	line "읽을까?"
 	done
 
 _ViridianBlackboardSleepText::
-	text "A #MON can't"
-	line "attack if it's"
-	cont "asleep!"
+	text "잠든 상태인 포켓몬은"
+	line "공격 할 수가 없습니다!"
 
-	para "#MON will stay"
-	line "asleep even after"
-	cont "battles."
+	para "배틀후에도 포켓몬은"
+	line "계속 자게됩니다!"
 
-	para "Use AWAKENING to"
-	line "wake them up!"
+	para "잠깨는약으로"
+	line "깨우세요!"
 	prompt
 
 _ViridianBlackboardPoisonText::
-	text "When poisoned, a"
-	line "#MON's health"
-	cont "steadily drops."
+	text "독에 걸린 포켓몬의"
+	line "체력은 계속 떨어집니다!"
 
-	para "Poison lingers"
-	line "after battles."
+	para "독 상태는 배틀후에도"
+	line "이어집니다"
 
-	para "Use an ANTIDOTE"
-	line "to cure poison!"
+	para "해독제로"
+	line "독을 치료하세요!"
 	prompt
 
 _ViridianBlackboardPrlzText::
-	text "Paralysis could"
-	line "make #MON"
-	cont "moves misfire!"
+	text "마비 상태인 포켓몬은 몸이 저려서"
+	line "못 움직이기도 합니다!"
 
-	para "Paralysis remains"
-	line "after battles."
+	para "마비 상태는"
+	line "배틀후에도 유지됩니다"
 
-	para "Use PARLYZ HEAL"
-	line "for treatment!"
+	para "마비치료제로"
+	line "치료하세요!"
 	prompt
 
 _ViridianBlackboardBurnText::
-	text "A burn reduces"
-	line "power and speed."
-	cont "It also causes"
-	cont "ongoing damage."
+	text "화상 상태가 되면"
+	line "힘과 스피드가 떨어지고"
+	cont "지속적으로 데미지가"
+	cont "발생합니다"
 
-	para "Burns remain"
-	line "after battles."
+	para "화상 상태는"
+	line "배틀후에도 유지됩니다"
 
-	para "Use BURN HEAL to"
-	line "cure a burn!"
+	para "화상치료제로"
+	line "치료하세요!"
 	prompt
 
 _ViridianBlackboardFrozenText::
-	text "If frozen, a"
-	line "#MON becomes"
-	cont "totally immobile!"
+	text "얼음 상태인 포켓몬은"
+	line "꼼작 할 수 없습니다!"
 
-	para "It stays frozen"
-	line "even after the"
-	cont "battle ends."
+	para "배틀이 끝난후에도"
+	line "얼음 상태는 지속됩니다"
 
-	para "Use ICE HEAL to"
-	line "thaw out #MON!"
+	para "얼음상태치료제로"
+	line "치료하세요!"
 	prompt
 
 _VermilionGymTrashText::
-	text "Nope, there's"
-	line "only trash here."
+	text "아무것도 없다!"
+	line "그냥 쓰레기만 있다"
 	done
 
 _VermilionGymTrashSuccessText1::
-	text "Hey! There's a"
-	line "switch under the"
-	cont "trash!"
-	cont "Turn it on!"
+	text "얏호!"
+	line "쓰레기통 바닥에 스위치가 있다!"
+	cont "스위치를 키자!"
 
-	para "The 1st electric"
-	line "lock opened!@@"
+	para "1번째 전자자물쇠가"
+	line "풀렸다!@@"
 
 _VermilionGymTrashSuccessText2::
-	text "Hey! There's"
-	line "another switch"
-	cont "under the trash!"
-	cont "Turn it on!"
+	text "얏호!"
+	line "쓰레기통 바닥에 스위치가 있다!"
+	cont "스위치를 키자!"
 	prompt
 
 _VermilionGymTrashSuccessText3::
-	text "The 2nd electric"
-	line "lock opened!"
+	text "2번째 전자자물쇠가"
+	line "풀렸다!"
 
-	para "The motorized door"
-	line "opened!@@"
+	para "자동문이 열렸다!@@"
 
 _VermilionGymTrashFailText::
-	text "Nope! There's"
-	line "only trash here."
-	cont "Hey! The electric"
-	cont "locks were reset!@@"
+	text "아무것도 없다!"
+	line "그냥 쓰레기만 있다"
+	cont "전자자물쇠가 리셋됐다!@@"
 
 _FoundHiddenItemText::
-	text "<PLAYER> found"
+	text $52, "는(은)"
 	line "@"
 	TX_RAM wcd6d
-	text "!@@"
+	text "을(를) 발견했다!@@"
 
 _HiddenItemBagFullText::
-	text "But, <PLAYER> has"
-	line "no more room for"
-	cont "other items!"
+	text "하지만 "
+	db $52, "는(은)"
+	line "더 이상은 들 수 없어!"
 	done
 
 _FoundHiddenCoinsText::
-	text "<PLAYER> found"
+	text $52, "는(은)"
 	line "@"
 	TX_BCD hCoins, 2 | LEADING_ZEROES | LEFT_ALIGN
-	text " coins!@@"
+	text "개의 동전을 발견했다!@@"
 
 _FoundHiddenCoins2Text::
-	text "<PLAYER> found"
+	text $52, "는(은)"
 	line "@"
 	TX_BCD hCoins, 2 | LEADING_ZEROES | LEFT_ALIGN
-	text " coins!@@"
+	text "개의 동전을 발견했다!@@"
 
 _DroppedHiddenCoinsText::
 	text ""
-	para "Oops! Dropped"
-	line "some coins!"
+	para "아이고!"
+	line "동전이 떨어져있다!"
 	done
 
 _IndigoPlateauStatuesText1::
-	text "INDIGO PLATEAU"
+	text "이곳은 석영고원"
 	prompt
 
 _IndigoPlateauStatuesText2::
-	text "The ultimate goal"
-	line "of trainers!"
-	cont "#MON LEAGUE HQ"
+	text "이곳는 포켓몬 리그"
+	line "트레이너들의 최종목표"
 	done
 
 _IndigoPlateauStatuesText3::
-	text "The highest"
-	line "#MON authority"
-	cont "#MON LEAGUE HQ"
+	text "이곳은 포켓몬 리그"
+	line "최고의 포켓몬 권위자"
 	done
 
 _PokemonBooksText::
-	text "Crammed full of"
-	line "#MON books!"
+	text "포켓몬 책들로"
+	line "빼곡하게 채워져 있다!"
 	done
 
 _DiglettSculptureText::
-	text "It's a sculpture"
-	line "of DIGLETT."
+	text "디그나 조각상이다"
 	done
 
 _ElevatorText::
-	text "This is an"
-	line "elevator."
+	text "엘리베이터다"
 	done
 
 _TownMapText::
-	text "A TOWN MAP.@@"
+	text "타운맵이다@@"
 
 _PokemonStuffText::
-	text "Wow! Tons of"
-	line "#MON stuff!"
+	text "우와! 엄청난"
+	line "포켓몬 상품들이다!"
 	done
 
 _OutOfSafariBallsText::
-	text "PA: Ding-dong!"
+	text "안내방송『딩-동!"
 
-	para "You are out of"
-	line "SAFARI BALLs!"
+	para "사파리볼을"
+	line "다 쓰셨습니다!"
 	prompt
 
 _WildRanText::
-	text "Wild @"
+	text "야생의 @"
 	TX_RAM wEnemyMonNick
-	text ""
-	line "ran!"
+	text "는(은)"
+	line "도망쳤다!"
 	prompt
 
 _EnemyRanText::
-	text "Enemy @"
+	text "적의 @"
 	TX_RAM wEnemyMonNick
-	text ""
-	line "ran!"
+	text "는(은)"
+	line "도망쳤다!"
 	prompt
 
 _HurtByPoisonText::
-	text "<USER>'s"
-	line "hurt by poison!"
+	text $5A, "는(은)"
+	line "독의 데미지를 입고 있다!"
 	prompt
 
 _HurtByBurnText::
-	text "<USER>'s"
-	line "hurt by the burn!"
+	text $5A, "는(은)"
+	line "화상의 데미지를 입었다!"
 	prompt
 
 _HurtByLeechSeedText::
-	text "LEECH SEED saps"
-	line "<USER>!"
+	text "기생목이 "
+	db $5A, "의"
+	line "체력을 빼앗았다!"
 	prompt
 
 _EnemyMonFaintedText::
-	text "Enemy @"
+	text "적의 @"
 	TX_RAM wEnemyMonNick
-	text ""
-	line "fainted!"
+	text "는(은)"
+	line "쓰러졌다!"
 	prompt
 
 _MoneyForWinningText::
-	text "<PLAYER> got ¥@"
+	text $52, "는(은) 상금으로"
+	line "@"
 	TX_BCD wAmountMoneyWon, 3 | LEADING_ZEROES | LEFT_ALIGN
-	text ""
-	line "for winning!"
+	text "원 손에 넣었다!"
 	prompt
 
 _TrainerDefeatedText::
-	text "<PLAYER> defeated"
+	text $52, "는(은)"
 	line "@"
 	TX_RAM wTrainerName
-	text "!"
+	text "와(과)의 승부에서 이겼다!"
 	prompt
 
 _PlayerMonFaintedText::
 	TX_RAM wBattleMonNick
-	text ""
-	line "fainted!"
+	text "는(은)"
+	line "쓰러졌다!"
 	prompt
 
 _UseNextMonText::
-	text "Use next #MON?"
+	text "다음 포켓몬을 사용하겠습니까?"
 	done
 
 _Sony1WinText::
-	text "<RIVAL>: Yeah! Am"
-	line "I great or what?"
+	text $53,"『됐어!"
+	line "좋은 포켓몬을 골랐나보군!"
 	prompt
 
 _PlayerBlackedOutText2::
-	text "<PLAYER> is out of"
-	line "useable #MON!"
+	text $52, "의 곁에는"
+	line "싸울 수 있는 포켓몬이 없다!"
 
-	para "<PLAYER> blacked"
-	line "out!"
+	para $52, "는(은)"
+	line "눈앞이 깜깜해졌다!"
 	prompt
 
 _LinkBattleLostText::
-	text "<PLAYER> lost to"
+	text "<PLAYER>는(은)"
 	line "@"
 	TX_RAM wTrainerName
-	text "!"
+	text "와(과)의 승부에서 졌다!!"
 	prompt
 
 _TrainerAboutToUseText::
 	TX_RAM wTrainerName
-	text " is"
-	line "about to use"
-	cont"@"
+	text "는(은)"
+	line "@"
 	TX_RAM wEnemyMonNick
-	text "!"
+	text "를(을)"
+	cont "꺼내려 하고있다"
 
-	para "Will <PLAYER>"
-	line "change #MON?"
+	para $52, "(이)도 포켓몬을"
+	line "바꾸겠습니까?"
 	done
 
 _TrainerSentOutText::
 	TX_RAM wTrainerName
-	text " sent"
-	line "out @"
+	text "는(은)"
+	line "@"
 	TX_RAM wEnemyMonNick
-	text "!"
+	text "를(을)"
+	cont "차례로 꺼냈다"
 	done
 
 _NoWillText::
-	text "There's no will"
-	line "to fight!"
+	text "싸울 기력이 없다!"
 	prompt
 
 _CantEscapeText::
-	text "Can't escape!"
+	text "도망칠 수가 없다!"
 	prompt
 
 _NoRunningText::
-	text "No! There's no"
-	line "running from a"
-	cont "trainer battle!"
+	text "안 되!"
+	line "승부도중에"
+	cont "상대에게 등을 보일 수 없어!"
 	prompt
 
 _GotAwayText::
-	text "Got away safely!"
+	text "성공적으로 도망쳤다!"
 	prompt
 
 _RunAwayText::
-	text "Hurry, get away!"
+	text "어서 이곳을 벗어나자!"
 	prompt
 
 _ItemsCantBeUsedHereText::
-	text "Items can't be"
-	line "used here."
+	text "여기서는 도구를"
+	line "사용할 수 없습니다"
 	prompt
 
 _AlreadyOutText::
 	TX_RAM wBattleMonNick
-	text " is"
-	line "already out!"
+	text "는(은)"
+	line "이미 나가 있습니다"
 	prompt
 
 _MoveNoPPText::
-	text "No PP left for"
-	line "this move!"
+	text "기술의 남은 포인트가 없다!"
 	prompt
 
 _MoveDisabledText::
-	text "The move is"
-	line "disabled!"
+	text "기술을 봉인 당해있다!"
 	prompt
 
 _NoMovesLeftText::
 	TX_RAM wBattleMonNick
-	text " has no"
-	line "moves left!"
+	text "는(은)"
+	line "낼 수 있는 기술이 없다!"
 	done
 
 _MultiHitText::
-	text "Hit the enemy"
-	line "@"
+	text "적을@"
 	TX_NUM wPlayerNumHits, 1, 1
-	text " times!"
+	text "회 맞혔다!"
 	prompt
 
 _ScaredText::
 	TX_RAM wBattleMonNick
-	text " is too"
-	line "scared to move!"
+	text "는(은) 너무 겁먹어서"
+	line "움직일 수 없다!"
 	prompt
 
 _GetOutText::
-	text "GHOST: Get out..."
-	line "Get out..."
+	text "유령『여기서 나가……"
+	line "썩 꺼져……"
 	prompt
 
 _FastAsleepText::
-	text "<USER>"
-	line "is fast asleep!"
+	text $5A, "는(은)"
+	line "쿨쿨 자고 있다"
 	prompt
 
 _WokeUpText::
-	text "<USER>"
-	line "woke up!"
+	text $5A, "는(은)"
+	line "눈을 떴다!"
 	prompt
 
 _IsFrozenText::
-	text "<USER>"
-	line "is frozen solid!"
+	text $5A, "는(은)"
+	line "얼어버려서 움직일 수 없다!!"
 	prompt
 
 _FullyParalyzedText::
-	text "<USER>'s"
-	line "fully paralyzed!"
+	text $5A, "는(은)"
+	line "마비되었다!"
 	prompt
 
 _FlinchedText::
-	text "<USER>"
-	line "flinched!"
+	text $5A, "는(은)"
+	line "기가 죽었다"
 	prompt
 
 _MustRechargeText::
-	text "<USER>"
-	line "must recharge!"
+	text "공격의 반동으로"
+	line $5A,"는(은) 꼼짝못한다";파괴광선같은 1턴쉬기 기술류로 확인
 	prompt
 
 _DisabledNoMoreText::
-	text "<USER>'s"
-	line "disabled no more!"
+	text $5A,"의"
+	line "사슬묶기가 풀렸다!"
 	prompt
 
 _IsConfusedText::
-	text "<USER>"
-	line "is confused!"
+	text $5A, "는(은)"
+	line "혼란에 빠져있다!"
 	prompt
 
 _HurtItselfText::
-	text "It hurt itself in"
-	line "its confusion!"
+	text "영문도 모르고"
+	line "자신을 공격했다!"
 	prompt
 
 _ConfusedNoMoreText::
-	text "<USER>'s"
-	line "confused no more!"
+	text $5A, "는(은)"
+	line "혼란이 풀렸다!"
 	prompt
 
 _SavingEnergyText::
-	text "<USER>"
-	line "is saving energy!"
+	text $5A, "는(은)"
+	line "힘을 모았다!"
 	prompt
 
 _UnleashedEnergyText::
-	text "<USER>"
-	line "unleashed energy!"
+	text $5A, "는(은)"
+	line "힘을 방출했다!"
 	prompt
 
 _ThrashingAboutText::
-	text "<USER>'s"
-	line "thrashing about!"
+	text $5A, "는(은)"
+	line "난동이 나고 있다!"
 	done
 
 _AttackContinuesText::
-	text "<USER>'s"
-	line "attack continues!"
+	text $5A,"는(은)"
+	line "데미지를 받고있다";김밥말이같은 조이기 기술
 	done
 
 _CantMoveText::
-	text "<USER>"
-	line "can't move!"
+	text $5A, "는(은)"
+	line "움직일 수 없다!"
 	prompt
 
 _MoveIsDisabledText::
-	text "<USER>'s"
+	text "<USER>의"
 	line "@"
 	TX_RAM wcd6d
-	text " is"
-	cont "disabled!"
+	text " 은(는)"
+	cont "사용할 수 없다!"
 	prompt
 
 _MonName1Text::
 	text "<USER>@@"
 
 _Used1Text::
-	text ""
-	line "used @@"
+	text "",$07,$97
+	line "@@"
 
 _Used2Text::
-	text ""
-	line "used @@"
+	text "",$07,$97
+	line "@@"
+	;text ""
+	;line "used @@"
 
+	
 _InsteadText::
-	text "instead,"
+	text "대신에 "
 	cont "@@"
 
 _CF4BText::
@@ -1348,213 +1283,214 @@ _CF4BText::
 	text "@"
 
 _ExclamationPoint1Text::
-	text "!"
-	done
+	; text "!"
+	; done
 
 _ExclamationPoint2Text::
-	text "!"
-	done
+	; text "!"
+	; done
 
 _ExclamationPoint3Text::
-	text "!"
-	done
+	; text "!"
+	; done
 
 _ExclamationPoint4Text::
-	text "!"
-	done
+	; text "!"
+	; done
 
 _ExclamationPoint5Text::
 	text "!"
 	done
 
 _AttackMissedText::
-	text "<USER>'s"
-	line "attack missed!"
+	text "<USER>의"
+	line "공격은 빗나갔다!"
 	prompt
 
 _KeptGoingAndCrashedText::
-	text "<USER>"
-	line "kept going and"
-	cont "crashed!"
+	text "<USER>도"
+	line "약간의 데미지를 입었다"
+	cont "!"
 	prompt
 
 _UnaffectedText::
-	text "<TARGET>'s"
-	line "unaffected!"
+	text $59,"에게는"
+	line "전혀 효과가 없다!"
 	prompt
 
 _DoesntAffectMonText::
-	text "It doesn't affect"
-	line "<TARGET>!"
+	text $59,"에게는"
+	line "효과가 없는 듯 하다……"
 	prompt
 
 _CriticalHitText::
-	text "Critical hit!"
+	text "급소에 맞았다!"
 	prompt
 
 _OHKOText::
-	text "One-hit KO!"
+	text "일격필살!"
 	prompt
 
 _LoafingAroundText::
 	TX_RAM wBattleMonNick
-	text " is"
-	line "loafing around."
+	text "는(은)"
+	line "게으름을 피우고 있다"
 	prompt
 
 _BeganToNapText::
 	TX_RAM wBattleMonNick
-	text " began"
-	line "to nap!"
+	text "는(은)"
+	line "낮잠자기 시작했다!"
 	prompt
 
 _WontObeyText::
 	TX_RAM wBattleMonNick
-	text " won't"
-	line "obey!"
+	text "는(은)"
+	line "말을 듣지 않는다!"
 	prompt
 
 _TurnedAwayText::
 	TX_RAM wBattleMonNick
-	text " turned"
-	line "away!"
+	text " 는(은)"
+	line "외면했다"
 	prompt
 
 _IgnoredOrdersText::
 	TX_RAM wBattleMonNick
-	text ""
-	line "ignored orders!"
+	text "는(은)"
+	line "명령을 무시했다!"
 	prompt
 
 _SubstituteTookDamageText::
-	text "The SUBSTITUTE"
-	line "took damage for"
-	cont "<TARGET>!"
+	text $52, "를(을) 대신해서"
+	line "분신이 공격을 받았다!"
 	prompt
 
 _SubstituteBrokeText::
-	text "<TARGET>'s"
-	line "SUBSTITUTE broke!"
+	text $52,"의 분신은"
+	line "사라져버렸다……"
 	prompt
 
 _BuildingRageText::
-	text "<USER>'s"
-	line "RAGE is building!"
+	text $5A,"의 분노의"
+	line "볼티지가 올라간다!"
 	prompt
 
 _MirrorMoveFailedText::
-	text "The MIRROR MOVE"
-	next "failed!"
+	text "그러나 따라하기는"
+	next "실패로 끝났다!"
 	prompt
 
 _HitXTimesText::
-	text "Hit @"
+	text "@"
 	TX_NUM wEnemyNumHits, 1, 1
-	text " times!"
+	text "회 맞았다!"
 	prompt
 
 _GainedText::
 	TX_RAM wcd6d
-	text " gained"
+	text "는(은)"
 	line "@@"
-
+	;
+	;원문은 gained이며 아래의 경험치를 얻었다와 연결되는 문장입니다
+	;영어와 한국어의 어법차이때문에 다른곳에서 문제가 발생할수 있기에 원문을 적어둡니다
 _WithExpAllText::
-	text "with EXP.ALL,"
+	text "학습장치를 통해"
 	cont "@@"
 
 _BoostedText::
-	text "a boosted"
+	text "추가된"
 	cont "@@"
 
 _ExpPointsText::
 	TX_NUM wExpAmountGained, 2, 4
-	text " EXP. Points!"
+	text " 경험치를 얻었다!"
 	prompt
 
 _GrewLevelText::
 	TX_RAM wcd6d
-	text " grew"
-	line "to level @"
+	text " 의 레벨이"
+	line "@"
 	TX_NUM wCurEnemyLVL, 1, 3
-	text "!@@"
-
+	text "(으)로 되었다!@"
+	
 _SuperEffectiveText::
-	text "It's super"
-	line "effective!"
+	text "효과는 굉장했다!"
 	prompt
-
+	
 _NotVeryEffectiveText::
-	text "It's not very"
-	line "effective..."
+	text "<TARGET>에게"
+	line "효과가 없다…"
 	prompt
 
 _SafariZoneEatingText::
-	text "Wild @"
+	text "야생의 @"
 	TX_RAM wEnemyMonNick
-	text ""
-	line "is eating!"
+	text "는(은)"
+	line "먹이를 먹고 있다!"
 	prompt
 
 _SafariZoneAngryText::
-	text "Wild @"
+	text "야생의 @"
 	TX_RAM wEnemyMonNick
-	text ""
-	line "is angry!"
-	prompt
-
-_WildMonAppearedText::
-	text "Wild @"
-	TX_RAM wEnemyMonNick
-	text ""
-	line "appeared!"
-	prompt
-
-_HookedMonAttackedText::
-	text "The hooked"
-	line "@"
-	TX_RAM wEnemyMonNick
-	text ""
-	cont "attacked!"
+	text "는(은)"
+	line "화가 나있다!"
 	prompt
 
 
 SECTION "Text 3", ROMX ; BANK $28
+	
+_WildMonAppearedText::
+	text "앗! 야생의"
+	line "@"
+	TX_RAM wEnemyMonNick
+	text "(이)가"
+	cont "튀어나왔다!"
+	prompt
+
+_HookedMonAttackedText::
+	text "낚아올린"
+	line "@"
+	TX_RAM wEnemyMonNick
+	text "(이)가"
+	cont "덤벼들었다!"
+	prompt
+
 
 _EnemyAppearedText::
 	TX_RAM wEnemyMonNick
-	text ""
-	line "appeared!"
+	text "(이)가"
+	line "튀어나왔다!"
 	prompt
 
 _TrainerWantsToFightText::
 	TX_RAM wTrainerName
-	text " wants"
-	line "to fight!"
+	text "(이)가"
+	line "승부를 걸어왔다!"
 	prompt
 
 _UnveiledGhostText::
-	text "SILPH SCOPE"
-	line "unveiled the"
-	cont "GHOST's identity!"
+	text "실프스코프로 유령의"
+	line "정체를 간파했다!"
 	prompt
 
 _GhostCantBeIDdText::
-	text "Darn! The GHOST"
-	line "can't be ID'd!"
+	text "이럴수가! 유령의"
+	line "정체를 알 수 없다!"
 	prompt
 
 _GoText::
-	text "Go! @@"
+	text "가랏! @@"
 
 _DoItText::
-	text "Do it! @@"
+	text "나가랏! @@"
 
 _GetmText::
-	text "Get'm! @@"
+	text "힘내라! @@"
 
 _EnemysWeakText::
-	text "The enemy's weak!"
-	line "Get'm! @@"
+	text "상대가 약해져 있다!"
+	line "찬스닷! @@"
 
 _PlayerMon1Text::
 	TX_RAM wBattleMonNick
@@ -1566,311 +1502,295 @@ _PlayerMon2Text::
 	text " @@"
 
 _EnoughText::
-	text "enough!@@"
+	text "이젠 됐어@@"
 
 _OKExclamationText::
-	text "OK!@@"
+	text "좋아!@@"
 
 _GoodText::
-	text "good!@@"
+	text "잘 싸웠다!@@"
 
 _ComeBackText::
 	text ""
-	line "Come back!"
+	line "돌아와!"
 	done
 
 ; money related
 _PickUpPayDayMoneyText::
-	text "<PLAYER> picked up"
-	line "¥@"
+	text $52,"는(은)"
+	line "￥@"
 	TX_BCD wTotalPayDayMoney, 3 | LEADING_ZEROES | LEFT_ALIGN
-	text "!"
+	text "원 주웠다!"
 	prompt
 
 _ClearSaveDataText::
-	text "Clear all saved"
-	line "data?"
+	text "모든 세이브 데이터 영역을"
+	line "지우겠습니까?"
 	done
 
 _WhichFloorText::
-	text "Which floor do"
-	line "you want? "
+	text "몇 층으로"
+	line "가시겠습니까?"
 	done
 
 _SleepingPikachuText1::
-	text "There isn't any"
-	line "response..."
+	text "반응이 없다……"
 	prompt
 
 _PartyMenuNormalText::
-	text "Choose a #MON."
+	text "포켓몬을 골라 주십시오"
 	done
 
 _PartyMenuItemUseText::
-	text "Use item on which"
-	line "#MON?"
+	text "어느 포켓몬에 사용하겠습니까?"
 	done
 
 _PartyMenuBattleText::
-	text "Bring out which"
-	line "#MON?"
+	text "어느 포켓몬을 꺼내겠습니까?"
 	done
 
 _PartyMenuUseTMText::
-	text "Teach to which"
-	line "#MON?"
+	text "어느 포켓몬에게 가르치겠습니까?"
 	done
 
 _PartyMenuSwapMonText::
-	text "Move #MON"
-	line "where?"
+	text "어디로 이동하겠습니까?"
 	done
 
 _PotionText::
 	TX_RAM wcd6d
-	text ""
-	line "recovered by @"
+	text "의 체력이"
+	line "@"
 	TX_NUM wHPBarHPDifference, 2, 3
-	text "!"
+	text "회복되었다!"
 	done
 
 _AntidoteText::
 	TX_RAM wcd6d
-	text " was"
-	line "cured of poison!"
+	text "의 독은"
+	line "깨끗이 사라졌다!"
 	done
 
 _ParlyzHealText::
 	TX_RAM wcd6d
-	text "'s"
-	line "rid of paralysis!"
+	text "의 몸에"
+	line "마비가 사라졌다!"
 	done
 
 _BurnHealText::
 	TX_RAM wcd6d
-	text "'s"
-	line "burn was healed!"
+	text "의"
+	line "화상이 회복되었다!"
 	done
 
 _IceHealText::
 	TX_RAM wcd6d
-	text " was"
-	line "defrosted!"
+	text "의 몸에"
+	line "얼음이 녹았다!"
 	done
 
 _AwakeningText::
 	TX_RAM wcd6d
-	text ""
-	line "woke up!"
+	text "는(은)"
+	line "눈을 떴다!"
 	done
 
 _FullHealText::
 	TX_RAM wcd6d
-	text "'s"
-	line "health returned!"
+	text "는(은)"
+	line "건강하게 되었다!"
 	done
 
 _ReviveText::
 	TX_RAM wcd6d
-	text ""
-	line "is revitalized!"
+	text "는(은)"
+	line "기운을 되찾았다!"
 	done
 
 _RareCandyText::
 	TX_RAM wcd6d
-	text " grew"
-	line "to level @"
+	text "의 레벨이"
+	line "@"
 	TX_NUM wCurEnemyLVL, 1, 3
-	text "!@@"
+	text "(으)로 되었다!@@"
 
 _TurnedOnPC1Text::
-	text "<PLAYER> turned on"
-	line "the PC."
+	text "<PLAYER>는(은)"
+	line "컴퓨터의 스위치를 켰다!"
 	prompt
 
 _AccessedBillsPCText::
-	text "Accessed BILL's"
-	line "PC."
+	text "이수재의 컴퓨터와 연결했다!"
 
-	para "Accessed #MON"
-	line "Storage System."
+	para "포켓몬 맡김 시스템을"
+	line "불러냈습니다!"
 	prompt
 
 _AccessedSomeonesPCText::
-	text "Accessed someone's"
-	line "PC."
+	text "누군가의 컴퓨터와 연결했다!"
 
-	para "Accessed #MON"
-	line "Storage System."
+	para "포켓몬 맡김 시스템을"
+	line "불러냈습니다!"
 	prompt
 
 _AccessedMyPCText::
-	text "Accessed my PC."
+	text "자신의 컴퓨터와 연결했다!"
 
-	para "Accessed Item"
-	line "Storage System."
+	para "도구 맡김 시스템을"
+	line "불러냈습니다!"
 	prompt
 
 _TurnedOnPC2Text::
-	text "<PLAYER> turned on"
-	line "the PC."
+	text "<PLAYER>는(은)"
+	line "컴퓨터의 스위치를 넣었다!"
 	prompt
 
 _WhatDoYouWantText::
-	text "What do you want"
-	line "to do?"
+	text "무엇을 하겠습니까?"
 	done
 
 _WhatToDepositText::
-	text "What do you want"
-	line "to deposit?"
+	text "무엇을"
+	line "맡기겠습니까?"
 	done
 
 _DepositHowManyText::
-	text "How many?"
+	text "몇 개를 맡기겠습니까?"
 	done
 
 _ItemWasStoredText::
 	TX_RAM wcd6d
-	text " was"
-	line "stored via PC."
+	text "를(을)"
+	line "컴퓨터에 맡겼습니다"
 	prompt
 
 _NothingToDepositText::
-	text "You have nothing"
-	line "to deposit."
+	text "도구를 하나도"
+	line "가지고 있지 않아!"
 	prompt
 
 _NoRoomToStoreText::
-	text "No room left to"
-	line "store items."
+	text "도구가 가득 있습니다"
+	line "더 이상 맡길 수 없습니다!"
 	prompt
 
 _WhatToWithdrawText::
-	text "What do you want"
-	line "to withdraw?"
+	text "무엇을"
+	line "꺼내겠습니까?"
 	done
 
 _WithdrawHowManyText::
-	text "How many?"
+	text "몇 개를 꺼내겠습니까?"
 	done
 
 _WithdrewItemText::
-	text "Withdrew"
-	line "@"
 	TX_RAM wcd6d
-	text "."
+	text "를(을)"
+	line "컴퓨터서 꺼냈습니다"
 	prompt
 
 _NothingStoredText::
-	text "There is nothing"
-	line "stored."
+	text "도구를 하나도"
+	line "가지고 있지 않아!"
 	prompt
 
 _CantCarryMoreText::
-	text "You can't carry"
-	line "any more items."
+	text "지닌 물건이 잔뜩 있어서"
+	line "꺼낼 수 없습니다!"
 	prompt
 
 _WhatToTossText::
-	text "What do you want"
-	line "to toss away?"
+	text "무엇을"
+	line "버리겠습니까?"
 	done
 
 _TossHowManyText::
-	text "How many?"
+	text "몇 개 버리겠습니까?"
 	done
 
 _AccessedHoFPCText::
-	text "Accessed #MON"
-	line "LEAGUE's site."
+	text "포켓몬 리그 기록에"
+	line "접속했습니다!"
 
-	para "Accessed the HALL"
-	line "OF FAME List."
+	para "명예의 전당 리스트에"
+	line "접속했습니다!"
 	prompt
 
 _SleepingPikachuText2::
-	text "There isn't any"
-	line "response..."
+	text "더는"
+	line "반응이 없다……"
 	prompt
 
 _SwitchOnText::
-	text "Switch on!"
+	text "컴퓨터의 스위치를 넣었다!"
 	prompt
 
 _WhatText::
-	text "What?"
+	text "무슨일이지?"
 	done
 
 _DepositWhichMonText::
-	text "Deposit which"
-	line "#MON?"
+	text "어느 #MON을"
+	line "맡기겠습니까?"
 	done
 
 _MonWasStoredText::
 	TX_RAM wcf4b
-	text " was"
-	line "stored in Box @"
+	text "를(을)"
+	line "박스 @"
 	TX_RAM wBoxNumString
-	text "."
+	text "에 맡겼다!"
 	prompt
 
 _CantDepositLastMonText::
-	text "You can't deposit"
-	line "the last #MON!"
+	text "싸울 포켓몬이 없어지게 됩니다!"
 	prompt
 
 _BoxFullText::
-	text "Oops! This Box is"
-	line "full of #MON."
+	text "박스가 가득찼습니다!"
 	prompt
 
 _MonIsTakenOutText::
 	TX_RAM wcf4b
-	text " is"
-	line "taken out."
-	cont "Got @"
-	TX_RAM wcf4b
-	text "."
+	text "를(을) 찾았다!"
+	;line "꺼냈습니다."
+	;cont "@"
+	;TX_RAM wcf4b
+	;text "찾았습니다."
 	prompt
 
 _NoMonText::
-	text "What? There are"
-	line "no #MON here!"
+	text "여기에는 맡겨둔"
+	line "포켓몬이 없습니다!"
 	prompt
 
 _CantTakeMonText::
-	text "You can't take"
-	line "any more #MON."
-
-	para "Deposit #MON"
-	line "first."
+	text "더이상 데리고 갈 수 없습니다!"
 	prompt
 
 _PikachuUnhappyText::
 	TX_RAM wcd6d
-	text " looks"
-	line "unhappy about it!"
+	text "는(은)"
+	line "불만이 가득해 보인다!"
 	prompt
 
 _ReleaseWhichMonText::
-	text "Release which"
-	line "#MON?"
+	text "정말로 놓아주겠습니까?"
 	done
 
 _OnceReleasedText::
-	text "Once released,"
-	line "@"
+	text "놓아준 포켓몬은"
+	line "영원히 작별입니다"
+	para "@"
 	TX_RAM wcf4b
-	text " is"
-	cont "gone forever. OK?"
+	text "을(를)"
+	cont "정말로 놓아주겠습니까?"
 	done
 
 _MonWasReleasedText::
 	TX_RAM wcf4b
-	text " was"
-	line "released outside."
-	cont "Bye @"
+	text "를(을) 밖에 놓아주었다"
+	line "잘가-!@"
 
 _CF4BExclamationText::
 	TX_RAM wcf4b
@@ -1878,213 +1798,208 @@ _CF4BExclamationText::
 	prompt
 
 _RequireCoinCaseText::
-	text "A COIN CASE is"
-	line "required!@@"
+	text "동전케이스가"
+	line "필요합니다!@@"
 
 _ExchangeCoinsForPrizesText::
-	text "We exchange your"
-	line "coins for prizes."
+	text "게임을 해서 모은 동전은"
+	line "경품으로 교환할 수 있습니다!"
 	prompt
 
 _WhichPrizeText::
-	text "Which prize do"
-	line "you want?"
+	text "어느 것을 고르시겠습니까?"
 	done
 
 _HereYouGoText::
-	text "Here you go!@@"
+	text "네 여기 있습니다!!@@"
 
 _SoYouWantPrizeText::
-	text "So, you want"
-	line "@"
+	text "@"
 	TX_RAM wcd6d
-	text "?"
+	text "(으)로"
+	line "하시겠습니까?"
 	done
 
 _SorryNeedMoreCoinsText::
-	text "Sorry, you need"
-	line "more coins.@@"
+	text "동전이 부족하군요@@"
 
 _OopsYouDontHaveEnoughRoomText::
-	text "Oops! You don't"
-	line "have enough room.@@"
+	text "그 이상은 지닐 수 없습니다@@"
 
 _OhFineThenText::
-	text "Oh, fine then.@@"
+	text "괜찮은듯합니다@@"
 
 _GetDexRatedText::
-	text "Want to get your"
-	line "#DEX rated?"
+	text "현재의 포켓몬 도감을"
+	line "평가받겠습니까?"
 	done
 
 _ClosedOaksPCText::
-	text "Closed link to"
-	line "PROF.OAK's PC.@@"
+	text "…… 오박사의 컴퓨터와의"
+	line "접속을 끝냈다!@@"
 
 _AccessedOaksPCText::
-	text "Accessed PROF."
-	line "OAK's PC."
+	text "오박사의 컴퓨터와 연결했다!"
 
-	para "Accessed #DEX"
-	line "Rating System."
+	para "포켓몬 도감"
+	line "평가 시스템을 불러냈습니다!"
 	prompt
 
 _ExpressionText::
-	text "This expression is"
+	text ""
 	line "No. @"
 	TX_NUM wExpressionNumber, 1, 2
-	text "."
+	text "에 대한 설명"
 	prompt
 
 _NotEnoughMemoryText::
-	text "Not enough Yellow"
-	line "Version memory."
+	text "옐로 버전 메모리가"
+	line "부족합니다"
 	done
 
 INCLUDE "text/oakspeech.asm"
 
 _DoYouWantToNicknameText::
-	text "Do you want to"
-	line "give a nickname"
-	cont "to @"
+	text "@"
 	TX_RAM wcd6d
-	text "?"
+	text "에게"
+	line "이름을 붙이겠습니까?"
 	done
 
 _YourNameIsText::
-	text "Right! So your"
-	line "name is <PLAYER>!"
+	text "맞다!"
+	line "네 이름은 "
+	db $52,"였지!"
 	prompt
 
 _HisNameIsText::
-	text "That's right! I"
-	line "remember now! His"
-	cont "name is <RIVAL>!"
+	text "그래 맞아! 기억났구나!"
+	line "이아이의 이름은 "
+	db $53, "였지!"
 	prompt
 
 _WillBeTradedText::
 	TX_RAM wNameOfPlayerMonToBeTraded
-	text " and"
+	text "과(와)"
 	line "@"
 	TX_RAM wcd6d
-	text " will"
-	cont "be traded."
+	text "를(을)"
+	cont "교환합니다!"
 	done
-
+;검수해야됨
 _Colosseum3MonsText::
-	text "You need 3 #MON"
-	line "to fight!"
+	text "싸우기 위해서는"
+	line "3마리의 포켓몬 필요합니다!"
 	prompt
 
 _ColosseumMewText::
-	text "Sorry, MEW can't"
-	line "attend!"
+	text "죄송합니다"
+	line "뮤는 출전불가입니다!"
 	prompt
 
 _ColosseumDifferentMonsText::
-	text "Your #MON must"
-	line "all be different!"
+	text "모든 포켓몬이"
+	line "다른 종류여야 합니다!"
 	prompt
 
 _ColosseumMaxL55Text::
-	text "No #MON can"
-	line "exceed L55!"
+	text "포켓몬 레벨이 55를"
+	line "넘으면 안 됩니다!"
 	prompt
 
 _ColosseumMinL50Text::
-	text "All #MON must"
-	line "be at least L50!"
+	text "모든 포켓몬 레벨이"
+	line "최소 50이 되야 합니다!"
 	prompt
 
 _ColosseumTotalL155Text::
-	text "Your total levels"
-	line "exceed 155!"
+	text "레벨 합계가 155를"
+	line "초과했습니다!"
 	prompt
 
 _ColosseumMaxL30Text::
-	text "No #MON can"
-	line "exceed L30!"
+	text "포켓몬 레벨이 30을"
+	line "넘으면 안 됩니다!"
 	prompt
 
 _ColosseumMinL25Text::
-	text "All #MON must"
-	line "be at least L25!"
+	text "모든 포켓몬 레벨이"
+	line "최소 25이 되야 합니다!"
 	prompt
 
 _ColosseumTotalL80Text::
-	text "Your total levels"
-	line "exceed 80!"
+	text "레벨 합계가 80을"
+	line "초과했습니다!"
 	prompt
 
 _ColosseumMaxL20Text::
-	text "No #MON can"
-	line "exceed L20!"
+	text "포켓몬 레벨이 20을"
+	line "넘으면 안 됩니다!"
 	prompt
 
 _ColosseumMinL15Text::
-	text "All #MON must"
-	line "be at least L15!"
+	text "모든 포켓몬 레벨이"
+	line "최소 15가 되야 합니다!"
 	prompt
 
 _ColosseumTotalL50Text::
-	text "Your total levels"
-	line "exceed 50!"
+	text "레벨 합계가 50을"
+	line "초과했습니다!"
 	prompt
 
 _ColosseumHeightText::
 	TX_RAM wcd6d
-	text " is over"
-	line "6′8″ tall!"
+	text "의 키가"
+	line "2m를 초과했습니다!"
 	prompt
 
 _ColosseumWeightText::
 	TX_RAM wcd6d
-	text " weighs"
-	line "over 44 pounds!"
+	text "의 무게가"
+	line "20kg을 초과했습니다!"
 	prompt
 
 _ColosseumEvolvedText::
 	TX_RAM wcd6d
-	text " is an"
-	line "evolved #MON!"
+	text "는(은)"
+	line "진화한 포켓몬입니다!"
 	prompt
 
 _ColosseumIneligibleText::
-	text "Your opponent is"
-	line "ineligible."
+	text "상대방이"
+	line "적합지 않습니다";대체문. [상대방과 레벨이 맞지 않습니다]
 	prompt
 
 _ColosseumWhereToText::
-	text "Where would you"
-	line "like to go?"
+	text "어디로"
+	line "가시겠습니까?"
 	done
 
 _ColosseumPleaseWaitText::
-	text "OK, please wait"
-	line "just a moment."
+	text "예 잠시만"
+	line "기다려주세요"
 	done
 
 _ColosseumCanceledText::
-	text "The link was"
-	line "canceled."
+	text "통신이 중간되었습니다"
 	done
 
 _ColosseumVersionText::
-	text "The game versions"
-	line "don't match."
+	text "게임 버전이"
+	line "맞지 않습니다"
 	prompt
 
 _Char00Text::
 	TX_NUM hSpriteIndexOrTextID, 1, 2
-	text " error."
+	text " 에러"
 	done
 
 _Char55Text::
 	text $4B, "@@"
 
 _NoPokemonText::
-	text "There are no"
-	line "#MON here!"
+	text "여기에는"
+	line "포켓몬이 없어!"
 	prompt
 
 INCLUDE "text/maps/digletts_cave_route_2_entrance.asm"
@@ -2151,327 +2066,324 @@ INCLUDE "text/maps/route_24.asm"
 INCLUDE "text/maps/route_25.asm"
 
 _FileDataDestroyedText::
-	text "The file data is"
-	line "destroyed!"
+	text "레포트의 내용이"
+	line "손상되어 있습니다"
 	prompt
 
 _WouldYouLikeToSaveText::
-	text "Would you like to"
-	line "SAVE the game?"
+	text "여기까지의 활약을"
+	line "포켓몬 레포트에 기록하겠습니까?"
 	done
 
 _SavingText::
-	text "Saving..."
+	text "포켓몬 레포트에 기록하고 있습니다"
+	line "전원을 끄지 말아주세요"
 	done
 
 _GameSavedText::
-	text "<PLAYER> saved"
-	line "the game!"
+	text "<PLAYER>는(은)"
+	line "레포트에 정확히 기록했습니다!"
 	done
 
 _OlderFileWillBeErasedText::
-	text "The older file"
-	line "will be erased to"
-	cont "save. Okay?"
+	text "이전에 기록한 레포트에"
+	line "덮어써도 괜찮겠습니까?"
 	done
 
 _WhenYouChangeBoxText::
-	text "When you change a"
-	line "#MON BOX, data"
-	cont "will be saved."
+	text "박스를 바꾸면"
+	line "동시에 레포트가 기록되어집니다"
 
-	para "Is that okay?"
+	para "괜찮겠습니까?"
 	done
 
 _ChooseABoxText::
-	text "Choose a"
-	line "<pkmn> BOX.@@"
+	text "박스를 골라주세요@@"
 
 _EvolvedText::
+	text "축하합니다!"
+	line "@"
 	TX_RAM wcf4b
-	text " evolved"
+	text "는(은)"
 	done
 
 _IntoText::
 	text ""
-	line "into @"
+	line "@"
 	TX_RAM wcd6d
-	text "!"
+	text "(으)로"
+	cont "진화했다!"
 	done
 
 _StoppedEvolvingText::
-	text "Huh? @"
+	text "얼라리……?"
+	line "@"
 	TX_RAM wcf4b
-	text ""
-	line "stopped evolving!"
+	text "의 변화가"
+	cont "멈췄다!"
 	prompt
 
 
 SECTION "Text 5", ROMX ; BANK $2a
 
 _IsEvolvingText::
-	text "What? @"
+	text "오잉!?"
+	line "@"
 	TX_RAM wcf4b
-	text ""
-	line "is evolving!"
+	text "의 상태가……!"
 	done
 
 _FellAsleepText::
-	text "<TARGET>"
-	line "fell asleep!"
+	text $59,"는(은)"
+	line "잠들어버렸다!"
 	prompt
 
 _AlreadyAsleepText::
-	text "<TARGET>'s"
-	line "already asleep!"
+	text $59,"는(은) 이미"
+	line "이미 잠들어있다!"
 	prompt
 
 _PoisonedText::
-	text "<TARGET>"
-	line "was poisoned!"
+	text $59,"는(은)"
+	line "독을 뒤집어썼다!"
 	prompt
 
 _BadlyPoisonedText::
-	text "<TARGET>'s"
-	line "badly poisoned!"
+	text $59,"는(은)"
+	line "벌써 독을 뒤집어썼다!"
 	prompt
 
 _BurnedText::
-	text "<TARGET>"
-	line "was burned!"
+	text $59,"는(은)"
+	line "화상을 입었다!"
 	prompt
 
 _FrozenText::
-	text "<TARGET>"
-	line "was frozen solid!"
+	text $59,"는(은)"
+	line "꽁꽁 얼어버렸다!"
 	prompt
 
 _FireDefrostedText::
-	text "Fire defrosted"
-	line "<TARGET>!"
+	text $59,"의"
+	line "얼음이 녹았다!"
 	prompt
 
 _MonsStatsRoseText::
-	text "<USER>'s"
+	text $5A, "의"
 	line "@"
 	TX_RAM wcf4b
-	text "@@"
+	text "이(가) @@"
 
 _GreatlyRoseText::
-	text $4c, "greatly@@"
+	text $4c, "부쩍@@"
 
 _RoseText::
-	text " rose!"
+	text " 올랐다!"
 	prompt
 
 _MonsStatsFellText::
-	text "<TARGET>'s"
+	text $59, "의"
 	line "@"
 	TX_RAM wcf4b
-	text "@@"
+	text "이(가) @@"
 
 _GreatlyFellText::
-	text $4c, "greatly@@"
+	text $4c, "확@@"
 
 _FellText::
-	text " fell!"
+	text " 떨어졌다!"
 	prompt
 
 _RanFromBattleText::
-	text "<USER>"
-	line "ran from battle!"
+	text $5A, "는(은) 전투에서"
+	line "이탈했다!"
 	prompt
 
 _RanAwayScaredText::
-	text "<TARGET>"
-	line "ran away scared!"
+	text $59, "는(은) 두려워져서"
+	line "도망쳤다!"
 	prompt
 
 _WasBlownAwayText::
-	text "<TARGET>"
-	line "was blown away!"
+	text $59, "는(은)"
+	line "내동댕이쳐졌다!"
 	prompt
 
 _ChargeMoveEffectText::
-	text "<USER>@@"
+	text $5A,"@@"
 
 _MadeWhirlwindText::
-	text ""
-	line "made a whirlwind!"
+	text "의 주변에서"
+	line "공기가 소용돌이를 감는다!"
 	prompt
 
 _TookInSunlightText::
-	text ""
-	line "took in sunlight!"
+	text "는(은)"
+	line "빛을 흡수했다!"
 	prompt
 
 _LoweredItsHeadText::
-	text ""
-	line "lowered its head!"
+	text "는(은)"
+	line "목을 집어넣었다!"
 	prompt
 
 _SkyAttackGlowingText::
-	text ""
-	line "is glowing!"
+	text "는(은)"
+	line "세찬 빛이 감싼다!"
 	prompt
 
 _FlewUpHighText::
-	text ""
-	line "flew up high!"
+	text "는(은)"
+	line "하늘높이 날아올랐다!"
 	prompt
 
 _DugAHoleText::
-	text ""
-	line "dug a hole!"
+	text "는(은)"
+	line "구멍을 파서 땅속으로 숨었다!"
 	prompt
 
 _BecameConfusedText::
-	text "<TARGET>"
-	line "became confused!"
+	text $59,"는(은)"
+	line "혼란해 있다!"
 	prompt
 
 _MimicLearnedMoveText::
-	text "<USER>"
-	line "learned"
-	cont "@"
+	text $5A,"는(은)"
+	line "@"
 	TX_RAM wcd6d
-	text "!"
+	text "를(을) 배웠다!"
 	prompt
 
 _MoveWasDisabledText::
-	text "<TARGET>'s"
+	text $59,"의"
 	line "@"
 	TX_RAM wcd6d
-	text " was"
-	cont "disabled!"
+	text "를(을)"
+	cont "봉해버렸다!"
 	prompt
 
 _NothingHappenedText::
-	text "Nothing happened!"
+	text "그러나 아무것도 일어나지 않는다!"
 	prompt
 
 _NoEffectText::
-	text "No effect!"
+	text "그러나 기술이 잘 먹히지 않았다!"
 	prompt
 
 _ButItFailedText::
-	text "But, it failed! "
+	text "기술이 잘 먹히지 않았다!"
 	prompt
 
 _DidntAffectText::
-	text "It didn't affect"
-	line "<TARGET>!"
+	text "그러나 "
+	db $59,"에는"
+	line "듣지 않았다!"
 	prompt
 
 _IsUnaffectedText::
-	text "<TARGET>"
-	line "is unaffected!"
+	text $59,"에는"
+	line "듣지 않았다!"
 	prompt
 
 _ParalyzedMayNotAttackText::
-	text "<TARGET>'s"
-	line "paralyzed! It may"
-	cont "not attack!"
+	text $59,"는(은) 마비되어서"
+	line "기술을 펼치기 힘들게되었다!"
 	prompt
 
 _SubstituteText::
-	text "It created a"
-	line "SUBSTITUTE!"
+	text "분신이 나타났다!"
 	prompt
 
 _HasSubstituteText::
-	text "<USER>"
-	line "has a SUBSTITUTE!"
+	text $5A,"의"
+	line "분신이 나타났다!"
 	prompt
 
 _TooWeakSubstituteText::
-	text "Too weak to make"
-	line "a SUBSTITUTE!"
+	text "그러나 분신을 불러내기에는"
+	line "체력이 부족했다!"
 	prompt
 
 _WasSeededText::
-	text "<TARGET>"
-	line "was seeded!"
+	text $59,"에게"
+	line "씨를 심었다!"
 	prompt
 
 _EvadedAttackText::
-	text "<TARGET>"
-	line "evaded attack!"
+	text $59,"는(은)"
+	line "공격을 피했다!"
 	prompt
 
 _HitWithRecoilText::
-	text "<USER>'s"
-	line "hit with recoil!"
+	text $5A,"는(은) 공격의"
+	line "반동을 입었다!"
 	prompt
 
 _ConvertedTypeText::
-	text "Converted type to"
-	line "<TARGET>'s!"
+	text $5A,"는(은)"
+	line "타입이 바뀌었다!"
 	prompt
 
 _StatusChangesEliminatedText::
-	text "All STATUS changes"
-	line "are eliminated!"
+	text "모든 스테이터스가"
+	line "원래대로 되돌아왔다!"
 	prompt
 
 _GettingPumpedText::
-	text "<USER>'s"
-	line "getting pumped!"
+	text $5A, "는(은)"
+	line "꼼짝않고 있다!"
 	prompt
 
 _StartedSleepingEffect::
-	text "<USER>"
-	line "started sleeping!"
+	text $5A, "는(은)"
+	line "잠들기 시작했다!"
 	done
 
 _FellAsleepBecameHealthyText::
-	text "<USER>"
-	line "fell asleep and"
-	cont "became healthy!"
+	text $5A, "는(은)"
+	line "건강해져서 잠자기 시작했다!"
 	done
 
 _RegainedHealthText::
-	text "<USER>"
-	line "regained health!"
+	text $5A, "는(은) 체력을"
+	line "회복했다!"
 	prompt
 
 _TransformedText::
-	text "<USER>"
-	line "transformed into"
-	cont "@"
+	text $5A, "는(은)"
+	line "@"
 	TX_RAM wcd6d
-	text "!"
+	text "(으)로"
+	cont "변신했다!"
 	prompt
 
 _LightScreenProtectedText::
-	text "<USER>'s"
-	line "protected against"
-	cont "special attacks!"
+	text $5A, "는(은) 빛의 장막"
+	line "으로 특정 공격에 강하게되었다!"
 	prompt
 
 _ReflectGainedArmorText::
-	text "<USER>"
-	line "gained armor!"
+	text $5A, "는(은) 리플렉터로"
+	line "타격공격에 강하게되었다!"
 	prompt
 
 _ShroudedInMistText::
-	text "<USER>'s"
-	line "shrouded in mist!"
+	text $5A, "는(은)"
+	line "흰안개에 둘러싸였다!"
 	prompt
 
 _CoinsScatteredText::
-	text "Coins scattered"
-	line "everywhere!"
+	text "금화가 주변에 산산히 흩어졌다!"
 	prompt
 
 _SuckedHealthText::
-	text "Sucked health from"
-	line "<TARGET>!"
+	text $59,"(으)로부터"
+	line "체력을 흡수했다!"
 	prompt
 
 _DreamWasEatenText::
-	text "<TARGET>'s"
-	line "dream was eaten!"
+	text $59,"의"
+	line "꿈을 먹었다!"
 	prompt
 
 _TradeCenterText1::
@@ -2530,14 +2442,11 @@ INCLUDE "text/maps/vermilion_house.asm"
 INCLUDE "text/maps/vermilion_dock.asm"
 
 TeachingHMsText::
-	text "Once a #MON"
-	line "learns an HM, the"
-	cont "technique can't"
-	cont "be replaced."
+	text "포켓몬에게 비전머신 기술을"
+	line "가르치면 절대 지울 수 없어!"
 
-	para "Better think care-"
-	line "fully before you"
-	cont "teach HM moves."
+	para "비전머신 기술을 가르치기전에"
+	line "신중히 생각해야합니다"
 	done
 
 INCLUDE "text/maps/vermilion_fishing_house.asm"
@@ -2592,336 +2501,320 @@ INCLUDE "text/maps/saffron_pokecenter.asm"
 INCLUDE "text/maps/mr_psychics_house.asm"
 
 _PokemonText::
-	text "#MON!"
+	text "포켓몬!"
 	done
 
 _PokemartGreetingText::
-	text "Hi there!"
-	next "May I help you?"
+	text "어서오세요!"
+	next "물건을 사러 오셨군요!"
 	done
 
 _PokemonFaintedText::
 	TX_RAM wcd6d
-	text ""
-	line "fainted!"
+	text "는(은)"
+	line "쓰러졌다!"
 	done
 
 _PlayerBlackedOutText::
-	text "<PLAYER> is out of"
-	line "useable #MON!"
+	text $52,"의 곁에는"
+	line "싸울 수 있는 포켓몬이 없다!"
 
-	para "<PLAYER> blacked"
-	line "out!"
+	para $52,"는(은)"
+	line "눈앞이 깜깜해졌다!"
 	prompt
 
 _RepelWoreOffText::
-	text "REPEL's effect"
-	line "wore off."
+	text "스프레이의 효과가 떨어졌다"
 	done
 
 _PokemartBuyingGreetingText::
-	text "Take your time."
+	text "예! 여기 있습니다!"
 	done
 
 _PokemartTellBuyPriceText::
 	TX_RAM wcf4b
-	text "?"
-	line "That will be"
-	cont "¥@"
+	text "는(은)"
+	line "@"
 	TX_BCD hMoney, 3 | LEADING_ZEROES | LEFT_ALIGN
-	text ". OK?"
+	text "원입니다"
+	cont "괜찮겠습니까?"
 	done
 
 _PokemartBoughtItemText::
-	text "Here you are!"
-	line "Thank you!"
+	text "예! 여기 있습니다!"
+	line "고맙습니다!"
 	prompt
 
 _PokemartNotEnoughMoneyText::
-	text "You don't have"
-	line "enough money."
+	text "돈이 부족하군요!"
 	prompt
 
 _PokemartItemBagFullText::
-	text "You can't carry"
-	line "any more items."
+	text "그 이상은"
+	line "지닐 수 없어요!!"
 	prompt
 
 _PokemonSellingGreetingText::
-	text "What would you"
-	line "like to sell?"
+	text "무엇을"
+	line "판매하시겠습니까?"
 	done
 
 _PokemartTellSellPriceText::
-	text "I can pay you"
-	line "¥@"
+	text "@"
 	TX_BCD hMoney, 3 | LEADING_ZEROES | LEFT_ALIGN
-	text " for that."
+	text "원으로"
+	line "쳐서 받겠습니다"
+	
+	cont "괜찮겠습니까?"
 	done
 
 _PokemartItemBagEmptyText::
-	text "You don't have"
-	line "anything to sell."
+	text "도구를 한개도"
+	line "지니고 있지 않습니다!"
 	prompt
 
 _PokemartUnsellableItemText::
-	text "I can't put a"
-	line "price on that."
+	text "그 도구를"
+	line "사들일 수는 없습니다!"
 	prompt
 
 _PokemartThankYouText::
-	text "Thank you!"
+	text "또 오세요!"
 	done
 
 _PokemartAnythingElseText::
-	text "Is there anything"
-	line "else I can do?"
+	text "그 밖에 우리들로서"
+	line "무언가 힘이 될 수 있는 일은?"
 	done
 
 _LearnedMove1Text::
 	TX_RAM wLearnMoveMonName
-	text " learned"
+	text "는(은) 새로"
 	line "@"
 	TX_RAM wcf4b
-	text "!@@"
+	text "를(을) 배웠다!@@"
 
 _WhichMoveToForgetText::
-	text "Which move should"
-	next "be forgotten?"
+	text "어느 기술을"
+	next "잊게 하고싶은가?"
 	done
 
 _AbandonLearningText::
-	text "Abandon learning"
+	text "그렇다면……"
 	line "@"
 	TX_RAM wcf4b
-	text "?"
+	text "를(을)"
+	cont "배우는 것을 그만두겠습니까?"
 	done
 
 _DidNotLearnText::
 	TX_RAM wLearnMoveMonName
-	text ""
-	line "did not learn"
-	cont "@"
+	text "는(은)"
+	line "@"
 	TX_RAM wcf4b
-	text "!"
+	text "를(을)"
+	cont "배우지 않고 끝났다!"
 	prompt
 
 _TryingToLearnText::
 	TX_RAM wLearnMoveMonName
-	text " is"
-	line "trying to learn"
-	cont "@"
+	text "는(은) 새로"
+	line "@"
+	
 	TX_RAM wcf4b
-	text "!"
-
-	para "But, @"
+	text "를(을)"
+	cont "배우고싶다……!"
+	
+	para "그러나 @"
 	TX_RAM wLearnMoveMonName
-	text ""
-	line "can't learn more"
-	cont "than 4 moves!"
+	text "는(은)"
+	line "기술을 4개"
+	cont "기억하고있기에 더 이상은 무리다"
 
-	para "Delete an older"
-	line "move to make room"
-	cont "for @"
+	para "@"
 	TX_RAM wcf4b
-	text "?"
+	text "의 대신"
+	line "다른 기술을 잊게하겠습니까?"
 	done
 
 _OneTwoAndText::
-	text "1, 2 and...@@"
+	text "1 2 ……@@"
 
 _PoofText::
-	text " Poof!@@"
+	text " 짠!@@"
 
 _ForgotAndText::
 	text ""
 	para "@"
 	TX_RAM wLearnMoveMonName
-	text " forgot"
+	text "는(은)"
 	line "@"
 	TX_RAM wcd6d
-	text "!"
+	text "의"
+	cont "사용방법을 깨끗이 잊었다!"
 
-	para "And..."
+	para "그리고……!"
 	prompt
 
 _HMCantDeleteText::
-	text "HM techniques"
-	line "can't be deleted!"
+	text "그것은 중요한 기술입니다"
+	line "잊게하는 것은 할 수 없습니다!"
 	prompt
 
 _PokemonCenterWelcomeText::
-	text "Welcome to our"
-	line "#MON CENTER!"
+	text "안녕하세요!"
+	line "포켓몬 센터입니다!"
 
-	para "We heal your"
-	line "#MON back to"
-	cont "perfect health!"
+	para "이곳에서는 포켓몬의"
+	line "체력을 회복합니다!"
 	prompt
 
 _ShallWeHealYourPokemonText::
-	text "Shall we heal your"
-	line "#MON?"
+	text "당신의 포켓몬을"
+	line "쉬게 하겠습니까?"
 	done
 
 _NeedYourPokemonText::
-	text "OK. We'll need"
-	line "your #MON."
+	text "그럼"
+	line "맡아놓겠습니다!"
 	done
 
 _PokemonFightingFitText::
-	text "Thank you!"
-	line "Your #MON are"
-	cont "fighting fit!"
+	text "오래 기다리셨습니다!"
+	line "맡아놓은 포켓몬은"
+	cont "모두 건강해졌습니다!"
 	prompt
 
 _PokemonCenterFarewellText::
-	text "We hope to see"
-	line "you again!"
+	text "다음 번에도"
+	line "방문하시길 기다리겠습니다!"
 	done
 
 _LooksContentText::
-	text "It looks very"
-	line "content asleep."
+	text "곤하게 자고"
+	line "있어보인다"
 	done
 
 _CableClubNPCAreaReservedFor2FriendsLinkedByCableText::
-	text "This area is"
-	line "reserved for 2"
-	cont "friends who are"
-	cont "linked by cable."
+	text "친구분의 준비가"
+	line "되어 있지 않은 것 같습니다"
 	done
 
 _CableClubNPCWelcomeText::
-	text "Welcome to the"
-	line "Cable Club!"
+	text "통신케이블 클럽에"
+	line "잘 오셨습니다!"
 	done
 
 _CableClubNPCPleaseApplyHereHaveToSaveText::
-	text "Please apply here."
+	text "잠시 기다려주십시오"
 
-	para "Before opening"
-	line "the link, we have"
-	cont "to save the game."
+	para "통신을 시작하기 전에"
+	line "레포트를 쓰겠습니다"
 	done
+
 
 
 SECTION "Text 8", ROMX ; BANK $2d
 
 _CableClubNPCPleaseWaitText::
-	text "Please wait.@@"
+	text "잠시 기다려주십시오@@"
 
 _CableClubNPCLinkClosedBecauseOfInactivityText::
-	text "The link has been"
-	line "closed because of"
-	cont "inactivity."
+	text "기다리는 시간이 길기에"
+	line "접수를 중지하겠습니다"
 
-	para "Please contact"
-	line "your friend and"
-	cont "come again!"
+	para "친구와 연락을 해서"
+	line "다시 한번 와주십시오!"
 	done
 
 _CableClubNPCPleaseComeAgainText::
-	text "Please come again!"
+	text "다시 한번 와주십시오!"
 	done
 
 _CableClubNPCMakingPreparationsText::
-	text "We're making"
-	line "preparations."
-	cont "Please wait."
+	text "통신을 준비하겠습니다."
+	line "잠시만 기다려주세요"
 	done
 
 _FlashLightsAreaText::
-	text "A blinding FLASH"
-	line "lights the area!"
+	text "눈부신 빛이"
+	line "주변을 밝게 비춘다……"
 	prompt
 
 _WarpToLastPokemonCenterText::
-	text "Warp to the last"
-	line "#MON CENTER."
+	text "여기서는 사용할 수 없습니다!"
 	done
 
 _CannotUseTeleportNowText::
 	TX_RAM wcd6d
-	text " can't"
-	line "use TELEPORT now."
+	text "이곳에서는 공중날기를"
+	line "텔레포트를 쓸수없습니다"
 	prompt
 
 _CannotFlyHereText::
 	TX_RAM wcd6d
-	text " can't"
-	line "FLY here."
+	text "이곳에서는 공중날기를"
+	line "사용할 수 없습니다"
 	prompt
 
 _NotHealthyEnoughText::
-	text "Not healthy"
-	line "enough."
+	text "아직 건강치"
+	line "못합니다."
 	prompt
 
 _NewBadgeRequiredText::
-	text "No! A new BADGE"
-	line "is required."
+	text "새로운 배지를 손에 넣을 때까지"
+	line "아직 사용할 수 없습니다!"
 	prompt
 
 _CannotUseItemsHereText::
-	text "You can't use items"
-	line "here."
+	text "이곳에서는 사용할 수 없습니다"
 	prompt
 
 _CannotGetOffHereText::
-	text "You can't get off"
-	line "here."
+	text "이곳에서는 내릴 수 없다!"
 	prompt
 
 _UsedStrengthText::
 	TX_RAM wcd6d
-	text " used"
-	line "STRENGTH.@@"
+	text "는(은)"
+	line "괴력을 발휘했다!@@"
 
 _CanMoveBouldersText::
 	TX_RAM wcd6d
-	text " can"
-	line "move boulders."
+	text "의 괴력덕분에"
+	line "바위를 밀 수 있게 되었다!"
 	prompt
 
 _CurrentTooFastText::
-	text "The current is"
-	line "much too fast!"
+	text "지금 너무 빠릅니다!"
 	prompt
 
 _CyclingIsFunText::
-	text "Cycling is fun!"
-	line "Forget SURFing!"
+	text "자전거타는게 재밌어!"
+	line "파도타기는 잊어버려!"
 	prompt
 
 _GotMonText::
-	text "<PLAYER> got"
+	text $52,"는(은)"
 	line "@"
 	TX_RAM wcd6d
-	text "!@@"
+	text "를(을) 얻었다!@@"
 
 _SetToBoxText::
-	text "There's no more"
-	line "room for #MON!"
-	cont "@"
+	text "더 이상 포켓몬을 지닐 수 없어서"
+	line "@"
+	cont ""
 	TX_RAM wBoxMonNicks
-	text " was"
-	cont "sent to #MON"
-	cont "BOX @"
+	text "는(은)"
+	cont "@"
 	TX_RAM wcf4b
-	text " on PC!"
+	text " 박스로 전송되었다"
 	done
 
 _BoxIsFullText::
-	text "There's no more"
-	line "room for #MON!"
-
-	para "The #MON BOX"
-	line "is full and can't"
-	cont "accept any more!"
-
-	para "Change the BOX at"
-	line "a #MON CENTER!"
+	text "박스에 맡겨놓은 포켓몬이"
+	line "가득차서 더는 사용 못합니다!"
 	done
 
 INCLUDE "text/maps/pallet_town.asm"
@@ -2936,439 +2829,427 @@ INCLUDE "text/maps/cinnabar_island.asm"
 INCLUDE "text/maps/saffron_city.asm"
 
 _ItemUseBallText00::
-	text "It dodged the"
-	line "thrown BALL!"
-
-	para "This #MON"
-	line "can't be caught!"
+	text "빠져나갔다!"
+	line "이녀석은 붙잡지 못할 것 같다!"
 	prompt
 
 _ItemUseBallText01::
-	text "You missed the"
-	line "#MON!"
+	text "포켓몬에게"
+	line "잘 맞추지 못했다!"
 	prompt
 
 _ItemUseBallText02::
-	text "Darn! The #MON"
-	line "broke free!"
+	text "이런! 포켓몬이"
+	line "볼에서 튀어 나와버렸다!"
 	prompt
 
 _ItemUseBallText03::
-	text "Aww! It appeared"
-	line "to be caught! "
+	text "으으!"
+	line "잡았다고 생각했는데! "
 	prompt
 
 _ItemUseBallText04::
-	text "Shoot! It was so"
-	line "close too!"
+	text "분하다!"
+	line "조금만 더하면 잡을 수 있었는데!"
 	prompt
 
 _ItemUseBallText05::
-	text "All right!"
+	text "신난다!"
 	line "@"
 	TX_RAM wEnemyMonNick
-	text " was"
-	cont "caught!@@"
+	text "를(을) 잡았다!@@"
 
 _ItemUseBallText07::
 	TX_RAM wBoxMonNicks
-	text " was"
-	line "transferred to"
-	cont "BILL's PC!"
+	text "는(은) 이수재"
+	line "가 있는 곳에 전송되었다!"
 	prompt
-
+	
 _ItemUseBallText08::
 	TX_RAM wBoxMonNicks
-	text " was"
-	line "transferred to"
-	cont "someone's PC!"
+	text "는(은) 누군가"
+	line "가 있는 곳에 전송되었다!"
 	prompt
 
 _ItemUseBallText06::
-	text "New #DEX data"
-	line "will be added for"
-	cont "@"
 	TX_RAM wEnemyMonNick
-	text "!@@"
+	text "의"
+	line "데이터가 새롭게"
+	cont "포켓몬 도감에 세이브 되어집니다!@@"
 
 _SurfingGotOnText::
-	text "<PLAYER> got on"
+	text $52,"는(은)"
 	line "@"
 	TX_RAM wcd6d
-	text "!"
+	text "를(을) 얻었다!"
 	prompt
 
 _SurfingNoPlaceToGetOffText::
-	text "There's no place"
-	line "to get off!"
+	text "이곳에서는 내릴 수 없다!"
 	prompt
 
 _RefusingText::
 	TX_RAM wcd6d
 	text ""
-	line "is refusing!"
+	line "거부하고 있다!"
 	prompt
 
 _VitaminStatRoseText::
 	TX_RAM wcd6d
-	text "'s"
+	text "의"
 	line "@"
 	TX_RAM wcf4b
-	text " rose."
+	text "기초 포인트가 올라갔다!"
 	prompt
 
 _VitaminNoEffectText::
-	text "It won't have any"
-	line "effect."
+	text "그 포켓몬에는"
+	line "사용할 수 없습니다"
 	prompt
 
 _ThrewBaitText::
-	text "<PLAYER> threw"
-	line "some BAIT."
+	text $52,"는(은)"
+	line "먹이를 던졌다"
 	done
 
 _ThrewRockText::
-	text "<PLAYER> threw a"
-	line "ROCK."
+	text $52,"는(은)"
+	line "돌을 던졌다.";짱돌? 자갈?
 	done
 
 _PlayedFluteNoEffectText::
-	text "Played the #"
-	line "FLUTE."
+	text "포켓몬의 피리를 불었다!"
 
-	para "Now, that's a"
-	line "catchy tune!"
+	para "우음!"
+	line "훌륭한 음색이다!"
 	prompt
 
 _FluteWokeUpText::
-	text "All sleeping"
-	line "#MON woke up."
+	text "모든 포켓몬이"
+	line "눈을 떴다!"
 	prompt
 
 _PlayedFluteHadEffectText::
-	text "<PLAYER> played the"
-	line "# FLUTE.@@"
+	text $52, "는(은)"
+	line "포켓몬의 피리를 불었다!@@"
 
 _CoinCaseNumCoinsText::
-	text "Coins"
+	text "동전"
 	line "@"
 	TX_BCD wPlayerCoins, 2 | LEADING_ZEROES | LEFT_ALIGN
-	text " "
+	text "개 "
 	prompt
 
 _ItemfinderFoundItemText::
-	text "Yes! ITEMFINDER"
-	line "indicates there's"
-	cont "an item nearby."
+	text "옷!"
+	line "머신이 반응하고 있어!"
+	cont "근처에 도구가 묻혀있다!"
 	prompt
 
 _ItemfinderFoundNothingText::
-	text "Nope! ITEMFINDER"
-	line "isn't responding."
+	text "…… …… 후우!"
+	line "…… 반응하지 않는다."
 	prompt
 
 _RaisePPWhichTechniqueText::
-	text "Raise PP of which"
-	line "technique?"
+	text "어느 기술의"
+	line "포인트를 늘릴까?"
 	done
 
 _RestorePPWhichTechniqueText::
-	text "Restore PP of"
-	line "which technique?"
+	text "어느 기술을"
+	line "회복할까?"
 	done
 
 _PPMaxedOutText::
 	TX_RAM wcf4b
-	text "'s PP"
-	line "is maxed out."
+	text "는(은) 더이상"
+	line "늘릴 수가 없습니다!"
 	prompt
 
 _PPIncreasedText::
 	TX_RAM wcf4b
-	text "'s PP"
-	line "increased."
+	text "의"
+	line "기술 포인트가 늘었다!"
 	prompt
 
 _PPRestoredText::
-	text "PP was restored."
+	text "기술 포인트가"
+	line "회복되었다!"
 	prompt
 
 _BootedUpTMText::
-	text "Booted up a TM!"
+	text "기술 머신을 가동시켰다!"
 	prompt
 
 _BootedUpHMText::
-	text "Booted up an HM!"
+	text "비전 머신을 가동시켰다!"
 	prompt
 
 _TeachMachineMoveText::
-	text "It contained"
-	line "@"
+	text "안에는 @"
 	TX_RAM wcf4b
-	text "!"
+	text "(이)가"
+	line "기록되어져 있다!"
 
-	para "Teach @"
+	para "@"
 	TX_RAM wcf4b
-	text ""
-	line "to a #MON?"
+	text "를(을)"
+	line "포켓몬에게 가르치겠습니까?"
 	done
 
 _MonCannotLearnMachineMoveText::
 	TX_RAM wcd6d
-	text " is not"
-	line "compatible with"
-	cont "@"
-	TX_RAM wcf4b
-	text "."
-
-	para "It can't learn"
+	text "과(와) "
 	line "@"
 	TX_RAM wcf4b
-	text "."
+	line "는(은)"
+	cont "상성이 좋지 않았다!"
+
+	para "@"
+	TX_RAM wcf4b
+	text "는(은)"
+	line "배울 수 없다!"
 	prompt
 
 _ItemUseNotTimeText::
-	text "OAK: <PLAYER>!"
-	line "This isn't the"
-	cont "time to use that! "
+	text "오박사님의 말씀……"
+	line $52, "야(아)! 이런 것에는"
+	cont "사용할 때가 따로 있는 법!"
 	prompt
 
 _ItemUseNotYoursToUseText::
-	text "This isn't yours"
-	line "to use!"
+	text "중요한 보관품입니다!"
+	line "사용하는 것은 할 수 없습니다!"
 	prompt
 
 _ItemUseNoEffectText::
-	text "It won't have any"
-	line "effect."
+	text "사용해도 효과가 없습니다."
 	prompt
 
 _ThrowBallAtTrainerMonText1::
-	text "The trainer"
-	line "blocked the BALL!"
+	text "트레이너가 볼을 쳐냈다!"
 	prompt
 
 _ThrowBallAtTrainerMonText2::
-	text "Don't be a thief!"
+	text "다른사람의 물건을 훔치면 도둑놈!"
 	prompt
 
 _NoCyclingAllowedHereText::
-	text "No cycling"
-	next "allowed here."
+	text "여기서는 자전거에"
+	next "탈 수 없습니다"
 	prompt
 
 _NoSurfingHereText::
-	text "No SURFing on"
-	line "@"
+	text "여기서는 @"
 	TX_RAM wcd6d
-	text " here!"
+	text "에"
+	line "탈 수 없습니다"
 	prompt
 
 _BoxFullCannotThrowBallText::
-	text "The #MON BOX"
-	line "is full! Can't"
-	cont "use that item!"
+	text "박스에 맡겨놓은 포켓몬이"
+	line "가득차서 더는 사용 못합니다!"
 	prompt
 
 _DontHavePokemonText::
-	text "You don't have a "
-	line "#MON!"
+	text "데리고 있는 포켓몬이"
+	line "없습니다!"
 	prompt
 
 _ItemUseText001::
-	text "<PLAYER> used@@"
-
+	text $52, "는(은) @@"
 _ItemUseText002::
 	TX_RAM wcf4b
-	text "!"
+	text "를(을)"
+	line "사용했다!"
 	done
 
 _GotOnBicycleText1::
-	text "<PLAYER> got on the@@"
+	text $52, "는(은) @@"
 
 _GotOnBicycleText2::
 	TX_RAM wcf4b
-	text "!"
+	text "에 탔다"
 	prompt
 
 _GotOffBicycleText1::
-	text "<PLAYER> got off@@"
-
+	text $52, "는(은) @@"
+	
 _GotOffBicycleText2::
-	text "the @"
 	TX_RAM wcf4b
-	text "."
+	text "에서 내렸다"
 	prompt
 
 _ThrewAwayItemText::
-	text "Threw away"
+	text "박스에서"
 	line "@"
 	TX_RAM wcd6d
-	text "."
+	text "을 버립니다"
 	prompt
 
 _IsItOKToTossItemText::
-	text "Is it OK to toss"
+	text "정말로"
 	line "@"
 	TX_RAM wcf4b
-	text "?"
+	text "버리겠습니까?"
 	prompt
 
 _TooImportantToTossText::
-	text "That's too impor-"
-	line "tant to toss!"
+	text "버릴수 없는"
+	line "중요한 아이템입니다!"
 	prompt
 
 _AlreadyKnowsText::
 	TX_RAM wcd6d
-	text " knows"
+	text "는(은) 이미"
 	line "@"
 	TX_RAM wcf4b
-	text "!"
+	text "를(을)"
+	cont "알고 있습니다"
 	prompt
 
 _ConnectCableText::
-	text "Okay, connect the"
-	line "cable like so!"
+	text "케이블이"
+	line "연결되었다!"
 	prompt
 
 _TradedForText::
-	text "<PLAYER> traded"
-	line "@"
+	text $52,"는(은) @"
 	TX_RAM wInGameTradeGiveMonName
-	text " for"
-	cont "@"
+	text "와(과)"
+	line "@"
 	TX_RAM wInGameTradeReceiveMonName
-	text "!@@"
+	text "를(을)@@"
+	cont "교환했다!"
 
 _WannaTrade1Text::
-	text "I'm looking for"
+	text "내가 구하고 싶은건"
 	line "@"
 	TX_RAM wInGameTradeGiveMonName
-	text "! Wanna"
+	text "야!"
 
-	para "trade one for"
+	para "한마리 있으면"
 	line "@"
 	TX_RAM wInGameTradeReceiveMonName
-	text "? "
+	text "랑 교환 가능할까?"
 	done
 
 _NoTrade1Text::
-	text "Awww!"
-	line "Oh well..."
+	text "으아!"
+	line "어쩔수 없지……"
 	done
 
 _WrongMon1Text::
-	text "What? That's not"
+	text "응? 그건"
 	line "@"
 	TX_RAM wInGameTradeGiveMonName
-	text "!"
+	text "이(가) 아니잖아!"
 
-	para "If you get one,"
-	line "come back here!"
+	para "다른애로"
+	line "다시 오도록해!"
 	done
 
 _Thanks1Text::
-	text "Hey thanks!"
+	text "고마워!"
 	done
 
 _AfterTrade1Text::
-	text "Isn't my old"
+	text "내 예전 파트너"
 	line "@"
 	TX_RAM wInGameTradeReceiveMonName
-	text " great?"
+	text "! 근사하지?"
 	done
 
 _WannaTrade2Text::
-	text "Hello there! Do"
-	line "you want to trade"
+	text "안녕하십니까!"
+	line ""
 
-	para "your @"
+	para "당신의 @"
 	TX_RAM wInGameTradeGiveMonName
-	text ""
-	line "for @"
+	text "를(을)"
+	line "@"
 	TX_RAM wInGameTradeReceiveMonName
-	text "?"
+	text "와(과) 교환하시겠습니까?"
 	done
 
 _NoTrade2Text::
-	text "Well, if you"
-	line "don't want to..."
+	text "뭐,"
+	line "싫으면 말고……"
 	done
 
 _WrongMon2Text::
-	text "Hmmm? This isn't"
+	text "흐음? 이건"
 	line "@"
 	TX_RAM wInGameTradeGiveMonName
-	text "."
+	text "(이)가 아닌데요"
 
-	para "Think of me when"
-	line "you get one."
+	para "준비해서 와주세요"
+	line ""
 	done
 
 _Thanks2Text::
-	text "Thanks!"
+	text "고마워요!"
 	done
 
 _AfterTrade2Text::
-	text "Hello there! Your"
-	line "old @"
+	text "안녕!"
+	line "네 @"
 	TX_RAM wInGameTradeGiveMonName
-	text " is"
-	cont "magnificent!"
+	text "는(은)"
+	cont "참으로 멋져!"
 	done
 
 _WannaTrade3Text::
-	text "Hi! Do you have"
+	text "안녕! 혹시"
 	line "@"
 	TX_RAM wInGameTradeGiveMonName
-	text "?"
+	text "를(을) 가지고 있니?"
 
-	para "Want to trade it"
-	line "for @"
+	para "그걸로"
+	line " @"
 	TX_RAM wInGameTradeReceiveMonName
-	text "?"
+	text "하고 교환하지 않겠어?"
 	done
 
 _NoTrade3Text::
-	text "That's too bad."
+	text "그거 참 유감이네"
 	done
 
 _WrongMon3Text::
-	text "...This is no"
+	text "…… 이건"
 	line "@"
 	TX_RAM wInGameTradeGiveMonName
-	text "."
+	text "(이)가 아닌데."
 
-	para "If you get one,"
-	line "trade it with me!"
+	para "한마리 생기면"
+	line "나랑 교환해줘!"
 	done
 
 _Thanks3Text::
-	text "Thanks, pal!"
+	text "고맙워 친구!"
 	done
 
 _AfterTrade3Text::
-	text "How is my old"
+	text "내가 키웠던"
 	line "@"
 	TX_RAM wInGameTradeReceiveMonName
-	text "?"
+	text "는(은) 어떤거 같아?"
 
-	para "My @"
+	para "@"
 	TX_RAM wInGameTradeGiveMonName
-	text " is"
-	line "doing great!"
+	text "는(은)"
+	line "잘 지내고 있어!"
 	done
 
 _NothingToCutText::
-	text "There isn't"
-	line "anything to CUT!"
+	text "이곳에서는 사용할 수 없습니다"
 	prompt
 
 _UsedCutText::
 	TX_RAM wcd6d
-	text " hacked"
-	line "away with CUT!"
+	text "는(은) "
+	line "풀베기를 사용했다!"
 	prompt
 
 

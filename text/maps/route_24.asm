@@ -1,183 +1,174 @@
 _Route24Text_51510::
-	text "Congratulations!"
-	line "You beat our 5"
-	cont "contest trainers!@@"
+	text "축하드립니다!"
+	line "트레이너 5명과의"
+	cont "시합을 제패했습니다!@@"
 
 _Route24Text_51515::
 	text ""
-	para "You just earned a"
-	line "fabulous prize!"
+	para "당신에게 멋진 상품을"
+	line "증여하겠습니다!"
 	prompt
 
 _Route24Text_5151a::
-	text "<PLAYER> received"
-	line "a @"
+	text $52, "는(은)"
+	line "@"
 	TX_RAM wcf4b
-	text "!@@"
+	text "를(을) 얻었다!@@"
 
 _Route24Text_51521::
-	text "You don't have"
-	line "any room!"
+	text "이 이상은"
+	line "들 수 없어!"
 	done
 
 _Route24Text_51526::
-	text "By the way, would"
-	line "you like to join"
-	cont "TEAM ROCKET?"
+	text "그런데 말이야"
+	line "자네 로켓단에 들어올"
+	cont "생각은 없는가?"
 
-	para "We're a group"
-	line "dedicated to evil"
-	cont "using #MON!"
+	para "우리 조직은 뒷세계를 지배하기"
+	line "위해 포켓몬을 이용하지!"
 
-	para "Want to join?"
+	para "함께 하겠나?"
 
-	para "Are you sure?"
+	para "진심이야?"
 
-	para "Come on, join us!"
+	para "농담말고 우리랑 함께하자고!"
 
-	para "I'm telling you"
-	line "to join!"
+	para "내가 말한건 합류야!"
 
-	para "OK, you need"
-	line "convincing!"
+	para "알았어"
+	line "너한테는 설득이 필요한거야!"
 
-	para "I'll make you an"
-	line "offer you can't"
-	cont "refuse!"
+	para "네가 더는 반항하지 못하게"
+	line "만들어주마!"
 	done
 
 _Route24Text_5152b::
-	text "Arrgh!"
-	line "You are good!"
+	text "아흐으윽!"
+	line "너 좋을대로 해!"
 	prompt
 
 _Route24Text_51530::
-	text "With your ability,"
-	line "you could become"
-	cont "a top leader in"
-	cont "TEAM ROCKET!"
+	text "네 실력이면 로켓단에서"
+	line "간부급이 될수 있어!"
 	done
 
 _Route24BattleText1::
-	text "I saw your feat"
-	line "from the grass!"
+	text "풀밭에서부터"
+	line "네 솜씨를 봤지!"
 	done
 
 _Route24EndBattleText1::
-	text "I"
-	line "thought not!"
+	text "이런걸"
+	line "생각한게 아니였는데!"
 	prompt
 
 _Route24AfterBattleText1::
-	text "I hid because the"
-	line "people on the"
-	cont "bridge scared me!"
+	text "다리위에 있는 사람들이"
+	line "겁준바람에 숨어 있었어!"
 	done
 
 _Route24BattleText2::
-	text "OK! I'm No. 5!"
-	line "I'll stomp you!"
+	text "좋았어! 나는 넘버5!"
+	line "짓밟아 주겠어!"
 	done
 
 _Route24EndBattleText2::
-	text "Whoa!"
-	line "Too much!"
+	text "우와!"
+	line "무지막해!"
 	prompt
 
 _Route24AfterBattleText2::
-	text "I did my best, I"
-	line "have no regrets!"
+	text "최선을 다했으니"
+	line "후회는 없어!"
 	done
 
 _Route24BattleText3::
-	text "I'm No. 4!"
-	line "Getting tired?"
+	text "넘버4!"
+	line "슬슬 지칠려나?"
 	done
 
 _Route24EndBattleText3::
-	text "I lost"
-	line "too!"
+	text "나도 졌네!"
 	prompt
 
 _Route24AfterBattleText3::
-	text "I did my best, so"
-	line "I've no regrets!"
+	text "전력을 다했기에"
+	line "후회는 없군!"
 	done
 
 _Route24BattleText4::
-	text "Here's No. 3!"
-	line "I won't be easy!"
+	text "여기 넘버3 갑니다!"
+	line "만만치 않을겁니다!"
 	done
 
 _Route24EndBattleText4::
-	text "Ow!"
-	line "Stomped flat!"
+	text "어휴!"
+	line "헛발 굴렸네!"
 	prompt
 
 _Route24AfterBattleText4::
-	text "I did my best, I"
-	line "have no regrets!"
+	text "전력을 다했기에"
+	line "후회는 없습니다!"
 	done
 
 _Route24BattleText5::
-	text "I'm second!"
-	line "Now it's serious!"
+	text "나는야 넘버투!"
+	line "난 지금 진지해!"
 	done
 
 _Route24EndBattleText5::
-	text "How could I"
-	line "lose?"
+	text "어떡게 내가"
+	line "진거지?"
 	prompt
 
 _Route24AfterBattleText5::
-	text "I did my best, I"
-	line "have no regrets!"
+	text "최선을 다한거라"
+	line "후회하지 않아!"
 	done
 
 _Route24BattleText6::
-	text "This is NUGGET"
-	line "BRIDGE! Beat us 5"
-	cont "trainers and win"
-	cont "a fabulous prize!"
-
-	para "Think you got"
-	line "what it takes?"
+	text "이곳은 너겟 브릿지!"
+	line "트레이너 5명을 이기면"
+	cont "호화상품을 증여해주지!"
+;너켓 브릿지 찾아야 할듯 금다리?
+	para "뭐를 받을거"
+	line "같아?"
 	done
 
 _Route24EndBattleText6::
-	text "Whoo!"
-	line "Good stuff!"
+	text "유후!"
+	line "대물이다!"
 	prompt
 
 _Route24AfterBattleText6::
-	text "I did my best, I"
-	line "have no regrets!"
+	text "나로썬 최선을 다했고"
+	line "아쉬운건 없어!"
 	done
 
 _Route24DamianText1::
-	text "I'm not good at"
-	line "raising #MON."
+	text "영 적성이 안 맞아서"
+	line "포켓몬을 못 키우겠어"
 
-	para "I should release"
-	line "my CHARMANDER"
-	cont "because I haven't"
-	cont "raised it well..."
+	para "잘 키울 자신이 없어서"
+	line "아무래도 내 파이리를"
+	cont "풀어줘야 할까봐……"
 
-	para "If you promise me"
-	line "you'll care for"
-	cont "it, it's yours."
+	para "혹시 내 파이리"
+	line "돌봐 줄 수 있어?"
 	done
 
 _Route24DamianText2::
-	text "Take good care of"
-	line "my CHARMANDER!@@"
+	text "내 파이리"
+	line "잘 부탁할게!@@"
 
 _Route24DamianText3::
-	text "Oh... I'd better"
-	line "release it then."
+	text "어…… 이렇게 하는게"
+	line "놓아주는것보단 낫지."
 	done
 
 _Route24DamianText4::
-	text "How's CHARMANDER"
-	line "doing?"
+	text "파이리는"
+	line "요즘 어때?"
 	done
+	

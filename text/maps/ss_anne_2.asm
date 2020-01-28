@@ -1,63 +1,62 @@
 _SSAnne2Text1::
-	text "This ship, she is"
-	line "a luxury liner"
-	cont "for trainers!"
-
-	para "At every port, we"
-	line "hold parties with"
-	cont "invited trainers!"
+	text "이 배는 트레이너들을 위한"
+	line "호화 여객선이죠"
+	
+	para "어느 항구에서나 저흰"
+	line "트레이너와 파티를 즐긴답니다"
 	done
 
 _SSAnneRivalBeforeBattleText::
-	text $53, ": Bonjour!"
+	text $53, "『봉쥬르!"
 	line $52, "!"
 
-	para "Imagine seeing"
-	line "you here!"
+	para "널 여기서 보게 될"
+	line "줄이야!"
 
-	para $52, ", were you"
-	line "really invited?"
+	para $52
+	line "진짜 너 초대받은거 맞아?"
 
-	para "So how's your"
-	line "#DEX coming?"
+	para "그리고 도감은 잘 되가?"
 
-	para "I already caught"
-	line "40 kinds, pal!"
+	para "난 벌써 40종류나"
+	line "잡았다구, 헷!"
 
-	para "Different kinds"
-	line "are everywhere!"
+	para "여러 곳의 수풀에"
+	line "들어가서 잡은"
 
-	para "Crawl around in"
-	line "grassy areas!"
+	para "내 다양한 포켓몬들을"
+	line "한번 봐봐!"
 	done
 
 _SSAnneRivalDefeatedText::
-	text "Humph!"
+	text "흥!"
 
-	para "At least you're"
-	line "raising your"
-	cont "#MON!"
+	para "포켓몬을 키우긴 한것같네!"
 	prompt
 
-_SSAnneRivalWonText::
-	text $52, "! What are"
-	line "you, seasick?"
 
-	para "You should shape"
-	line "up, pal!"
+
+_SSAnneRivalWonText::
+	text $52, "!"
+	line "뱃멀미라도 하는거야?"
+
+	para "이정도로는 힘들텐데!"
 	prompt
 
 _SSAnneRivalCaptainText::
-	text $53, ": I heard"
-	line "there was a CUT"
-	cont "master on board."
+	text $53, "『선내에"
+	line "풀베기 마스터가 있다고 들었어"
 
-	para "But, he was just a"
-	line "seasick, old man!"
+	para "근데 알고보니"
+	line "뱃멀미하는 할아버지더라고!"
 
-	para "But, CUT itself is"
-	line "really useful!"
+ 
 
-	para "You should go see"
-	line "him! Smell ya!"
+	para "하지만 풀베기 자체는"
+	line "굉장히 유용해!"
+
+	para "한번 만나보는게 좋을거야!"
+	line "그럼 바이비!"
 	done
+
+ 

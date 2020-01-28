@@ -149,10 +149,7 @@ Trade_Delay80:
 	jp DelayFrames
 
 Trade_ClearTileMap:
-	coord hl, 0, 0
-	ld bc, SCREEN_WIDTH * SCREEN_HEIGHT
-	ld a, " "
-	jp FillMemory
+	jp ClearScreen
 
 LoadTradingGFXAndMonNames:
 	call Trade_ClearTileMap
@@ -241,9 +238,17 @@ Trade_ShowPlayerMon:
 	call Trade_PrintPlayerMonInfoText
 	ld b, vBGMap0 / $100
 	call CopyScreenTileBufferToVRAM
-	call ClearScreen
+	
+	call LegacyClearScreen
+
 	ld a, [wTradedPlayerMonSpecies]
 	call Trade_LoadMonSprite
+	
+	ld b, vBGMap0 / $100
+	call CopyScreenTileBufferToVRAM1
+	
+	call ClearScreenVBK1
+	
 	ld a, $7e
 .slideScreenLoop
 	push af
@@ -267,8 +272,14 @@ Trade_ShowPlayerMon:
 	ret
 
 Trade_DrawOpenEndOfLinkCable:
-	call Trade_ClearTileMap
+	ld a, $1
+	ld [H_AUTOBGTRANSFERENABLED], a
+	call ClearScreen
+	call Delay3
+	ld a,%11101011
+	ld [rLCDC],a
 	ld b, vBGMap0 / $100
+	call CopyScreenTileBufferToVRAM1
 	call CopyScreenTileBufferToVRAM
 	ld b, SET_PAL_GENERIC
 	call RunPaletteCommand
@@ -855,3 +866,53 @@ Trade_ShowAnimation:
 	xor a
 	ld [wAnimationType], a
 	predef_jump MoveAnimation
+CopyScreenTileBufferToVRAM1:
+; Copy wTileMap to the BG Map starting at b * $100.
+; This is done in thirds of 6 rows, so it takes 3 frames.
+	ld a,[hVEnable]
+	set 2,a
+	ld [hVEnable],a
+	ld c, 6
+
+	ld hl, $600 * 0
+	coord de, 0, 6 * 0
+	call .setup
+	call DelayFrame
+
+	ld hl, $600 * 1
+	coord de, 0, 6 * 1
+	call .setup
+	call DelayFrame
+
+	ld hl, $600 * 2
+	coord de, 0, 6 * 2
+	call .setup
+	call DelayFrame
+	ld a,[hVEnable]
+	res 2,a
+	ld [hVEnable],a
+
+	ret
+.setup
+	push hl
+		push de
+		pop hl
+			push bc
+			ld bc,$D800-wTileMap
+			add hl,bc
+			pop bc
+		push hl
+		pop de
+	pop hl
+	ld a, d
+	ld [H_VBCOPYBGSRC+1], a
+	call GetRowColAddressBgMap
+	ld a, l
+	ld [H_VBCOPYBGDEST], a
+	ld a, h
+	ld [H_VBCOPYBGDEST+1], a
+	ld a, c
+	ld [H_VBCOPYBGNUMROWS], a
+	ld a, e
+	ld [H_VBCOPYBGSRC], a
+	ret

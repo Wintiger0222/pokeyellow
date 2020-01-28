@@ -1,33 +1,32 @@
 _SafariZoneNorthText3::
-	text "REST HOUSE"
+	text "휴게소"
 	done
 
 _SafariZoneNorthText4::
-	text "TRAINER TIPS"
+	text "…… 득이 되는 게시판!"
 
-	para "The SECRET HOUSE"
-	line "is still ahead!"
+	para "비밀의 집은"
+	line "저앞에 있습니다!"
 	done
 
 _SafariZoneNorthText5::
-	text "AREA 2"
+	text "여기는 2 구역"
 	done
 
 _SafariZoneNorthText6::
-	text "TRAINER TIPS"
+	text "…… 득이 되는 게시판!"
 
-	para "#MON hide in"
-	line "tall grass!"
+	para "포켓몬은"
+	line "풀이 긴 곳에 숨습니다!"
 
-	para "Zigzag through"
-	line "grassy areas to"
-	cont "flush them out."
+	para "지그재그로 풀밭에"
+	line "들어가면 튀어나옵니다!"
 	done
 
 _SafariZoneNorthText7::
-	text "TRAINER TIPS"
+	text "…… 득이 되는 게시판!"
 
-	para "Win a free HM for"
-	line "finding the"
-	cont "SECRET HOUSE!"
+	para "무료 비전머신을"
+	line "얻기 위해서는"
+	cont "비밀의 집 찾으세요!"
 	done

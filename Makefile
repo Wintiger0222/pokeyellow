@@ -1,4 +1,4 @@
-PYTHON := python
+PYTHON := python2.7
 pcm      := $(PYTHON) tools/pokemontools/pcm.py pcm
 
 rom := pokeyellow.gbc
@@ -56,7 +56,7 @@ endif
 $(objs): %.o: %.asm $$(dep)
 	$(RGBASM) -h -o $@ $*.asm
 
-opts = -cjsv -k 01 -l 0x33 -m 0x1b -p 0 -r 03 -t "POKEMON YELLOW"
+opts = -cjsv -k 01 -l 0x33 -m 0x1b -p 0 -r 03 -t "POKEMON YELAPSK"
 
 $(rom): $(objs)
 		$(RGBLINK) -n pokeyellow.sym -l pokeyellow.link -o $@ $^

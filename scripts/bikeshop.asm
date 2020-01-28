@@ -60,7 +60,7 @@ BikeShopText1:
 	coord hl, 2, 2
 	ld de, BikeShopMenuText
 	call PlaceString
-	coord hl, 8, 3
+	coord hl, 8, 2
 	ld de, BikeShopMenuPrice
 	call PlaceString
 	ld hl, BikeShopText_1d815
@@ -83,11 +83,11 @@ BikeShopText1:
 	jp TextScriptEnd
 
 BikeShopMenuText:
-	db   "BICYCLE"
-	next "CANCEL@"
+	db   "자전거"
+	next "돌아가다@"
 
 BikeShopMenuPrice:
-	db "¥1000000@"
+	db "1000000¥@"
 
 BikeShopText_1d810:
 	TX_FAR _BikeShopText_1d810

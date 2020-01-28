@@ -162,14 +162,14 @@ OakSpeechSlidePicCommon:
 
 DisplayIntroNameTextBox:
 	push de
-	coord hl, 0, 0
+	coord hl, 0, 1
 	lb bc, 10, 9
 	call TextBoxBorder
-	coord hl, 3, 0
+	coord hl, 3, 1
 	ld de, .namestring
 	call PlaceString
 	pop de
-	coord hl, 2, 2
+	coord hl, 2, 3
 	call PlaceString
 	call UpdateSprites
 	xor a
@@ -179,27 +179,28 @@ DisplayIntroNameTextBox:
 	ld [wTopMenuItemX], a
 	ld [wMenuWatchedKeys], a ; A_BUTTON
 	inc a
+	inc a
 	ld [wTopMenuItemY], a
 	inc a
 	ld [wMaxMenuItem], a
 	jp HandleMenuInput
 
 .namestring
-	db "NAME@"
+	db "이름 후보@"
 
 DefaultNamesPlayer:
-	db   "NEW NAME"
-	next "YELLOW"
-	next "ASH"
-	next "JACK"
-	db   "@"
+	db   "스스로 결정하다"
+	next "옐로"
+	next "지우"
+	next "명석"
+	next   "윈도타이거@"
 
 DefaultNamesRival:
-	db   "NEW NAME"
-	next "BLUE"
-	next "GARY"
-	next "JOHN"
-	db   "@"
+	db   "스스로 결정하다"
+	next "그린"
+	next "바람"
+	next "문환"
+	next   "뇌씨@"
 
 GetDefaultName:
 ; a = name index
@@ -226,16 +227,18 @@ GetDefaultName:
 	jp CopyData
 
 DefaultNamesPlayerList:
-	db "NEW NAME@"
-	db "YELLOW@"
-	db "ASH@"
-	db "JACK@"
+	db "스스로 결정하다@"
+	db "옐로@"
+	db "지우@"
+	db "명석@"
+	db "윈도타이거@"
 
 DefaultNamesRivalList:
-	db "NEW NAME@"
-	db "BLUE@"
-	db "GARY@"
-	db "JOHN@"
+	db "스스로 결정하다@"
+	db "그린@"
+	db "바람@"
+	db "문환@"
+	db "뇌씨@"
 
 TextTerminator_6b20:
 	db "@"

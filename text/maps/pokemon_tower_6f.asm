@@ -1,61 +1,66 @@
 _PokemonTower2Text_60c1f::
-	text "The GHOST was the"
-	line "restless soul of"
-	cont "CUBONE's mother!"
+	text "유령의 정체는"
+	line "탕구리 엄마의 영혼이었다!"
 	done
 
 _PokemonTower2Text_60c24::
-	text "The mother's soul"
-	line "was calmed."
+	text "어미의 영혼이 진정된듯하다"
 
-	para "It departed to"
-	line "the afterlife!"
+	para "이제 저승으로 떠난 것 같다!"
 	done
 
+
+
 _PokemonTower6BattleText1::
-	text "Give...me..."
-	line "blood..."
+	text "피…… 피를……"
+	line "줘……"
 	done
 
 _PokemonTower6EndBattleText1::
-	text "Groan!"
+	text "끄응!"
 	prompt
 
 _PokemonTower6AfterBattleText1::
-	text "I feel anemic and"
-	line "weak..."
+	text "빈혈에다가 "
+	line "몸도 쑤셔오고……"
 	done
 
 _PokemonTower6BattleText2::
-	text "Urff... Kwaah!"
+	text "으으…… 꺄아악!"
 	done
 
 _PokemonTower6EndBattleText2::
-	text "Some-"
-	line "thing fell out!"
+	text "뭔가 떨어져 나갔어!"
 	prompt
 
+
+
 _PokemonTower6AfterBattleText2::
-	text "Hair didn't fall"
-	line "out! It was an"
-	cont "evil spirit!"
+	text "머리카락이 떨어진게아니라"
+	line "악령이야!"
+	cont "악령이었다구!"
 	done
 
+  
+
 _PokemonTower6BattleText3::
-	text "Ke..ke...ke..."
-	line "ke..ke...ke!!"
+	text "킥…… 킥…… 킥……"
+	line "킥…… 킥…… 킥!!"
 	done
 
 _PokemonTower6EndBattleText3::
-	text "Keee!"
+	text "키에에!"
 	prompt
 
+
+
 _PokemonTower6AfterBattleText3::
-	text "What's going on"
-	line "here?"
+	text "무슨 일이 있었던거죠?"
 	done
 
+
+
 _PokemonTower6Text6::
-	text "Be gone..."
-	line "Intruders..."
+	text "불청객은……"
+	line "떠나라……"
 	done

@@ -167,20 +167,13 @@ GetFarByte::
 
 ClearScreenArea::
 ; Clear tilemap area cxb at hl.
-	ld a, " " ; blank tile
-	ld de, 20 ; screen width
-.y
-	push hl
-	push bc
-.x
-	ld [hli], a
-	dec c
-	jr nz, .x
-	pop bc
-	pop hl
-	add hl, de
-	dec b
-	jr nz, .y
+	ld a,h
+	ld [H_2TEMP],a
+	ld a,l
+	ld [H_2TEMP+1],a
+	ld a,b
+	ld [hTemp],a
+	callba _ClearScreenArea ;공간절약용
 	ret
 
 CopyScreenTileBufferToVRAM::
@@ -218,17 +211,14 @@ CopyScreenTileBufferToVRAM::
 	ld [H_VBCOPYBGSRC], a
 	ret
 
+LegacyClearScreen::
+	callba _LegacyClearScreen;호환용?
+	ret
+
 ClearScreen::
 ; Clear wTileMap, then wait
 ; for the bg map to update.
-	ld bc, 20 * 18
-	inc b
-	coord hl, 0, 0
-	ld a, " "
-.loop
-	ld [hli], a
-	dec c
-	jr nz, .loop
-	dec b
-	jr nz, .loop
-	jp Delay3
+	callba _ClearScreen
+ClearScreenVBK1::
+	callba _ClearScreenVBK1
+	ret

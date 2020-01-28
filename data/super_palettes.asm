@@ -326,9 +326,9 @@ GBCBasePalettes:
 
 	; PAL_LOGO2
 	RGB 31, 31, 31
-	RGB 31, 31,  0
-	RGB  7,  7, 25
-	RGB  0,  0, 17
+	RGB 31, 31, 0
+	RGB  1, 22,  6
+	RGB 23, 8,  0
 
 	; PAL_0F
 	RGB 31, 31, 31
@@ -476,6 +476,6 @@ GBCBasePalettes:
 
 	; PAL_27
 	RGB 31, 31, 31
-	RGB  9,  9,  9
+	RGB 31, 31,  0
 	RGB 31, 21,  0
 	RGB  3,  3,  3

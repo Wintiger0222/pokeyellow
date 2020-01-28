@@ -1,37 +1,35 @@
 _BrunoBeforeBattleText::
-	text "I am BRUNO of"
-	line "the ELITE FOUR!"
+	text "나는 사천왕"
+	line "시바!"
 
-	para "Through rigorous"
-	line "training, people"
-	cont "and #MON can"
-	cont "become stronger!"
+	para "혹독한 훈련을 통해"
+	line "사람과 포켓몬은 더욱 강해지지!"
 
-	para "I've weight"
-	line "trained with"
-	cont "my #MON!"
+	para "나는 웨이트 트레이닝으로"
+	line "내 포켓몬과 단련해왔다!"
 
-	para $52, "!"
+	para $52, "군!"
 
-	para "We will grind you"
-	line "down with our"
-	cont "superior power!"
+	para "우리가 널"
+	line "가루로 만들어주지!"
+	cont "압도적인 힘으로!"
 
-	para "Hoo hah!"
+	para "우-! 하-앗!"
 	done
 
 _BrunoEndBattleText::
-	text "Why?"
-	line "How could I lose?"
+	text "어째서지?"
+	line "내가 질줄이야!"
 	prompt
 
 _BrunoAfterBattleText::
-	text "My job is done!"
-	line "Go face your next"
-	cont "challenge!"
+	text "내 할일은 다했다"
+	
+	para "가서 다음 도전과"
+	line "마주해라!"
 	done
 
 _BrunoDontRunAwayText::
-	text "Someone's voice:"
-	line "Don't run away!"
+	text "누군가의 목소리『안 되!"
+	line "도망칠 순 없어!"
 	done

@@ -1,137 +1,135 @@
 _Route21BattleText1::
-	text "You want to know"
-	line "if the fish are"
-	cont "biting?"
+	text "물고기가 사람을"
+	line "물수있는지 궁금한거니?"
 	done
 
 _Route21EndBattleText1::
-	text "Dang!"
+	text "땡!"
 	prompt
 
 _Route21AfterBattleText1::
-	text "I can't catch"
-	line "anything good!"
+	text "뭐 좀 좋은게"
+	line "걸리지 않을려나!"
 	done
 
 _Route21BattleText2::
-	text "I got a big haul!"
-	line "Wanna go for it?"
+	text "월척을 났았단다!"
+	line "볼래?"
 	done
 
 _Route21EndBattleText2::
-	text "Darn"
-	line "MAGIKARP!"
+	text "망할"
+	line "잉어킹!"
 	prompt
 
 _Route21AfterBattleText2::
-	text "I seem to only"
-	line "catch MAGIKARP!"
+	text "잉어킹이 득실거리는것만"
+	line "봤어!"
 	done
 
 _Route21BattleText3::
-	text "The sea cleanses"
-	line "my body and soul!"
+	text "바다가 몸과 마음을"
+	line "깨끗하게 한다!"
 	done
 
 _Route21EndBattleText3::
-	text "Ayah!"
+	text "아야!"
 	prompt
 
 _Route21AfterBattleText3::
-	text "I like the"
-	line "mountains too!"
+	text "산도"
+	line "좋아해!"
 	done
 
 _Route21BattleText4::
-	text "What's wrong with"
-	line "me swimming?"
+	text "나랑 수영하는데"
+	line "뭐가 문제인거람?"
 	done
 
 _Route21EndBattleText4::
-	text "Cheap"
-	line "shot!"
+	text "이건 불공평"
+	line "하다고!"
 	prompt
 
 _Route21AfterBattleText4::
-	text "I look like what?"
-	line "A studded inner"
-	cont "tube? Get lost!"
+	text "내가 뭘 좋아할거 같아?"
+	line "빵빵한 튜브?"
+	cont "택도 없어!"
 	done
 
 _Route21BattleText5::
-	text "I caught all my"
-	line "#MON at sea!"
+	text "바다에서 내 모든"
+	line "포켓몬을 잡았어!"
 	done
 
 _Route21EndBattleText5::
-	text "Diver!!"
-	line "Down!!"
+	text "다이버!!"
+	line "잠수!!"
 	prompt
 
 _Route21AfterBattleText5::
-	text "Where'd you catch"
-	line "your #MON?"
+	text "어디서 잡은거야,"
+	line "그 포켓몬?"
 	done
 
 _Route21BattleText6::
-	text "Right now, I'm in"
-	line "a triathlon meet!"
+	text "지금은 철인경기"
+	line "참여중이야!"
 	done
 
 _Route21EndBattleText6::
-	text "Pant..."
-	line "pant...pant..."
+	text "헉……"
+	line "헉……헉……"
 	prompt
 
 _Route21AfterBattleText6::
-	text "I'm beat!"
-	line "But, I still have"
-	cont "the bike race and"
-	cont "marathon left!"
+	text "졌다!"
+	line "그래도 자전거 경주와"
+	cont "마라톤이 남았어!"
 	done
 
 _Route21BattleText7::
-	text "Ahh! Feel the sun"
-	line "and the wind!"
+	text "오오오!"
+	line "햇빛과 바람을 느껴라!"
 	done
 
 _Route21EndBattleText7::
-	text "Yow!"
-	line "I lost!"
+	text "아뿔사!"
+	line "졌다!"
 	prompt
 
 _Route21AfterBattleText7::
-	text "I'm sunburnt to a"
-	line "crisp!"
+	text "햇볕에 바싹"
+	line "말라붙었어!"
 	done
 
 _Route21BattleText8::
-	text "Hey, don't scare"
-	line "away the fish!"
+	text "야"
+	line "물고기 겁줘서 쫓아내지마!"
 	done
 
 _Route21EndBattleText8::
-	text "Sorry!"
-	line "I didn't mean it!"
+	text "미안해!"
+	line "고의가 아니였어!"
 	prompt
 
 _Route21AfterBattleText8::
-	text "I was just angry"
-	line "that I couldn't"
-	cont "catch anything."
+	text "아무것도 못잡고"
+	line "허탕치고 있는게"
+	cont "화났을뿐이야"
 	done
 
 _Route21BattleText9::
-	text "Keep me company"
-	line "'til I get a hit!"
+	text "한 건 할때까지"
+	line "나하고 있어줘!"
 	done
 
 _Route21EndBattleText9::
-	text "That"
-	line "burned some time."
+	text "약간은 불사른"
+	line "시간이 됐네."
 	prompt
 
 _Route21AfterBattleText9::
-	text "Oh wait! I got a"
-	line "bite! Yeah!"
+	text "잠깐 있어봐!"
+	line "뭔가 걸렸어!"
 	done

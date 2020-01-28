@@ -1,130 +1,166 @@
 _FightingDojoText_5ce8e::
-	text "Grunt!"
+	text "흠!"
 
-	para "I am the KARATE"
-	line "MASTER! I am the"
-	cont "LEADER here!"
 
-	para "You wish to"
-	line "challenge us?"
-	cont "Expect no mercy!"
 
-	para "Fwaaa!"
+	para "나는 태권도 마스터!"
+	line "이 곳의 관장이다!"
+
+	para "우리에게 도전하려는건가?"
+	line "말해두지만 봐주는건 없다!"
+
+ 
+
+	para "흐아아아압!"
 	done
 
 _FightingDojoText_5ce93::
-	text "Hwa!"
-	line "Arrgh! Beaten!"
+	text "하!"
+	line "흐아! 맞았군!"
 	prompt
 
 _FightingDojoText_5ce98::
-	text "Indeed, I have"
-	line "lost!"
+	text "설마 진짜로"
+	line "져버릴 줄이야!"
 
-	para "But, I beseech"
-	line "you, do not take"
-	cont "our emblem as"
-	cont "your trophy!"
+ 
 
-	para "In return, I will"
-	line "give you a prized"
-	cont "fighting #MON!"
+	para "그렇지만 제발 우리 간판을"
+	line "가져가는 것 만큼은"
+	cont "봐주지 않겠나?"
+	
+  
 
-	para "Choose whichever"
-	line "one you like!"
+	para "그 대신 포켓몬 한마리를"
+	line "선물로 주지!"
+
+ 
+
+	para "원하는 녀석으로"
+	line "골라보게나!"
 	done
 
-_FightingDojoText_5ce9d::
-	text "Ho!"
+ 
 
-	para "Stay and train at"
-	line "Karate with us!"
+_FightingDojoText_5ce9d::
+	text "호!"
+
+
+
+	para "함께 태권도를"
+	line "수련하자!"
 	done
 
 _FightingDojoBattleText1::
-	text "Hoargh! Take your"
-	line "shoes off!"
+	text "아뵤오!"
+	line "신발 벗어!"
 	done
 
 _FightingDojoEndBattleText1::
-	text "I give"
-	line "up!"
+	text "내가 졌다!"
 	prompt
+
+
 
 _FightingDojoAfterBattleText1::
-	text "You wait 'til you"
-	line "see our Master!"
+	text "우리 사부님을 만나기전까지"
+	line "기고 만장하지 말라고!"
 
-	para "I'm a small fry"
-	line "compared to him!"
+ 
+
+	para "나 같은 놈과는 비교가"
+	line "안되게 강하시니까!"
 	done
+
+ 
 
 _FightingDojoBattleText2::
-	text "I hear you're"
-	line "good! Show me!"
+	text "듣자하니 좀 한다는 것 같은데!"
+	line "덤벼라!"
 	done
+
+ 
 
 _FightingDojoEndBattleText2::
-	text "Judge!"
-	line "1 point!"
+	text "판정!"
+	line "한판승!"
 	prompt
+
+ 
 
 _FightingDojoAfterBattleText2::
-	text "Our Master is a"
-	line "pro fighter!"
+	text "우리 사부님은"
+	line "싸움의 고수야!"
 	done
+
+ 
 
 _FightingDojoBattleText3::
-	text "Nothing tough"
-	line "frightens me!"
+	text "누구도 날"
+	line "겁줄순 없다!"
 
-	para "I break boulders"
-	line "for training!"
+ 
+
+	para "바위깨기 수련의 성과를"
+	line "보여주지!"
 	done
+
+ 
 
 _FightingDojoEndBattleText3::
-	text "Yow!"
-	line "Stubbed fingers!"
+	text "끄악!"
+	line "손가락이 찌부러졌어!"
 	prompt
+
+ 
 
 _FightingDojoAfterBattleText3::
-	text "The only thing"
-	line "that frightens us"
-	cont "is psychic power!"
+	text "우릴 겁줄수있는건"
+	line "초능력 뿐이야!"
 	done
+
+ 
 
 _FightingDojoBattleText4::
-	text "Hoohah!"
+	text "호이차!"
 
-	para "You're trespassing"
-	line "in our FIGHTING"
-	cont "DOJO!"
+
+
+	para "겁도없이 우리 도장에"
+	line "무단침입하다니!"
 	done
+
+ 
 
 _FightingDojoEndBattleText4::
-	text "Oof!"
-	line "I give up!"
+	text "크윽!"
+	line "나의 패배다!"
 	prompt
 
+
 _FightingDojoAfterBattleText4::
-	text "The prime fighters"
-	line "across the land"
-	cont "train here."
+	text "세계를 넘나드는 일류 파이터들이"
+	line "여기서 수련을 하지"
 	done
+
+ 
 
 _WantHitmonleeText::
-	text "You want the"
-	line "hard-kicking"
-	cont "HITMONLEE?"
+	text "발차기의 달인"
+	line "시라소몬을 원하나?"
 	done
 
+ 
 _WantHitmonchanText::
-	text "You want the"
-	line "piston-punching"
-	cont "HITMONCHAN?"
+	text "속사포 같은 펀치의"
+	line "홍수몬을 원하나?"
 	done
+
+ 
 
 _OtherHitmonText::
-	text "Better not get"
-	line "greedy..."
+	text "너무 욕심내지는 말게……"
 	done
+
+
+

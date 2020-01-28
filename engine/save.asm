@@ -167,8 +167,8 @@ SaveSAV:
 
 SaveSAVConfirm:
 	call PrintText
-	coord hl, 0, 7
-	lb bc, 8, 1
+	coord hl, 0, 6
+	lb bc, 7, 1
 	ld a,TWO_OPTION_MENU
 	ld [wTextBoxID],a
 	call DisplayTextBoxID ; yes/no menu
@@ -478,21 +478,21 @@ ChooseABoxText:
 	db "@"
 
 BoxNames:
-	db   "BOX 1"
-	next "BOX 2"
-	next "BOX 3"
-	next "BOX 4"
-	next "BOX 5"
-	next "BOX 6"
-	next "BOX 7"
-	next "BOX 8"
-	next "BOX 9"
-	next "BOX10"
-	next "BOX11"
-	next "BOX12@"
+	db   $D9, $DA, "1"
+	next $D9, $DA, "2"
+	next $D9, $DA, "3"
+	next $D9, $DA, "4"
+	next $D9, $DA, "5"
+	next $D9, $DA, "6"
+	next $D9, $DA, "7"
+	next $D9, $DA, "8"
+	next $D9, $DA, "9"
+	next $D9, $DA, "10"
+	next $D9, $DA, "11"
+	next $D9, $DA, "12@"
 
 BoxNoText:
-	db "BOX No.@"
+	db "지금의 박스@"
 
 EmptyAllSRAMBoxes:
 ; marks all boxes in SRAM as empty (initialisation for the first time the

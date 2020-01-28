@@ -33,4 +33,4 @@ SafariSteps:
 	db "/500@"
 
 SafariBallText:
-	db "BALL×× @"
+	db "사파리볼×× @"

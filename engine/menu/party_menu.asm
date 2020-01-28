@@ -28,6 +28,11 @@ RedrawPartyMenu_:
 	ld a,[wPartyMenuTypeOrMessageID]
 	cp a,SWAP_MONS_PARTY_MENU
 	jp z,.printMessage
+	xor a
+	ld [H_AUTOBGTRANSFERENABLED],a ;단순히 깜빡이는거 방지->느려짐
+	coord hl, 0, 0
+	lb bc, $0C, $14
+	call ClearScreenArea ;더 느려짐
 	call ErasePartyMenuCursors
 	callba InitPartyMenuBlkPacket
 	coord hl, 3, 0
@@ -48,7 +53,11 @@ RedrawPartyMenu_:
 	ld hl,wPartyMonNicks
 	call GetPartyMonName
 	pop hl
+	ld bc,20
+	add hl, bc
 	call PlaceString ; print the pokemon's name
+	ld bc,-20
+	add hl, bc
 	ld a,[hPartyMonIndex]
 	ld [wWhichPokemon],a
 	callab IsThisPartymonStarterPikachu_Party
@@ -89,13 +98,7 @@ RedrawPartyMenu_:
 	cp a,EVO_STONE_PARTY_MENU
 	jr z,.evolutionStoneMenu
 	push hl
-	ld bc,14 ; 14 columns to the right
-	add hl,bc
-	ld de,wLoadedMonStatus
-	call PrintStatusCondition
-	pop hl
-	push hl
-	ld bc,20 + 1 ; down 1 row and right 1 column
+	ld bc,8
 	ld a,[hFlags_0xFFFA]
 	set 0,a
 	ld [hFlags_0xFFFA],a
@@ -123,9 +126,15 @@ RedrawPartyMenu_:
 	call PlaceString
 	pop hl
 .printLevel
-	ld bc,10 ; move 10 columns to the right
+	ld bc,20+5 ; down 1 row and right 5 columns
 	add hl,bc
 	call PrintLevel
+	pop hl
+	push hl
+	ld bc,5 ; 5 columns to the right
+	add hl,bc
+	ld de,wLoadedMonStatus
+	call PrintStatusCondition
 	pop hl
 	pop de
 	inc de
@@ -135,9 +144,9 @@ RedrawPartyMenu_:
 	inc c
 	jp .loop
 .ableToLearnMoveText
-	db "ABLE@"
+	db "배울 수 있다@"
 .notAbleToLearnMoveText
-	db "NOT ABLE@"
+	db "배울 수 없다@"
 .evolutionStoneMenu
 	push hl
 	ld hl,EvosMovesPointerTable
@@ -190,11 +199,11 @@ RedrawPartyMenu_:
 	add hl,bc
 	call PlaceString
 	pop hl
-	jr .printLevel
+	jp .printLevel
 .ableToEvolveText
-	db "ABLE@"
+	db "쓸 수 있다@"
 .notAbleToEvolveText
-	db "NOT ABLE@"
+	db "쓸 수 없다@"
 .afterDrawingMonEntries
 	ld b, SET_PAL_PARTY_MENU
 	call RunPaletteCommand
@@ -224,6 +233,8 @@ RedrawPartyMenu_:
 	ld [H_AUTOBGTRANSFERENABLED],a
 	call Delay3
 	jp GBPalNormal
+	ret
+	
 .printItemUseMessage
 	and a,$0F
 	ld hl,PartyMenuItemUseMessagePointers

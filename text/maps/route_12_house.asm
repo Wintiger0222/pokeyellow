@@ -1,60 +1,65 @@
 _Route12HouseText_564c0::
-	text "I'm the FISHING"
-	line "GURU's brother!"
+	text "난 낚시꾼 동생!"
 
-	para "I simply Looove"
-	line "fishing!"
 
-	para "Do you like to"
-	line "fish?"
+
+	para "낚시를 저어어어어어엉말"
+	line "사랑하는 사람이지!"
+
+ 
+
+	para "너도 낚시 좋아하니?"
 	done
 
+
+
 _Route12HouseText_564c5::
-	text "Grand! I like"
-	line "your style!"
+	text "좋아!"
+	line "대답 한번 시원한걸!"
 
-	para "Take this and"
-	line "fish, young one!"
+	para "이걸받아 소년!"
 
-	para $52, " received"
-	line "a @"
+
+
+	para $52, "는(은)"
+	line "@"
 	TX_RAM wcf4b
-	text "!@@"
+	text "를(을) 얻었다!@@"
 
 _Route12HouseText_564ca::
 	db $0
-	para "Fishing is a way"
-	line "of life!"
+	para "낚시는 삶의 전부!"
 
-	para "From the seas to"
-	line "rivers, go out"
-	cont "and land the big"
-	cont "one!"
+
+
+	para "바다부터 강까지"
+	line "어디서든 한다!"
 	done
 
 _Route12HouseText_564cf::
-	text "Oh... That's so"
-	line "disappointing..."
+	text "으응……"
+	line "실망이네……"
 	done
 
+
 _Route12HouseText_564d4::
-	text "Hello there,"
+	text "안녕"
 	line $52, "!"
 
-	para "Use the SUPER ROD"
-	line "in any water!"
-	cont "You can catch"
-	cont "different kinds"
-	cont "of #MON."
+	para "물가에서 대단한 낚시대를"
+	line "사용해봐!"
+	cont "다양한 종류의 포켓몬이"
+	cont "나올 거야"
 
-	para "Try fishing"
-	line "wherever you can!"
+	para "언제 어디서나"
+	line "낚시를 해봐!"
 	done
 
 _Route12HouseText_564d9::
-	text "Oh no!"
+	text "이런!"
 
-	para "I had a gift for"
-	line "you, but you have"
-	cont "no room for it!"
+
+
+	para "선물을 받을 수 없다!"
 	done
+

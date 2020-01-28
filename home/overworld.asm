@@ -1370,6 +1370,9 @@ TilePairCollisionsWater::
 
 ; this builds a tile map from the tile block map based on the current X/Y coordinates of the player's character
 LoadCurrentMapView::
+	lb bc,20,18
+	coord hl,0,0
+	call ClearScreenArea
 	ld a, [H_LOADEDROMBANK]
 	push af
 	ld a, [wTilesetBank] ; tile data ROM bank

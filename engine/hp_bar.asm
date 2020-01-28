@@ -217,7 +217,7 @@ UpdateHPBar_PrintHPNumber:
 	ld a, [hFlags_0xFFFA]
 	bit 0, a
 	jr z, .next
-	ld de, $9
+	ld de, $15
 .next
 	add hl, de
 	push hl

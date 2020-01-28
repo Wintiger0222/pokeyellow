@@ -1,5 +1,6 @@
 SurfingPikachuMinigame:
 	call SurfingPikachuMinigame_BlankPals
+	call ClearScreenVBK1
 	call DelayFrame
 	call DelayFrame
 	call DelayFrame
@@ -1525,18 +1526,18 @@ INCBIN "gfx/unknown_f8946.map"
 
 SurfingMinigame_PrintTextHiScore:
 	ld hl, .Hi_Score
-	coord de, 6, 8
-	ld bc, $9
+	coord de, 7, 8
+	ld bc, $7
 	call CopyData
 	ret
 
 .Hi_Score:
-	db $20,$2e,$2f,$30,$31,$2c,$32,$23,$33 ; Hi-Score!!
+	db $30,$31,$32,$33,$34,$35,$36,$23,$33 ; Hi-Score!!
 
 SurfingMinigame_WriteHPLeft:
 	ld hl, .HP_Left
 	coord de, 2, 2
-	ld bc, $7
+	ld bc, $6
 	call CopyData
 	call SurfingMinigame_BCDPrintHPLeft
 	ret
@@ -1579,23 +1580,23 @@ SurfingMinigame_BCDPrintHPLeft:
 	call SurfingPikachu_PlaceBCDNumber
 	inc hl
 	inc hl
-	ld [hl], $21 ; P
+	ld [hl], $2D ; P
 	inc hl
-	ld [hl], $25 ; t
+	ld [hl], $2E ; t
 	inc hl
-	ld [hl], $26 ; s
+	ld [hl], $2F ; s
 	ret
 
 SurfingMinigame_WriteRadness:
 	ld hl, .Radness
 	coord de, 2, 4
-	ld bc, $7
+	ld bc, $6
 	call CopyData
 	call SurfingMinigame_BCDPrintRadness
 	ret
 
 .Radness:
-	db $27,$28,$29,$2a,$23,$26,$26 ; Radness
+	db $27,$28,$ff,$29,$2a,$26 ; Radness
 
 SurfingMinigame_AddRadnessToTotal:
 	ld c, 99
@@ -1640,11 +1641,11 @@ SurfingMinigame_BCDPrintRadness:
 	call SurfingPikachu_PlaceBCDNumber
 	inc hl
 	inc hl
-	ld [hl], $21 ; P
+	ld [hl], $2D ; P
 	inc hl
-	ld [hl], $25 ; t
+	ld [hl], $2E ; t
 	inc hl
-	ld [hl], $26 ; s
+	ld [hl], $2F ; s
 	ret
 
 SurfingMinigame_AddPointsToTotal:
@@ -1671,11 +1672,11 @@ SurfingMinigame_BCDPrintTotalScore:
 	call SurfingPikachu_PlaceBCDNumber
 	inc hl
 	inc hl
-	ld [hl], $21 ; P
+	ld [hl], $2D ; P
 	inc hl
-	ld [hl], $25 ; t
+	ld [hl], $2E ; t
 	inc hl
-	ld [hl], $26 ; s
+	ld [hl], $2F ; s
 	ret
 
 SurfingMinigame_WriteTotal:
@@ -1688,7 +1689,7 @@ SurfingMinigame_WriteTotal:
 	ret
 
 .Total:
-	db $2b,$2c,$25,$28,$2d ; Total
+	db $37,$38,$39,$3a,$26,$2d ; Total
 	
 DidPlayerGetAHighScore:
 	ld hl, wSurfingMinigameHiScore + 1
@@ -2411,8 +2412,8 @@ DrawSurfingPikachuMinigameIntroBackground:
 	lb bc, 3, 15
 	call .FillBoxWithFF
 	ld hl, Tilemap_f91ac
-	coord de, 3, 7
-	ld bc, 15
+	coord de, 4, 7
+	ld bc, 11
 	call CopyData
 	ld hl, Tilemap_f91bb
 	coord de, 4, 9

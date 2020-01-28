@@ -1,21 +1,42 @@
 
-; The rst vectors are unused.
-SECTION "rst 00", ROM0
-	rst $38
-SECTION "rst 08", ROM0
-	rst $38
-SECTION "rst 10", ROM0
-	rst $38
-SECTION "rst 18", ROM0
-	rst $38
-SECTION "rst 20", ROM0
-	rst $38
-SECTION "rst 28", ROM0
-	rst $38
-SECTION "rst 30", ROM0
-	rst $38
-SECTION "rst 38", ROM0
-	rst $38
+SECTION "rst 00", ROM0 ;폰트로드
+	push bc
+	ld b,a
+	inc de
+	ld a,[de]
+	ld c,a
+	ld a,[H_LOADEDROMBANK]
+	push af
+	ld a,$40
+	call BankswitchCommon
+	call HangulStart
+	and a
+	jr z,NoVramUpdate
+	call BankswitchCommon
+	ld a,$01
+	di
+	ld [rVBK],a
+	ld a,$02
+	ld [H_VBCOPYDOUBLESIZE],a
+	ei
+	call DelayFrame
+	xor a
+	ld [rVBK],a
+NoVramUpdate:
+	pop af
+	call BankswitchCommon
+	pop bc
+	inc hl
+	ret
+DisplayNamingScreen::
+	ld a,[H_LOADEDROMBANK]
+	push af
+	ld a, BANK(_DisplayNamingScreen)
+	call BankswitchCommon
+	call _DisplayNamingScreen
+	pop af
+	call BankswitchCommon
+	ret
 
 ; Hardware interrupts
 SECTION "vblank", ROM0
@@ -142,7 +163,7 @@ LoadNextSoundClipSample::
 	ret
 
 PlaySoundClipSample::
-	ld a, $3
+	ld a, $10 ;재생속도 조절, 원래값은 $3
 .loop
 	dec a
 	jr nz, .loop
@@ -566,11 +587,12 @@ PrintStatusCondition::
 	pop de
 	jr nz, PrintStatusConditionNotFainted
 ; if the pokemon's HP is 0, print "FNT"
-	ld a, "F"
+;기절 글자
+	ld a, $D6
 	ld [hli], a
-	ld a, "N"
+	ld a, $D7
 	ld [hli], a
-	ld [hl], "T"
+	ld [hl], $D8
 	and a
 	ret
 
@@ -708,6 +730,7 @@ GetPartyMonName::
 ; their meaning at the beginning of the functions's execution.
 PrintBCDNumber::
 	ld b, c ; save flags in b
+	push bc
 	res 7, c
 	res 6, c
 	res 5, c ; c now holds the length
@@ -715,8 +738,6 @@ PrintBCDNumber::
 	jr z, .loop
 	bit 7, b
 	jr nz, .loop
-	ld [hl], "¥"
-	inc hl
 .loop
 	ld a, [de]
 	swap a
@@ -727,19 +748,20 @@ PrintBCDNumber::
 	dec c
 	jr nz, .loop
 	bit 7, b ; were any non-zero digits printed?
-	jr z, .done ; if so, we are done
+	jr z, .koreanCurrency ; if so, we are done
 .numberEqualsZero ; if every digit of the BCD number is zero
 	bit 6, b ; left or right alignment?
 	jr nz, .skipRightAlignmentAdjustment
 	dec hl ; if the string is right-aligned, it needs to be moved back one space
 .skipRightAlignmentAdjustment
-	bit 5, b
-	jr z, .skipCurrencySymbol
-	ld [hl], "¥"
-	inc hl
-.skipCurrencySymbol
 	ld [hl], "0"
 	call PrintLetterDelay
+	inc hl
+.koreanCurrency
+	pop bc
+	bit 5, b
+	jr z, .done
+	ld [hl], "¥"
 	inc hl
 .done
 	ret
@@ -754,8 +776,6 @@ PrintBCDDigit::
 ; if bit 7 is set, then no numbers have been printed yet
 	bit 5, b ; print the currency symbol?
 	jr z, .skipCurrencySymbol
-	ld [hl], "¥"
-	inc hl
 	res 5, b
 .skipCurrencySymbol
 	res 7, b ; unset 7 to indicate that a nonzero digit has been reached
@@ -1234,6 +1254,7 @@ CloseTextDisplay::
 	ld a, $90
 	ld [hWY], a ; move the window off the screen
 	call DelayFrame
+	call ClearScreenVBK1
 	call LoadGBPal
 	xor a
 	ld [H_AUTOBGTRANSFERENABLED], a ; disable continuous WRAM to VRAM transfer each V-blank
@@ -1832,7 +1853,7 @@ PrintListMenuEntries::
 	ld [wcf91], a
 	call GetItemPrice ; get price
 	pop hl
-	ld bc, SCREEN_WIDTH + 5 ; 1 row down and 5 columns right
+	ld bc, 5 ; 0 row down and 5 columns right
 	add hl, bc
 	ld c, $a3 ; no leading zeroes, right-aligned, print currency symbol, 3 bytes
 	call PrintBCDNumber
@@ -1870,7 +1891,7 @@ PrintListMenuEntries::
 	ld [wLoadedMonLevel], a
 .skipCopyingLevel
 	pop hl
-	ld bc, $001c
+	ld bc, $0009
 	add hl, bc
 	call PrintLevel
 	pop af
@@ -1890,7 +1911,7 @@ PrintListMenuEntries::
 	and a ; is the item unsellable?
 	jr nz, .skipPrintingItemQuantity ; if so, don't print the quantity
 	push hl
-	ld bc, SCREEN_WIDTH + 8 ; 1 row down and 8 columns right
+	ld bc, 9 ; 9 columns right
 	add hl, bc
 	ld a, "×"
 	ld [hli], a
@@ -1939,7 +1960,7 @@ PrintListMenuEntries::
 	jp PlaceString
 
 ListMenuCancelText::
-	db "CANCEL@"
+	db "돌아가다@"
 
 GetMonName::
 	push hl
@@ -2006,11 +2027,11 @@ GetMachineName::
 	add 5
 	ld [wd11e], a
 	ld hl, HiddenPrefix ; points to "HM"
-	ld bc, 2
+	ld bc, 8
 	jr .WriteMachinePrefix
 .WriteTM
 	ld hl, TechnicalPrefix ; points to "TM"
-	ld bc, 2
+	ld bc, 8
 .WriteMachinePrefix
 	ld de, wcd6d
 	call CopyData
@@ -2045,9 +2066,9 @@ GetMachineName::
 	ret
 
 TechnicalPrefix::
-	db "TM"
+	db "기술머신"
 HiddenPrefix::
-	db "HM"
+	db "비전머신"
 
 ; sets carry if item is HM, clears carry if item is not HM
 ; Input: a = item ID
@@ -2871,10 +2892,11 @@ IsSurfingPikachuInParty::
 	cp b
 	jr nz, .noSurf
 .hasSurf
+.noSurf;파도타기 피카츄가 없어도 미니게임을 할수 있도록 픽스
 	ld a, [wd472]
 	set 6, a
 	ld [wd472], a
-.noSurf
+;.noSurf
 	pop hl
 .notPikachu
 	ld de, wPartyMon2 - wPartyMon1
@@ -3197,16 +3219,16 @@ Func_35f7::
 InitYesNoTextBoxParameters::
 	xor a ; YES_NO_MENU
 	ld [wTwoOptionMenuID], a
-	coord hl, 14, 7
-	ld bc, $80f
+	coord hl, 14, 6
+	lb bc, 7, 15
 	ret
 
 YesNoChoicePokeCenter::
 	call SaveScreenTilesToBuffer1
 	ld a, HEAL_CANCEL_MENU
 	ld [wTwoOptionMenuID], a
-	coord hl, 11, 6
-	lb bc, 8, 12
+	coord hl, 12, 6
+	lb bc, 8, 13
 	jr DisplayYesNoChoice
 
 WideYesNoChoice:: ; unused
@@ -3345,42 +3367,26 @@ UncompressSpriteFromDE::
 	ld [hl], d
 	jp UncompressSpriteData
 
+;공간절약용으로 일부 함수 다른 뱅크로 옮김
 SaveScreenTilesToBuffer2::
-	coord hl, 0, 0
-	ld de, wTileMapBackup2
-	ld bc, SCREEN_WIDTH * SCREEN_HEIGHT
-	jp CopyData
+	callba _SaveScreenTilesToBuffer2
+	ret
 
 LoadScreenTilesFromBuffer2::
-	call LoadScreenTilesFromBuffer2DisableBGTransfer
-	ld a, 1
-	ld [H_AUTOBGTRANSFERENABLED], a
+	callba _LoadScreenTilesFromBuffer2
 	ret
 
 ; loads screen tiles stored in wTileMapBackup2 but leaves H_AUTOBGTRANSFERENABLED disabled
 LoadScreenTilesFromBuffer2DisableBGTransfer::
-	xor a
-	ld [H_AUTOBGTRANSFERENABLED], a
-	ld hl, wTileMapBackup2
-	coord de, 0, 0
-	ld bc, SCREEN_WIDTH * SCREEN_HEIGHT
-	jp CopyData
+	callba _LoadScreenTilesFromBuffer2DisableBGTransfer
+	ret
 
 SaveScreenTilesToBuffer1::
-	coord hl, 0, 0
-	ld de, wTileMapBackup
-	ld bc, SCREEN_WIDTH * SCREEN_HEIGHT
-	jp CopyData
+	callba _SaveScreenTilesToBuffer1
+	ret
 
 LoadScreenTilesFromBuffer1::
-	xor a
-	ld [H_AUTOBGTRANSFERENABLED], a
-	ld hl, wTileMapBackup
-	coord de, 0, 0
-	ld bc, SCREEN_WIDTH * SCREEN_HEIGHT
-	call CopyData
-	ld a, 1
-	ld [H_AUTOBGTRANSFERENABLED], a
+	callba _LoadScreenTilesFromBuffer1
 	ret
 
 DelayFrames::

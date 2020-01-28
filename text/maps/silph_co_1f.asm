@@ -1,7 +1,9 @@
 _SilphCo1Text1::
-	text "Welcome!"
+	text "어서오세요!"
 
-	para "The PRESIDENT is"
-	line "in the boardroom"
-	cont "on 11F!"
+	para "회장님은 11층에 위치한"
+	line "이사회실에 계십니다!"
 	done
+
+ 
+

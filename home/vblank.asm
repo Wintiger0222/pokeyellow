@@ -4,7 +4,10 @@ VBlank::
 	push bc
 	push de
 	push hl
-
+	ld a,[rSVBK]
+	ld [H_LOADEDWRAMBANK],a
+	ld a,$01
+	ld [rSVBK],a
 	ld a, [rVBK] ; vram bank
 	push af
 	xor a
@@ -24,12 +27,22 @@ VBlank::
 	ld a, [hWY]
 	ld [rWY], a
 .ok
-
+	ld a,[H_LOADEDROMBANK]
+	push af
+	ld a,$50
+	call BankswitchCommon
 	call AutoBgMapTransfer
+	call AutoBgMapTransferVBK1
 	call VBlankCopyBgMap
 	call RedrawRowOrColumn
+	pop af
+	call BankswitchCommon
 	call VBlankCopy
+	pop af
+	ld [rVBK],a
 	call VBlankCopyDouble
+	xor a
+	ld [rVBK],a
 	call UpdateMovingBgTiles
 	call $ff80 ; hOAMDMA
 	ld a, BANK(PrepareOAMData)
@@ -68,8 +81,8 @@ VBlank::
 	ld [H_LOADEDROMBANK], a
 	ld [MBC1RomBank], a
 
-	pop af
-	ld [rVBK],a
+	ld a,[H_LOADEDWRAMBANK]
+	ld [rSVBK],a
 
 	pop hl
 	pop de

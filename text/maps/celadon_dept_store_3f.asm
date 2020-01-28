@@ -1,98 +1,90 @@
 _CeladonMart3Text2::
-	text "Captured #MON"
-	line "are registered"
-	cont "with an ID No."
-	cont "and OT, the name"
-	cont "of the Original"
-	cont "Trainer that"
-	cont "caught it!"
+	text "포획한 포켓몬은 ID 번호와"
+	line "어버이 트레이너 이름이 등록돼"
+	
+	para "최초로 포획한"
+	line "트레이너의 이름으로!"
 	done
 
 _CeladonMart3Text3::
-	text "All right!"
+	text "신난다!"
 
-	para "My buddy's going"
-	line "to trade me his"
-	cont "KANGASKHAN for my"
-	cont "GRAVELER!"
+	para "친구하고 내 데구리를"
+	line "캥카로 교환했어!"
 	done
 
 _CeladonMart3Text4::
-	text "Come on GRAVELER!"
+	text "어서와 데구리!"
 
-	para "I love GRAVELER!"
-	line "I collect them!"
+	para "난 데구리가 좋아!"
+	line "걔들을 모으고 있어!"
 
-	para "Huh?"
+	para "……앙-?"
 
-	para "GRAVELER turned"
-	line "into a different"
-	cont "#MON!"
+	para "전송되어 온 데구리가"
+	line "다른 포켓몬으로!?"
 	done
 
 _CeladonMart3Text5::
-	text "You can identify"
-	line "#MON you got"
-	cont "in trades by"
-	cont "their ID Numbers!"
+	text "교환으로 얻은 포켓몬은"
+	line "ID 번호로 구분할수 있어!"
 	done
 
 _CeladonMart3Text6::
-	text "It's an SNES!"
+	text "현대 슈퍼컴보이다!"
 	done
 
 _CeladonMart3Text7::
-	text "An RPG! There's"
-	line "no time for that!"
+	text "알피지 게임!"
+	line "저사람들 촉박해보인다!"
 	done
 
 _CeladonMart3Text9::
-	text "A sports game!"
-	line "Dad'll like that!"
+	text "스포츠 게임!"
+	line "아버지가 좋아하겠어!"
 	done
 
 _CeladonMart3Text11::
-	text "A puzzle game!"
-	line "Looks addictive!"
+	text "퍼즐 게임!"
+	line "중독성이 있어보인다!"
 	done
 
 _CeladonMart3Text13::
-	text "A fighting game!"
-	line "Looks tough!"
+	text "격투 게임!"
+	line "박력있어 보인다!"
 	done
 
 _CeladonMart3Text14::
-	text "3F: TV GAME SHOP"
+	text "3층 …… 티비게임·숍"
 	done
 
 _CeladonMart3Text15::
-	text "Red and Blue!"
-	line "Both are #MON!"
+	text "포켓몬스터 레드·그린!"
+	line "호평판매중!"
 	done
 
 _TM18PreReceiveText::
-	text "Oh, hi! I finally"
-	line "finished #MON!"
+	text "오 안녕! 내가 마침내"
+	line "포켓몬스터 엔딩을 봤단다!"
 
-	para "Not done yet?"
-	line "This might be"
-	cont "useful!"
+	para "아직 안 해봤니?"
+	line "이게 꽤나 재미있단다!"
 	prompt
 
 _ReceivedTM18Text::
-	text "<PLAYER> received"
+	text $52, "는(은)"
 	line "@"
 	TX_RAM wcf4b
-	text "!@@"
+	text "를(을)"
+	cont "얻었다!@@"
 
 _TM18ExplanationText::
-	text "TM18 is COUNTER!"
-	line "Not like the one"
-	cont "I'm leaning on,"
-	cont "mind you!"
+	text "기술머신18은 카운터!"
+	
+	para "이게 내키지 않는다면"
+	line "전적으로 네 의사에 맡기마!"
 	done
 
 _TM18NoRoomText::
-	text "Your pack is full"
-	line "of items!"
+	text "가방이 가득찼구나!"
 	done

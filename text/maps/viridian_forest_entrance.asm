@@ -1,16 +1,13 @@
 _ViridianForestEntranceText1::
-	text "Are you going to"
-	line "VIRIDIAN FOREST?"
-	cont "Be careful, it's"
-	cont "a natural maze!"
+	text "상록숲으로 들어가려고?"
+	line "조심해!"
+	cont "여기는 미로야!"
 	done
 
 _ViridianForestEntranceText2::
-	text "You have to roam"
-	line "far to get new"
-	cont "kinds of #MON."
+	text "새로운 종류의 포켓몬을 얻으려면"
+	line "꽤 오래 돌아다녀야 할걸"
 
-	para "Look for other"
-	line "types outside of"
-	cont "VIRIDIAN FOREST."
+	para "상록숲밖에서 다른 종류를"
+	line "찾아봐"
 	done

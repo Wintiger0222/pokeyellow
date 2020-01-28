@@ -1,60 +1,55 @@
 _NameRaterText_1dab3::
-	text "Hello, hello!"
-	line "I am the official"
-	cont "NAME RATER!"
+	text "나는 이름풀이 점술가"
+	line "말하자면 이름으로 점을 칩니다"
 
-	para "Want me to rate"
-	line "the nicknames of"
-	cont "your #MON?"
+	para "네 당신 포켓몬의"
+	line "별명으로 점을 봐 줄께요"
 	done
 
 _NameRaterText_1dab8::
-	text "Which #MON"
-	line "should I look at?"
+	text "어느 포켓몬의"
+	line "별명을 점 칠텐가?"
 	prompt
 
 _NameRaterText_1dabd::
+	text "우움 @"
 	TX_RAM wcd6d
-	text ", is it?"
-	line "That is a decent"
-	cont "nickname!"
+	text "인가……"
+	line "꽤 좋은 별명을 붙였군"
 
-	para "But, would you"
-	line "like me to give"
-	cont "it a nicer name?"
+	para "하지만"
+	line "더 좋은 이름"
+	cont "내가 붙여줄까?"
 
-	para "How about it?"
+	para "어떤가?"
 	done
 
 _NameRaterText_1dac2::
-	text "Fine! What should"
-	line "we name it?"
+	text "그래? 그럼"
+	line "어떤 별명으로 해 볼까"
 	prompt
 
 _NameRaterText_1dac7::
-	text "OK! This #MON"
-	line "has been renamed"
-	cont "@"
 	TX_RAM wBuffer
 	text "!"
 
-	para "That's a better"
-	line "name than before!"
+
+	para "전 보다도 좋은 이름이지 않은가"
+	line "잘되었네!"
 	done
 
 _NameRaterText_1dacc::
-	text "Fine! Come any-"
-	line "time you like!"
+	text "알겠네 또 오거라"
 	done
 
 _NameRaterText_1dad1::
 	TX_RAM wcd6d
-	text ", is it?"
-	line "That is a truly"
-	cont "impeccable name!"
-
-	para "Take good care of"
-	line "@"
-	TX_RAM wcd6d
 	text "!"
+	line "이건 대단한 별명이군"
+	cont "나쁜건 조금도 없군!"
+
+	para "계속 @"
+	TX_RAM wcd6d
+	text "를(을)"
+	line "귀여워해 주거라!"
 	done

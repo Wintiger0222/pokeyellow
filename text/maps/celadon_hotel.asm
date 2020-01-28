@@ -1,21 +1,21 @@
 _CeladonHotelText1::
-	text "#MON? No, this"
-	line "is a hotel for"
-	cont "people."
+	text "포켓몬?"
+	
+	para "여긴 사람을 위한"
+	line "호텔입니다"
 
-	para "We're full up."
+	para "현재 빈 객실이 없습니다"
 	done
 
 _CeladonHotelText2::
-	text "I'm on vacation"
-	line "with my brother"
-	cont "and boy friend."
+	text "휴가로 남동생이랑"
+	line "남자친구하고 왔어"
 
-	para "CELADON is such a"
-	line "pretty city!"
+	para "무지개시티는 정말이지"
+	line "아름다운 도시야!"
 	done
 
 _CeladonHotelText3::
-	text "Why did she bring"
-	line "her brother?"
+	text "아니 왜"
+	line "동생까지 데려온거지?"
 	done

@@ -1,35 +1,25 @@
 _UGPathRoute7EntranceUnusedText_5d773::
-	text "I want to shop at"
-	line "the dept. store"
-	cont "in CELADON but..."
+	text "무지개 시티의 백화점에서"
+	line "쇼핑하곤 싶지만……"
 
-	para "There are so many"
-	line "rough looking"
-	cont "people there."
+	para "거긴 못되보이는 사람들이"
+	line "너무 많아……"
 	done
 
 _UGPathRoute7EntranceUnusedText_5d778::
-	text "TEAM ROCKET had a"
-	line "secret hideout in"
-	cont "CELADON CITY?"
+	text "로켓단의 비밀 아지트가"
+	line "무지개 시티에?"
 	done
 
 _UGPathRoute7EntranceUnusedText_5d77d::
-	text "You're here to"
-	line "shop in CELADON?"
+	text "무지개 시티에 쇼핑하러 가는길?"
 
-	para "Just step outside"
-	line "and head west!"
+	para "나가서 서쪽으로 가면돼!"
 	done
 
 _UGPathRoute7EntranceUnusedText_5d782::
-	text "The UNDERGROUND"
-	line "PATH goes beneath"
-	cont "SAFFRON and leads"
-	cont "to LAVENDER."
-
-	para "If you're heading"
-	line "to CERULEAN, go"
-	cont "to the building"
-	cont "across the road."
+	text "지하통로는 노랑시티의 지하를 통해 보라시티까지 이어져"
+	
+	para "블루시티로 가는 중이라면 길 건너 건물로 가면 돼"
 	done
+

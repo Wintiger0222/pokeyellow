@@ -1,11 +1,10 @@
 _SafariZoneCenterText2::
-	text "REST HOUSE"
+	text "휴게소"
 	done
 
 _SafariZoneCenterText3::
-	text "TRAINER TIPS"
+	text "…… 득이 되는 게시판!"
 
-	para "Press the START"
-	line "Button to check"
-	cont "remaining time!"
+	para "시작버튼을 눌러서"
+	line "남은 시간을 체크해보세요!"
 	done

@@ -1,140 +1,128 @@
 _SafariZoneEntranceText1::
-	text "Welcome to the"
-	line "SAFARI ZONE!"
+	text "사파리존에"
+	line "오신걸 환영합니다!"
 	done
 
 SafariZoneEntranceText_9e814::
-	text "Leaving early?@@"
+	text "벌써 가실 것인가요?@@"
 
 _SafariZoneEntranceText_753bb::
-	text "Please return any"
-	line "SAFARI BALLs you"
-	cont "have left."
+	text "남은 사파리볼을"
+	line "반납바랍니다"
 	done
 
 _SafariZoneEntranceText_753c0::
-	text "Good Luck!"
+	text "행운을 빕니다!"
 	done
 
 _SafariZoneEntranceText_753c5::
-	text "Did you get a"
-	line "good haul?"
-	cont "Come again!"
+	text "좋은 결과가 있었나요?"
+	line "나중에 또 오세요!"
 	done
 
 SafariZoneEntranceText_9e6e4::
-	text "For just ¥500,"
-	line "you can catch all"
-	cont "the #MON you"
-	cont "want in the park!"
-
-	para "Would you like to"
-	line "join the hunt?@@"
+	text "단돈 500원으로 이 공원에서"
+	line "포켓몬을 마음껏 잡을수 있습니다!"
+	para "참여하시겠나요?@@"
 
 SafariZoneEntranceText_9e747::
-	text "That'll be ¥@"
+	text "입장료 @"
 	TX_BCD wPriceTemp, $c3
-	text ","
-	line "please!"
+	text "원"
+	line "받았습니다!"
 
-	para "We only use a"
-	line "special # BALL"
-	cont "here."
+	para "저희측에서 제작한"
+	line "특수한 몬스터볼입니다"
 
-	para $52, " received"
-	line "30 SAFARI BALLs!@@"
+	para $52, "는(은)"
+	line "사파리볼 30개를 얻었다!@@"
 
 _SafariZoneEntranceText_75360::
 	db $0
-	para "We'll call you on"
-	line "the PA when you"
-	cont "run out of time"
-	cont "or SAFARI BALLs!"
+	para "사용시간이 종료되거나"
+	line "사파리볼이 소진되면"
+	cont "저희측에서 알려드리겠습니다!"
 	done
 
 _SafariZoneEntranceText_75365::
-	text "OK! Please come"
-	line "again!"
+	text "알겠습니다!"
+	line "다음에 또 들려주세요!"
 	done
 
 _SafariZoneEntranceText_7536a::
-	text "Oops! Not enough"
-	line "money!"
+	text "이런!"
+	line "소지금이 부족하네요!"
 	done
 
 _SafariZoneEntranceText_753e6::
-	text "Hi! Is it your"
-	line "first time here?"
+	text "어서오세요!"
+	line "이곳은 처음이신가요?"
 	done
 
 _SafariZoneEntranceText_753eb::
-	text "SAFARI ZONE has 4"
-	line "zones in it."
+	text "사파리존에는"
+	line "총 4 구역이 있습니다."
 
-	para "Each zone has"
-	line "different kinds"
-	cont "of #MON. Use"
-	cont "SAFARI BALLs to"
-	cont "catch them!"
+	para "각 구역마다 다른 종류의"
+	line "포켓몬이 있으며"
+	cont "사파리볼로 포획할 수 있습니다!"
+	
+	para "사용시간이 종료되거나"
+	line "사파리볼을 다 쓰시면"
+	cont "서비스가 종료됩니다!"
 
-	para "When you run out"
-	line "of time or SAFARI"
-	cont "BALLs, it's game"
-	cont "over for you!"
-
-	para "Before you go,"
-	line "open an unused"
-	cont "#MON BOX so"
-	cont "there's room for"
-	cont "new #MON!"
+	para "출발하시기 전에"
+	line "사용하지 않은"
+	cont "포켓몬 박스로"
+	cont "지정하시기 바랍니다"
 	done
 
 _SafariZoneEntranceText_753f0::
-	text "Sorry, you're a"
-	line "regular here!"
+	text "실례합니다"
+	line "이곳의 단골이시군요!"
 	done
 
 _SafariZoneLowCostText1::
 	db 0
-	para "Oh, all right, pay"
-	line "me what you have."
+	para "예 맞아요"
+	line "가지고 계신거 주셔야죠"
 	prompt
 
 _SafariZoneLowCostText2::
-	text "But, I can't give"
-	line "you all 30 BALLs."
+	text "그리고 볼 30개를"
+	line "전부 드릴수가 없습니다."
 	done
 
 _SafariZoneLowCostText3::
 	db 0
-	para "You're persistent,"
-	line "aren't you?"
+	para "정말 끈질기군요"
+	line "그렇게 들어가고 싶나요?"
 
-	para "OK, you can go in"
-	line "for free, but"
-	cont "just this once!@@"
+	para "좋아요"
+	line "입장하세요"
+	cont "하지만 이번뿐입니다!@@"
 
 _SafariZoneLowCostText4::
 	db 0
 	done
 
 _SafariZoneLowCostText5::
-	text "I'm sorry, but you"
-	line "have to pay to"
-	cont "enter."
+	text "죄송합니다만"
+	line "요금을 내야"
+	cont "입장이 가능합니다"
 	done
 
 _SafariZoneLowCostText6::
-	text "You can't enter"
-	line "without paying!"
+	text "요금을 안 내면"
+	line "입장 못 합니다!"
 	done
 
 _SafariZoneLowCostText7::
-	text "I said, no money,"
-	line "no entry!"
+	text "한 마디하죠,"
+	line "돈없으면 못 들어갑니다!"
 	done
 
 _SafariZoneLowCostText8::
-	text "Read my lips, NO!"
-	line "Get it?"
+	text "제 입 보세요 안 되요!"
+	line "알겠죠?"
 	done

@@ -1,252 +1,229 @@
 _BlaineBattleText::
-	text "Hah!"
+	text "하하!"
 
-	para "I am BLAINE! I"
-	line "am the LEADER of"
-	cont "CINNABAR GYM!"
+	para "난 강연!"
+	line "홍련 체육관의 관장이다!"
+	
+	para "내 화염 포켓몬이 도전자들을"
+	line "뜨겁게 맞이해줄것이다!"
 
-	para "My fiery #MON"
-	line "will incinerate"
-	cont "all challengers!"
-
-	para "Hah! You better"
-	line "have BURN HEAL!"
+	para "화상 치료제는 잘 준비했는가!"
 	done
 
 _BlaineEndBattleText::
-	text "I have"
-	line "burnt out!"
+	text "내가 졌다……!"
 
-	para "You have earned"
-	line "the VOLCANOBADGE!@@"
-
+	para "진홍색배지를 주겠다!@@"
+	
 _BlaineFireBlastText::
-	text "FIRE BLAST is the"
-	line "ultimate fire"
-	cont "technique!"
+	text "불대문자야 말로"
+	line "궁극의 화염기술!"
 
-	para "Don't waste it on"
-	line "water #MON!"
+	para "절대 물타입 포켓몬에게"
+	line "낭비하지 마라!"
 	done
 
 _BlaineBadgeText::
-	text "Hah!"
+	text "하하!"
 
-	para "The VOLCANOBADGE"
-	line "heightens the"
-	cont "SPECIAL abilities"
-	cont "of your #MON!"
+	para "진홍색배지는 네 포켓몬의"
+	line "특수능력을 높여주지!"
 
-	para "Here, you can"
-	line "have this too!"
+	para "자네는 이것도 가질 자격이"
+	line "있다!"
 	done
 
 _ReceivedTM38Text::
-	text $52, " received"
+	text $52, "는(은)"
 	line "@"
 	TX_RAM wcf4b
-	text "!@@"
+	text "를(을) 얻었다!@@"
 
 _TM38ExplanationText::
 	db $0
-	para "TM38 contains"
-	line "FIRE BLAST!"
+	para "기술머신38은"
+	line "불대문자!"
 
-	para "Teach it to fire-"
-	line "type #MON!"
+	para "화염 포켓몬에게"
+	line "배우게 하게!"
 
-	para "CHARMELEON or"
-	line "PONYTA would be"
-	cont "good bets!"
+	para "리자드나 포니타라면"
+	line "잘 쓸수 있을거다!"
 	done
 
 _TM38NoRoomText::
-	text "Make room for my"
-	line "gift!"
+	text "내 선물을 위한 공간을"
+	line "마련해주게!"
 	done
 
 _CinnabarGymText_7595f::
-	text "Do you know how"
-	line "hot #MON fire"
-	cont "breath can get?"
+	text "너는 포켓몬이 얼마나"
+	line "뜨겁게 숨쉬는지 아는가!"
 	done
 
 _CinnabarGymText_75964::
-	text "Yow!"
-	line "Hot, hot, hot!"
+	text "어-이!"
+	line "앗 뜨 뜨!"
 	prompt
 
 _CinnabarGymText_75969::
-	text "Fire, or to be"
-	line "more precise,"
-	cont "combustion..."
+	text "화상 아니"
+	line "더 정확히는 연소……"
 
-	para "Blah, blah, blah,"
-	line "blah..."
+	para "중얼 중얼 중얼 중얼……"
+	line "중얼 중얼 중얼 중얼……"
 	done
 
 _CinnabarGymText_75994::
-	text "I was a thief, but"
-	line "I became straight"
-	cont "as a trainer!"
+	text "나는 도둑이었지만"
+	line "트레이너가 되면서"
+	cont "바른길을 걷게되었지!"
 	done
 
 _CinnabarGymText_75999::
-	text "I"
-	line "surrender!"
+	text "하 항복!"
 	prompt
 
 _CinnabarGymText_7599e::
-	text "I can't help"
-	line "stealing other"
-	cont "people's #MON!"
+	text "다른사람의 포켓몬을 훔치는건"
+	line "어쩔 수 없어!"
 	done
 
 _CinnabarGymText_759c9::
-	text "You can't win!"
-	line "I have studied"
-	cont "#MON totally!"
+	text "포켓몬을 완벽히 연구한 날"
+	line "이길순 없을걸!"
 	done
 
 _CinnabarGymText_759ce::
-	text "Waah!"
-	line "My studies!"
+	text "으아악!"
+	line "내 연구결과가--!"
 	prompt
 
 _CinnabarGymText_759d3::
-	text "My theories are"
-	line "too complicated"
-	cont "for you!"
+	text "문과인 너는 내 이론을"
+	line "절대로 이해하지 못할거야!"
 	done
 
 _CinnabarGymText_759fe::
-	text "I just like using"
-	line "fire #MON!"
+	text "난 화염 포켓몬이 좋아!"
 	done
 
 _CinnabarGymText_75a03::
-	text "Too hot"
-	line "to handle!"
+	text "화염 포켓몬은"
+	line "너무 뜨겁구나아-!"
 	prompt
 
 _CinnabarGymText_75a08::
-	text "I wish there was"
-	line "a thief #MON!"
-	cont "I'd use that!"
+	text "도둑 포켓몬이 있었으면 좋겠어!"
+	line "그럼 내가 쓸텐데!"
 	done
 
 _CinnabarGymText_75a33::
-	text "I know why BLAINE"
-	line "became a trainer!"
+	text "난 강연이 왜 트레이너가"
+	line "되었는지 알고있지!"
 	done
 
 _CinnabarGymText_75a38::
-	text "Ow!"
+	text "어-이!"
 	prompt
 
 _CinnabarGymText_75a3d::
-	text "BLAINE was lost"
-	line "in the mountains"
-	cont "when a fiery bird"
-	cont "#MON appeared."
+	text "강연이 산에서 길을 잃었을 때"
+	line "한 불새 포켓몬이 나타났었지"
 
-	para "Its light enabled"
-	line "BLAINE to find"
-	cont "his way down!"
+	para "그 불빛이"
+	line "강연의 길을 밝혀준거야!"
 	done
 
 _CinnabarGymText_75a68::
-	text "I've been to many"
-	line "GYMs, but this is"
-	cont "my favorite!"
+	text "여러 체육관에 있었지만"
+	line "역시 여기가 최고야!"
 	done
 
 _CinnabarGymText_75a6d::
-	text "Yowza!"
-	line "Too hot!"
+	text "우왓!"
+	line "뜨거워!"
 	prompt
 
 _CinnabarGymText_75a72::
-	text "Us fire #MON"
-	line "fans like PONYTA"
-	cont "and NINETALES!"
+	text "우리 같은 화염 포켓몬 팬은"
+	line "포니타나 나인테일을 좋아해!"
 	done
 
+ 
 _CinnabarGymText_75a9d::
-	text "Fire is weak"
-	line "against H2O!"
+	text "불은 일산화이수소에게 약하지!"
 	done
 
 _CinnabarGymText_75aa2::
-	text "Oh!"
-	line "Snuffed out!"
+	text "으악!"
+	line "완파당했다!"
 	prompt
 
 _CinnabarGymText_75aa7::
-	text "Water beats fire!"
-	line "But, fire melts"
-	cont "ice #MON!"
+	text "물은 불을 이기지!"
+	line "하지만 불은"
+	cont "얼음포켓몬을 녹여버려!"
 	done
 
 _CinnabarGymText_75ac2::
-	text "Yo! Champ in"
-	line "making!"
+	text "어이!"
+	line "미래의 챔피언!"
 
-	para "The hot-headed"
-	line "BLAINE is a fire"
-	cont "#MON pro!"
+	para "화염남자 강연은"
+	line "화염 포켓몬 전문가야!"
 
-	para "Douse his spirits"
-	line "with water!"
+	para "물을 부어버려서"
+	line "그의 열정을 식혀버려!"
 
-	para "You better take"
-	line "some BURN HEALs!"
+	para "화상치료제 챙기는거 잊지말고!"
 	done
 
 _CinnabarGymText_75ac7::
-	text $52, "! You beat"
-	line "that fire brand!"
+	text $52, "군!"
+	line "너 화염남자를 쓰러뜨렸구나!"
 	done
 
 _CinnabarGymText_1::
-	text "This GYM is also"
-	line "known as the QUIZ"
-	cont "GYM."
+	text "이 체육관은"
+	line "퀴즈 체육관으로도 유명해"
 
-	para "You have to take a"
-	line "quiz if you want"
-	cont "to see BLAINE."
+	para "강연과 만나고 싶다면"
+	line "퀴즈를 풀어야할거야"
 
-	para "You don't have to"
-	line "fight us if you"
-	cont "get it right."
+
+	para "정답을 맞춘다면"
+	line "우리와 싸울 필요는 없어"
 	done
 
+ 
 _CinnabarGymText_2::
-	text "Think you can do"
-	line "it?"
+	text "맞출수 있을것같나?"
 	done
+
+
 
 _CinnabarGymText_3::
-	text "This one's tricky!"
+	text "이번 문제는 좀 헷갈릴거야!"
 	done
 
 _CinnabarGymText_4::
-	text "#MON enjoy"
-	line "quizzes too!"
+	text "포켓몬도 퀴즈를 좋아하지!"
 	done
 
+
+
 _CinnabarGymText_5::
-	text "I like it here at"
-	line "QUIZ GYM."
+	text "난 이 퀴즈 체육관이 "
+	line "정말 마음에 들어"
 	done
 
 _CinnabarGymText_6::
-	text "This is the last"
-	line "question."
+	text "자 그럼 마지막문제"
 	done
 
+
+
 _CinnabarGymText_7::
-	text "Come on, answer"
-	line "the question!"
+	text "정답 공개해주세요!"
 	done

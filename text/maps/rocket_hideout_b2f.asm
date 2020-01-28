@@ -1,17 +1,19 @@
 _RocketHideout2BattleText2::
-	text "BOSS said you can"
-	line "see GHOSTs with"
-	cont "the SILPH SCOPE!"
+	text "보스가 실프 스코프를 쓰면"
+	line "유령을 볼수있다고 하셨어!"
 	done
 
+ 
+
 _RocketHideout2EndBattleText2::
-	text "I"
-	line "surrender!"
+	text "항복!"
+	line "항복!"
 	prompt
 
 _RocketHideout2AfterBattleTxt2::
-	text "The TEAM ROCKET"
-	line "HQ has 4 basement"
-	cont "floors. Can you"
-	cont "reach the BOSS?"
+	text "로켓단 본부는 무려 4층이나되지"
+	line "네가 보스께 도달할수 있을까?"
 	done
+
+
+

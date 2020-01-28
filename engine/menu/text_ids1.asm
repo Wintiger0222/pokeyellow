@@ -13,12 +13,12 @@ DisplayTextIDInit:
 ; below this, so this seems unnecessary.
 	CheckEvent EVENT_GOT_POKEDEX
 ; start menu with pokedex
-	coord hl, 10, 0
-	lb bc, 14, 8
+	coord hl, 12, 0
+	lb bc, 14, 6
 	jr nz,.drawTextBoxBorder
 ; start menu without pokedex
-	coord hl, 10, 0
-	lb bc, 12, 8
+	coord hl, 12, 0
+	lb bc, 12, 6
 	jr .drawTextBoxBorder
 ; if text ID is not 0 (i.e. not the start menu) then do a standard dialogue text box
 .notStartMenu
@@ -78,19 +78,19 @@ DisplayTextIDInit:
 DrawStartMenu:
 	CheckEvent EVENT_GOT_POKEDEX
 ; menu with pokedex
-	coord hl, 10, 0
-	lb bc, 14, 8
+	coord hl, 12, 0
+	lb bc, 14, 6
 	jr nz,.drawTextBoxBorder
 ; shorter menu if the player doesn't have the pokedex
-	coord hl, 10, 0
-	lb bc, 12, 8
+	coord hl, 12, 0
+	lb bc, 12, 6
 .drawTextBoxBorder
 	call TextBoxBorder
 	ld a,D_DOWN | D_UP | START | B_BUTTON | A_BUTTON
 	ld [wMenuWatchedKeys],a
 	ld a,$02
 	ld [wTopMenuItemY],a ; Y position of first menu choice
-	ld a,$0b
+	ld a,13
 	ld [wTopMenuItemX],a ; X position of first menu choice
 	ld a,[wBattleAndStartSavedMenuItem] ; remembered menu selection from last time
 	ld [wCurrentMenuItem],a
@@ -99,7 +99,7 @@ DrawStartMenu:
 	ld [wMenuWatchMovingOutOfBounds],a
 	ld hl,wd730
 	set 6,[hl] ; no pauses between printing each letter
-	coord hl, 12, 2
+	coord hl, 14, 2
 	CheckEvent EVENT_GOT_POKEDEX
 ; case for not having pokdex
 	ld a,$06
@@ -134,25 +134,25 @@ DrawStartMenu:
 	ret
 
 StartMenuPokedexText:
-	db "POKéDEX@"
+	db "도감@"
 
 StartMenuPokemonText:
-	db "#MON@"
+	db "포켓몬@"
 
 StartMenuItemText:
-	db "ITEM@"
+	db "가방@"
 
 StartMenuSaveText:
-	db "SAVE@"
+	db "레포트@"
 
 StartMenuResetText:
-	db "RESET@"
+	db "리셋@"
 
 StartMenuExitText:
-	db "EXIT@"
+	db "닫다@"
 
 StartMenuOptionText:
-	db "OPTION@"
+	db "설정@"
 
 PrintStartMenuItem:
 	push hl

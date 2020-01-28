@@ -166,7 +166,7 @@ TextBoxTextAndCoordTable:
 	db 3,0   ; text coordinates
 
 	db USE_TOSS_MENU_TEMPLATE
-	db 13,10,19,14 ; text box coordinates
+	db 13,9,19,14 ; text box coordinates
 	dw UseTossText
 	db 15,11 ; text coordinates
 
@@ -191,19 +191,19 @@ TextBoxTextAndCoordTable:
 	db 2,14  ; text coordinates
 
 	db SWITCH_STATS_CANCEL_MENU_TEMPLATE
-	db 11,11,19,17 ; text box coordinates
+	db 9,10,19,17 ; text box coordinates
 	dw SwitchStatsCancelText
-	db 13,12 ; text coordinates
+	db 11,12 ; text coordinates
 
 	db BUY_SELL_QUIT_MENU_TEMPLATE
-	db 0,0,10,6    ; text box coordinates
+	db 0,0,11,7    ; text box coordinates
 	dw BuySellQuitText
-	db 2,1   ; text coordinates
+	db 2,2   ; text coordinates
 
 	db MONEY_BOX_TEMPLATE
 	db 11,0,19,2   ; text box coordinates
 	dw MoneyText
-	db 13,0  ; text coordinates
+	db 12,0  ; text coordinates
 
 	db JP_AH_MENU_TEMPLATE
 	db 7,6,11,10   ; text box coordinates
@@ -218,53 +218,53 @@ TextBoxTextAndCoordTable:
 ; note that there is no terminator
 
 BuySellQuitText:
-	db   "BUY"
-	next "SELL"
-	next "QUIT@@"
+	db   "사러 오다"
+	next "팔러 오다"
+	next "아무것도 아닙니다@@"
 
 UseTossText:
-	db   "USE"
-	next "TOSS@"
+	db   "사용하다"
+	next "버리다@"
 
 JapaneseSaveMessageText:
-	db   "きろく"
-	next "メッセージ@"
+	db   "기록"
+	next "메시지@"
 
 JapaneseSpeedOptionsText:
-	db   "はやい"
-	next "おそい@"
+	db   "빨라"
+	next "느려@"
 
 MoneyText:
-	db "MONEY@"
+	db "돈@"
 
 JapaneseMochimonoText:
-	db "もちもの@"
+	db "소지품@"
 
 JapaneseMainMenuText:
-	db   "つづきから"
-	next "さいしょから@"
+	db   "이어서"
+	next "명세서에서@"
 
 BattleMenuText:
-	db   "FIGHT ",$E1,$E2
-	next "ITEM  RUN@"
+	db   "싸우다  가방"
+	next "포켓몬  도망치다@"
 
 SafariZoneBattleMenuText:
-	db   "BALL×       BAIT"
-	next "THROW ROCK  RUN@"
+	db   "사파리볼×      먹이를 주다"
+	next "돌을 던지다     도망치다@"
 
 SwitchStatsCancelText:
-	db   "SWITCH"
-	next "STATS"
-	next "CANCEL@"
+	db   "순서바꾸기"
+	next "강한정도를 보다"
+	next "돌아가다@"
 
 JapaneseAhText:
-	db "アッ!@"
+	db "앗!@"
 
 JapanesePokedexMenu:
-	db   "データをみる"
-	next "なきごえ"
-	next "ぶんぷをみる"
-	next "キャンセル@"
+	db   "데이타를보다"
+	next "울음소리"
+	next "분포"
+	next "캔슬@"
 
 DisplayMoneyBox:
 	ld hl, wd730
@@ -299,7 +299,7 @@ DoBuySellQuitMenu:
 	ld [wMenuWatchedKeys], a
 	ld a, $2
 	ld [wMaxMenuItem], a
-	ld a, $1
+	ld a, $2
 	ld [wTopMenuItemY], a
 	ld a, $1
 	ld [wTopMenuItemX], a
@@ -357,8 +357,10 @@ DisplayTwoOptionMenu:
 	ld a, $1
 	ld [wMaxMenuItem], a
 	ld a, b
+	dec a
 	ld [wTopMenuItemY], a
 	ld a, c
+	dec c
 	ld [wTopMenuItemX], a
 	xor a
 	ld [wLastMenuItem], a
@@ -404,10 +406,18 @@ DisplayTwoOptionMenu:
 	pop hl
 	ld a, [hli]
 	and a ; put blank line before first menu item?
-	ld bc, 20 + 2
+	ld bc, 2 * 20 + 2 ;수정됨. 아래겻도 수정해야 함
 	jr z, .noBlankLine
-	ld bc, 2 * 20 + 2
+	ld a,[wTopMenuItemY]
+	inc a
+	ld [wTopMenuItemY],a
+	jr nz, .withBlackLine
 .noBlankLine
+	ld a,[wTopMenuItemY]
+	inc a
+	inc a
+	ld [wTopMenuItemY],a
+.withBlackLine
 	ld a, [hli]
 	ld e, a
 	ld a, [hli]
@@ -453,8 +463,21 @@ DisplayTwoOptionMenu:
 ; The bottom and right edges of the menu may remain after the function returns.
 
 TwoOptionMenu_SaveScreenTiles:
-	ld de, wBuffer
-	lb bc, 5, 6
+	ld a,$02
+	ld [rSVBK],a
+	push hl
+	call TwoOptionMenu_SaveScreenTiles_VRAM0
+	pop hl
+	ld bc,$D800-wTileMap
+	add hl,bc
+	call TwoOptionMenu_SaveScreenTiles_VRAM1
+	ld a,$01
+	ld [rSVBK],a
+	ret
+	
+TwoOptionMenu_SaveScreenTiles_VRAM0:
+	ld de, $D100 ;wBuffer에서 2:$D100으로 변경해야 함.
+	lb bc, 6, 8
 .loop
 	ld a, [hli]
 	ld [de], a
@@ -462,17 +485,48 @@ TwoOptionMenu_SaveScreenTiles:
 	dec c
 	jr nz, .loop
 	push bc
-	ld bc, SCREEN_WIDTH - 6
+	ld bc, SCREEN_WIDTH - 8
 	add hl, bc
 	pop bc
-	ld c, $6
+	ld c, $8
+	dec b
+	jr nz, .loop
+	ret
+	
+TwoOptionMenu_SaveScreenTiles_VRAM1:
+	ld de, $D180 ;wBuffer에서 2:$D180으로 변경해야 함.
+	lb bc, 6, 8
+.loop
+	ld a, [hli]
+	ld [de], a
+	inc de
+	dec c
+	jr nz, .loop
+	push bc
+	ld bc, SCREEN_WIDTH - 8
+	add hl, bc
+	pop bc
+	ld c, $8
 	dec b
 	jr nz, .loop
 	ret
 
 TwoOptionMenu_RestoreScreenTiles:
-	ld de, wBuffer
-	lb bc, 5, 6
+	ld a,$02
+	ld [rSVBK],a
+	push hl
+	call TwoOptionMenu_RestoreScreenTiles_VRAM0
+	pop hl
+	ld bc,$D800-wTileMap
+	add hl,bc
+	call TwoOptionMenu_RestoreScreenTiles_VRAM1
+	ld a,$01
+	ld [rSVBK],a
+	call UpdateSprites
+	ret
+TwoOptionMenu_RestoreScreenTiles_VRAM0:
+	ld de, $D100
+	lb bc, 6, 8
 .loop
 	ld a, [de]
 	inc de
@@ -480,13 +534,30 @@ TwoOptionMenu_RestoreScreenTiles:
 	dec c
 	jr nz, .loop
 	push bc
-	ld bc, SCREEN_WIDTH - 6
+	ld bc, SCREEN_WIDTH - 8
 	add hl, bc
 	pop bc
-	ld c, 6
+	ld c, 8
 	dec b
 	jr nz, .loop
-	call UpdateSprites
+	ret
+	
+TwoOptionMenu_RestoreScreenTiles_VRAM1:
+	ld de, $D180
+	lb bc, 6, 8
+.loop
+	ld a, [de]
+	inc de
+	ld [hli], a
+	dec c
+	jr nz, .loop
+	push bc
+	ld bc, SCREEN_WIDTH - 8
+	add hl, bc
+	pop bc
+	ld c, 8
+	dec b
+	jr nz, .loop
 	ret
 
 ; Format:
@@ -495,37 +566,37 @@ TwoOptionMenu_RestoreScreenTiles:
 ; 02: byte put blank line before first menu item
 ; 03: word text pointer
 TwoOptionMenuStrings:
-	db 4,3,0
+	db 4,4,0
 	dw .YesNoMenu
-	db 6,3,0
+	db 6,4,0
 	dw .NorthWestMenu
-	db 6,3,0
+	db 6,4,0
 	dw .SouthEastMenu
-	db 6,3,0
+	db 6,4,0
 	dw .YesNoMenu
-	db 6,3,0
+	db 6,4,0
 	dw .NorthEastMenu
-	db 7,3,0
+	db 7,4,0
 	dw .TradeCancelMenu
-	db 7,4,1
+	db 6,4,1
 	dw .HealCancelMenu
-	db 4,3,0
+	db 4,4,0
 	dw .NoYesMenu
 
 .NoYesMenu
-	db "NO",$4E,"YES@"
+	db "아니오",$4E,"예@"
 .YesNoMenu
-	db "YES",$4E,"NO@"
+	db "예",$4E,"아니오@"
 .NorthWestMenu
-	db "NORTH",$4E,"WEST@"
+	db "북쪽",$4E,"서쪽@"
 .SouthEastMenu
-	db "SOUTH",$4E,"EAST@"
+	db "남쪽",$4E,"동쪽@"
 .NorthEastMenu
-	db "NORTH",$4E,"EAST@"
+	db "북쪽",$4E,"동쪽@"
 .TradeCancelMenu
-	db "TRADE",$4E,"CANCEL@"
+	db "교환",$4E,"그만두다@"
 .HealCancelMenu
-	db "HEAL",$4E,"CANCEL@"
+	db "쉬게하다",$4E,"그만두다@"
 
 DisplayFieldMoveMonMenu:
 	xor a
@@ -542,13 +613,13 @@ DisplayFieldMoveMonMenu:
 	jr nz, .fieldMovesExist
 
 ; no field moves
-	coord hl, 11, 11
-	lb bc, 5, 7
+	coord hl, 9, 10
+	lb bc, 6, 9
 	call TextBoxBorder
 	call UpdateSprites
 	ld a, 12
 	ld [hFieldMoveMonMenuTopMenuItemX], a ; fffb, not fff7
-	coord hl, 13, 12
+	coord hl, 11, 12
 	ld de, PokemonMenuEntries
 	jp PlaceString
 
@@ -557,13 +628,13 @@ DisplayFieldMoveMonMenu:
 
 ; Calculate the text box position and dimensions based on the leftmost X coord
 ; of the field move names before adjusting for the number of field moves.
-	coord hl, 0, 11
+	coord hl, 18, 9
 	ld a, [wFieldMovesLeftmostXCoord]
 	dec a
 	ld e, a
 	ld d, 0
 	add hl, de
-	ld b, 5
+	ld b, 6
 	ld a, 18
 	sub e
 	ld c, a
@@ -578,17 +649,14 @@ DisplayFieldMoveMonMenu:
 	inc b
 	dec a
 	jr nz, .textBoxHeightLoop
-
+	inc c
+	inc c
 ; Make space for an extra blank row above the top field move.
-	ld de, -SCREEN_WIDTH
-	add hl, de
-	inc b
-
 	call TextBoxBorder
 	call UpdateSprites
 
 ; Calculate the position of the first field move name to print.
-	coord hl, 0, 12
+	coord hl, 18, 11
 	ld a, [wFieldMovesLeftmostXCoord]
 	inc a
 	ld e, a
@@ -637,7 +705,7 @@ DisplayFieldMoveMonMenu:
 	pop hl
 	ld a, [wFieldMovesLeftmostXCoord]
 	ld [hFieldMoveMonMenuTopMenuItemX], a
-	coord hl, 0, 12
+	coord hl, 18, 11
 	ld a, [wFieldMovesLeftmostXCoord]
 	inc a
 	ld e, a
@@ -647,20 +715,20 @@ DisplayFieldMoveMonMenu:
 	jp PlaceString
 
 FieldMoveNames:
-	db "CUT@"
-	db "FLY@"
+	db "풀베기@"
+	db "공중날기@"
 	db "@"
-	db "SURF@"
-	db "STRENGTH@"
-	db "FLASH@"
-	db "DIG@"
-	db "TELEPORT@"
-	db "SOFTBOILED@"
+	db "파도타기@"
+	db "괴력@"
+	db "플래시@"
+	db "고멍파기@"
+	db "순간이동@"
+	db "알낳기@"
 
 PokemonMenuEntries:
-	db   "STATS"
-	next "SWITCH"
-	next "CANCEL@"
+	db   "강한정도를 보다"
+	next "순서바꾸기"
+	next "돌아가다@"
 
 GetMonFieldMoves:
 	ld a, [wWhichPokemon]
@@ -724,10 +792,10 @@ FieldMoveDisplayData:
 	db FLY, $02, $0C
 	db $B4, $03, $0C ; unused field move
 	db SURF, $04, $0C
-	db STRENGTH, $05, $0A
+	db STRENGTH, $05, $0C
 	db FLASH, $06, $0C
 	db DIG, $07, $0C
-	db TELEPORT, $08, $0A
-	db SOFTBOILED, $09, $08
+	db TELEPORT, $08, $0C
+	db SOFTBOILED, $09, $0C
 	db $ff ; list terminator
 	

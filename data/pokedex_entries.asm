@@ -195,1060 +195,1064 @@ PokedexEntryPointers:
 ; weight in pounds
 ; text entry
 
+;종류
+;키 (1.2m=>1,2)
+;무게 (1.2kg=>12)
+
 BulbasaurDexEntry:
-	db "SEED@"
-	db 2,4
-	dw 150
+	db "씨앗@"
+	db 0,7
+	dw 69
 	TX_FAR _BulbasaurDexEntry
 	db "@"
 
 IvysaurDexEntry:
-	db "SEED@"
-	db 3,3
-	dw 290
+	db "씨앗@"
+	db 1,0
+	dw 130
 	TX_FAR _IvysaurDexEntry
 	db "@"
 
 VenusaurDexEntry:
-	db "SEED@"
-	db 6,7
-	dw 2210
+	db "씨앗@"
+	db 2,0
+	dw 1000
 	TX_FAR _VenusaurDexEntry
 	db "@"
 
 CharmanderDexEntry:
-	db "LIZARD@"
-	db 2,0
-	dw 190
+	db "도룡뇽@"
+	db 0,6
+	dw 85
 	TX_FAR _CharmanderDexEntry
 	db "@"
 
 CharmeleonDexEntry:
-	db "FLAME@"
-	db 3,7
-	dw 420
+	db "화염@"
+	db 1,1
+	dw 190
 	TX_FAR _CharmeleonDexEntry
 	db "@"
 
 CharizardDexEntry:
-	db "FLAME@"
-	db 5,7
-	dw 2000
+	db "화염@"
+	db 1,7
+	dw 905
 	TX_FAR _CharizardDexEntry
 	db "@"
 
 SquirtleDexEntry:
-	db "TINYTURTLE@"
-	db 1,8
-	dw 200
+	db "꼬마거북@"
+	db 0,5
+	dw 90
 	TX_FAR _SquirtleDexEntry
 	db "@"
 
 WartortleDexEntry:
-	db "TURTLE@"
-	db 3,3
-	dw 500
+	db "거북@"
+	db 1,0
+	dw 225
 	TX_FAR _WartortleDexEntry
 	db "@"
 
 BlastoiseDexEntry:
-	db "SHELLFISH@"
-	db 5,3
-	dw 1890
+	db "껍질@"
+	db 1,6
+	dw 855
 	TX_FAR _BlastoiseDexEntry
 	db "@"
 
 CaterpieDexEntry:
-	db "WORM@"
-	db 1,0
-	dw 60
+	db "애벌레@"
+	db 0,3
+	dw 29
 	TX_FAR _CaterpieDexEntry
 	db "@"
 
 MetapodDexEntry:
-	db "COCOON@"
-	db 2,4
-	dw 220
+	db "번데기@"
+	db 0,7
+	dw 99
 	TX_FAR _MetapodDexEntry
 	db "@"
 
 ButterfreeDexEntry:
-	db "BUTTERFLY@"
-	db 3,7
-	dw 710
+	db "나비@"
+	db 1,1
+	dw 320
 	TX_FAR _ButterfreeDexEntry
 	db "@"
 
 WeedleDexEntry:
-	db "HAIRY BUG@"
-	db 1,0
-	dw 70
+	db "송충이@"
+	db 0,3
+	dw 32
 	TX_FAR _WeedleDexEntry
 	db "@"
 
 KakunaDexEntry:
-	db "COCOON@"
-	db 2,0
-	dw 220
+	db "번데기@"
+	db 0,6
+	dw 100
 	TX_FAR _KakunaDexEntry
 	db "@"
 
 BeedrillDexEntry:
-	db "POISON BEE@"
-	db 3,3
-	dw 650
+	db "독벌@"
+	db 1,0
+	dw 295
 	TX_FAR _BeedrillDexEntry
 	db "@"
 
 PidgeyDexEntry:
-	db "TINY BIRD@"
-	db 1,0
-	dw 40
+	db "아기새@"
+	db 0,3
+	dw 18
 	TX_FAR _PidgeyDexEntry
 	db "@"
 
 PidgeottoDexEntry:
-	db "BIRD@"
-	db 3,7
-	dw 660
+	db "새@"
+	db 1,1
+	dw 300
 	TX_FAR _PidgeottoDexEntry
 	db "@"
 
 PidgeotDexEntry:
-	db "BIRD@"
-	db 4,11
-	dw 870
+	db "새@"
+	db 1,5
+	dw 395
 	TX_FAR _PidgeotDexEntry
 	db "@"
 
 RattataDexEntry:
-	db "RAT@"
-	db 1,0
-	dw 80
+	db "쥐@"
+	db 0,3
+	dw 35
 	TX_FAR _RattataDexEntry
 	db "@"
 
 RaticateDexEntry:
-	db "RAT@"
-	db 2,4
-	dw 410
+	db "쥐@"
+	db 0,7
+	dw 185
 	TX_FAR _RaticateDexEntry
 	db "@"
 
 SpearowDexEntry:
-	db "TINY BIRD@"
-	db 1,0
-	dw 40
+	db "아기새@"
+	db 0,3
+	dw 20
 	TX_FAR _SpearowDexEntry
 	db "@"
 
 FearowDexEntry:
-	db "BEAK@"
-	db 3,11
-	dw 840
+	db "부리@"
+	db 1,2
+	dw 380
 	TX_FAR _FearowDexEntry
 	db "@"
 
 EkansDexEntry:
-	db "SNAKE@"
-	db 6,7
-	dw 150
+	db "뱀@"
+	db 2,0
+	dw 690
 	TX_FAR _EkansDexEntry
 	db "@"
 
 ArbokDexEntry:
-	db "COBRA@"
-	db 11,6
-	dw 1430
+	db "코브라@"
+	db 3,5
+	dw 650
 	TX_FAR _ArbokDexEntry
 	db "@"
 
 PikachuDexEntry:
-	db "MOUSE@"
-	db 1,4
-	dw 130
+	db "쥐@"
+	db 0,4
+	dw 60
 	TX_FAR _PikachuDexEntry
 	db "@"
 
 RaichuDexEntry:
-	db "MOUSE@"
-	db 2,7
-	dw 660
+	db "쥐@"
+	db 0,8
+	dw 300
 	TX_FAR _RaichuDexEntry
 	db "@"
 
 SandshrewDexEntry:
-	db "MOUSE@"
-	db 2,0
-	dw 260
+	db "쥐@"
+	db 0,6
+	dw 120
 	TX_FAR _SandshrewDexEntry
 	db "@"
 
 SandslashDexEntry:
-	db "MOUSE@"
-	db 3,3
-	dw 650
+	db "쥐@"
+	db 1,0
+	dw 295
 	TX_FAR _SandslashDexEntry
 	db "@"
 
 NidoranFDexEntry:
-	db "POISON PIN@"
-	db 1,4
-	dw 150
+	db "독침@"
+	db 0,4
+	dw 70
 	TX_FAR _NidoranFDexEntry
 	db "@"
 
 NidorinaDexEntry:
-	db "POISON PIN@"
-	db 2,7
-	dw 440
+	db "독침@"
+	db 0,8
+	dw 200
 	TX_FAR _NidorinaDexEntry
 	db "@"
 
 NidoqueenDexEntry:
-	db "DRILL@"
-	db 4,3
-	dw 1320
+	db "드릴@"
+	db 1,3
+	dw 600
 	TX_FAR _NidoqueenDexEntry
 	db "@"
 
 NidoranMDexEntry:
-	db "POISON PIN@"
-	db 1,8
-	dw 200
+	db "독침@"
+	db 0,5
+	dw 90
 	TX_FAR _NidoranMDexEntry
 	db "@"
 
 NidorinoDexEntry:
-	db "POISON PIN@"
-	db 2,11
-	dw 430
+	db "독침@"
+	db 0,9
+	dw 195
 	TX_FAR _NidorinoDexEntry
 	db "@"
 
 NidokingDexEntry:
-	db "DRILL@"
-	db 4,7
-	dw 1370
+	db "드릴@"
+	db 1,4
+	dw 620
 	TX_FAR _NidokingDexEntry
 	db "@"
 
 ClefairyDexEntry:
-	db "FAIRY@"
-	db 2,0
-	dw 170
+	db "요정@"
+	db 0,6
+	dw 75
 	TX_FAR _ClefairyDexEntry
 	db "@"
 
 ClefableDexEntry:
-	db "FAIRY@"
-	db 4,3
-	dw 880
+	db "요정@"
+	db 1,3
+	dw 400
 	TX_FAR _ClefableDexEntry
 	db "@"
 
 VulpixDexEntry:
-	db "FOX@"
-	db 2,0
-	dw 220
+	db "여우@"
+	db 0,6
+	dw 99
 	TX_FAR _VulpixDexEntry
 	db "@"
 
 NinetalesDexEntry:
-	db "FOX@"
-	db 3,7
-	dw 440
+	db "여우@"
+	db 1,1
+	dw 199
 	TX_FAR _NinetalesDexEntry
 	db "@"
 
 JigglypuffDexEntry:
-	db "BALLOON@"
-	db 1,8
-	dw 120
+	db "풍선@"
+	db 0,5
+	dw 55
 	TX_FAR _JigglypuffDexEntry
 	db "@"
 
 WigglytuffDexEntry:
-	db "BALLOON@"
-	db 3,3
-	dw 260
+	db "풍선@"
+	db 1,0
+	dw 120
 	TX_FAR _WigglytuffDexEntry
 	db "@"
 
 ZubatDexEntry:
-	db "BAT@"
-	db 2,7
-	dw 170
+	db "박쥐@"
+	db 0,8
+	dw 75
 	TX_FAR _ZubatDexEntry
 	db "@"
 
 GolbatDexEntry:
-	db "BAT@"
-	db 5,3
-	dw 1210
+	db "박쥐@"
+	db 1,6
+	dw 550
 	TX_FAR _GolbatDexEntry
 	db "@"
 
 OddishDexEntry:
-	db "WEED@"
-	db 1,8
-	dw 120
+	db "잡초@"
+	db 0,5
+	dw 54
 	TX_FAR _OddishDexEntry
 	db "@"
 
 GloomDexEntry:
-	db "WEED@"
-	db 2,7
-	dw 190
+	db "잡초@"
+	db 0,8
+	dw 86
 	TX_FAR _GloomDexEntry
 	db "@"
 
 VileplumeDexEntry:
-	db "FLOWER@"
-	db 3,11
-	dw 410
+	db "꽃@"
+	db 1,2
+	dw 186
 	TX_FAR _VileplumeDexEntry
 	db "@"
 
 ParasDexEntry:
-	db "MUSHROOM@"
-	db 1,0
-	dw 120
+	db "버섯@"
+	db 0,3
+	dw 54
 	TX_FAR _ParasDexEntry
 	db "@"
 
 ParasectDexEntry:
-	db "MUSHROOM@"
-	db 3,3
-	dw 650
+	db "버섯@"
+	db 1,0
+	dw 295
 	TX_FAR _ParasectDexEntry
 	db "@"
 
 VenonatDexEntry:
-	db "INSECT@"
-	db 3,3
-	dw 660
+	db "곤충@"
+	db 1,0
+	dw 300
 	TX_FAR _VenonatDexEntry
 	db "@"
 
 VenomothDexEntry:
-	db "POISONMOTH@"
-	db 4,11
-	dw 280
+	db "독나방@"
+	db 1,5
+	dw 125
 	TX_FAR _VenomothDexEntry
 	db "@"
 
 DiglettDexEntry:
-	db "MOLE@"
-	db 0,8
-	dw 20
+	db "두더지@"
+	db 0,2
+	dw 8
 	TX_FAR _DiglettDexEntry
 	db "@"
 
 DugtrioDexEntry:
-	db "MOLE@"
-	db 2,4
-	dw 730
+	db "두더지@"
+	db 0,7
+	dw 333
 	TX_FAR _DugtrioDexEntry
 	db "@"
 
 MeowthDexEntry:
-	db "SCRATCHCAT@"
-	db 1,4
-	dw 90
+	db "요괴고양이@"
+	db 1,0
+	dw 320
 	TX_FAR _MeowthDexEntry
 	db "@"
 
 PersianDexEntry:
-	db "CLASSY CAT@"
+	db "샴고양이@"
 	db 3,3
 	dw 710
 	TX_FAR _PersianDexEntry
 	db "@"
 
 PsyduckDexEntry:
-	db "DUCK@"
-	db 2,7
-	dw 430
+	db "오리@"
+	db 0,8
+	dw 196
 	TX_FAR _PsyduckDexEntry
 	db "@"
 
 GolduckDexEntry:
-	db "DUCK@"
-	db 5,7
-	dw 1690
+	db "오리@"
+	db 1,7
+	dw 766
 	TX_FAR _GolduckDexEntry
 	db "@"
 
 MankeyDexEntry:
-	db "PIG MONKEY@"
-	db 1,8
-	dw 620
+	db "돈숭이@"
+	db 0,5
+	dw 280
 	TX_FAR _MankeyDexEntry
 	db "@"
 
 PrimeapeDexEntry:
-	db "PIG MONKEY@"
-	db 3,3
-	dw 710
+	db "돈숭이@"
+	db 1,0
+	dw 320
 	TX_FAR _PrimeapeDexEntry
 	db "@"
 
 GrowlitheDexEntry:
-	db "PUPPY@"
-	db 2,4
-	dw 420
+	db "강아지@"
+	db 0,7
+	dw 190
 	TX_FAR _GrowlitheDexEntry
 	db "@"
 
 ArcanineDexEntry:
-	db "LEGENDARY@"
-	db 6,3
-	dw 3420
+	db "전설@"
+	db 1,9
+	dw 1550
 	TX_FAR _ArcanineDexEntry
 	db "@"
 
 PoliwagDexEntry:
-	db "TADPOLE@"
-	db 2,0
-	dw 270
+	db "올챙이@"
+	db 0,6
+	dw 124
 	TX_FAR _PoliwagDexEntry
 	db "@"
 
 PoliwhirlDexEntry:
-	db "TADPOLE@"
-	db 3,3
-	dw 440
+	db "올챙이@"
+	db 1,0
+	dw 200
 	TX_FAR _PoliwhirlDexEntry
 	db "@"
 
 PoliwrathDexEntry:
-	db "TADPOLE@"
-	db 4,3
-	dw 1190
+	db "올챙이@"
+	db 1,3
+	dw 540
 	TX_FAR _PoliwrathDexEntry
 	db "@"
 
 AbraDexEntry:
-	db "PSI@"
+	db "초능력@"
 	db 2,11
 	dw 430
 	TX_FAR _AbraDexEntry
 	db "@"
 
 KadabraDexEntry:
-	db "PSI@"
-	db 4,3
-	dw 1250
+	db "초능력@"
+	db 1,3
+	dw 565
 	TX_FAR _KadabraDexEntry
 	db "@"
 
 AlakazamDexEntry:
-	db "PSI@"
-	db 4,11
-	dw 1060
+	db "초능력@"
+	db 1,5
+	dw 480
 	TX_FAR _AlakazamDexEntry
 	db "@"
 
 MachopDexEntry:
-	db "SUPERPOWER@"
-	db 2,7
-	dw 430
+	db "괴력@"
+	db 0,8
+	dw 195
 	TX_FAR _MachopDexEntry
 	db "@"
 
 MachokeDexEntry:
-	db "SUPERPOWER@"
-	db 4,11
-	dw 1550
+	db "괴력@"
+	db 1,5
+	dw 705
 	TX_FAR _MachokeDexEntry
 	db "@"
 
 MachampDexEntry:
-	db "SUPERPOWER@"
-	db 5,3
-	dw 2870
+	db "괴력@"
+	db 1,6
+	dw 1300
 	TX_FAR _MachampDexEntry
 	db "@"
 
 BellsproutDexEntry:
-	db "FLOWER@"
-	db 2,4
-	dw 90
+	db "꽃@"
+	db 0,7
+	dw 40
 	TX_FAR _BellsproutDexEntry
 	db "@"
 
 WeepinbellDexEntry:
-	db "FLYCATCHER@"
-	db 3,3
-	dw 140
+	db "파리잡이@"
+	db 1,0
+	dw 64
 	TX_FAR _WeepinbellDexEntry
 	db "@"
 
 VictreebelDexEntry:
-	db "FLYCATCHER@"
-	db 5,7
-	dw 340
+	db "파리잡이@"
+	db 1,7
+	dw 155
 	TX_FAR _VictreebelDexEntry
 	db "@"
 
 TentacoolDexEntry:
-	db "JELLYFISH@"
-	db 2,11
-	dw 1000
+	db "해파리@"
+	db 0,9
+	dw 455
 	TX_FAR _TentacoolDexEntry
 	db "@"
 
 TentacruelDexEntry:
-	db "JELLYFISH@"
-	db 5,3
-	dw 1210
+	db "해파리@"
+	db 1,6
+	dw 550
 	TX_FAR _TentacruelDexEntry
 	db "@"
 
 GeodudeDexEntry:
-	db "ROCK@"
-	db 1,4
-	dw 440
+	db "암석@"
+	db 0,4
+	dw 200
 	TX_FAR _GeodudeDexEntry
 	db "@"
 
 GravelerDexEntry:
-	db "ROCK@"
-	db 3,3
-	dw 2320
+	db "암석@"
+	db 1,0
+	dw 1050
 	TX_FAR _GravelerDexEntry
 	db "@"
 
 GolemDexEntry:
-	db "MEGATON@"
-	db 4,7
-	dw 6620
+	db "메가톤@"
+	db 1,4
+	dw 3000
 	TX_FAR _GolemDexEntry
 	db "@"
 
 PonytaDexEntry:
-	db "FIRE HORSE@"
-	db 3,3
-	dw 660
+	db "불의말@"
+	db 1,0
+	dw 300
 	TX_FAR _PonytaDexEntry
 	db "@"
 
 RapidashDexEntry:
-	db "FIRE HORSE@"
-	db 5,7
-	dw 2090
+	db "불의말@"
+	db 1,7
+	dw 950
 	TX_FAR _RapidashDexEntry
 	db "@"
 
 SlowpokeDexEntry:
-	db "DOPEY@"
-	db 3,11
-	dw 790
+	db "얼간이@"
+	db 1,2
+	dw 360
 	TX_FAR _SlowpokeDexEntry
 	db "@"
 
 SlowbroDexEntry:
-	db "HERMITCRAB@"
-	db 5,3
-	dw 1730
+	db "기생@"
+	db 1,6
+	dw 785
 	TX_FAR _SlowbroDexEntry
 	db "@"
 
 MagnemiteDexEntry:
-	db "MAGNET@"
-	db 1,0
-	dw 130
+	db "자석@"
+	db 0,3
+	dw 60
 	TX_FAR _MagnemiteDexEntry
 	db "@"
 
 MagnetonDexEntry:
-	db "MAGNET@"
-	db 3,3
-	dw 1320
+	db "자석@"
+	db 1,0
+	dw 600
 	TX_FAR _MagnetonDexEntry
 	db "@"
 
 FarfetchdDexEntry:
-	db "WILD DUCK@"
-	db 2,7
-	dw 330
+	db "청둥오리@"
+	db 0,8
+	dw 150
 	TX_FAR _FarfetchdDexEntry
 	db "@"
 
 DoduoDexEntry:
-	db "TWIN BIRD@"
-	db 4,7
-	dw 860
+	db "쌍둥이새@"
+	db 1,4
+	dw 392
 	TX_FAR _DoduoDexEntry
 	db "@"
 
 DodrioDexEntry:
-	db "TRIPLEBIRD@"
-	db 5,11
-	dw 1880
+	db "세쌍둥이@"
+	db 1,8
+	dw 852
 	TX_FAR _DodrioDexEntry
 	db "@"
 
 SeelDexEntry:
-	db "SEA LION@"
-	db 3,7
-	dw 1980
+	db "강치@"
+	db 1,1
+	dw 900
 	TX_FAR _SeelDexEntry
 	db "@"
 
 DewgongDexEntry:
-	db "SEA LION@"
-	db 5,7
-	dw 2650
+	db "강치@"
+	db 1,7
+	dw 1200
 	TX_FAR _DewgongDexEntry
 	db "@"
 
 GrimerDexEntry:
-	db "SLUDGE@"
-	db 2,11
-	dw 660
+	db "진흙@"
+	db 0,9
+	dw 300
 	TX_FAR _GrimerDexEntry
 	db "@"
 
 MukDexEntry:
-	db "SLUDGE@"
-	db 3,11
-	dw 660
+	db "진흙@"
+	db 1,2
+	dw 300
 	TX_FAR _MukDexEntry
 	db "@"
 
 ShellderDexEntry:
-	db "BIVALVE@"
-	db 1,0
-	dw 90
+	db "두조개@"
+	db 0,3
+	dw 40
 	TX_FAR _ShellderDexEntry
 	db "@"
 
 CloysterDexEntry:
-	db "BIVALVE@"
-	db 4,11
-	dw 2920
+	db "두조개@"
+	db 1,5
+	dw 1325
 	TX_FAR _CloysterDexEntry
 	db "@"
 
 GastlyDexEntry:
-	db "GAS@"
-	db 4,3
-	dw 2
+	db "가스@"
+	db 1,3
+	dw 1
 	TX_FAR _GastlyDexEntry
 	db "@"
 
 HaunterDexEntry:
-	db "GAS@"
-	db 5,3
-	dw 2
+	db "가스@"
+	db 1,6
+	dw 1
 	TX_FAR _HaunterDexEntry
 	db "@"
 
 GengarDexEntry:
-	db "SHADOW@"
-	db 4,11
-	dw 890
+	db "그림자@"
+	db 1,5
+	dw 405
 	TX_FAR _GengarDexEntry
 	db "@"
 
 OnixDexEntry:
-	db "ROCK SNAKE@"
-	db 28,10
-	dw 4630
+	db "돌뱀@"
+	db 8,8
+	dw 2100
 	TX_FAR _OnixDexEntry
 	db "@"
 
 DrowzeeDexEntry:
-	db "HYPNOSIS@"
-	db 3,3
-	dw 710
+	db "최면@"
+	db 1,0
+	dw 324
 	TX_FAR _DrowzeeDexEntry
 	db "@"
 
 HypnoDexEntry:
-	db "HYPNOSIS@"
-	db 5,3
-	dw 1670
+	db "최면@"
+	db 1,6
+	dw 756
 	TX_FAR _HypnoDexEntry
 	db "@"
 
 KrabbyDexEntry:
-	db "RIVER CRAB@"
-	db 1,4
-	dw 140
+	db "게@"
+	db 0,4
+	dw 65
 	TX_FAR _KrabbyDexEntry
 	db "@"
 
 KinglerDexEntry:
-	db "PINCER@"
-	db 4,3
-	dw 1320
+	db "집게@"
+	db 1,3
+	dw 600
 	TX_FAR _KinglerDexEntry
 	db "@"
 
 VoltorbDexEntry:
-	db "BALL@"
-	db 1,8
-	dw 230
+	db "볼@"
+	db 1,2
+	dw 666
 	TX_FAR _VoltorbDexEntry
 	db "@"
 
 ElectrodeDexEntry:
-	db "BALL@"
+	db "볼@"
 	db 3,11
 	dw 1470
 	TX_FAR _ElectrodeDexEntry
 	db "@"
 
 ExeggcuteDexEntry:
-	db "EGG@"
-	db 1,4
-	dw 60
+	db "알@"
+	db 0,4
+	dw 25
 	TX_FAR _ExeggcuteDexEntry
 	db "@"
 
 ExeggutorDexEntry:
-	db "COCONUT@"
-	db 6,7
-	dw 2650
+	db "야자나무@"
+	db 2,0
+	dw 1200
 	TX_FAR _ExeggutorDexEntry
 	db "@"
 
 CuboneDexEntry:
-	db "LONELY@"
-	db 1,4
-	dw 140
+	db "고독@"
+	db 0,4
+	dw 65
 	TX_FAR _CuboneDexEntry
 	db "@"
 
 MarowakDexEntry:
-	db "BONEKEEPER@"
-	db 3,3
-	dw 990
+	db "뼈다귀@"
+	db 1,0
+	dw 450
 	TX_FAR _MarowakDexEntry
 	db "@"
 
 HitmonleeDexEntry:
-	db "KICKING@"
-	db 4,11
-	dw 1100
+	db "킥@"
+	db 1,5
+	dw 498
 	TX_FAR _HitmonleeDexEntry
 	db "@"
 
 HitmonchanDexEntry:
-	db "PUNCHING@"
-	db 4,7
-	dw 1110
+	db "펀치@"
+	db 1,4
+	dw 502
 	TX_FAR _HitmonchanDexEntry
 	db "@"
 
 LickitungDexEntry:
-	db "LICKING@"
-	db 3,11
-	dw 1440
+	db "핥기@"
+	db 1,2
+	dw 655
 	TX_FAR _LickitungDexEntry
 	db "@"
 
 KoffingDexEntry:
-	db "POISON GAS@"
-	db 2,0
-	dw 20
+	db "독가스@"
+	db 0,6
+	dw 10
 	TX_FAR _KoffingDexEntry
 	db "@"
 
 WeezingDexEntry:
-	db "POISON GAS@"
-	db 3,11
-	dw 210
+	db "독가스@"
+	db 1,2
+	dw 95
 	TX_FAR _WeezingDexEntry
 	db "@"
 
 RhyhornDexEntry:
-	db "SPIKES@"
-	db 3,3
-	dw 2540
+	db "뿔@"
+	db 1,0
+	dw 1150
 	TX_FAR _RhyhornDexEntry
 	db "@"
 
 RhydonDexEntry:
-	db "DRILL@"
-	db 6,3
-	dw 2650
+	db "드릴@"
+	db 1,9
+	dw 1200
 	TX_FAR _RhydonDexEntry
 	db "@"
 
 ChanseyDexEntry:
-	db "EGG@"
-	db 3,7
-	dw 760
+	db "알@"
+	db 1,1
+	dw 346
 	TX_FAR _ChanseyDexEntry
 	db "@"
 
 TangelaDexEntry:
-	db "VINE@"
-	db 3,3
-	dw 770
+	db "넝쿨@"
+	db 1,0
+	dw 350
 	TX_FAR _TangelaDexEntry
 	db "@"
 
 KangaskhanDexEntry:
-	db "PARENT@"
-	db 7,3
-	dw 1760
+	db "가족@"
+	db 2,2
+	dw 800
 	TX_FAR _KangaskhanDexEntry
 	db "@"
 
 HorseaDexEntry:
-	db "DRAGON@"
-	db 1,4
-	dw 180
+	db "드레곤@"
+	db 0,4
+	dw 80
 	TX_FAR _HorseaDexEntry
 	db "@"
 
 SeadraDexEntry:
-	db "DRAGON@"
-	db 3,11
-	dw 550
+	db "드레곤@"
+	db 1,2
+	dw 250
 	TX_FAR _SeadraDexEntry
 	db "@"
 
 GoldeenDexEntry:
-	db "GOLDFISH@"
-	db 2,0
-	dw 330
+	db "금붕어@"
+	db 0,6
+	dw 150
 	TX_FAR _GoldeenDexEntry
 	db "@"
 
 SeakingDexEntry:
-	db "GOLDFISH@"
-	db 4,3
-	dw 860
+	db "금붕어@"
+	db 1,3
+	dw 390
 	TX_FAR _SeakingDexEntry
 	db "@"
 
 StaryuDexEntry:
-	db "STARSHAPE@"
-	db 2,7
-	dw 760
+	db "별@"
+	db 0,8
+	dw 345
 	TX_FAR _StaryuDexEntry
 	db "@"
 
 StarmieDexEntry:
-	db "MYSTERIOUS@"
-	db 3,7
-	dw 1760
+	db "수수께끼@"
+	db 1,1
+	dw 800
 	TX_FAR _StarmieDexEntry
 	db "@"
 
 MrMimeDexEntry:
-	db "BARRIER@"
-	db 4,3
-	dw 1200
+	db "배리어@"
+	db 1,3
+	dw 545
 	TX_FAR _MrMimeDexEntry
 	db "@"
 
 ScytherDexEntry:
-	db "MANTIS@"
-	db 4,11
-	dw 1230
+	db "버마재비@"
+	db 1,5
+	dw 560
 	TX_FAR _ScytherDexEntry
 	db "@"
 
 JynxDexEntry:
-	db "HUMANSHAPE@"
-	db 4,7
-	dw 900
+	db "인간형태@"
+	db 1,4
+	dw 406
 	TX_FAR _JynxDexEntry
 	db "@"
 
 ElectabuzzDexEntry:
-	db "ELECTRIC@"
-	db 3,7
-	dw 660
+	db "전기@"
+	db 1,1
+	dw 300
 	TX_FAR _ElectabuzzDexEntry
 	db "@"
 
 MagmarDexEntry:
-	db "SPITFIRE@"
-	db 4,3
-	dw 980
+	db "불뿜기@"
+	db 1,3
+	dw 445
 	TX_FAR _MagmarDexEntry
 	db "@"
 
 PinsirDexEntry:
-	db "STAGBEETLE@"
-	db 4,11
-	dw 1210
+	db "뿔집게@"
+	db 1,5
+	dw 550
 	TX_FAR _PinsirDexEntry
 	db "@"
 
 TaurosDexEntry:
-	db "WILD BULL@"
-	db 4,7
-	dw 1950
+	db "성난소@"
+	db 1,4
+	dw 884
 	TX_FAR _TaurosDexEntry
 	db "@"
 
 MagikarpDexEntry:
-	db "FISH@"
-	db 2,11
-	dw 220
+	db "물고기@"
+	db 0,9
+	dw 100
 	TX_FAR _MagikarpDexEntry
 	db "@"
 
 GyaradosDexEntry:
-	db "ATROCIOUS@"
-	db 21,4
-	dw 5180
+	db "흉악@"
+	db 6,5
+	dw 2350
 	TX_FAR _GyaradosDexEntry
 	db "@"
 
 LaprasDexEntry:
-	db "TRANSPORT@"
-	db 8,2
-	dw 4850
+	db "탈것@"
+	db 2,5
+	dw 2200
 	TX_FAR _LaprasDexEntry
 	db "@"
 
 DittoDexEntry:
-	db "TRANSFORM@"
-	db 1,0
-	dw 90
+	db "변신@"
+	db 0,3
+	dw 40
 	TX_FAR _DittoDexEntry
 	db "@"
 
 EeveeDexEntry:
-	db "EVOLUTION@"
-	db 1,0
-	dw 140
+	db "진화@"
+	db 0,3
+	dw 65
 	TX_FAR _EeveeDexEntry
 	db "@"
 
 VaporeonDexEntry:
-	db "BUBBLE JET@"
-	db 3,3
-	dw 640
+	db "거품뿜기@"
+	db 1,0
+	dw 290
 	TX_FAR _VaporeonDexEntry
 	db "@"
 
 JolteonDexEntry:
-	db "LIGHTNING@"
-	db 2,7
-	dw 540
+	db "번개@"
+	db 0,8
+	dw 245
 	TX_FAR _JolteonDexEntry
 	db "@"
 
 FlareonDexEntry:
-	db "FLAME@"
-	db 2,11
-	dw 550
+	db "불꽃@"
+	db 0,9
+	dw 250
 	TX_FAR _FlareonDexEntry
 	db "@"
 
 PorygonDexEntry:
-	db "VIRTUAL@"
-	db 2,7
-	dw 800
+	db "가상@"
+	db 0,8
+	dw 365
 	TX_FAR _PorygonDexEntry
 	db "@"
 
 OmanyteDexEntry:
-	db "SPIRAL@"
-	db 1,4
-	dw 170
+	db "소용돌이@"
+	db 0,4
+	dw 75
 	TX_FAR _OmanyteDexEntry
 	db "@"
 
 OmastarDexEntry:
-	db "SPIRAL@"
-	db 3,3
-	dw 770
+	db "소용돌이@"
+	db 1,0
+	dw 350
 	TX_FAR _OmastarDexEntry
 	db "@"
 
 KabutoDexEntry:
-	db "SHELLFISH@"
-	db 1,8
-	dw 250
+	db "껍질@"
+	db 0,5
+	dw 115
 	TX_FAR _KabutoDexEntry
 	db "@"
 
 KabutopsDexEntry:
-	db "SHELLFISH@"
-	db 4,3
-	dw 890
+	db "껍질@"
+	db 1,3
+	dw 405
 	TX_FAR _KabutopsDexEntry
 	db "@"
 
 AerodactylDexEntry:
-	db "FOSSIL@"
-	db 5,11
-	dw 1300
+	db "화석@"
+	db 1,8
+	dw 590
 	TX_FAR _AerodactylDexEntry
 	db "@"
 
 SnorlaxDexEntry:
-	db "SLEEPING@"
-	db 6,11
-	dw 10140
+	db "졸음@"
+	db 2,1
+	dw 4600
 	TX_FAR _SnorlaxDexEntry
 	db "@"
 
 ArticunoDexEntry:
-	db "FREEZE@"
-	db 5,7
-	dw 1220
+	db "냉동@"
+	db 1,7
+	dw 554
 	TX_FAR _ArticunoDexEntry
 	db "@"
 
 ZapdosDexEntry:
-	db "ELECTRIC@"
-	db 5,3
-	dw 1160
+	db "전기@"
+	db 1,6
+	dw 526
 	TX_FAR _ZapdosDexEntry
 	db "@"
 
 MoltresDexEntry:
-	db "FLAME@"
-	db 6,7
-	dw 1320
+	db "화염@"
+	db 2,0
+	dw 600
 	TX_FAR _MoltresDexEntry
 	db "@"
 
 DratiniDexEntry:
-	db "DRAGON@"
-	db 5,11
-	dw 70
+	db "드래곤@"
+	db 1,8
+	dw 33
 	TX_FAR _DratiniDexEntry
 	db "@"
 
 DragonairDexEntry:
-	db "DRAGON@"
-	db 13,1
-	dw 360
+	db "드래곤@"
+	db 4,0
+	dw 165
 	TX_FAR _DragonairDexEntry
 	db "@"
 
 DragoniteDexEntry:
-	db "DRAGON@"
-	db 7,3
-	dw 4630
+	db "드래곤@"
+	db 2,2
+	dw 2100
 	TX_FAR _DragoniteDexEntry
 	db "@"
 
 MewtwoDexEntry:
-	db "GENETIC@"
-	db 6,7
-	dw 2690
+	db "유전@"
+	db 2,0
+	dw 1220
 	TX_FAR _MewtwoDexEntry
 	db "@"
 
 MewDexEntry:
-	db "NEW SPECIE@"
-	db 1,4
-	dw 90
+	db "신종@"
+	db 0,4
+	dw 40
 	TX_FAR _MewDexEntry
 	db "@"
 
@@ -1256,7 +1260,7 @@ MissingNoDexEntry:
 	db "???@"
 	db 10 ; 1.0 m
 	db 100 ; 10.0 kg
-	text "コメント さくせいちゅう@" ; コメント作成中 (Comment to be written)
+	text "코멘트 작성중@" ; コメント作成中 (Comment to be written)
 
 ; what the game sees
 ;	db "???@"

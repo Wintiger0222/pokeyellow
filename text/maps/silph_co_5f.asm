@@ -1,107 +1,115 @@
 _SilphCo5Text_1a010::
-	text "TEAM ROCKET is"
-	line "in an uproar over"
-	cont "some intruder."
-	cont "That's you right?"
+	text "로켓단은 침입자 때문에"
+	line "난리가 났대"
+	cont "네가 그 침입자 맞지?"
 	done
+
 
 _SilphCo5Text_1a015::
-	text "TEAM ROCKET took"
-	line "off! You're our"
-	cont "hero! Thank you!"
+	text "로켓단이 떠났어!"
+	line "네가 우리 영웅이야!"
+	cont "고마워!"
 	done
+
+  
 
 _SilphCo5BattleText2::
-	text "I heard a kid was"
-	line "wandering around."
+	text "어떤 꼬마가 돌아다는다는"
+	line "말을 들었는데"
 	done
 
+ 
+
 _SilphCo5EndBattleText2::
-	text "Boom!"
+	text "펑!"
 	prompt
 
 _SilphCo5AfterBattleText2::
-	text "It's not smart"
-	line "to pick a fight"
-	cont "with TEAM ROCKET!"
+	text "로켓단이랑 싸우는건"
+	line "영 좋지 않을텐데!"
 	done
 
 _SilphCo5BattleText3::
-	text "We study #"
-	line "BALL technology"
-	cont "on this floor!"
+	text "우린 여기서"
+	line "몬스터 볼을 연구하고 있어!"
 	done
 
 _SilphCo5EndBattleText3::
-	text "Dang!"
-	line "Blast it!"
+	text "젠장!"
+	line "다 부질없어!"
 	prompt
+
 
 _SilphCo5AfterBattleText3::
-	text "We worked on the"
-	line "ultimate #"
-	cont "BALL which would"
-	cont "catch anything!"
+	text "우린 어떤 것이라도"
+	line "잡을 수 있는 궁극의"
+	cont "몬스터볼을 연구중이다!"
 	done
+
+  
 
 _SilphCo5BattleText4::
-	text "Whaaat? There"
-	line "shouldn't be any"
-	cont "children here!"
+	text "뭐야?"
+	line "여긴 꼬맹이가"
+	cont "와도 되는 곳이 아니야!"
 	done
 
+  
+
 _SilphCo5EndBattleText4::
-	text "Oh"
-	line "goodness!"
+	text "세상에!"
 	prompt
 
+
+
 _SilphCo5AfterBattleText4::
-	text "You're only on 5F."
-	line "It's a long way"
-	cont "to my BOSS!"
+	text "여긴 겨우 5층"
+	line "꼭대기에 도달 할 수 있을까?"
 	done
 
 _SilphCo5BattleText5::
-	text "Show TEAM ROCKET"
-	line "a little respect!"
+	text "로켓단에게 경의를 표하라!"
 	done
 
+
+
 _SilphCo5EndBattleText5::
-	text "Cough..."
-	line "Cough..."
+	text "콜록……"
+	line "콜록……"
 	prompt
 
 _SilphCo5AfterBattleText5::
-	text "Which reminds me."
+	text "이것 참"
 
-	para "KOFFING evolves"
-	line "into WEEZING!"
+
+
+	para "또가스가 또도가스로"
+	line "진화했을때를 생각나게 하는군!"
 	done
 
-_SilphCo5Text9::
-	text "It's a #MON"
-	line "REPORT!"
+ 
 
-	para "#MON LAB"
-	line "created PORYGON,"
-	cont "the first virtual"
-	cont "reality #MON."
+_SilphCo5Text9::
+	text "회사 보고서다!"
+
+
+
+	para "포켓몬 연구소는"
+	line "첫 인공 포켓몬인"
+	cont "폴리곤을 만들어 냈습니다"
 	done
 
 _SilphCo5Text10::
-	text "It's a #MON"
-	line "REPORT!"
+	text "회사 보고서다!"
 
-	para "Over 160 #MON"
-	line "techniques have"
-	cont "been confirmed."
+	para "!60개가 넘는 포켓몬 기술이"
+	line "확인되었습니다"
 	done
 
 _SilphCo5Text11::
-	text "It's a #MON"
-	line "REPORT!"
+	text "회사 보고서다!"
 
-	para "4 #MON evolve"
-	line "only when traded"
-	cont "by link-cable."
+	para "4종류의 포켓몬은"
+	line "케이블을 통해 교환하면"
+	cont "진화합니다"
 	done

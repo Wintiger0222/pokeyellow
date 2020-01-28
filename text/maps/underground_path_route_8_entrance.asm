@@ -1,5 +1,4 @@
 _UndergroundPathEntRoute8Text1::
-	text "The dept. store"
-	line "in CELADON has a"
-	cont "great selection!"
+	text "무지개 시티의 백화점에는"
+	line "살게 엄청 많아!"
 	done

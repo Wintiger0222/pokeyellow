@@ -211,6 +211,10 @@ TitleScreen_PlacePikaSpeechBubble:
 	ld de, TitleScreenPikaBubbleTilemap
 	lb bc, 4, 7
 	call Bank3D_CopyBox
+	coord hl, 5, 0
+	ld de, Pointer_f4669
+	lb bc, 1, 10
+	call Bank3D_CopyBox
 	coord hl, 9, 8
 	ld [hl], $64
 	inc hl
@@ -266,39 +270,38 @@ Bank3D_CopyBox:
 	ret
 
 TitleScreenPokemonLogoTilemap:
-; 16x7 (xy)
-	db $f4, $f4, $f4, $f4, $f4, $f4, $49, $f4, $72, $30, $f4, $f4, $f4, $f4, $f4, $f4
-	db $fd, $01, $02, $03, $04, $05, $06, $07, $08, $09, $0a, $0b, $f4, $0d, $0e, $0f
+; 16x7 (xy)	
+	db $00, $01, $02, $03, $04, $05, $06, $07, $08, $09, $0a, $0b, $0c, $0d, $0e, $0f
 	db $10, $11, $12, $13, $14, $15, $16, $17, $18, $19, $1a, $1b, $1c, $1d, $1e, $1f
 	db $20, $21, $22, $23, $24, $25, $26, $27, $28, $29, $2a, $2b, $2c, $2d, $2e, $2f
-	db $f4, $31, $32, $33, $34, $35, $36, $37, $38, $39, $3a, $3b, $3c, $3d, $3e, $3f
-	db $f4, $41, $42, $43, $44, $45, $46, $47, $48, $f4, $4a, $4b, $4c, $4d, $4e, $4f
-	db $f4, $6a, $6b, $6c, $6d, $f4, $f4, $f4, $f4, $f4, $f4, $6e, $6f, $70, $71, $f4
+	db $30, $31, $32, $33, $34, $35, $36, $37, $38, $39, $3a, $3b, $3c, $3d, $3e, $3f
+	db $40, $41, $42, $43, $44, $45, $46, $47, $48, $49, $4a, $4b, $4c, $4d, $4e, $4f
+	db $f4, $f4, $f4, $f4, $f4, $f4, $f4, $f4, $f4, $f4, $f4, $f4, $f4, $f4, $f4, $f4
+	db $f4, $f4, $f4, $f4, $f4, $f4, $f4, $f4, $f4, $f4, $f4, $f4, $f4, $f4, $f4, $f4
 
 Pointer_f4669:
-; Unreferenced
-	db $47, $48, $49, $4a, $4b, $4c, $4d, $4e, $4f, $5f
+	db $6a, $6b, $6c, $6d, $6e, $6f, $70, $71, $72, $50
 
 TitleScreenPikaBubbleTilemap:
 ; 7x4 (xy)
-	db $24, $25, $66, $67, $68, $69, $2a
-	db $50, $51, $52, $53, $54, $55, $56
+	db $34, $35, $66, $67, $68, $69, $3a
+	db $44, $51, $52, $53, $54, $55, $56
 	db $57, $58, $59, $5a, $5b, $5c, $5d
-	db $6d, $5e, $5f, $60, $61, $62, $63
+	db $f4, $5e, $5f, $60, $61, $62, $63
 
 TitleScreenPikachuTilemap:
 ; 12x9 (xy)
-	db $80, $81, $82, $83, $00, $00, $00, $00, $84, $85, $86, $87
+	db $80, $81, $82, $83, $f4, $f4, $f4, $f4, $84, $85, $86, $87
 	db $88, $89, $8a, $8b, $8c, $8d, $8d, $8e, $8f, $8a, $90, $91
-	db $00, $92, $93, $8a, $8a, $8a, $8a, $8a, $8a, $94, $95, $00
-	db $00, $00, $97, $8a, $8a, $98, $99, $8a, $8a, $9a, $9b, $9c
-	db $00, $00, $9e, $9f, $a0, $a1, $a2, $a3, $a4, $a5, $a6, $8a
-	db $00, $a8, $a9, $aa, $8a, $ab, $ac, $8a, $ad, $ae, $af, $b0
-	db $00, $b2, $b3, $b4, $8a, $8a, $8a, $8a, $b5, $b6, $b7, $b8
-	db $00, $b9, $ba, $8a, $8a, $8a, $8a, $8a, $8a, $bb, $bc, $00
-	db $00, $00, $bd, $8a, $8a, $8a, $8a, $8a, $8a, $be, $bf, $00
+	db $f4, $92, $93, $8a, $8a, $8a, $8a, $8a, $8a, $94, $95, $f4
+	db $f4, $f4, $97, $8a, $8a, $98, $99, $8a, $8a, $9a, $9b, $9c
+	db $f4, $f4, $9e, $9f, $a0, $a1, $a2, $a3, $a4, $a5, $a6, $8a
+	db $f4, $a8, $a9, $aa, $8a, $ab, $ac, $8a, $ad, $ae, $af, $b0
+	db $f4, $b2, $b3, $b4, $8a, $8a, $8a, $8a, $b5, $b6, $b7, $b8
+	db $f4, $b9, $ba, $8a, $8a, $8a, $8a, $8a, $8a, $bb, $bc, $f4
+	db $f4, $f4, $bd, $8a, $8a, $8a, $8a, $8a, $8a, $be, $bf, $f4
 
-PokemonLogoGraphics:	     INCBIN "gfx/pokemon_logo.2bpp"
+PokemonLogoGraphics:	     INCBIN "gfx/pokemon_logo.bin"
 PokemonLogoGraphicsEnd:
 YellowLogoGraphics:	      INCBIN "gfx/yellow_titlescreen.2bpp"
 YellowLogoGraphicsEnd:

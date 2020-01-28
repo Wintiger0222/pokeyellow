@@ -1,104 +1,102 @@
 _Route22RivalDefeatedText1::
-	text "Awww!"
-	line "You just lucked"
-	cont "out!"
+	text "오호라!"
+	line "너 운 좋을줄 알라고!"
 	prompt
 
 _Route22Text_511bc::
-	text $53, ": What?"
-	line "Why do I have 2"
-	cont "#MON?"
+	text $53, "『뭐지?"
+	line "내가 왜 포켓몬"
+	cont "2마리 밖에 없지?"
 
-	para "You should catch"
-	cont "some more too!"
+	para "너도 분발해서"
+	cont "좀더 잡으란 말이야!"
 	prompt
 
 _Route22RivalDefeatedText2::
-	text "What!?"
+	text "아닛!?"
 
-	para "I was just"
-	line "careless!"
+	para "내가"
+	line "방심했어!"
 	prompt
 
 _Route22Text_511d0::
-	text $53, ": Hahaha!"
-	line $52, "! That's"
-	cont "your best? You're"
-	cont "nowhere near as"
-	cont "good as me, pal!"
+	text $53, "『하하하!"
+	line $52, "!"
+	cont "그게 너로썬 최선이냐?"
+	cont "너 그런식으로는 내 발치에도"
+	cont "못 닿는다?"
 
-	para "Go train some"
-	line "more! You loser!"
+	para "훈련이나 좀더 하라고!"
+	line "패배자씨!"
 	prompt
 
 _Route22RivalBeforeBattleText1::
-	text $53, ": Hey!"
+	text $53, "『어이!"
 	line $52, "!"
 
-	para "You're going to"
-	line "#MON LEAGUE?"
+	para "지금 가려는데가"
+	line "석영 고원이야?"
 
-	para "Forget it! You"
-	line "probably don't"
-	cont "have any BADGEs!"
+	para "포기해!"
+	line "네녀석은 배지 하나도"
+	cont "없을 거 아냐!"
 
-	para "The guard won't"
-	line "let you through!"
+	para "저기 검문관이"
+	line "통과시켜주지도 않을걸!"
 
-	para "By the way, did"
-	line "your #MON"
-	cont "get any stronger?"
+	para "그런데 말이야"
+	line "네 포켓몬"
+	cont "조금은 세졌냐?"
 	done
 
 _Route22RivalAfterBattleText1::
-	text "I heard #MON"
-	line "LEAGUE has many"
-	cont "tough trainers!"
+	text "내가 듣기론"
+	line "포켓몬 리그에는"
+	cont "막강한 트레이너들이 있댔어!"
 
-	para "I have to figure"
-	line "out how to get"
-	cont "past them!"
+	para "그 사람들을"
+	line "어떡게 뚫고 가야할지"
+	cont "생각해야겠어!"
 
-	para "You should quit"
-	line "dawdling and get"
-	cont "a move on!"
+	para "너 말이야"
+	line "그만 꾸물대고"
+	cont "어서 움직이는게 좋을걸!"
 	done
 
 _Route22RivalBeforeBattleText2::
-	text $53, ": What?"
-	line $52, "! What a"
-	cont "surprise to see"
-	cont "you here!"
+	text $53, "『어라?"
+	line $52, "!"
+	cont "이런데서"
+	cont "만나다니 놀라운데!"
 
-	para "So you're going to"
-	line "#MON LEAGUE?"
+	para "지금 가려는데가"
+	line "석영 고원이야?"
 
-	para "You collected all"
-	line "the BADGEs too?"
-	cont "That's cool!"
+	para "너도 배지"
+	line "다 모았단 말이지?"
+	cont "대단해!"
 
-	para "Then I'll whip"
-	line "you, <PLAYER>, as"
-	cont "a warmup for"
-	cont "#MON LEAGUE!"
+	para "이몸께서 특별히"
+	line "워밍업이나 시켜주지"
+	cont "포켓몬 리그를 위해!"
 
-	para "Come on!"
+	para "덤벼!"
 	done
 
 _Route22RivalAfterBattleText2::
-	text "That loosened me"
-	line "up! I'm ready for"
-	cont "#MON LEAGUE!"
+	text "이제 몸이 좀 풀리네!"
+	line "난 이제 준비됐으니"
+	cont "포켓몬 리그로!"
 
-	para $52, ", you need"
-	line "more practice!"
+	para $52
+	line "너는 연습이나 더 해!"
 
-	para "But hey, you know"
-	line "that! I'm out of"
-	cont "here. Smell ya!"
+	para "아 그리고 나가기전에"
+	line "알려줄게 있는데"
+	cont "너 냄새나!"
 	done
 
 _Route22FrontGateText::
-	text "#MON LEAGUE"
-	line "Front Gate"
+	text "포켓몬 리그"
+	line "접수처"
 	done

@@ -1,66 +1,71 @@
 _SilphCo10Text_5a1d3::
-	text "Waaaaa!"
-	line "I'm scared!"
+	text "우에에엥!"
+	line "무서워!"
 	done
+
+
 
 _SilphCo10Text_5a1d8::
-	text "Please keep quiet"
-	line "about my crying!"
+	text "내가 울었던건"
+	line "비밀로 해줘!"
 	done
 
+ 
+
 _SilphCo10BattleText1::
-	text "Welcome to the"
-	line "10F! So good of"
-	cont "you to join me!"
+	text "10층에 오신걸 환영합니다!"
+	line "선물은 주먹이예요!"
 	done
 
 _SilphCo10EndBattleText1::
-	text "I'm"
-	line "stunned!"
+	text "내가 맞아버렸네!"
 	prompt
 
 _SilphCo10AfterBattleText1::
-	text "Nice try, but the"
-	line "boardroom is up"
-	cont "one more floor!"
+	text "제법이지만 이사회실은"
+	line "아직 한층 남았다!"
 	done
+
+ 
 
 _SilphCo10BattleText2::
-	text "Enough of your"
-	line "silly games!"
+	text "네 엉터리 게임도"
+	line "여기까지다!"
 	done
+
+ 
 
 _SilphCo10EndBattleText2::
-	text "No"
-	line "continues left!"
+	text "남은 목숨 없어?"
 	prompt
 
+
+
 _SilphCo10AfterBattleText2::
-	text "Are you satisfied"
-	line "with beating me?"
-	cont "Then go on home!"
+	text "날 이겨서 기쁘냐?"
+	line "그럼 돌아가!"
 	done
+
+ 
 
 _SilphCoJessieJamesText1::
-	text "Hold it right"
-	line "there, brat!@@"
+	text "멈춰라 꼬마 녀석!@@"
 
 _SilphCoJessieJamesText2::
-	text "Our BOSS is in a"
-	line "meeting!"
+	text "우리 보스는 중요한"
+	line "회의중이시라고!"
 
-	para "You better not"
-	line "disturb him!"
+	para "방해하게 둘순 없지!"
 	done
 
+
+
 _SilphCoJessieJamesText3::
-	text "Like"
-	line "always..."
+	text "싫은 느낌-!!"
 	prompt
 
 _SilphCoJessieJamesText4::
-	text "TEAM ROCKET, blast"
-	line "off at the speed"
-	cont "of light!"
+	text "우리 로켓단들에겐 아름다운 미래"
+	line "밝은 내일이 기다리고 있다!"
 
-	para "Again...@@"
+	para "아마도…@@"

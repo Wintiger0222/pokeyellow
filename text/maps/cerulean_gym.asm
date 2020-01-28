@@ -1,134 +1,120 @@
 _CeruleanGymText_5c7be::
-	text "Hi, you're a new"
-	line "face!"
+	text "안녕!"
+	line "우리 서로 처음보지?"
 
-	para "What's your policy"
-	line "on #MON? What"
-	cont "is your approach?"
+	para "너는 포켓몬 전략을"
+	line "어떡게 짰니?"
 
-	para "My policy is an"
-	line "all-out offensive"
-	cont "with water-type"
-	cont "#MON!"
+	para "내 방침은"
+	line "물타입 포켓몬과 함께하는"
+	cont "전력 공격이야!"
 
-	para "MISTY, the world-"
-	line "famous beauty, is"
-	cont "your host!"
+	para "세계 제일의 미녀 이슬이가"
+	line "오늘 네 상대라구!"
 
-	para "Are you ready,"
-	line "sweetie?"
+	para "준비됐니"
+	line "귀염둥이야?"
 	done
 
 _CeruleanGymText_5c7c3::
-	text "TM11 teaches"
-	line "BUBBLEBEAM!"
+	text "기술머신11 안에는"
+	line "거품광선이 들어있어!"
 
-	para "Use it on an"
-	line "aquatic #MON!"
+	para "물에 사는 포켓몬에게"
+	line "사용해보봐!"
 	done
 
 _CeruleanGymText_5c7c8::
-	text "The CASCADEBADGE"
-	line "makes all #MON"
-	cont "up to L30 obey!"
+	text "블루배지는 30레벨까지의"
+	line "모든 포켓몬이 널 따르게 해줘!"
+	
+	para "그리고 언제든지 풀베기를"
+	line "사용 할 수 있게 해줘!"
 
-	para "That includes"
-	line "even outsiders!"
+	para "길을 막는 작은 나무정도는"
+	line "잘라낼 수 있어!"
 
-	para "There's more, you"
-	line "can now use CUT"
-	cont "anytime!"
-
-	para "You can CUT down"
-	line "small bushes to"
-	cont "open new paths!"
-
-	para "You can also have"
-	line "my favorite TM!"
+	para "그리고 이 기술머신도 줄게!"
 	done
 
 _ReceivedTM11Text::
-	text $52, " received"
-	line "TM11!@@"
+	text $52, "는(은)"
+	line "기술머신11를(을)"
+	cont "받았다!@@"
 
 _CeruleanGymText_5c7d3::
-	text "You better make"
-	line "room for this!"
+	text "가방을 비우고 다시오렴!"
 	done
 
 _CeruleanGymText_5c7d8::
-	text "I can't"
-	line "believe I lost!"
+	text "말도 안돼!"
+	line "내가 졌단말이야?"
 
-	para "All right!"
+	para "좋아!"
 
-	para "You can have the"
-	line "CASCADEBADGE to"
-	cont "show you beat me!"
+	para "넌 날 이겼다는 증표인"
+	line "블루배지를 가질 자격이 있어!"
 	prompt
 
 _CeruleanGymBattleText1::
-	text "I'm more than good"
-	line "enough for you!"
+	text "보아하니"
+	line "한참 모자란 것 같네!"
 
-	para "MISTY can wait!"
+	para "이슬이님이 나설 필요도 없어!"
 	done
 
 _CeruleanGymEndBattleText1::
-	text "You"
-	line "overwhelmed me!"
+	text "너 정말"
+	line "대단하구나!"
 	prompt
 
 _CeruleanGymAfterBattleText1::
-	text "You have to face"
-	line "other trainers to"
-	cont "find out how good"
-	cont "you really are."
+	text "다른 트레이너들과 싸워서"
+	line "좀더 실력을 키워봐"
 	done
 
 _CeruleanGymBattleText2::
-	text "Splash!"
+	text "어푸!"
 
-	para "I'm first up!"
-	line "Let's do it!"
+	para "먼저 내가 상대다!"
+	line "덤벼라!"
 	done
 
 _CeruleanGymEndBattleText2::
-	text "That"
-	line "can't be!"
+	text "이럴리"
+	line "없는데!"
 	prompt
 
-_CeruleanGymAfterBattleText2::
-	text "MISTY is going to"
-	line "keep improving!"
 
-	para "She won't lose to"
-	line "someone like you!"
+_CeruleanGymAfterBattleText2::
+	text "이슬이는 수련을"
+	line "게을리 하지 않았단다!"
+
+	para "너 같은 애송이한테는"
+	line "지지 않을걸!"
 	done
 
 _CeruleanGymText_5c82a::
-	text "Yo! Champ in"
-	line "making!"
+	text "미래의 챔피언!"
 
-	para "Here's my advice!"
+	para "내가 충고 하나 해줄게!"
 
-	para "The LEADER, MISTY,"
-	line "is a pro who uses"
-	cont "water #MON!"
+	para "이곳의 관장 이슬이는"
+	line "물타입 포켓몬 전문가야!"
 
-	para "You can drain all"
-	line "their water with"
-	cont "plant #MON!"
+	para "풀타입 포켓몬을 사용해서"
+	line "물을 흡수해버리는게 효과적이지!"
 
-	para "Or, zap them with"
-	line "electricity!"
+	para "아니면 전기로"
+	line "제압하는것도 좋아!"
 	done
 
 _CeruleanGymText_5c82f::
-	text "You beat MISTY!"
-	line "What'd I tell ya?"
-
-	para "You and me, kid,"
-	line "we make a pretty"
-	cont "darn good team!"
+	text "이슬이를 이겼구나!"
+	line "내가 보는 눈이 있다니까!"
+	
+	para "너랑 나"
+	line "꽤나 좋은 콤비가"
+	cont "될수있을 것 같은데!"
 	done
+

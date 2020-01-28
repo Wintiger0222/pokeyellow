@@ -1,31 +1,29 @@
 _VictoryRoad1BattleText1::
-	text "I wonder if you"
-	line "are good enough"
-	cont "for me!"
+	text "네가 나한테 적당한"
+	line "상대가 될련지 궁금하네!"
 	done
 
 _VictoryRoad1EndBattleText1::
-	text "I"
-	line "lost out!"
+	text "처참하게"
+	line "깨졌다!"
 	prompt
 
 _VictoryRoad1AfterBattleText1::
-	text "I never wanted to"
-	line "lose to anybody!"
+	text "누구에게도"
+	line "결코 지고싶지 않아!"
 	done
 
 _VictoryRoad1BattleText2::
-	text "I can see you're"
-	line "good! Let me see"
-	cont "exactly how good!"
+	text "너 한가닥 해 보이는데!"
+	line "얼마나 하는지 보자!"
 	done
 
 _VictoryRoad1EndBattleText2::
-	text "I"
-	line "had a chance..."
+	text "나한테는"
+	line "기회가 있었어……"
 	prompt
 
 _VictoryRoad1AfterBattleText2::
-	text "I concede, you're"
-	line "better than me!"
+	text "인정하겠어"
+	line "네가 나보다 낫다!"
 	done

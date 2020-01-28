@@ -188,7 +188,7 @@ SetupPlayerAndEnemyPokeballs:
 	ld hl, wBaseCoordX
 	ld a, $50
 	ld [hli], a
-	ld [hl], $68
+	ld [hl], $60
 	ld a, $1
 	ld [wdef5], a
 	ld hl, wOAMBuffer + $18

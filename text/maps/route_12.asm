@@ -1,139 +1,153 @@
 _Route12Text1::
-	text "A sleeping #MON"
-	line "blocks the way!"
+	text "자고있는 포켓몬이"
+	line "길을 막고 있어!"
 	done
 
 _Route12Text13::
-	text "SNORLAX woke up!"
+	text "잠만보가 깨어났다!"
 
-	para "It attacked in a"
-	line "grumpy rage!"
+
+
+	para "……그리고 짜증을 내며"
+	line "공격해 왔다!"
 	done
 
 _Route12Text14::
-	text "SNORLAX calmed"
-	line "down! With a big"
-	cont "yawn, it returned"
-	cont "to the mountains!"
+	text "잠만보는 진정되었다!"
+	line "하품의 한뒤 산으로 돌아갔다!"
 	done
 
 _Route12BattleText1::
-	text "Yeah! I got a"
-	line "bite, here!"
+	text "좋았어!"
+	line "입질이 왔다!"
 	done
 
 _Route12EndBattleText1::
-	text "Tch!"
-	line "Just a small fry!"
+	text "쳇!"
+	line "치어잖아!"
 	prompt
 
 _Route12AfterBattleText1::
-	text "Hang on! My line's"
-	line "snagged!"
+	text "잠깐!"
+	line "줄이 걸렸어!"
 	done
 
+ 
+
 _Route12BattleText2::
-	text "Be patient!"
-	line "Fishing is a"
-	cont "waiting game!"
+	text "서두르지마!"
+	line "낚시는 기다려야되!"
 	done
 
 _Route12EndBattleText2::
-	text "That"
-	line "one got away!"
+	text "도망가 버렸다!"
 	prompt
+
+
 
 _Route12AfterBattleText2::
-	text "With a better ROD,"
-	line "I could catch"
-	cont "better #MON!"
+	text "좋은 낚시대가 있으면"
+	line "더 좋은 포켓몬을"
+	cont "잡을수 있지!"
 	done
+
+  
 
 _Route12BattleText3::
-	text "Have you found a"
-	line "MOON STONE?"
+	text "달의 돌을 본적 있니?"
 	done
+
+
 
 _Route12EndBattleText3::
-	text "Oww!"
+	text "아야!"
 	prompt
+
+
 
 _Route12AfterBattleText3::
-	text "I could have made"
-	line "my #MON evolve"
-	cont "with MOON STONE!"
+	text "달의돌로 내 포켓몬을"
+	line "진화시켰어!"
 	done
+
+ 
 
 _Route12BattleText4::
-	text "Electricity is my"
-	line "specialty!"
+	text "전기야말로 내 주특기지!"
 	done
+
+
 
 _Route12EndBattleText4::
-	text "Unplugged!"
+	text "방전!"
 	prompt
 
+
+
 _Route12AfterBattleText4::
-	text "Water conducts"
-	line "electricity, so"
-	cont "you should zap"
-	cont "sea #MON!"
+	text "물은 전기가 통하지"
+	line "바다포켓몬정도는"
+	cont "쉽게 제압할수있어!"
 	done
 
+ 
+
 _Route12BattleText5::
-	text "The FISHING FOOL"
-	line "vs. #MON KID!"
+	text "초보 낚시꾼 대"
+	line "포켓몬 소년!"
 	done
 
 _Route12EndBattleText5::
-	text "Too"
-	line "much!"
+	text "너무해!"
 	prompt
 
+
+
 _Route12AfterBattleText5::
-	text "You beat me at"
-	line "#MON, but I'm"
-	cont "good at fishing!"
+	text "포켓몬으로 날 이겼을진 몰라도"
+	line "낚시에선 지지않아!"
 	done
 
+ 
+
 _Route12BattleText6::
-	text "I'd rather be"
-	line "working!"
+	text "회사나 갈껄!"
 	done
 
 _Route12EndBattleText6::
-	text "It's"
-	line "not easy..."
+	text "이거참"
+	line "쉽지 않네……"
 	prompt
 
 _Route12AfterBattleText6::
-	text "It's all right."
-	line "Losing doesn't"
-	cont "bug me anymore."
+	text "괜찮아"
+	line "이젠 져도 괴롭지 않거든"
 	done
+
 
 _Route12BattleText7::
-	text "You never know"
-	line "what you could"
-	cont "catch!"
+	text "내가 뭘 잡았는지"
+	line "상상도 못할걸!"
 	done
 
+ 
+
 _Route12EndBattleText7::
-	text "Lost"
-	line "it!"
+	text "졌다!"
 	prompt
 
+
+
 _Route12AfterBattleText7::
-	text "I catch MAGIKARP"
-	line "all the time, but"
-	cont "they're so weak!"
+	text "매일 잉어킹만 낚는데"
+	line "너무 약해 빠졌어!"
 	done
 
 _Route12Text11::
-	text "ROUTE 12 "
-	line "North to LAVENDER"
+	text "이곳은 12번 도로"
+	line "북쪽 …… 보라타운"
 	done
 
 _Route12Text12::
-	text "SPORT FISHING AREA"
+	text "이곳은 낚시의 명소"
 	done

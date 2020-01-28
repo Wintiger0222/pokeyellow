@@ -1,125 +1,117 @@
 _MtMoonJessieJamesText1::
-	text "Stop right there!@@"
+	text "거기 동작 그만!@@"
 
 _MtMoonJessieJamesText2::
-	text "That fossil is"
-	line "TEAM ROCKET's!"
+	text "그 화석"
+	line "우리 로켓단이 접수하겠다!"
 
-	para "Surrender now, or "
-	line "prepare to fight!"
+	para "순순히 내놓던지"
+	line "아니면 결투다!"
 	done
 
 _MtMoonJessieJamesText3::
-	text "A"
-	line "brat beat us?"
+	text "우리가"
+	line "꼬마녀석에게 졌다고?"
 	prompt
 
 _MtMoonJessieJamesText4::
-	text "TEAM ROCKET, blast"
-	line "off at the speed"
-	cont "of light!@@"
+	text "로켓단은 바람처럼"
+	line "왔다가 빛의 속도로 사라진다!@@"
 
 _MtMoon3Text_49f24::
-	text "You want the"
-	line "DOME FOSSIL?"
+	text "껍질화석을"
+	line "선택하시겠습니까?"
 	done
 
 _MtMoon3Text_49f64::
-	text "You want the"
-	line "HELIX FOSSIL?"
+	text "조개화석을"
+	line "선택하시겠습니까?"
 	done
 
 _MtMoon3Text_49f6f::
-	text $52, " got the"
+	text $52, "는(은)"
 	line "@"
 	TX_RAM wcf4b
-	text "!@@"
+	text "를(을) 얻었다!@@"
 
 _MtMoon3Text_49f7f::
-	text "Look, you've got"
-	line "no room for this.@@"
+	text "이 이상은"
+	line "들 수 없어!@@"
 
 _MtMoon3Text_49f85::
-	text "Hey, stop!"
+	text "이봐 멈춰!"
 
-	para "I found these"
-	line "fossils! They're"
-	cont "both mine!"
+	para "이 화석들은"
+	line "내가 발굴했다구!"
+	cont "그건 둘다 내꺼야!"
 	done
 
 _MtMoon3Text_49f8a::
-	text "OK!"
-	line "I'll share!"
+	text "알았어!"
+	line "나누면 되잖아!"
 	prompt
 
 _MtMoon3Text_49f8f::
-	text "We'll each take"
-	line "one!"
-	cont "No being greedy!"
+	text "각자 1개씩 갖자고!"
+	line "욕심부리지마!"
 	done
 
 _MtMoon3Text_49f94::
-	text "Far away, on"
-	line "CINNABAR ISLAND,"
-	cont "there's a #MON"
-	cont "LAB."
+	text "저멀리 홍련섬에"
+	line "포켓몬 연구소가 있어"
 
-	para "They do research"
-	line "on regenerating"
-	cont "fossils."
+	para "그들이 연구하는건"
+	line "화석을 부활시키는거야"
 	done
 
 _MtMoon3Text_49f99::
-	text "All right. Then"
-	line "this is mine!@@"
+	text "이제됐어"
+	line "이건 내꺼야!@@"
 
 _MtMoon3BattleText3::
-	text "We, TEAM ROCKET,"
-	line "are #MON"
-	cont "gangsters!"
+	text "우리 로켓단은 포켓몬을"
+	line "이용하는 조직이다!"
 	done
 
 _MtMoon3EndBattleText3::
-	text "I blew"
-	line "it!"
+	text "완전히"
+	line "망했어!"
 	prompt
 
 _MtMoon3AfterBattleText3::
-	text "Darn it all! My"
-	line "associates won't"
-	cont "stand for this!"
+	text "이거 곤란한데!"
+	line "동료들을 볼낯이 없어!"
 	done
 
 _MtMoon3BattleText4::
-	text "We're pulling a"
-	line "big job here!"
-	cont "Get lost, kid!"
+	text "우리는 여기서"
+	line "프로젝트를 추진중이다!"
+	cont "애들은 저리가!"
 	done
 
 _MtMoon3EndBattleText4::
-	text "So, you"
-	line "are good."
+	text "어 그래"
+	line "넌 괜찮다"
 	prompt
 
 _MtMoon3AfterBattleText4::
-	text "If you find a"
-	line "fossil, give it"
-	cont "to me and scram!"
+	text "만약 화석을 찾으면"
+	line "그건 나한테 주고"
+	cont "썩 꺼져!"
 	done
 
 _MtMoon3BattleText5::
-	text "Little kids"
-	line "should leave"
-	cont "grown-ups alone!"
+	text "아이는 자라서"
+	line "홀로서기를 해야해!"
 	done
 
 _MtMoon3EndBattleText5::
-	text "I'm"
-	line "steamed!"
+	text "이거"
+	line "열받네!"
 	prompt
 
 _MtMoon3AfterBattleText5::
-	text "#MON lived"
-	line "here long before"
-	cont "people came."
+	text "포켓몬은 사람이 오기전부터"
+	line "이곳에 오랫동안 존재해왔어"
 	done
+

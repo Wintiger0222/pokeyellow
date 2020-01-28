@@ -1,45 +1,52 @@
 _PokemonTower4BattleText1::
-	text "GHOST! No!"
-	line "Kwaaah!"
+	text "유령은 싫어!"
+	line "꺄아아악!"
 	done
 
+ 
+
 _PokemonTower4EndBattleText1::
-	text "Where"
-	line "is the GHOST?"
+	text "유……"
+	line "유령은?"
 	prompt
 
 _PokemonTower4AfterBattleText1::
-	text "I must have been"
-	line "dreaming..."
+	text "분명 꿈이었을거야……"
 	done
 
 _PokemonTower4BattleText2::
-	text "Be cursed with"
-	line "me! Kwaaah!"
+	text "나와함께 저주받아라!"
+	line "캬옹!"
 	done
 
 _PokemonTower4EndBattleText2::
-	text "What!"
+	text "뭐라고!"
 	prompt
 
+
+
 _PokemonTower4AfterBattleText2::
-	text "We can't crack"
-	line "the identity of"
-	cont "the GHOSTs."
+	text "결국 유령의 정체는"
+	line "알아내지 못했어"
 	done
 
+ 
+
 _PokemonTower4BattleText3::
-	text "Huhuhu..."
-	line "Beat me not!"
+	text "후후후……"
+	line "날 쓰러뜨리진 못할걸!"
 	done
 
 _PokemonTower4EndBattleText3::
-	text "Huh?"
-	line "Who? What?"
+	text "응?"
+	line "넌 누구? 무슨일이야?"
 	prompt
 
+ 
+
 _PokemonTower4AfterBattleText3::
-	text "May the departed"
-	line "souls of #MON"
-	cont "rest in peace..."
+	text "부디 하직한 포켓몬의"
+	line "영혼들에게 안식을……"
 	done
+
+ 

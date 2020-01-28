@@ -1188,8 +1188,8 @@ DoUseNextMonDialogue:
 	ld hl, UseNextMonText
 	call PrintText
 .displayYesNoBox
-	coord hl, 13, 9
-	lb bc, 10, 14
+	coord hl, 14, 6
+	lb bc, 7, 15
 	ld a, TWO_OPTION_MENU
 	ld [wTextBoxID], a
 	call DisplayTextBoxID
@@ -1505,8 +1505,8 @@ EnemySendOutFirstMon:
 	jr nz,.next4
 	ld hl, TrainerAboutToUseText
 	call PrintText
-	coord hl, 0, 7
-	lb bc, 8, 1
+	coord hl, 0, 6
+	lb bc, 7, 1
 	ld a,TWO_OPTION_MENU
 	ld [wTextBoxID],a
 	call DisplayTextBoxID
@@ -1985,7 +1985,7 @@ DrawPlayerHUDAndHPBar:
 	coord hl, 18, 9
 	ld [hl], $73
 	ld de, wBattleMonNick
-	coord hl, 10, 7
+	coord hl, 12, 8
 	call CenterMonName
 	call PlaceString
 	ld hl, wBattleMonSpecies
@@ -2000,10 +2000,30 @@ DrawPlayerHUDAndHPBar:
 	push hl
 	inc hl
 	ld de, wLoadedMonStatus
+	;추가한부분
+	push hl
+	
+	ld hl, wBattleMonNick
+	call CalcNameLength
+	xor a
+	ld b,a
+	coord hl, 12, 8
+	add hl,bc
 	call PrintStatusConditionNotFainted
 	pop hl
+	
+;추가한부분
+	pop hl
 	jr nz, .doNotPrintLevel
+	push hl
+	ld hl, wBattleMonNick
+	call CalcNameLength
+	xor a
+	ld b,a
+	coord hl, 12, 8
+	add hl,bc
 	call PrintLevel
+	pop hl
 .doNotPrintLevel
 	ld a, [wLoadedMonSpecies]
 	ld [wcf91], a
@@ -2040,23 +2060,44 @@ DrawEnemyHUDAndHPBar:
 	xor a
 	ld [H_AUTOBGTRANSFERENABLED], a
 	coord hl, 0, 0
-	lb bc, 4, 12
+	lb bc, 5, 12
 	call ClearScreenArea
 	callab PlaceEnemyHUDTiles
 	ld de, wEnemyMonNick
-	coord hl, 1, 0
+	;coord hl, 1, 0
+	coord hl, 4, 1
 	call CenterMonName
 	call PlaceString
-	coord hl, 4, 1
+	;coord hl, 4, 1
 	push hl
 	inc hl
 	ld de, wEnemyMonStatus
-	call PrintStatusConditionNotFainted
-	pop hl
-	jr nz, .skipPrintLevel ; if the mon has a status condition, skip printing the level
+	;추가한부분
+	push hl
 	ld a, [wEnemyMonLevel]
 	ld [wLoadedMonLevel], a
+	ld hl,wEnemyMonNick
+	call CalcNameLength
+	xor a
+	ld b,a
+	coord hl, 4, 1
+	add hl,bc
+	;추가한부분
+	call PrintStatusConditionNotFainted
+	pop hl
+	pop hl
+	jr nz, .skipPrintLevel ; if the mon has a status condition, skip printing the level
+	push hl
+	ld a, [wEnemyMonLevel]
+	ld [wLoadedMonLevel], a
+	ld hl,wEnemyMonNick
+	call CalcNameLength
+	xor a
+	ld b,a
+	coord hl, 4, 1
+	add hl,bc
 	call PrintLevel
+	pop hl
 .skipPrintLevel
 	ld hl, wEnemyMonHP
 	ld a, [hli]
@@ -2140,23 +2181,29 @@ GetBattleHealthBarColor:
 ; (i.e. for names longer than 4 letters)
 ; if the name is 3 or 4 letters long, it is printed 1 space more to the right than usual
 ; (i.e. for names longer than 4 letters)
+;1~3 그대로
+;4 한칸 땅기기
+;5 두칸땅기기
+
 CenterMonName:
-	push de
-	inc hl
-	inc hl
-	ld b, $2
+	push de;
+	;1번째 글자
+	ld b, 6
 .loop
 	inc de
-	ld a, [de]
+	ld a, [de];7번쨰 파이트
 	cp "@"
 	jr z, .done
-	inc de
+	dec b
+	jr nz, .loop
+	
+	dec hl
+	inc de;8
+	inc de;9
 	ld a, [de]
 	cp "@"
 	jr z, .done
 	dec hl
-	dec b
-	jr nz, .loop
 .done
 	pop de
 	ret
@@ -2211,7 +2258,7 @@ DisplayBattleMenu:
 	ld c, 20
 	call DelayFrames
 	ld [hl], " "
-	coord hl, 9, 16
+	coord hl, 14, 14
 	ld [hl], "▶"
 	ld c, 20
 	call DelayFrames
@@ -2219,9 +2266,9 @@ DisplayBattleMenu:
 	ld a, $2 ; select the "ITEM" menu
 	jp .upperLeftMenuItemWasNotSelected
 .oldManName
-	db "OLD MAN@"
+	db "노인@"
 .profOakName
-	db "PROF.OAK@"
+	db "오박사@"
 .handleBattleMenuInput
 	ld a, [wBattleAndStartSavedMenuItem]
 	ld [wCurrentMenuItem], a
@@ -2232,14 +2279,14 @@ DisplayBattleMenu:
 	ld [wCurrentMenuItem], a
 	ld [wLastMenuItem], a
 	jr .rightColumn
-.leftColumn ; put cursor in left column of menu
+.leftColumn ; put cursor in left column of menu ;왼쪽과 오른쪽의 메뉴를 별개로 처리합니다!
 	ld a, [wBattleType]
 	cp BATTLE_TYPE_SAFARI
 	ld a, " "
 	jr z, .safariLeftColumn
 ; put cursor in left column for normal battle menu (i.e. when it's not a Safari battle)
-	Coorda 15, 14 ; clear upper cursor position in right column
-	Coorda 15, 16 ; clear lower cursor position in right column
+	Coorda 14, 14 ; clear upper cursor position in right column
+	Coorda 14, 16 ; clear lower cursor position in right column
 	ld b, $9 ; top menu item X
 	jr .leftColumn_WaitForInput
 .safariLeftColumn
@@ -2273,7 +2320,7 @@ DisplayBattleMenu:
 ; put cursor in right column for normal battle menu (i.e. when it's not a Safari battle)
 	Coorda 9, 14 ; clear upper cursor position in left column
 	Coorda 9, 16 ; clear lower cursor position in left column
-	ld b, $f ; top menu item X
+	ld b, $e ; top menu item X 수정 (f->e)
 	jr .rightColumn_WaitForInput
 .safariRightColumn
 	Coorda 1, 14 ; clear upper cursor position in left column
@@ -2317,13 +2364,19 @@ DisplayBattleMenu:
 	cp $1 ; was the item menu selected?
 	jr nz, .notItemMenu
 ; item menu was selected
+	ld a,$01
+	jr .hangul_partymenu
 	inc a ; increment a to 2
+.hangul_itemmenu
 	jr .handleMenuSelection
 .notItemMenu
 	cp $2 ; was the party menu selected?
 	jr nz, .handleMenuSelection
 ; party menu selected
+	ld a,$02
+	jr .hangul_itemmenu
 	dec a ; decrement a to 1
+.hangul_partymenu
 .handleMenuSelection
 	and a
 	jr nz, .upperLeftMenuItemWasNotSelected
@@ -2517,10 +2570,6 @@ PartyMenuOrRockOrRun:
 	call GBPalNormal
 	jp DisplayBattleMenu
 .partyMonDeselected
-	coord hl, 11, 11
-	ld bc, 6 * SCREEN_WIDTH + 9
-	ld a, " "
-	call FillMemory
 	xor a ; NORMAL_PARTY_MENU
 	ld [wPartyMenuTypeOrMessageID], a
 	call GoBackToPartyMenu
@@ -2532,6 +2581,8 @@ PartyMenuOrRockOrRun:
 	ld hl, wTopMenuItemY
 	ld a, $c
 	ld [hli], a ; wTopMenuItemY
+	dec a
+	dec a
 	ld [hli], a ; wTopMenuItemX
 	xor a
 	ld [hli], a ; wCurrentMenuItem
@@ -2668,11 +2719,11 @@ MoveSelectionMenu:
 .writemoves
 	ld de, wMovesString
 	ld a, [hFlags_0xFFFA]
-	set 2, a
+	res 1, a
 	ld [hFlags_0xFFFA], a
 	call PlaceString
 	ld a, [hFlags_0xFFFA]
-	res 2, a
+	res 1, a
 	ld [hFlags_0xFFFA], a
 	ret
 
@@ -2681,26 +2732,22 @@ MoveSelectionMenu:
 	ret z
 	ld hl, wBattleMonMoves
 	call .loadmoves
-	coord hl, 4, 12
-	lb bc, 4, 14
+	coord hl, 0, 8 ;좌표(가로, 세로)
+	lb bc, 8, 8 ;크기(세로, 가로)
 	di ; out of pure coincidence, it is possible for vblank to occur between the di and ei
 	   ; so it is necessary to put the di ei block to not cause tearing
 	call TextBoxBorder
-	coord hl, 4, 12
-	ld [hl], $7a
-	coord hl, 10, 12
-	ld [hl], $7e
 	ei
-	coord hl, 6, 13
+	coord hl, $02, $0A
 	call .writemoves
-	ld b, $5
-	ld a, $c
+	ld b, $1 ; wTopMenuItemX 5
+	ld a, $8 ; wTopMenuItemY c
 	jr .menuset
 .mimicmenu
 	ld hl, wEnemyMonMoves
 	call .loadmoves
 	coord hl, 0, 7
-	lb bc, 4, 14
+	lb bc, 8, 8
 	call TextBoxBorder
 	coord hl, 2, 8
 	call .writemoves
@@ -2713,13 +2760,13 @@ MoveSelectionMenu:
 	ld bc, wPartyMon2 - wPartyMon1
 	call AddNTimes
 	call .loadmoves
-	coord hl, 4, 7
-	lb bc, 4, 14
+	coord hl, 10, 8
+	lb bc, 8, 8
 	call TextBoxBorder
-	coord hl, 6, 8
+	coord hl, 12, 10
 	call .writemoves
-	ld b, $5
-	ld a, $7
+	ld b, 11 ; wTopMenuItemX
+	ld a, 8 ; wTopMenuItemY
 .menuset
 	ld hl, wTopMenuItemY
 	ld [hli], a ; wTopMenuItemY
@@ -2782,14 +2829,15 @@ SelectMenuItem:
 	ld a, [wMenuItemToSwap]
 	and a
 	jr z, .select
-	coord hl, 5, 13
+	coord hl, 1, 10
 	dec a
+	sla a
 	ld bc, SCREEN_WIDTH
 	call AddNTimes
 	ld [hl], $ec
 .select
 	ld hl, hFlags_0xFFFA
-	set 1, [hl]
+	res 1,[hl]
 	call HandleMenuInput
 	ld hl, hFlags_0xFFFA
 	res 1, [hl]
@@ -3074,8 +3122,8 @@ SwapMovesInMenu:
 PrintMenuItem:
 	xor a
 	ld [H_AUTOBGTRANSFERENABLED], a
-	coord hl, 0, 8
-	lb bc, 3, 9
+	coord hl, 9, 12
+	lb bc, 4, 9
 	call TextBoxBorder
 	ld a, [wPlayerDisabledMove]
 	and a
@@ -3118,23 +3166,23 @@ PrintMenuItem:
 	and $3f
 	ld [wcd6d], a
 ; print TYPE/<type> and <curPP>/<maxPP>
-	coord hl, 1, 9
+	coord hl, $0A, $0F
 	ld de, TypeText
 	call PlaceString
-	coord hl, 7, 11
+	coord hl, $0E, $10
 	ld [hl], "/"
-	coord hl, 5, 9
+	coord hl, $10, $0D
 	ld [hl], "/"
-	coord hl, 5, 11
+	coord hl, $0E, $0D
 	ld de, wcd6d
 	lb bc, 1, 2
 	call PrintNumber
-	coord hl, 8, 11
+	coord hl, $11, $0D
 	ld de, wMaxPP
 	lb bc, 1, 2
 	call PrintNumber
 	call GetCurrentMove
-	coord hl, 2, 10
+	coord hl, $0F, $10
 	predef PrintMoveType
 .moveDisabled
 	ld a, $1
@@ -3142,10 +3190,10 @@ PrintMenuItem:
 	jp Delay3
 
 DisabledText:
-	db "Disabled!@"
+	db "쓸 수 없어!@"
 
 TypeText:
-	db "TYPE@"
+	db "기술타입@"
 
 SelectEnemyMove:
 	ld a, [wLinkState]
@@ -7879,12 +7927,12 @@ PrintStatText:
 	jp CopyData
 
 StatsTextStrings:
-	db "ATTACK@"
-	db "DEFENSE@"
-	db "SPEED@"
-	db "SPECIAL@"
-	db "ACCURACY@"
-	db "EVADE@"
+	db "공격력@"
+	db "방어력@"
+	db "스피드@"
+	db "특수력@"
+	db "명중률@"
+	db "회피율@"
 
 StatModifierRatios:
 ; first byte is numerator, second byte is denominator
@@ -8660,3 +8708,28 @@ PlayBattleAnimationGotID:
 	pop de
 	pop hl
 	ret
+CalcNameLength:
+	ld c, $0
+.loop
+	ld a, [hl]
+	cp a,$0c
+	jr nc,.nonHangul
+	inc hl
+.nonHangul	
+	cp "@"
+	jr z, .done
+	inc hl
+	inc c
+	jr .loop
+.done
+	ld a,c
+	cp $1
+	jr z, .really_done
+	cp $2
+	jr z, .really_done
+	cp $3
+	jr z, .really_done
+	ld c, $3
+.really_done
+	ret
+	

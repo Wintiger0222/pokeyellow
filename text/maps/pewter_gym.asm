@@ -1,182 +1,184 @@
 _PewterGymText_5c49e::
-	text "I'm BROCK!"
-	line "I'm PEWTER's GYM"
-	cont "LEADER!"
+	text "나는 회색시티 포켓몬 체육관"
+	line "관장인 웅!"
 
-	para "I believe in rock"
-	line "hard defense and"
-	cont "determination!"
+	para "바위의 단단한 방어와"
+	line "의지를 의심치 않는자!"
 
-	para "That's why my"
-	line "#MON are all"
-	cont "the rock-type!"
+ 
 
-	para "Do you still want"
-	line "to challenge me?"
-	cont "Fine then! Show"
-	cont "me your best!"
+	para "그게 내 포켓몬이"
+	line "모두 바위타입인 이유지!"
+
+ 
+
+	para "그래도 나한테 도전하겠다고?"
+	line "그럼 오너라!"
 	done
 
 _PewterGymText_5c4a3::
-	text "There are all"
-	line "kinds of trainers"
-	cont "in the world!"
+	text "세상에는 강한 트레이너가"
+	line "많이 존재한다"
 
-	para "Some raise #MON"
-	line "for fights. Some"
-	cont "see them as pets."
+	para "몇몇은 싸움을 위해 기르고"
+	line "애완용으로 기르는 사람도 있지"
 
-	para "I'm in training to"
-	line "become a #MON"
-	cont "breeder."
+ 
 
-	para "If you take your"
-	line "#MON training"
-	cont "seriously, go"
-	cont "visit the GYM in"
-	cont "CERULEAN and test"
-	cont "your abilities!"
+	para "난 포켓몬 트레이너가"
+	line "되기 위해 수련중이다"
+
+	para "네 포켓몬을 더욱 수련시킬거면"
+	line "블루시티 체육관에 가랏!"
 	done
 
 _TM34PreReceiveText::
-	text "Wait! Take this"
-	line "with you!"
+	text "잠깐!"
+	line "이것도 가져가!"
 	done
 
+ 
+
 _ReceivedTM34Text::
-	text $52, " received"
-	line "TM34!@@"
+	text $52, "는(은)"
+	line "기술머신34를 얻었다!@@"
 
 _TM34ExplanationText::
 	db $0
-	para "A TM contains a"
-	line "technique that"
-	cont "can be taught to"
-	cont "#MON!"
+	para "기술머신 안에는"
+	line "포켓몬 기술이 들어있다!"
 
-	para "A TM is good only"
-	line "once! So when you"
-	cont "use one to teach"
-	cont "a new technique,"
-	cont "pick the #MON"
-	cont "carefully!"
+	para "기술머신은 한번밖에 못쓰니까"
+	line "사용할 포켓몬을"
+	cont "신중히 골라야 된다!"
 
-	para "TM34 contains"
-	line "BIDE!"
+	para "기술머신34는 참기!"
 
-	para "Your #MON will"
-	line "absorb damage in"
-	cont "battle then pay"
-	cont "it back double!"
+
+
+	para "화를 쌓아두었다가"
+	line "두배로 돌려주지!"
 	done
 
+ 
+
 _TM34NoRoomText::
-	text "You don't have"
-	line "room for this!"
+	text "이 이상 들 수 없어!"
 	done
 
 _PewterGymText_5c4bc::
-	text "I took"
-	line "you for granted."
+	text "인정할수 밖에 없겠는걸"
 
-	para "As proof of your"
-	line "victory, here's"
-	cont "the BOULDERBADGE!"
 
-	para $52, " received"
-	line "the BOULDERBADGE!@@"
+
+	para "자 이 배지를"
+	line "가지고 가라!"
+	para $52, "는(은)"
+	line "회색배지를 얻었다!@@"
 
 _PewterGymText_5c4c1::
 	db $0
-	para "That's an official"
-	line "#MON LEAGUE"
-	cont "BADGE!"
+	para "그건 포켓몬 배지다!"
 
-	para "Its bearer's"
-	line "#MON become"
-	cont "more powerful!"
+	para "배지의 소유자는"
+	line "좀더 강해지지!"
 
-	para "The technique"
-	line "FLASH can now be"
-	cont "used anytime!"
+	para "그리고 플래시 기술을"
+	line "언제든 사용할수 있게 된다!"
 	prompt
+
+ 
 
 _PewterGymBattleText1::
-	text "Stop right there,"
-	line "kid!"
+	text "거기 멈춰"
+	line "애송이!"
 
-	para "You're still light"
-	line "years from facing"
-	cont "BROCK!"
+
+	para "너 같은애가 웅이를"
+	line "상대하기에는 만광년 이르다고!"
 	done
+
+ 
 
 _PewterGymEndBattleText1::
-	text "Darn!"
+	text "제길!"
 
-	para "Light years isn't"
-	line "time! It measures"
-	cont "distance!"
+
+
+	para "만광년이라고 말한 건 "
+	line "시간이 아니라 거리라구!"
 	prompt
+
+ 
 
 _PewterGymAfterBattleText1::
-	text "You're pretty hot,"
-	line "but not as hot"
-	cont "as BROCK!"
+	text "너 제법 격한걸"
+	line "하지만 웅이만큼은 아니지!"
 	done
+
 
 _PewterGymText_5c515::
-	text "Hiya! I can tell"
-	line "you have what it"
-	cont "takes to become a"
-	cont "#MON champ!"
+	text "안녕! 미래의 챔피언!"
+	line "챔피언이 되기위해"
+	cont "필요한걸 알려줄게!"
 
-	para "I'm no trainer,"
-	line "but I can tell"
-	cont "you how to win!"
+	para "난 트레이너는 아니지만"
+	line "이기는 방법에 대해서"
+	cont "알려줄수있어!"
 
-	para "Let me take you"
-	line "to the top!"
+  
+
+	para "내가 널 최고로"
+	line "만들어 줄게!"
 	done
 
+ 
+
 _PewterGymText_5c51a::
-	text "All right! Let's"
-	line "get happening!"
+	text "좋아!"
+	line "그럼 시작해볼까!"
 	prompt
 
-_PewterGymText_5c51f::
-	text "The 1st #MON"
-	line "out in a match is"
-	cont "at the top of the"
-	cont "#MON LIST!"
+ 
 
-	para "By changing the"
-	line "order of #MON,"
-	cont "matches could be"
-	cont "made easier!"
+_PewterGymText_5c51f::
+	text "지니고 있는 포켓몬 중"
+	line "맨 위의 포켓몬이 가장 먼저"
+	cont "싸우게 될 거야!"
+
+
+	para "포켓몬의 순서를 바꾸면"
+	line "좀 더 쉽게 이길 수 도 있어!"
 	done
 
 _PewterGymText_5c524::
-	text "It's a free"
-	line "service! Let's"
-	cont "get happening!"
+	text "돈달라고 안할 테니"
+	line "들어보라구!"
 	prompt
 
+ 
+
 _PewterGymText_5c529::
-	text "Just as I thought!"
-	line "You're #MON"
-	cont "champ material!"
+	text "내 예상대로야!"
+	line "역시 넌 포켓몬 챔피언이"
+	cont "될 재목이야!"
 	done
+
+ 
 
 _PewterGymGuyText::
-	text "All right! Let's"
-	line "get happening!"
+	text "좋아!"
+	line "그럼 시작해볼까!"
 
-	para "It will be tough"
-	line "for your PIKACHU"
-	cont "at this GYM!"
+ 
 
-	para "Electric attacks"
-	line "are harmless to"
-	cont "BROCK's ground-"
-	cont "type #MON."
+	para "네 피카츄로 이 체육관을"
+	line "돌파하는건 힘들거야!"
+
+ 
+
+	para "전기공격은 웅의 땅타입 포켓몬에게"
+	line "아무런 효과가 없기때문이지"
 	done
+
+ 

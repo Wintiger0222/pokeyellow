@@ -1,214 +1,196 @@
 _KogaBeforeBattleText::
-	text "KOGA: Fwahahaha!"
+	text "독수『크크크큭!"
 
-	para "A mere child like"
-	line "you dares to"
-	cont "challenge me?"
+	para "겨우 너같은 애송이가"
+	line "감히 나한테"
+	cont "도전하겠단 말이지?"
 
-	para "Very well, I"
-	line "shall show you"
-	cont "true terror as a"
-	cont "ninja master!"
+	para "마음에 들었다"
+	line "닌자 마스터로써"
+	cont "진짜 두려움을"
+	cont "보여주도록 하마!"
 
-	para "You shall feel"
-	line "the despair of"
-	cont "poison and sleep"
-	cont "techniques!"
+	para "독과 수면기로"
+	line "절망을 느끼게 해주겠다!"
 	done
 
 _KogaAfterBattleText::
-	text "Humph!"
-	line "You have proven"
-	cont "your worth!"
+	text "흡!"
+	line "네 가치를 증명했군!"
 
-	para "Here! Take the"
-	line "SOULBADGE!"
+	para "여기"
+	line "핑크배지를 주마!"
 	prompt
 
 _KogaExplainToxicText::
-	text "When afflicted by"
-	line "TOXIC, #MON"
-	cont "suffer more and"
-	cont "more as battle"
-	cont "progresses!"
-
-	para "It will surely"
-	line "terrorize foes!"
+	text "포켓몬이 맹독에 걸리면"
+	line "배틀이 길어질수록"
+	cont "더 많은 데미지를 받는다!"
+	
+	para "그야말로 진정한"
+	line "공포스런 안개다!"
 	done
 
 _FuchsiaGymText9::
-	text "Now that you have"
-	line "the SOULBADGE,"
-	cont "the DEFENSE of"
-	cont "your #MON"
-	cont "increases!"
+	text "네가 지금 받은"
+	line "핑크배지는 네 포켓몬의"
+	cont "방어력을 올려준다!"
 
-	para "It also lets you"
-	line "SURF outside of"
-	cont "battle!"
+	para "게다가 평상시에도"
+	line "파도타기를 쓸수 있게 한다!"
 
-	para "Ah! Take this"
-	line "too!"
+	para "아! 이것도 가져가라!"
 	done
 
 _ReceivedTM06Text::
-	text $52, " received"
+	text $52, "는(은)"
 	line "@"
 	TX_RAM wcf4b
-	text "!@@"
+	text "를(을) 얻었다!@@"
 
 _TM06ExplanationText::
 	db $0
-	para "TM06 contains"
-	line "TOXIC!"
+	para "기술머신06에는"
+	line "맹독이 들어있다!"
 
-	para "It is a secret"
-	line "technique over"
-	cont "400 years old!"
+	para "이건 무려 400년 동안"
+	line "전해져 내려온 비기지!"
 	done
 
 _TM06NoRoomText::
-	text "Make space for"
-	line "this, child!"
+	text "이 이상은"
+	line "들 수 없어!"
 	done
 
 _FuchsiaGymBattleText1::
-	text "Strength isn't"
-	line "the key for"
-	cont "#MON!"
+	text "힘만이 전부가"
+	line "아닌것이 바로 포켓몬!"
 
-	para "It's strategy!"
-	para "I'll show you how"
-	line "strategy can beat"
-	cont "brute strength!"
+	para "그것은 바로 전략!"
+	
+	para "무식하게 힘으로만"
+	line "밀어붙이는걸"
+	cont "내 전략으로 격파해주지!"
 	done
 
 _FuchsiaGymEndBattleText1::
-	text "What?"
-	line "Extraordinary!"
+	text "뭐야?"
+	line "이럴리가 없어!"
 	prompt
 
 _FuchsiaGymAfterBattleText1::
-	text "So, you mix brawn"
-	line "with brains?"
-	cont "Good strategy!"
+	text "그랬군"
+	line "두뇌와 체력을 겸비한건가?"
+	cont "좋은 전략이야!"
 	done
 
 _FuchsiaGymBattleText2::
-	text "I wanted to become"
-	line "a ninja, so I"
-	cont "joined this GYM!"
+	text "난 닌자가 되는게"
+	line "꿈이라서 이 체육관에 왔어!"
 	done
 
 _FuchsiaGymEndBattleText2::
-	text "I'm done"
-	line "for!"
+	text "내 역할은"
+	line "여기까지!"
 	prompt
 _FuchsiaGymAfterBattleText2::
-	text "I will keep on"
-	line "training under"
-	cont "KOGA, my ninja"
-	cont "master!"
+	text "닌자 마스터인 독수님에게"
+	line "앞으로 계속"
+	cont "가르침을 받을거야!"
 	done
 _FuchsiaGymBattleText3::
-	text "Let's see you"
-	line "beat my special"
-	cont "techniques!"
+	text "어디한번"
+	line "내 특별 비기를"
+	cont "깨봐!"
 	done
 
 _FuchsiaGymEndBattleText3::
-	text "You"
-	line "had me fooled!"
+	text "이거 아주"
+	line "우습게 됐네!"
 	prompt
 
 _FuchsiaGymAfterBattleText3::
-	text "I like poison and"
-	line "sleep techniques,"
-	cont "as they linger"
-	cont "after battle!"
+	text "내가 좋아하는 기술은"
+	line "독과 잠듦 기술이야"
+	cont "배틀후에도 지속이 되니깐!"
 	done
 
 _FuchsiaGymBattleText4::
-	text "Stop right there!"
+	text "거기 꼼짝마!"
 
-	para "Our invisible"
-	line "walls have you"
-	cont "frustrated?"
+	para "이곳에 있는"
+	line "보이지 않는 장벽이"
+	cont "혼란스럽지?"
 	done
 
 _FuchsiaGymEndBattleText4::
-	text "Whoa!"
-	line "He's got it!"
+	text "휘유"
+	line "해냈군!"
 	prompt
 _FuchsiaGymAfterBattleText4::
-	text "You impressed me!"
-	line "Here's a hint!"
+	text "정말 인상적이였어!"
+	line "힌트를 주마!"
 
-	para "Look very closely"
-	line "for gaps in the"
-	cont "invisible walls!"
+	para "안 보이는 벽"
+	line "사이에 있는 틈새를"
+	cont "유심히 보렴!"
 	done
 
 _FuchsiaGymBattleText5::
-	text "I also study the"
-	line "way of the ninja"
-	cont "with master KOGA!"
+	text "나 역시 독수님과 함께"
+	line "닌자의 길을 수행중인 몸!"
 
-	para "Ninja have a long"
-	line "history of using"
-	cont "animals!"
+	para "닌자는 오래토록"
+	line "동물을 부려온"
+	cont "역사가 있지!"
 	done
 
 _FuchsiaGymEndBattleText5::
-	text "Awoo!"
+	text "아오오오-!"
 	prompt
 
 _FuchsiaGymAfterBattleText5::
-	text "I still have much"
-	line "to learn!"
+	text "난 여전히"
+	line "배울게 많군!"
 	done
 
 _FuchsiaGymBattleText6::
-	text "Master KOGA comes"
-	line "from a long line"
-	cont "of ninjas!"
+	text "독수 관장님은"
+	line "족보있는 닌자가문"
+	cont "일족이셔!"
 
-	para "What did you"
-	line "descend from?"
+	para "너는 무슨 가문"
+	line "후예냐?"
 	done
 
 _FuchsiaGymEndBattleText6::
-	text "Dropped"
-	line "my balls!"
+	text "내 몬스터볼을"
+	line "떨어뜨렸다!"
 	prompt
 
 _FuchsiaGymAfterBattleText6::
-	text "Where there is"
-	line "light, there is"
-	cont "shadow!"
+	text "빛에서 오는자와"
+	line "그림자에서 오는자는"
+	cont "항상 있기 마련!"
 
-	para "Light and shadow!"
-	line "Which do you"
-	cont "choose?"
+	para "너는 어느쪽인가!"
 	done
 
 _FuchsiaGymText_7564e::
-	text "Yo! Champ in"
-	line "making!"
+	text "요!"
+	line "미래의 챔피언!"
 
-	para "FUCHSIA GYM is"
-	line "riddled with"
-	cont "invisible walls!"
-
-	para "KOGA might appear"
-	line "close, but he's"
-	cont "blocked off!"
-	para "You have to find"
-	line "gaps in the walls"
-	cont "to reach him!"
+	para "연분홍시티 퍼즐은"
+	line "투명한 벽으로 되어 있어!"
+	
+	para "독수관장은 가까이에 있을지라도"
+	line "코앞에 두고 길이 막혀있다!"
+	
+	para "관장에게 가기위해서는"
+	line "저 벽의 틈새를 찾아가야해!"
 	done
 _FuchsiaGymText_75653::
-	text "It's amazing how"
-	line "ninja can terrify"
-	cont "even now!"
+	text "지금까지도 닌자라는 존재가"
+	line "경외의 대상이 될수 있다는 게"
+	cont "놀라운걸!"
 	done

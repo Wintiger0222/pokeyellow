@@ -7,8 +7,8 @@ DoClearSaveDialogue:
 	call PrintText
 	ld a, B_BUTTON
 	ld [wJoyIgnore], a
-	coord hl, 14, 7
-	lb bc, 8, 15
+	coord hl, 14, 6
+	lb bc, 7, 15
 	ld a, NO_YES_MENU
 	ld [wTwoOptionMenuID], a
 	ld a, TWO_OPTION_MENU

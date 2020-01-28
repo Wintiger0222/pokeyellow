@@ -571,7 +571,10 @@ GBPrinter_UpdateStatusMessage:
 	ld [H_AUTOBGTRANSFERENABLED], a
 	coord hl, 0, 5
 	lb bc, 10, 18
-	call TextBoxBorder
+;미니게임후 프린트 할수 있는 표창장을 볼때
+;에러메시지에 가리지 않도록 하는 삽질
+;VC버전의 사양에 맞추기 위해서
+;	call TextBoxBorder
 	pop af
 	ld e, a
 	ld d, $0
@@ -581,11 +584,11 @@ GBPrinter_UpdateStatusMessage:
 	ld e, [hl]
 	inc hl
 	ld d, [hl]
-	coord hl, 1, 7
-	call PlaceString
-	coord hl, 2, 15
+;	coord hl, 1, 7
+;	call PlaceString
+;	coord hl, 2, 15
 	ld de, .PressBToCancel
-	call PlaceString
+;	call PlaceString
 	ld a, $1
 	ld [H_AUTOBGTRANSFERENABLED], a
 	xor a
@@ -745,11 +748,11 @@ Printer_PrepareSurfingMinigameHighScoreTileMap:
 	db $7f, $7f, $7f, $05, $06, $07, $08, $09, $0a, $0b, $0c, $0d, $0e, $7f, $7f, $7f
 
 .PikachusBeachString:
-	db "Pikachu's Beach@"
+	db "   피카츄의 서머비치@"
 .HiScoreString:
-	db "'s Hi-Score@"
+	db "의 최고기록@"
 .PointsString:
-	db "Points@"
+	db "점@"
 
 Diploma_Surfing_CopyBox:
 .y
@@ -996,4 +999,6 @@ PrintPCBox_PlaceHorizontalLines:
 	ret
 
 .HorizontalLineString:
+setcharmap legacy_char
 	db "----------@"
+setcharmap hangul_char

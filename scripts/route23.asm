@@ -92,25 +92,25 @@ BadgeTextPointers:
 	dw EarthBadgeText
 
 EarthBadgeText:
-	db "EARTHBADGE@"
+	db "그린 배지@"
 
 VolcanoBadgeText:
-	db "VOLCANOBADGE@"
+	db "진홍색 배지@"
 
 MarshBadgeText:
-	db "MARSHBADGE@"
+	db "골드 배지@"
 
 SoulBadgeText:
-	db "SOULBADGE@"
+	db "핑크 배지@"
 
 RainbowBadgeText:
-	db "RAINBOWBADGE@"
+	db "무지개 배지@"
 
 ThunderBadgeText:
-	db "THUNDERBADGE@"
+	db "오렌지 배지@"
 
 CascadeBadgeText:
-	db "CASCADEBADGE@"
+	db "블루 배지@"
 
 Route23Script_512d8:
 	ld a, $1

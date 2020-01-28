@@ -1,25 +1,27 @@
 _TM29PreReceiveText::
-	text "...Wait! Don't"
-	line "say a word!"
-
-	para "You wanted this!"
+	text "…… …… ……"
+	para "…… …… ……"
+	para "…… …… ……"
+	para "…… …… 알겠다!"
+	para "이것을 가지고싶은가!"
 	prompt
 
 _ReceivedTM29Text::
-	text $52, " received"
+	text $52, "는(은)"
 	line "@"
 	TX_RAM wcf4b
-	text "!@@"
+	text "를(을) 얻었다!@@"
 
 _TM29ExplanationText::
-	text "TM29 is PSYCHIC!"
+	text "…… 알고 있는가?"
+	line "기술머신29는 사이코키네시스!"
 
-	para "It can lower the"
-	line "target's SPECIAL"
-	cont "abilities."
+	para "……  잘 되면"
+	line "상대방의 특수 능력을"
+	cont "피할 수 있을지도 모르지"
 	done
 
 _TM29NoRoomText::
-	text "Where do you plan"
-	line "to put this?"
+	text "이걸 어찌할지"
+	line "무슨 계획 있어?"
 	done

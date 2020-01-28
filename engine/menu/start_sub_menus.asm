@@ -51,6 +51,8 @@ StartMenu_Pokemon:
 	ld a,c
 	ld [hli],a ; top menu item Y
 	ld a,[hFieldMoveMonMenuTopMenuItemX]
+	dec a
+	dec a
 	ld [hli],a ; top menu item X
 	xor a
 	ld [hli],a ; current menu item ID
@@ -567,7 +569,7 @@ DrawTrainerInfo:
 	call TrainerInfo_FarCopyData
 	ld hl,GymLeaderFaceAndBadgeTileGraphics  ; gym leader face and badge tile patterns
 	ld de,vChars2 + $200
-	ld bc,$0400
+	ld bc,$0560
 	ld a,$03
 	call FarCopyData
 	ld hl,TextBoxGraphics
@@ -610,10 +612,10 @@ DrawTrainerInfo:
 	coord hl, 2, 2
 	ld de,TrainerInfo_NameMoneyTimeText
 	call PlaceString
-	coord hl, 7, 2
+	coord hl, 5, 2
 	ld de,wPlayerName
 	call PlaceString
-	coord hl, 8, 4
+	coord hl, 5, 4
 	ld de,wPlayerMoney
 	ld c,$e3
 	call PrintBCDNumber
@@ -632,13 +634,13 @@ TrainerInfo_FarCopyData:
 	jp FarCopyData
 
 TrainerInfo_NameMoneyTimeText:
-	db   "NAME/"
-	next "MONEY/"
-	next "TIME/@"
+	db   "이름/"
+	next "용돈/"
+	next "플레이 시간/@"
 
 ; $76 is a circle tile
 TrainerInfo_BadgesText:
-	db $76,"BADGES",$76,"@"
+	db $76,$70,$71,$72,$73,$74,$75,$76,"@"
 
 ; draws a text box on the trainer info screen
 ; height is always 6

@@ -1,31 +1,20 @@
 _CeladonMart1Text1::
-	text "Hello! Welcome to"
-	line "CELADON DEPT."
-	cont "STORE."
+	text "어서오세요!"
+	line "무지개 백화점에 잘 오셨습니다!"
 
-	para "The board on the"
-	line "right describes"
-	cont "the store layout."
+	para "각 플로어의 안내는"
+	line "오른쪽의 게시판을 봐 주세요"
 	done
 
 _CeladonMart1Text2::
-	text "1F: SERVICE"
-	line "    COUNTER"
-
-	para "2F: TRAINER'S"
-	line "    MARKET"
-
-	para "3F: TV GAME SHOP"
-
-	para "4F: WISEMAN GIFTS"
-
-	para "5F: DRUG STORE"
-
-	para "ROOFTOP SQUARE:"
-	line "VENDING MACHINES"
+	text "1층 …… 서비스·카운터"
+	line "2층 …… 트레이너즈·숍"
+	cont "3층 …… 티비게임·숍"
+	cont "4층 …… 와이즈맨·기프트"
+	cont "5층 …… 약품·스토어"
+	cont "6층 …… 자동판매기"
 	done
 
 _CeladonMart1Text3::
-	text "1F: SERVICE"
-	line "    COUNTER"
+	text "1층 …… 서비스·카운터"
 	done

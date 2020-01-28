@@ -1,78 +1,89 @@
 _Lab4Text_75dc6::
-	text "Hiya!"
+	text "안녕!"
 
-	para "I am important"
-	line "doctor!"
+	para "이래뵈도"
+	line "요직에 앉은 박사라구!"
 
-	para "I study here rare"
-	line "#MON fossils!"
+ 
 
-	para "You! Have you a"
-	line "fossil for me?"
+	para "나는 여기서 포켓몬 화석을"
+	line "연구하고 있어!"
+
+	para "너! 혹시"
+	line "화석을 가지고 있니?"
 	prompt
 
 _Lab4Text_75dcb::
-	text "No! Is too bad!"
+	text "아쉽다!"
 	done
 
 _Lab4Text_75dd0::
-	text "I take a little"
-	line "time!"
+	text "시간이 좀 걸릴거야!"
 
-	para "You go for walk a"
-	line "little while!"
+
+
+	para "잠깐 나가서"
+	line "산책이라도 하는게어때?"
 	done
 
+ 
+
 _Lab4Text_75dd5::
-	text "Where were you?"
+	text "어디 갔다 온거야?"
 
-	para "Your fossil is"
-	line "back to life!"
 
-	para "It was @"
+
+	para "벌써 네 화석이"
+	line "부활했다구!"
+
+ 
+
+	para "내 예상대로 이건"
+	line "@"
 	TX_RAM wcf4b
 	db $0
-	line "like I think!"
+	db "(이)었어!"
 	prompt
 
 _Lab4Text_610ae::
-	text "Oh! That is"
+	text "세상에 이건"
 	line "@"
 	TX_RAM wcd6d
-	text "!"
+	text "(이)잖아!"
 
-	para "It is fossil of"
+	para "이건 벌써 멸종한 포켓몬인"
 	line "@"
 	TX_RAM wcf4b
-	text ", a"
-	cont "#MON that is"
-	cont "already extinct!"
+	text "의 화석이야!"
 
-	para "My Resurrection"
-	line "Machine will make"
-	cont "that #MON live"
-	cont "again!"
+	para "내 부화 기계는 포켓몬을"
+	line "다시 살아숨쉬게 할수있어!"
 	done
 
-_Lab4Text_610b3::
-	text "So! You hurry and"
-	line "give me that!"
+ 
 
-	para $52, " handed"
-	line "over @"
+_Lab4Text_610b3::
+	text "그래!"
+	line "한번 해보자구!"
+
+	para $52, "는(은)"
+	line "@"
 	TX_RAM wcd6d
-	text "!"
+	text "를(을) 건네주었다!"
 	prompt
 
 _Lab4Text_610b8::
-	text "I take a little"
-	line "time!"
+	text "시간이 좀 걸릴거야!"
 
-	para "You go for walk a"
-	line "little while!"
+
+
+	para "잠깐 나가서"
+	line "산책이라도 하는게어때?"
 	done
 
 _Lab4Text_610bd::
-	text "Aiyah! You come"
-	line "again!"
+	text "여어!"
+	line "무슨화석을 가져왔어?"
 	done
+
+ 

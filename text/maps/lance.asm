@@ -1,63 +1,56 @@
 _LanceBeforeBattleText::
-	text "Ah! I heard about"
-	line "you, <PLAYER>!"
+	text "기다리고 있었다!"
+	line $52,"군!"
 
-	para "I lead the ELITE"
-	line "FOUR! You can"
-	cont "call me LANCE the"
-	cont "dragon trainer!"
+	para "내가 사천왕이자"
+	line "드래곤 조련사 목호!"
 
-	para "You know that"
-	line "dragons are"
-	cont "mythical #MON!"
+	para "너도 알다시피"
+	line "드래곤은"
+	cont "전설적인 포켓몬이지!"
 
-	para "They're hard to"
-	line "catch and raise,"
-	cont "but their powers"
-	cont "are superior!"
+	para "잡는것도 기르는것도"
+	line "어렵지만 그것들의 힘은"
+	cont "엄청나!"
 
-	para "They're virtually"
-	line "indestructible!"
+	para "사실상 깨부술수 없는"
+	line "존재지!"
 
-	para "Well, are you"
-	line "ready to lose?"
+	para "좋아"
+	line "패배를 받아들일 준비는 됐냐?"
 
-	para "Your LEAGUE"
-	line "challenge ends"
-	cont "with me, ", $52, "!"
+	para "나에 의해서"
+	line "네 도전은 끝이 날꺼야" 
+	cont $52, "군!"
 	done
 
 _LanceEndBattleText::
-	text "That's it!"
+	text "역시!"
 
-	para "I hate to admit"
-	line "it, but you are a"
-	cont "#MON master!"
+	para "인정하긴 싫지만"
+	line "너가 포켓몬 마스터이다!"
 	prompt
 
 _LanceAfterBattleText::
-	text "I still can't"
-	line "believe my"
-	cont "dragons lost to"
-	cont "you, ", $52, "!"
+	text "여전히 믿기질 않는군"
+	line "내 드래곤들이 네게 패했어"
+	cont $52, "군!"
 
-	para "You are now the"
-	line "#MON LEAGUE"
-	cont "champion!"
+	para "이제는 너가"
+	line "포켓몬 리그 챔피언이네!"
 
-	para "...Or, you would"
-	line "have been, but"
-	cont "you have one more"
-	cont "challenge ahead."
+	para "……혹은"
+	line "그렇게 되겠지"
+	cont "그나저나 네가 한번 더"
+	cont "도전을 해야해"
 
-	para "You have to face"
-	line "another trainer!"
-	cont "His name is..."
+	para "또 다른 트레이너와"
+	line "맞붙어야 한다는 거지!"
+	cont "그의 이름은……"
 
-	para $53, "!"
-	line "He beat the ELITE"
-	cont "FOUR before you!"
+	para $53, "군!"
+	line "그는 너보다 먼저 "
+	cont "사천왕을 이겼어!"
 
-	para "He is the real"
-	line "#MON LEAGUE"
-	cont "champion!@@"
+	para "현재 그가 포켓몬 리그"
+	line "챔피언이야!@@"

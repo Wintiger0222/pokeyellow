@@ -1,154 +1,161 @@
 _Route8BattleText1::
-	text "You look good at"
-	line "#MON, but"
-	cont "how's your chem?"
+	text "포켓몬은 잘다루는 것 같은데"
+	line "화학실력은 얼마나 좋을까?"
 	done
 
 _Route8EndBattleText1::
-	text "Ow!"
-	line "Meltdown!"
+	text "이런!"
+	line "완전 녹아버렸군!"
 	prompt
 
+ 
+
 _Route8AfterBattleText1::
-	text "I am better at"
-	line "school than this!"
+	text "시험볼 때는"
+	line "이것보다 잘 한다구!"
 	done
 
 _Route8BattleText2::
-	text "All right! Let's"
-	line "roll the dice!"
+	text "좋아!"
+	line "승부의 주사위를 던져보자!"
 	done
 
 _Route8EndBattleText2::
-	text "Drat!"
-	line "Came up short!"
+	text "젠장!"
+	line "열심히 했는데!"
 	prompt
+
+ 
 
 _Route8AfterBattleText2::
-	text "Lady Luck's not"
-	line "with me today!"
+	text "오늘은 승리의 여신이"
+	line "미소지어주질 않네!"
 	done
+
+ 
 
 _Route8BattleText3::
-	text "You need strategy"
-	line "to win at this!"
+	text "날 이기려면"
+	line "확실한 전략이 필요할거다!"
 	done
 
+ 
+
 _Route8EndBattleText3::
-	text "It's"
-	line "not logical!"
+	text "비 논리적이야!"
 	prompt
 
+
+
 _Route8AfterBattleText3::
-	text "Go with GRIMER"
-	line "first...and..."
-	cont "...and...then..."
+	text "질퍽이를 먼저……"
+	line "그리고…… 다음에…… 또……"
 	done
 
 _Route8BattleText4::
-	text "I like NIDORAN, so"
-	line "I collect them!"
+	text "난 니드런이 좋아!"
 	done
 
 _Route8EndBattleText4::
-	text "Why? Why??"
+	text "왜? 왜??"
 	prompt
 
+
+
 _Route8AfterBattleText4::
-	text "When #MON grow"
-	line "up they get ugly!"
-	cont "They shouldn't"
-	cont "evolve!"
+	text "포켓몬은 진화하면 못생겨져!"
+	line "진화는 안하는게 최고야!"
 	done
 
 _Route8BattleText5::
-	text "School is fun, but"
-	line "so are #MON."
+	text "학교도 즐겁지만"
+	line "포켓몬도 비교할게 못되지!"
 	done
 
 _Route8EndBattleText5::
-	text "I'll"
-	line "stay with school."
+	text "그냥 학교에 있어야겠다"
 	prompt
 
+
+
 _Route8AfterBattleText5::
-	text "We're stuck here"
-	line "because of the"
-	cont "gates at SAFFRON."
+	text "노랑시티의 게이트 때문에"
+	line "여기서 꼼짝달싹 못하고 있어"
 	done
 
 _Route8BattleText6::
-	text "MEOWTH is so cute,"
-	line "meow, meow, meow!"
+	text "나옹은 너무 귀여워"
+	line "냥, 냥, 냥!"
 	done
 
 _Route8EndBattleText6::
-	text "Meow!"
+	text "냥!"
 	prompt
 
+
+
 _Route8AfterBattleText6::
-	text "I think PIDGEY"
-	line "and RATTATA"
-	cont "are cute too!"
+	text "구구랑 꼬렛도"
+	line "귀여운것 같아!"
 	done
 
 _Route8BattleText7::
-	text "We must look"
-	line "silly standing"
-	cont "here like this!"
+	text "여기서 멀뚱히 서있으면"
+	line "웃겨보이겠지?"
 	done
 
+ 
+
 _Route8EndBattleText7::
-	text "Look what"
-	line "you did!"
+	text "웃기지?"
 	prompt
 
 _Route8AfterBattleText7::
-	text "SAFFRON's gate-"
-	line "keeper won't let"
-	cont "us through."
-	cont "He's so mean!"
+	text "노랑시티의 게이트 관리인은"
+	line "우릴 보내줄 생각이 없는것같아"
+	cont "정말 못됐어!"
 	done
 
 _Route8BattleText8::
-	text "I'm a rambling,"
-	line "gambling dude!"
+	text "나는야 도박사!"
 	done
 
 _Route8EndBattleText8::
-	text "Missed"
-	line "the big score!"
+	text "대량 실점!"
 	prompt
 
 _Route8AfterBattleText8::
-	text "Gambling and"
-	line "#MON are like"
-	cont "eating peanuts!"
-	cont "Just can't stop!"
+	text "도박과 포켓몬은"
+	line "탁자에 놓인 밀감같애!"
+	cont "손을 뗄수가 없어!"
 	done
 
 _Route8BattleText9::
-	text "What's a cute,"
-	line "round and fluffy"
-	cont "#MON?"
+	text "귀엽고 둥글둥글하고"
+	line "뽀송뽀송한 포켓몬은 뭐게?"
 	done
+
+ 
 
 _Route8EndBattleText9::
-	text "Stop!"
+	text "그만!"
 
-	para "Don't be so mean"
-	line "to my CLEFAIRY!"
+
+
+	para "삐삐를 너무 괴롭히지 마!"
 	prompt
 
+
+
 _Route8AfterBattleText9::
-	text "I heard that"
-	line "CLEFAIRY evolves"
-	cont "when it's exposed"
-	cont "to a MOON STONE."
+	text "삐삐가 달의 돌에 노출되면"
+	line "진화한다고 들은적이 있어"
 	done
 
+ 
+
 _Route8Text10::
-	text "UNDERGROUND PATH"
-	line "CELADON CITY -"
-	cont "LAVENDER TOWN"
+	text "여기서부터 지하통로"
+	line "무지개시티 …… 보라타운"
 	done
+

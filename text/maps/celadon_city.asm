@@ -1,152 +1,141 @@
 _CeladonCityText1::
-	text "I got my KOFFING"
-	line "from my friend!"
+	text "친구한테"
+	line "또가스 받았어!"
 
-	para "We get along now,"
-	line "because I was"
-	cont "very nice to it!"
+	para "우린 지금부터 함께할거야"
+	line "왜냐면 내겐 꿈이었거든!"
 	done
 
 _CeladonCityText2::
-	text "Heheh! This GYM"
-	line "is great! It's"
-	cont "full of women!"
+	text "으하하! 여기 체육관은 좋구나!"
+	line "여자아이들만 있어서!"
 	done
 
 _CeladonCityText3::
-	text "The GAME CORNER"
-	line "is bad for our"
-	cont "city's image!"
+	text "이 게임코너는"
+	line "우리 도시 이미지의 구멍이야!"
 	done
 
 _CeladonCityText4::
-	text "Moan! I blew it"
-	line "all at the slots!"
+	text "으으윽-"
+	line "난 여기에 전부 때려넣었어!"
 
-	para "I knew I should"
-	line "have cashed in my"
-	cont "coins for prizes!"
+	para "안다고 알아"
+	line "코인들을 경품으로"
+	cont "교환할걸 그랬어!"
 	done
 
 _TM41PreText::
-	text "Hello, there!"
+	text "안녕한가!"
 
-	para "I've seen you,"
-	line "but I never had a"
-	cont "chance to talk!"
+	para "자네를 지켜봤는데"
+	line "대화할 기회가 없더군"
 
-	para "Here's a gift for"
-	line "dropping by!"
+	para "이곳에 들린"
+	line "선물일세!"
 	prompt
 
 _ReceivedTM41Text::
-	text $52, " received"
+	text $52, "은(는)"
 	line "@"
 	TX_RAM wcf4b
-	text "!@@"
-
+	text "을(를)"
+	cont "얻었다!@@"
+	
 _TM41ExplanationText::
-	text "TM41 teaches"
-	line "SOFTBOILED!"
+	text "기술머신41은"
+	line "알낳기!"
 
-	para "Only one #MON"
-	line "can use it!"
+	para "오직 한종류의 포켓몬에게만"
+	line "사용할수 있지!"
 
-	para "That #MON is"
-	line "CHANSEY!"
+	para "그 포켓몬은"
+	line "럭키란다!"
 	done
 
 _TM41NoRoomText::
-	text "Oh, your pack is"
-	line "full of items!"
+	text "어이 어이"
+	line "가방이 가득 찼잖아!"
 	done
 
 _CeladonCityText6::
-	text "This is my trusted"
-	line "pal, POLIWRATH!"
+	text "이녀석은 나의 파트너"
+	line "강챙이!"
 
-	para "It evolved from"
-	line "POLIWHIRL when I"
-	cont "used WATER STONE!"
+	para "물의 돌을 써서"
+	line "수륙챙이에서 진화시켰지!"
 	done
 
 _CeladonCityText7::
-	text "POLIWRATH: Ribi"
-	line "ribit!@@"
+	text "강챙이『강챙 강챙!@@"
 
 _CeladonCityText8::
-	text "What are you"
-	line "staring at?"
+	text "뭘 그렇게 빤히"
+	line "쳐다봐?"
 	done
 
 _CeladonCityText9::
-	text "Keep out of TEAM"
-	line "ROCKET's way!"
+	text "로켓단의 행차길에서"
+	line "저리가!"
 	done
 
 _CeladonCityText11::
-	text "CELADON CITY"
-	line "The City of"
-	cont "Rainbow Dreams"
+	;금은참조
+	text "이곳은 무지개시티"
+	line "무지개는 총천연색 꿈의 색깔"
 	done
 
 _CeladonCityText13::
-	text "CELADON CITY"
-	line "#MON GYM"
-	cont "LEADER: ERIKA"
-
-	para "The Nature-Loving"
-	line "Princess!"
+	text "무지개 시티 포켓몬 체육관"
+	line "관장 민화"
+	cont "자연을 사랑하는 아가씨"
 	done
 
 _CeladonCityText14::
-	text "CELADON MANSION"
+	;금은참조
+	text "무지개 맨션"
 	done
 
 _CeladonCityText15::
-	text "Find what you"
-	line "need at CELADON"
-	cont "DEPT. STORE!"
+	;금은참조
+	text "원하는 것은 꼭 있습니다!"
+	line "무지개 백화점"
 	done
 
 _CeladonCityText16::
-	text "TRAINER TIPS"
+	;금은참조
+	text "…… 득이 되는 게시판"
 
-	para "GUARD SPEC."
-	line "protects #MON"
-	cont "against SPECIAL"
-	cont "attacks such as"
-	cont "fire and water!"
-
-	para "Get your items at"
-	line "CELADON DEPT."
-	cont "STORE!"
+	para "이펙트 가드는"
+	line "화염이랑 물 전기등의"
+	
+	para "특수 공격으로부터"
+	line "포켓몬을 지켜준다!"
+	
+	para "도구의 쇼핑천국"
+	line "무지개 백화점으로 오세요!"
 	done
 
 _CeladonCityText17::
-	text "Coins exchanged"
-	line "for prizes!"
-	cont "PRIZE EXCHANGE"
+	text "코인을 경품으로 교환하세요"
+	line "경품 교환소"
 	done
 
 _CeladonCityText18::
-	text "ROCKET GAME CORNER"
-	line "The playground"
-	cont "for grownups!"
+	;금은참조
+	text "이곳은 모두의 놀이장소"
+	line "로켓 게임코너"
 	done
 
 _CeladonCityText10::
-	text "TRAINER TIPS"
+	text "…… 득이 되는 게시판"
 
-	para "X ACCURACY boosts"
-	line "the accuracy of"
-	cont "techniques!"
+	para "잘-맞히기는"
+	line "기술의 명중률을 높여준다!"
+	
+	para "크리티컬커터는"
+	line "급소를 맞출 확률을 높여준다!"
 
-	para "DIRE HIT jacks up"
-	line "the likelihood of"
-	cont "critical hits!"
-
-	para "Get your items at"
-	line "CELADON DEPT."
-	cont "STORE!"
+	para "도구의 쇼핑천국"
+	line "무지개 백화점으로 오세요!"
 	done

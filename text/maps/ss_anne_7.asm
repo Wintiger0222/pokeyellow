@@ -1,62 +1,61 @@
 _SSAnne7RubText::
-	text "CAPTAIN: Ooargh..."
-	line "I feel hideous..."
-	cont "Urrp! Seasick..."
+	text "선장『어우……"
+	line "속이 뒤집혀 질것 같아……"
+	cont "우웁! 뱃멀미가……"
 
-	para $52, " rubbed"
-	line "the CAPTAIN's"
-	cont "back!"
+	para $52, "는(은)"
+	line "선장의 등을 문질러줬다!"
 
-	para "Rub-rub..."
-	line "Rub-rub...@@"
+	para "문질문질……"
+	line "문질문질……@@"
 
 _ReceivingHM01Text::
-	text "CAPTAIN: Whew!"
-	line "Thank you! I"
-	cont "feel much better!"
+	text "선장『휴! 고맙구나!"
+	line "개운하군!"
 
-	para "You want to see"
-	line "my CUT technique?"
+	para "내 풀베기 기술을"
+	line "보고싶다고?"
 
-	para "I could show you"
-	line "if I wasn't ill..."
+	para "아프지만 않았더라도"
+	line "보여줬겠다만……"
 
-	para "I know! You can"
-	line "have this!"
+	para "아 그래!"
+	line "이걸 가지렴!"
 
-	para "Teach it to your"
-	line "#MON and you"
-	cont "can see it CUT"
-	cont "anytime!"
+ 
+
+	para "포켓몬에게 가르치면"
+	line "언제든 풀베기를 볼 수 있단다!"
 	prompt
 
 _ReceivedHM01Text::
-	text $52, " got"
+	text $52, "는(은)"
 	line "@"
 	TX_RAM wcf4b
-	text "!@@"
+	text "를(을) 얻었다!@@"
 
 _SSAnne7Text_61932::
-	text "CAPTAIN: Whew!"
+	text "선장『오우!"
 
-	para "Now that I'm not"
-	line "sick anymore, I"
-	cont "guess it's time."
+
+
+	para "이제 멀미가 가셨군"
+	line "슬슬 시간이 되는구나"
 	done
 
 _HM01NoRoomText::
-	text "Oh no! You have"
-	line "no room for this!"
+	text "이런!"
+	line "더이상 들 수 없어!"
 	done
 
 _SSAnne7Text2::
-	text "Yuck! Shouldn't"
-	line "have looked!"
+	text "우웩!"
+	line "보는게 아니었다!"
 	done
 
+ 
+
 _SSAnne7Text3::
-	text "How to Conquer"
-	line "Seasickness..."
-	cont "The CAPTAIN's"
-	cont "reading this!"
+	text "선장이 읽던 책이다!"
+	line "뱃멀미를 극복하는 방법……"
 	done

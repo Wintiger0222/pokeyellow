@@ -1511,10 +1511,30 @@ WillPikachuSpawnOnTheScreen:
 	ld a, [hli]
 	cp d
 	jr nc, .not_on_screen
-	ld a, [hl]
+	ld a, [hld]
 	cp d
-	jr c, .on_screen
-.not_on_screen
+	jr nc, .not_on_screen
+.on_hangul_chk
+	ld a,$02
+	ld [rSVBK],a
+	ld bc,20+$D800-wTileMap
+	add hl,bc
+	bit 3,[hl]
+	jr nz, .not_on_screen
+	inc hl
+	bit 3,[hl]
+	jr nz, .not_on_screen
+	dec hl
+	ld bc, -20
+	add hl, bc
+	bit 3,[hl]
+	jr nz, .not_on_screen
+	inc hl
+	bit 3, [hl]
+	jr z,.on_screen
+.not_on_screen ;화면 위가 아니라 텍스트 타일 위일때
+	ld a,$01
+	ld [rSVBK],a
 	ld h, wSpriteStateData1 / $100
 	ld a, [H_CURRENTSPRITEOFFSET]
 	add wSpritePikachuStateData1ImageIndex - wSpritePikachuStateData1
@@ -1524,6 +1544,8 @@ WillPikachuSpawnOnTheScreen:
 	jr .return
 
 .on_screen
+	ld a,$01
+	ld [rSVBK],a
 	ld h, wSpriteStateData2 / $100
 	ld a, [H_CURRENTSPRITEOFFSET]
 	add wSpritePikachuStateData2GrassPriority - wSpritePikachuStateData2

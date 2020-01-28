@@ -1,232 +1,203 @@
 _CeruleanCityText_19668::
-	text $53, ": Yo!"
+	text $53, "『봉주르!"
 	line $52, "!"
 
-	para "You're still"
-	line "struggling along"
-	cont "back here?"
+	para "너 아직도 여기서"
+	line "헤메고 있는거야?"
 
-	para "I'm doing great!"
-	line "I caught a bunch"
-	cont "of strong and"
-	cont "smart #MON!"
+	para "난 벌써 강하고 똑똑한 포켓몬을"
+	line "여러마리나 잡았어!"
 
-	para "Here, let me see"
-	line "what you caught,"
-	cont $52, "!"
+	para $52, " 너한테도"
+	line "내가 잡은 포켓몬을 보여줄게!"
 	done
 
 _CeruleanCityText_1966d::
-	text "Hey!"
-	line "Take it easy!"
-	cont "You won already!"
+	text "잠깐! 진정해!"
+	line "너가 이겼어!"
 	prompt
 
 _CeruleanCityText_19672::
-	text "Heh!"
-	line "You're no match"
-	cont "for my genius!"
+	text "헤헤! 역시 내 천재성 앞에선"
+	line "상대가 안되는 구나!"
 	prompt
 
 _CeruleanCityText_19677::
-	text $53, ": Hey,"
-	line "guess what?"
+	text $53, "『아"
+	line "그거 알아?"
 
-	para "I went to BILL's"
-	line "and got him to"
-	cont "show me his rare"
-	cont "#MON!"
+	para "내 도감 페이지"
+	line "엄청 많이 채웠다!"
 
-	para "That added a lot"
-	line "of pages to my"
-	cont "#DEX!"
 
-	para "After all, BILL's"
-	line "world famous as a"
-	cont "#MANIAC!"
+	para "얼마전에 이수재한테 가서"
+	line "그의 희귀 포켓몬을"
+	cont "보여달라 그랬거든!"
 
-	para "He invented the"
-	line "#MON Storage"
-	cont "System on PC!"
+	para "그가 괴짜로 유명한 이유를"
+	line "알겠더라니까!"
 
-	para "Since you're using"
-	line "his system, go"
-	cont "thank him!"
+	para "게다가 컴퓨터의"
+	line "포켓몬 박스 시스템에도"
+	cont "초대해줬어!"
 
-	para "Well, I better"
-	line "get rolling!"
-	cont "Smell ya later!"
+	para "너도 그 시스템을 쓰고 있으니까"
+	line "한번 이야기 나누어봐!"
+
+	para "이제 그만 가봐야 겠다"
+	line "그럼 바이비!"
 	done
 
 _CeruleanCityText_196d9::
-	text "Hey! Stay out!"
-	line "It's not your"
-	cont "yard! Huh? Me?"
+	text "잠깐 거기! 나가라고!"
+	line "여기는 내 땅이야!"
+	cont "응? 나?"
 
-	para "I'm an innocent"
-	line "bystander! Don't"
-	cont "you believe me?"
+	para "난 그냥 지나가던 행인이라구!"
+	line "진짜야!"
 	done
 
 _ReceivedTM28Text::
-	text $52, " recovered"
-	line "TM28!@@"
+	text $52, "는(은)"
+	line "기술머신28을 돌려받았다!@@"
 
 _ReceivedTM28Text2::
 	db $0
-	para "I better get"
-	line "moving! Bye!@@"
+	para "이제 나는 간다!"
+	line "안녕!@@"
 
 _TM28NoRoomText::
-	text "Make room for"
-	line "this!"
+	text "이걸 넣을 공간을 만들어줘!"
 
-	para "I can't run until"
-	line "I give it to you!"
+	para "이걸 주기 전엔"
+	line "너가 계속 따라올테니까!"
 	done
 
 _CeruleanCityText_196ee::
-	text "Stop!"
-	line "I give up! I'll"
-	cont "leave quietly!"
+	text "잠깐!"
+	line "항복할께!"
+	cont "조용히 나갈 테니까!"
 	prompt
 
 _CeruleanCityText_196f3::
-	text "OK! I'll return"
-	line "the TM I stole!"
+	text "알겠어! 내가 훔친"
+	line "기술머신도 돌려줄게!"
 	prompt
 
 _CeruleanCityText3::
-	text "You're a trainer"
-	line "too? Collecting,"
-	cont "fighting, it's a"
-	cont "tough life."
+	text "너도 트레이너야?"
+	line "잡고 싸우고"
+	cont "고달픈 삶이지"
 	done
 
-_CeruleanCityText4::
-	text "That bush in"
-	line "front of the shop"
-	cont "is in the way."
 
-	para "There might be a"
-	line "way around."
+_CeruleanCityText4::
+	text "프렌들리숍 앞에 있는 나무가"
+	line "길을 막고 있어"
+
+	para "아마 돌아 갈 수 있는"
+	line "다른 길이 있을거야"
 	done
 
 _CeruleanCityText5::
-	text "You're making an"
-	line "encyclopedia on"
-	cont "#MON? That"
-	cont "sounds amusing."
+	text "포켓몬 도감을 만든다고?"
+	line "그거 대단한데!"
 	done
+
+ 
 
 _CeruleanCityText6::
-	text "These poor people"
-	line "here were robbed."
+	text "여기 이 사람들은"
+	line "빈집털이를 당했단다"
 
-	para "We're positive"
-	line "that TEAM ROCKET"
-	cont "is behind this"
-	cont "terrible deed."
+	para "우리는 이 사건의 배후에는"
+	line "로켓단이 있다고 확신해"
 
-	para "Even our POLICE"
-	line "FORCE has trouble"
-	cont "with the ROCKETs!"
+	para "로켓단 때문에"
+	line "경찰들도 골머리 썩는다니까!"
 	done
 
+ 
+
 _CeruleanCityText_19730::
-	text "OK! ELECTRODE!"
-	line "Use SONICBOOM!"
-	cont "Please ELECTRODE,"
-	cont "pay attention!"
+	text "자 붐볼!"
+	line "염동력을 발휘해라!"
+	cont "붐볼!"
+	cont "제발 집중 좀 해!"
 	done
 
 _CeruleanCityText_19735::
-	text "ELECTRODE, TACKLE!"
-	line "No! You blew it"
-	cont "again!"
+	text "붐볼! 몸통박치기!"
+	line "아니야! 또 실수했잖아!"
 	done
 
 _CeruleanCityText_1973a::
-	text "ELECTRODE, SWIFT!"
-	line "No! That's wrong!"
+	text "붐볼! 스피드 스타!"
+	line "아니! 아니라니까!"
 
-	para "Training #MON"
-	line "is difficult!"
+	para "포켓몬을 훈련시키는건"
+	line "어려워!"
 
-	para "Your #MON's"
-	line "obedience depends"
-	cont "on your abilities"
-	cont "as a trainer!"
+	para "네 포켓몬이 널 얼마나"
+	line "잘 따를지는 너의"
+	cont "트레이너로서의 능력에 달려있어!"
 	done
 
 _CeruleanCityText_1976f::
-	text "ELECTRODE took a"
-	line "snooze..."
+	text "붐볼은 졸고있다……"
 	done
 
 _CeruleanCityText_19774::
-	text "ELECTRODE is"
-	line "loafing around..."
+	text "붐볼은 굴러다니고있다……"
 	done
 
 _CeruleanCityText_19779::
-	text "ELECTRODE turned"
-	line "away..."
+	text "붐볼은 뒤돌았다……"
 	done
 
 _CeruleanCityText_1977e::
-	text "ELECTRODE"
-	line "ignored orders..."
+	text "붐볼은 주변을 무시하고있다……"
 	done
 
 _CeruleanCityText9::
-	text "I want a bright"
-	line "red BICYCLE!"
+	text "난 빨간 자전거가 갖고싶어!"
 
-	para "I'll keep it at"
-	line "home, so it won't"
-	cont "get dirty!"
+	para "더러워지면 안되니까"
+	line "집에 보관해둘거야!"
 	done
 
-_CeruleanCityText10::
-	text "This is CERULEAN"
-	line "CAVE! Horribly"
-	cont "strong #MON"
-	cont "live in there!"
 
-	para "The #MON LEAGUE"
-	line "champion is the"
-	cont "only person who"
-	cont "is allowed in!"
+_CeruleanCityText10::
+	text "여긴 블루시티 동굴이야!"
+	line "엄-청나게 강한 포켓몬이"
+	cont "살고있다고!"
+  
+
+	para "여긴 포켓몬 리그야!"
+	line "오직 챔피언만"
+	cont "입장을 허락받은 곳이지!"
 	done
 
 _CeruleanCityText12::
-	text "CERULEAN CITY"
-	line "A Mysterious,"
-	cont "Blue Aura"
-	cont "Surrounds It"
+	text "이곳은 블루시티"
+	line "블루는 바닷빛 신비의 색깔"
 	done
 
 _CeruleanCityText13::
-	text "TRAINER TIPS"
+	text "…… 득이 되는 게시판!"
 
-	para "Pressing B Button"
-	line "during evolution"
-	cont "cancels the whole"
-	cont "process."
+	para "진화중 B버튼을 누르면"
+	line "진화를 중단할 수 있습니다!"
 	done
 
+
 _CeruleanCityText16::
-	text "Grass and caves"
-	line "handled easily!"
-	cont "BIKE SHOP"
+	text "자전거에 대한 것이라면"
+	line "여기 미라클 싸이클로!"
 	done
 
 _CeruleanCityText17::
-	text "CERULEAN CITY"
-	line "#MON GYM"
-	cont "LEADER: MISTY"
-
-	para "The Tomboyish"
-	line "Mermaid!"
-	done
+	text "블루시티 포켓몬 체육관"
+	line "관장 이슬"
+	cont "말괄량이 인어"
+		done

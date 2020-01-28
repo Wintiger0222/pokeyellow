@@ -1,25 +1,23 @@
 _IndigoPlateauLobbyText2::
-	text "Yo! Champ in"
-	line "making!"
+	text "요!"
+	line "미래의 챔피언!"
 
-	para "At #MON LEAGUE,"
-	line "you have to face"
-	cont "the ELITE FOUR in"
-	cont "succession."
+	para "포켓몬 리그에서는"
+	line "연속으로 사천왕과"
+	cont "맞붙어야해"
 
-	para "If you lose, you"
-	line "have to start all"
-	cont "over again! This"
-	cont "is it! Go for it!"
+	para "패배시,"
+	line "처음부터 다시 도전해야해!"
+	cont "지금이야! 도전해봐!"
 	done
 
 _IndigoPlateauLobbyText3::
-	text "From here on, you"
-	line "face the ELITE"
-	cont "FOUR one by one!"
+	text "여기서부터"
+	line "사천왕과 한명씩"
+	cont "맞붙어야해!"
 
-	para "If you win, a"
-	line "door opens to the"
-	cont "next trainer!"
-	cont "Good luck!"
+	para "승리시"
+	line "다음 트네이너한테 가는"
+	cont "문이 열려!"
+	cont "행운을 빌게!"
 	done

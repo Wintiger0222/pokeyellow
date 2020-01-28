@@ -1,19 +1,14 @@
 _MtMoonPokecenterText1::
-	text "I've 6 # BALLs"
-	line "set in my belt."
-
-	para "At most, you can"
-	line "carry 6 #MON."
+	text "지닐수 있는 포켓몬은"
+	line "최대 6마리야"
 	done
 
 _MtMoonPokecenterText3::
-	text "TEAM ROCKET"
-	line "attacks CERULEAN"
-	cont "citizens..."
+	text "로켓단이 블루시티"
+	line "주민을 폭행……"
 
-	para "TEAM ROCKET is"
-	line "always in the"
-	cont "news!"
+	para "로켓단은 도무지 뉴스에서"
+	line "사라지질 않아!"
 	done
 
 _MtMoonPokecenterText5::
@@ -21,28 +16,27 @@ _MtMoonPokecenterText5::
 	done
 
 _MagikarpSalesmanText1::
-	text "MAN: Hello, there!"
-	line "Have I got a deal"
-	cont "just for you!"
+	text "잉어킹 장사꾼『안녕!"
+	line "마침 손님을 위한 좋은"
+	cont "매물이 있단다!"
 
-	para "I'll let you have"
-	line "a swell MAGIKARP"
-	cont "for just ¥500!"
-	cont "What do you say?"
+	para "잉어킹을 단돈 500원에"
+	line "판단다!"
+	cont "어떡게 할거니?"
 	done
 
 _MagikarpSalesmanNoText::
-	text "No? I'm only"
-	line "doing this as a"
-	cont "favor to you!"
+	text "싫다고?"
+	line "오직 손님을 위한"
+	cont "찬스란다!"
 	done
 
 _MagikarpSalesmanNoMoneyText::
-	text "You'll need more"
-	line "money than that!"
+	text "소지금이"
+	line "모자르구나!"
 	done
 
 _MagikarpSalesmanText2::
-	text "MAN: Well, I don't"
-	line "give refunds!"
+	text "잉어킹 장사꾼『아니 글쎄"
+	line "환불은 안된대도!"
 	done

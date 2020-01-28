@@ -21,7 +21,7 @@ EndOfBattle:
 	jr z, .placeWinOrLoseString
 	ld de, DrawText
 .placeWinOrLoseString
-	coord hl, 6, 8
+	coord hl, 7, 8
 	call PlaceString
 	ld c, 200
 	call DelayFrames
@@ -79,13 +79,13 @@ EndOfBattle:
 	ret
 
 YouWinText:
-	db "YOU WIN@"
+	db "당신의 승리@"
 
 YouLoseText:
-	db "YOU LOSE@"
+	db "당신의 패배@"
 
 DrawText:
-	db "  DRAW@"
+	db " 무승부@"
 
 PickUpPayDayMoneyText:
 	TX_FAR _PickUpPayDayMoneyText

@@ -11,7 +11,25 @@ UpdatePlayerSprite:
 ; background tile the sprite is standing on is greater than $5F, which is
 ; the maximum number for map tiles
 .checkIfTextBoxInFrontOfSprite
+	ld a,$02
+	ld [rSVBK],a
+	ld a,[$D8BC]
+	bit 3,a
+	jr nz,.HangulExtended
+.NonHangul
+	ld a,$01
+	ld [rSVBK],a
+	
 	aCoord 8, 9
+	ld [hTilePlayerStandingOn], a
+	cp $60
+	jr c, .lowerLeftTileIsMapTile
+	jr .disableSprite
+.HangulExtended
+	ld a,$01
+	ld [rSVBK],a
+	
+	ld a,$80
 	ld [hTilePlayerStandingOn], a
 	cp $60
 	jr c, .lowerLeftTileIsMapTile
@@ -487,6 +505,29 @@ CheckSpriteAvailability:
 	ld a, [hld]
 	cp d
 	jr nc, .spriteInvisible ; standing on tile with ID >=$60 (bottom right tile)
+	push hl
+	push bc
+	ld a,$02
+	ld [rSVBK],a
+	ld bc,$D800-wTileMap
+	add hl,bc
+	bit 3,[hl]
+	jr nz,.isHangul
+	inc hl
+	bit 3,[hl]
+	jr nz,.isHangul
+	jr .notHangul
+.isHangul
+	ld a,$01
+	ld [rSVBK],a
+	pop bc
+	pop hl
+	jr .spriteInvisible
+.notHangul
+	ld a,$01
+	ld [rSVBK],a
+	pop bc
+	pop hl
 	ld bc, -20
 	add hl, bc              ; go back one row of tiles
 	ld a, [hli]

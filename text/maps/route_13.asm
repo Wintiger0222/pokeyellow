@@ -1,179 +1,215 @@
 _Route13BattleText2::
-	text "My bird #MON"
-	line "want to scrap!"
+	text "내 새포켓몬이"
+	line "싸우고 싶다는데!"
 	done
 
+ 
+
 _Route13EndBattleText2::
-	text "My"
-	line "bird combo lost?"
+	text "내 버드콤보가"
+	line "졌다고?"
 	prompt
 
+ 
+
 _Route13AfterBattleText2::
-	text "My #MON look"
-	line "happy even though"
-	cont "they lost."
+	text "내 포켓몬은 졌지만"
+	line "즐거워 보이는 것 같아"
 	done
 
 _Route13BattleText3::
-	text "I'm told I'm good"
-	line "for a kid!"
+	text "난 애보기에"
+	line "소질이 있대!"
 	done
+
+ 
 
 _Route13EndBattleText3::
-	text "Ohh!"
-	line "I lost!"
+	text "엑!"
+	line "졌잖아!"
 	prompt
+
+ 
 
 _Route13AfterBattleText3::
-	text "I want to become"
-	line "a good trainer."
-	cont "I'll train hard."
+	text "좋은 트레이너가 되고싶어"
+	line "열심히 수련할거야"
 	done
+
 
 _Route13BattleText4::
-	text "Wow! Your BADGEs"
-	line "are too cool!"
+	text "우와!"
+	line "네 배지들 진짜 멋진걸!"
 	done
+
+ 
 
 _Route13EndBattleText4::
-	text "Not"
-	line "enough!"
+	text "아직인가!"
 	prompt
+
+
 
 _Route13AfterBattleText4::
-	text "You got those"
-	line "BADGEs from GYM"
-	cont "LEADERs. I know!"
+	text "체육관 관장들한테"
+	line "받은 뱃지들이지? "
+	cont "나도 알아!"
 	done
+
+ 
 
 _Route13BattleText5::
-	text "My cute #MON"
-	line "wish to make your"
-	cont "acquaintance."
+	text "내 귀여운 포켓몬들이"
+	line "너랑 친해지고 싶다는데"
 	done
+
 
 _Route13EndBattleText5::
-	text "Wow!"
-	line "You totally won!"
+	text "우와!"
+	line "너의 완벽한 승리야!"
 	prompt
+
+ 
 
 _Route13AfterBattleText5::
-	text "You have to make"
-	line "#MON fight to"
-	cont "toughen them up!"
+	text "포켓몬을 강하게 하려면"
+	line "배틀이 최고지!"
 	done
+
+ 
 
 _Route13BattleText6::
-	text "I found CARBOS in"
-	line "a cave once."
+	text "예전에 한번 동굴에서"
+	line "알칼로이드를 찾은적 있어!"
 	done
+
+ 
 
 _Route13EndBattleText6::
-	text "Just"
-	line "messed up!"
+	text "엉망진창!"
 	prompt
+
+
 
 _Route13AfterBattleText6::
-	text "CARBOS boosted"
-	line "the SPEED of my"
-	cont "#MON."
+	text "알칼로이드가 내포켓몬의"
+	line "스피드를 올려줬었어"
 	done
+
+ 
 
 _Route13BattleText7::
-	text "The wind's blowing"
-	line "my way!"
+	text "순풍이 부는구나!"
 	done
+
+
 
 _Route13EndBattleText7::
-	text "The"
-	line "wind turned!"
+	text "바람이 바꼈구나!"
 	prompt
+
+
 
 _Route13AfterBattleText7::
-	text "I'm beat. I guess"
-	line "I'll FLY home."
+	text "져버렸네"
+	line "집에 날아갈까봐"
 	done
+
+
 
 _Route13BattleText8::
-	text "Sure, I'll play"
-	line "with you!"
+	text "물론이지!"
+	line "같이 놀자!"
 	done
+
+ 
 
 _Route13EndBattleText8::
-	text "Oh!"
-	line "You little brute!"
+	text "아야!"
+	line "너 거친 녀석이구나?"
 	prompt
+
+ 
 
 _Route13AfterBattleText8::
-	text "I wonder which is"
-	line "stronger, male or"
-	cont "female #MON?"
+	text "어느쪽이 더 강할까?"
+	line "수컷? 아니면 암컷?"
 	done
+
+ 
 
 _Route13BattleText9::
-	text "Do you want to"
-	line "#MON with me?"
+	text "나랑 같이 포켓몬 배틀"
+	line "하지 않을래?"
 	done
 
+
+
 _Route13EndBattleText9::
-	text "It's over"
-	line "already?"
+	text "벌써"
+	line "끝나버린거야?"
 	prompt
 
+ 
+
 _Route13AfterBattleText9::
-	text "I don't know"
-	line "anything about"
-	cont "#MON. I just"
-	cont "like cool ones!"
+	text "사실 포켓몬에 대해서"
+	line "잘 모르겠어"
+	cont "그냥 멋지잖아!"
 	done
 
 _Route13BattleText10::
-	text "What're you"
-	line "lookin' at?"
+	text "뭘 찾고있니?"
 	done
 
+
+
 _Route13EndBattleText10::
-	text "Dang!"
-	line "Stripped gears!"
+	text "땡!"
+	line "이빠진 기어들!"
 	prompt
 
 _Route13AfterBattleText10::
-	text "Get lost!"
+	text "저리가!"
 	done
+
+
 
 _Route13BattleText11::
-	text "I always go with"
-	line "bird #MON!"
+	text "난 새포켓몬과"
+	line "항상 함께 다니지!"
 	done
+
+ 
 
 _Route13EndBattleText11::
-	text "Out"
-	line "of power!"
+	text "탈진!"
 	prompt
 
+
+
 _Route13AfterBattleText11::
-	text "I wish I could"
-	line "fly like PIDGEY"
-	cont "and PIDGEOTTO..."
+	text "구구나 피존투처럼"
+	line "날수있었으면……"
 	done
 
-_Route13Text11::
-	text "TRAINER TIPS"
+ 
 
-	para "Look to the left"
-	line "of that post!"
+_Route13Text11::
+	text "…… 득이 되는 게시판!"
+
+	para "거기 거기!"
+	line "말뚝을 사이에 두고 왼쪽"
 	done
 
 _Route13Text12::
-	text "TRAINER TIPS"
+	text "…… 득이 되는 게시판!"
 
-	para "Use SELECT to"
-	line "switch items in"
-	cont "the ITEM window!"
+	para "가방에서 셀렉트 키로"
+	line "아이템 위치를 바꿀수 있습니다!"
 	done
 
 _Route13Text13::
-	text "ROUTE 13"
-	line "North to SILENCE"
-	cont "BRIDGE"
+	text "이곳은 13번 도로"
+	line "북쪽 …… 고요한 다리"
 	done

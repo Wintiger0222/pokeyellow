@@ -1,6 +1,21 @@
 TextBoxBorder::
 ; Draw a cxb text box at hl.
-
+	ld a,$03
+	ld [hBGTransferDelay],a
+	ld a,[H_AUTOBGTRANSFERENABLED]
+	push af
+	xor a
+	ld [H_AUTOBGTRANSFERENABLED],a ;업데이트하는동안 타일 깨지는거 방지
+	push hl
+	push bc
+	inc b
+	inc b
+	inc c
+	inc c
+	call ClearScreenArea;타일뱅크 및 영역 초기화
+	pop bc
+	pop hl
+	
 	; top row
 	push hl
 	ld a, "┌"
@@ -35,15 +50,52 @@ TextBoxBorder::
 	ld a, "─"
 	call NPlaceChar
 	ld [hl], "┘"
+	pop af
+	and a
+	ret z
+	ld [H_AUTOBGTRANSFERENABLED],a
 	ret
 
 NPlaceChar::
 ; Place char a c times.
+	push hl
+	push de
+	push bc
+	push af
 	ld d, c
 .loop
 	ld [hli], a
 	dec d
 	jr nz, .loop
+	pop af
+	pop bc
+	pop de
+	pop hl
+	push af
+	call NResetBank
+	pop af
+	ret
+NResetBank::
+; Place char a c times.
+	ld a,$02
+	ld [rSVBK],a
+	push bc
+	ld bc,$1460
+	add hl,bc
+	pop bc
+	ld a,$00
+	ld d, c
+.loop
+	res 3,[hl]
+	inc hl
+	dec d
+	jr nz, .loop
+	push bc
+	ld bc,$EBA0 ;hl=hl-1460
+	add hl,bc
+	pop bc
+	ld a,$01
+	ld [rSVBK],a
 	ret
 
 PlaceString::
@@ -111,7 +163,15 @@ endm
 	dict $59, Char59 ; TARGET
 	dict $5A, Char5A ; USER
 
+HangulCheckAndOutput::
+	cp $0C
+	jr nc,.NonHangul
+	rst $00
+	jr TileMappingForHangul
+	;0번 뱅크의 공간 부족으로, RST00으로 대체해서 home.asm으로 이동시킴
+.NonHangul
 	ld [hli], a
+TileMappingForHangul::
 	call PrintLetterDelay
 PlaceNextChar_inc::
 	inc de
@@ -249,7 +309,7 @@ Char55Text::
 
 Char5F::
 ; ends a Pokédex entry
-	ld [hl], "."
+	;ld [hl], ".";강제로 점 붙지 않도록 ; 그냥 done으로 교체?
 	pop hl
 	ret
 
@@ -347,14 +407,34 @@ ScrollTextUpOneLine::
 	ld [hli], a
 	dec b
 	jr nz, .next2
-
+	
+ScrollTextUpOneLineForHangul:: ;support for hangul scroll
+	ld a,$02
+	ld [rSVBK],a
+	ld hl,$D918
+	ld de,$D904
+	ld b, 60
+.next
+	ld a, [hli]
+	ld [de], a
+	inc de
+	dec b
+	jr nz, .next
+	ld hl,$D941
+	ld a, $00
+	ld b, SCREEN_WIDTH - 2
+.next2
+	ld [hli], a
+	dec b
+	jr nz, .next2
 	; wait five frames
 	ld b, 5
 .WaitFrame
 	call DelayFrame
 	dec b
 	jr nz, .WaitFrame
-
+	ld a,$01
+	ld [rSVBK],a
 	ret
 
 ProtectedDelay3::

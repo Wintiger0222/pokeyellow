@@ -22,22 +22,26 @@ Printer_GetMonStats:
 	lb bc, 16, 18
 	call TextBoxBorder
 
-	coord hl, 0, 12
-	lb bc, 4, 18
+	coord hl, 0, 8
+	lb bc, 8, 8
+	call TextBoxBorder
+	
+	coord hl, 9, 8
+	lb bc, 8, 9
 	call TextBoxBorder
 
-	coord hl, 3, 10
+	coord hl, 10, 7
 	call PrintLevelFull
 
-	coord hl, 2, 10
+	coord hl, 9, 7
 	ld a, $6e
 	ld [hli], a
 	ld [hl], " "
 
-	coord hl, 2, 11
+	coord hl, 14, 7
 	ld [hl], "′"
 
-	coord hl, 4, 11
+	coord hl, 15, 7
 	ld de, wLoadedMonMaxHP
 	lb bc, 2, 3
 	call PrintNumber
@@ -47,11 +51,15 @@ Printer_GetMonStats:
 	ld [wd0b5], a
 	ld hl, wPartyMonNicks
 	call .GetNamePointer
-	coord hl, 8, 2
+	coord hl, 9, 2
+	call PlaceString
+	
+	coord hl, 13,3
+	ld de,.Slash
 	call PlaceString
 
 	call GetMonName
-	coord hl, 9, 3
+	coord hl, 14, 3
 	call PlaceString
 
 	predef IndexToPokedex
@@ -64,13 +72,13 @@ Printer_GetMonStats:
 	lb bc, $80 | 1, 3
 	call PrintNumber
 
-	coord hl, 8, 4
+	coord hl, 9, 5
 	ld de, .OT
 	call PlaceString
 
 	ld hl, wPartyMonOT
 	call .GetNamePointer
-	coord hl, 9, 5
+	coord hl, 13, 5
 	call PlaceString
 
 	coord hl, 9, 6
@@ -82,17 +90,11 @@ Printer_GetMonStats:
 	lb bc, $80 | 2, 5
 	call PrintNumber
 
-	coord hl, 9, 8
+	coord hl, 10, 10
 	ld de, .Stats
-	ld a, [hFlags_0xFFFA]
-	set 2, a
-	ld [hFlags_0xFFFA], a
 	call PlaceString
-	ld a, [hFlags_0xFFFA]
-	res 2, a
-	ld [hFlags_0xFFFA], a
 
-	coord hl, 16, 8
+	coord hl, 15, 10
 	ld de, wLoadedMonAttack
 	ld a, 4
 .loop
@@ -105,6 +107,7 @@ Printer_GetMonStats:
 	pop hl
 	ld bc, SCREEN_WIDTH
 	add hl, bc
+	add hl, bc
 
 	pop de
 	inc de
@@ -113,19 +116,19 @@ Printer_GetMonStats:
 	dec a
 	jr nz, .loop
 
-	coord hl, 1, 13
+	coord hl, 2, 10
 	ld a, [wLoadedMonMoves]
 	call .PlaceMoveName
 
-	coord hl, 1, 14
+	coord hl, 2, 12
 	ld a, [wLoadedMonMoves + 1]
 	call .PlaceMoveName
 
-	coord hl, 1, 15
+	coord hl, 2, 14
 	ld a, [wLoadedMonMoves + 2]
 	call .PlaceMoveName
 
-	coord hl, 1, 16
+	coord hl, 2, 16
 	ld a, [wLoadedMonMoves + 3]
 	call .PlaceMoveName
 
@@ -162,19 +165,24 @@ Printer_GetMonStats:
 	ret
 
 .OT:
-	db "OT/@"
+	db "어버이/@"
 
 .IDNo:
 	db $73, "№/@"
 
 .Stats:
-	db   "ATTACK"
-	next "DEFENSE"
-	next "SPEED"
-	next "SPECIAL@"
+	db   "공격"
+	next "방어"
+	next "스피드"
+	next "특수@"
 
+setcharmap legacy_char
 .Blank:
-	db "--------------@"
+	db "-----@"
+setcharmap hangul_char
+
+.Slash:
+	db "/@"
 
 GFX_ea563:
 INCBIN "gfx/stats_screen_hp.1bpp"

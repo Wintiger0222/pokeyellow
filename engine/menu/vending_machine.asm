@@ -24,7 +24,7 @@ VendingMachineMenu:
 	coord hl, 2, 5
 	ld de, DrinkText
 	call PlaceString
-	coord hl, 9, 6
+	coord hl, 9, 5
 	ld de, DrinkPriceText
 	call PlaceString
 	ld hl, wd730
@@ -84,15 +84,15 @@ VendingMachineText1:
 	db "@"
 
 DrinkText:
-	db   "FRESH WATER"
-	next "SODA POP"
-	next "LEMONADE"
-	next "CANCEL@"
+	db   "맛있는 물"
+	next "미네랄 사이다"
+	next "후르츠 밀크"
+	next "그만두다@"
 
 DrinkPriceText:
-	db   "¥200"
-	next "¥300"
-	next "¥350",$4E,"@"
+	db   "200¥"
+	next "300¥"
+	next "350¥",$4E,"@"
 
 VendingMachineText4:
 	TX_FAR _VendingMachineText4

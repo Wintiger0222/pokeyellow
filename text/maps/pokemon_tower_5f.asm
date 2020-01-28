@@ -1,71 +1,68 @@
 _PokemonTower5Text1::
-	text "Come, child! I"
-	line "sealed this space"
-	cont "with white magic!"
+	text "걱정마려무나!"
+	line "내가 여기에 주술을"
+	cont "걸어놓았단다!"
 
-	para "You can rest here!"
+	para "여기서 쉬다 가렴!"
 	done
 
 _PokemonTower5BattleText1::
-	text "Give...me..."
-	line "your...soul..."
+	text "영혼을…… 내게……"
+	line "넘겨……"
 	done
 
 _PokemonTower5EndBattleText1::
-	text "Gasp!"
+	text "쿨럭!"
 	prompt
 
 _PokemonTower5AfterBattleText1::
-	text "I was under"
-	line "possession!"
+	text "설마 진짜"
+	line "빙의당할줄이야!"
 	done
 
 _PokemonTower5BattleText2::
-	text "You...shall..."
-	line "join...us..."
+	text "너도…… 함께……"
+	line "가자……"
 	done
 
 _PokemonTower5EndBattleText2::
-	text "What"
-	line "a nightmare!"
+	text "정말 끔직한 악몽이었어!"
 	prompt
 
 _PokemonTower5AfterBattleText2::
-	text "I was possessed!"
+	text "나는 빙의당했어!"
 	done
 
 _PokemonTower5BattleText3::
-	text "Zombies!"
+	text "좀비다!"
 	done
 
 _PokemonTower5EndBattleText3::
-	text "Ha?"
+	text "응?"
 	prompt
 
 _PokemonTower5AfterBattleText3::
-	text "I regained my"
-	line "senses!"
+	text "드디어 감각이"
+	line "돌아왔어!"
 	done
 
 _PokemonTower5BattleText4::
-	text "Urgah..."
-	line "Urff...."
+	text "으으……"
+	line "그어어……"
 	done
 
 _PokemonTower5EndBattleText4::
-	text "Whoo!"
+	text "후우!"
 	prompt
 
 _PokemonTower5AfterBattleText4::
-	text "I fell to evil"
-	line "spirits despite"
-	cont "my training!"
+	text "수련을 했는데도"
+	line "귀신에게 씌이다니!"
 	done
 
 _PokemonTower5Text7::
-	text "Entered purified,"
-	line "protected zone!"
-
-	para $52, "'s #MON"
-	line "are fully healed!"
+	text "결계에 들어섰다!"
+	
+	para $52, "의 포켓몬은"
+	line "완전히 회복되었다!"
 	done

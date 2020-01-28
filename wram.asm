@@ -1898,7 +1898,7 @@ wMissableObjectCounter:: ; d047
 
 	ds 1
 
-wTrainerName:: ; d049
+;wTrainerName:: ; d049
 ; 13 bytes for the letters of the opposing trainer
 ; the name is terminated with $50 with possible
 ; unused trailing letters
@@ -3584,6 +3584,8 @@ wLastOBP0:: ds 1 ; def2
 wLastOBP1:: ds 1 ; def3
 wdef5:: ds 1 ; def4
 wBGPPalsBuffer:: ds NUM_ACTIVE_PALS * PAL_SIZE ; def5
+wTrainerName::
+wHangulKeyboard:: ds 1
 
 SECTION "Stack", WRAMX
 wStack:: ; dfff

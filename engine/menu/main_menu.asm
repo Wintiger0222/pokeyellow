@@ -15,6 +15,7 @@ MainMenu:
 	call DelayFrames
 	xor a ; LINK_STATE_NONE
 	ld [wLinkState],a
+	ld [H_AUTOBGTRANSFERENABLED],a
 	ld hl,wPartyAndBillsPCSavedMenuItem
 	ld [hli],a
 	ld [hli],a
@@ -48,6 +49,8 @@ MainMenu:
 	ld de,NewGameText
 	call PlaceString
 .next2
+	ld a,$01
+	ld [H_AUTOBGTRANSFERENABLED],a
 	ld hl,wd730
 	res 6,[hl]
 	call UpdateSprites
@@ -83,6 +86,7 @@ MainMenu:
 	cp a,1
 	jp z,StartNewGame
 	call DisplayOptionMenu
+.skip
 	ld a,1
 	ld [wOptionsInitialized],a
 	jp .mainMenuLoop
@@ -172,29 +176,29 @@ SpecialEnterMap:
 	jp EnterMap
 
 ContinueText:
-	db "CONTINUE", $4e
+	db "모험을 계속하다", $4e
 
 NewGameText:
-	db "NEW GAME", $4e
-	db "OPTION@"
+	db "새로운 모험을 시작하다", $4e
+	db "설정을 바꾸다@"
 
 DisplayContinueGameInfo:
 	xor a
 	ld [H_AUTOBGTRANSFERENABLED], a
-	coord hl, 4, 7
-	lb bc, 8, 14
+	coord hl, 6, 8
+	lb bc, 8, 12
 	call TextBoxBorder
-	coord hl, 5, 9
+	coord hl, 7, 10
 	ld de, SaveScreenInfoText
 	call PlaceString
-	coord hl, 12, 9
+	coord hl, 11, 10
 	ld de, wPlayerName
 	call PlaceString
-	coord hl, 17, 11
+	coord hl, 15, 12
 	call PrintNumBadges
-	coord hl, 16, 13
+	coord hl, 14, 14
 	call PrintNumOwnedMons
-	coord hl, 13, 15
+	coord hl, 13, 16
 	call PrintPlayTime
 	ld a, 1
 	ld [H_AUTOBGTRANSFERENABLED], a
@@ -204,20 +208,20 @@ DisplayContinueGameInfo:
 PrintSaveScreenText:
 	xor a
 	ld [H_AUTOBGTRANSFERENABLED], a
-	coord hl, 4, 0
-	lb bc, 8, 14
+	coord hl, 6, 0
+	lb bc, 8, 12
 	call TextBoxBorder
 	call LoadTextBoxTilePatterns
 	call UpdateSprites
-	coord hl, 5, 2
+	coord hl, 7, 2
 	ld de, SaveScreenInfoText
 	call PlaceString
-	coord hl, 12, 2
+	coord hl, 11, 2
 	ld de, wPlayerName
 	call PlaceString
-	coord hl, 17, 4
+	coord hl, 15, 4
 	call PrintNumBadges
-	coord hl, 16, 6
+	coord hl, 14, 6
 	call PrintNumOwnedMons
 	coord hl, 13, 8
 	call PrintPlayTime
@@ -257,10 +261,10 @@ PrintPlayTime:
 	jp PrintNumber
 
 SaveScreenInfoText:
-	db   "PLAYER"
-	next "BADGES    "
-	next "#DEX    "
-	next "TIME@"
+	db   "주인공"
+	next "가지고있는 배지   개"
+	next "포켓몬 도감    마리"
+	next "플레이 시간@"
 
 DisplayOptionMenu:
 	callab DisplayOptionMenu_

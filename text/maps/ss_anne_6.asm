@@ -1,69 +1,88 @@
 _SSAnne6Text1::
-	text "You, mon petit!"
-	line "We're busy here!"
-	cont "Out of the way!"
+	text "거기 꼬마!"
+	line "한참 바쁘니까"
+	cont "방해하지말고 나가!"
 	done
+
+  
 
 _SSAnne6Text2::
-	text "I saw an odd ball"
-	line "in the trash."
+	text "쓰레기통에서 "
+	line "이상한 공을 본것같아"
 	done
+
 
 _SSAnne6Text3::
-	text "I'm so busy I'm"
-	line "getting dizzy!"
+	text "너무 바빠서 "
+	line "쓰러질것같아!"
 	done
+
+
 
 _SSAnne6Text4::
-	text "Hum-de-hum-de-"
-	line "ho..."
+	text "흐-응- 흐-응-"
+	line "휴……"
 
-	para "I peel spuds"
-	line "every day!"
-	cont "Hum-hum..."
+
+	para "난 매일 감자를"
+	line "깎아!"
+	cont "흐-응- 흐-응-"
 	done
+
 
 _SSAnne6Text5::
-	text "Did you hear about"
-	line "SNORLAX?"
+	text "잠만보라고 들어봤니?"
 
-	para "All it does is"
-	line "eat and sleep!"
+
+
+	para "먹고 자는것밖에"
+	line "모른데!"
 	done
 
-_SSAnne6Text6::
-	text "Snivel...Sniff..."
+ 
 
-	para "I only get to"
-	line "peel onions..."
-	cont "Snivel..."
+_SSAnne6Text6::
+	text "훌쩍…… 킁……"
+
+
+	para "그냥 양파를"
+	line "까는중이야……"
+	cont "훌쩍……"
 	done
 
 _SSAnne6Text_61807::
-	text "Er-hem! Indeed I"
-	line "am le CHEF!"
+	text "에헴! "
+	line "여기의 내가 더 셰프!"
 
-	para "Le main course is"
+
+	para "더 메인 코스는"
 	prompt
 
-_SSAnne6Text_6180c::
-	text "Salade de Salmon!"
 
-	para "Les guests may"
-	line "gripe it's fish"
-	cont "again, however!"
+_SSAnne6Text_6180c::
+	text "셀러드 오브 연어!"
+
+
+	para "손님들은 또 생선 나온다고"
+	line "불평하겠지!"
 	done
 
 _SSAnne6Text_61811::
-	text "Eels au Barbecue!"
+	text "장어 엔 바비큐!"
 
-	para "Les guests will"
-	line "mutiny, I fear."
+
+	para "더 손님들이 폭동을"
+	line "일으키지 않으려나 몰라"
 	done
+
 
 _SSAnne6Text_61816::
-	text "Prime Beef Steak!"
+	text "최상급 비프 스테이크!"
 
-	para "But, have I enough"
-	line "fillets du beef?"
+
+
+	para "그런데 비프용 살코기가"
+	line "충분하던가?"
 	done
+
+ 

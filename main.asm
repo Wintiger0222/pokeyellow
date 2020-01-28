@@ -32,8 +32,8 @@ INCLUDE "engine/overworld/special_warps.asm"
 INCLUDE "data/special_warps.asm"
 
 INCLUDE "engine/debug1.asm"
-
-INCLUDE "engine/menu/naming_screen.asm"
+;한글 입력 루틴이 비대해 져서 다른 뱅크로 옮김
+;INCLUDE "engine/menu/naming_screen.asm"
 
 INCLUDE "engine/oak_speech2.asm"
 
@@ -2141,3 +2141,38 @@ INCLUDE "engine/bank3e.asm"
 SECTION "bank3F", ROMX
 
 INCLUDE "engine/bank3f.asm"
+
+SECTION "bank40",ROMX ;한글롬 확장을 위한 프로그램
+
+INCLUDE "hangul/bank40.asm"
+
+SECTION "bank40_fnt",ROMX ;폰트
+
+INCBIN "hangul/font40.fnt"
+
+SECTION "bank41",ROMX ;폰트
+
+INCBIN "hangul/font41.fnt"
+
+SECTION "bank42",ROMX ;폰트
+
+INCBIN "hangul/font42.fnt"
+
+;SECTION "bank43",ROMX,BANK[$43] ;폰트, 한글 키보드 입력을 위한 ㅎ
+
+;INCBIN "hangul/font43.fnt"
+
+SECTION "bank50",ROMX ;V-blank 확장
+
+INCLUDE "home/vblank-bank50.asm"
+
+SECTION "gbc_only", ROMX
+INCLUDE "engine/gbc_only.asm"
+
+SECTION "code-extend", ROMX ;코드확장
+
+INCLUDE "engine/code-extend.asm"
+
+SECTION "naming_screen", ROMX ;코드확장
+
+INCLUDE "engine/menu/naming_screen.asm"

@@ -1,5 +1,4 @@
 _Route7Text1::
-	text "UNDERGROUND PATH"
-	line "CELADON CITY -"
-	cont "LAVENDER TOWN"
+	text "여기서부터 지하통로"
+	line "무지개시티 …… 보라타운"
 	done

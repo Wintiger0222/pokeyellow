@@ -1,42 +1,44 @@
 _TM39PreReceiveText::
-	text "My #MON's"
-	line "ashes are stored"
-	cont "in #MON TOWER."
+	text "내 포켓몬의 재는"
+	line "포켓몬 타워에 납골되있어"
 
-	para "You can have this"
-	line "TM. I don't need"
-	cont "it anymore..."
+ 
+
+	para "이 기술머신 가져"
+	line "이제 난 필요없으니까……"
 	prompt
 
 _ReceivedTM39Text::
-	text $52, " received"
-	line "TM39!@@"
+	text $52, "는(은)"
+	line "기술머신39를 얻었다!!@@"
 
 _TM39ExplanationText::
-	text "TM39 is a move"
-	line "called SWIFT."
+	text "기술머신39는"
+	line "스피드스타라는 기술이야"
 
-	para "It's very accurate,"
-	line "so use it during"
-	cont "battles you can't"
-	cont "afford to lose."
+ 
+
+	para "굉장히 정확도가 높은 공격이니"
+	line "지고 싶지 않으면 사용해봐"
 	done
 
 _TM39NoRoomText::
-	text "You don't have"
-	line "room for this."
+	text "더 이상 들 수 없어!"
 	done
 
 _Route12GateUpstairsText_495b8::
-	text "Looked into the"
-	line "binoculars."
+	text "쌍안경을 들여다봤다"
 
-	para "A man fishing!"
+
+
+	para "낚시꾼이 보인다!"
 	done
 
-_Route12GateUpstairsText_495c4::
-	text "Looked into the"
-	line "binoculars."
 
-	para "It's #MON TOWER!"
+
+_Route12GateUpstairsText_495c4::
+	text "쌍안경을 들여다봤다"
+
+
+	para "포켓몬타워가 보인다!"
 	done

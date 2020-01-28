@@ -1,46 +1,41 @@
 _SilphCo3Text_59ff9::
-	text "I work for SILPH."
-	line "What should I do?"
+	text "난 실프주식회사 직원이야"
+	line "어떡게 해야되지?"
 	done
 
 _SilphCo3Text_59ffe::
-	text $52, "! You and"
-	line "your #MON"
-	cont "saved us!"
+	text $52, "! 네가"
+	line "우리를 구했어!"
 	done
 
 _SilphCo3BattleText1::
-	text "Quit messing with"
-	line "us, kid!"
+	text "소란 피우는 것도"
+	line "거기까지다! 꼬마녀석!"
 	done
 
 _SilphCo3EndBattleText1::
-	text "I give"
-	line "up!"
+	text "내가 졌다!"
 	prompt
 
 _SilphCo3AfterBattleText1::
-	text "A hint? You can"
-	line "open doors with a"
-	cont "CARD KEY!"
+	text "힌트? 카드키가 있으면"
+	line "문을 열 수 있어!"
 	done
 
 _SilphCo3BattleText2::
-	text "I support TEAM"
-	line "ROCKET more than"
-	cont "I support SILPH!"
+	text "나는 실프주식회사보다"
+	line "로켓단을 더 중시하지!"
 	done
 
 _SilphCo3EndBattleText2::
-	text "You"
-	line "really got me!"
+	text "날"
+	line "이길줄이야!"
 	prompt
 
 _SilphCo3AfterBattleText2::
-	text "Humph..."
+	text "쩝……"
 
-	para "TEAM ROCKET said"
-	line "that if I helped"
-	cont "them, they'd let"
-	cont "me study #MON!"
+	para "로켓단이 자기들을 도와주면"
+	line "포켓몬을 연구하게 해준다고"
+	cont "말했단 말이야!"
 	done

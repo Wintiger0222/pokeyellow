@@ -1,3 +1,2 @@
 _RocketElevatorText_4578b::
-	text "It appears to"
-	line "need a key.@@"
+	text "카드키가 필요해 보인다@@"

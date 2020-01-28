@@ -76,8 +76,8 @@ DontAbandonLearning:
 AbandonLearning:
 	ld hl, AbandonLearningText
 	call PrintText
-	coord hl, 14, 7
-	lb bc, 8, 15
+	coord hl, 14, 6
+	lb bc, 7, 15
 	ld a, TWO_OPTION_MENU
 	ld [wTextBoxID], a
 	call DisplayTextBoxID ; yes/no menu
@@ -99,8 +99,8 @@ TryingToLearn:
 	push hl
 	ld hl, TryingToLearnText
 	call PrintText
-	coord hl, 14, 7
-	lb bc, 8, 15
+	coord hl, 14, 6
+	lb bc, 7, 15
 	ld a, TWO_OPTION_MENU
 	ld [wTextBoxID], a
 	call DisplayTextBoxID ; yes/no menu
@@ -120,22 +120,16 @@ TryingToLearn:
 	push hl
 	ld hl, WhichMoveToForgetText
 	call PrintText
-	coord hl, 4, 7
-	lb bc, 4, 14
+	coord hl, 10, 8
+	lb bc, 8, 8
 	call TextBoxBorder
-	coord hl, 6, 8
+	coord hl, 12, 10
 	ld de, wMovesString
-	ld a, [hFlags_0xFFFA]
-	set 2, a
-	ld [hFlags_0xFFFA], a
 	call PlaceString
-	ld a, [hFlags_0xFFFA]
-	res 2, a
-	ld [hFlags_0xFFFA], a
 	ld hl, wTopMenuItemY
-	ld a, 8
+	ld a, 10
 	ld [hli], a ; wTopMenuItemY
-	ld a, 5
+	ld a, 11
 	ld [hli], a ; wTopMenuItemX
 	xor a
 	ld [hli], a ; wCurrentMenuItem
@@ -145,11 +139,7 @@ TryingToLearn:
 	ld a, A_BUTTON | B_BUTTON
 	ld [hli], a ; wMenuWatchedKeys
 	ld [hl], 0 ; wLastMenuItem
-	ld hl, hFlags_0xFFFA
-	set 1, [hl]
 	call HandleMenuInput
-	ld hl, hFlags_0xFFFA
-	res 1, [hl]
 	push af
 	call LoadScreenTilesFromBuffer1
 	pop af

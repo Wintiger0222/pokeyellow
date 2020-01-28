@@ -357,11 +357,13 @@ PetitCup::
 	call FarCopyData
 	ld hl,wcd6d
 .loop2
+;무게관련부분 수정해야함
 	ld a,[hli]
 	cp "@"
 	jr nz,.loop2
 	ld a,[hli]
-	cp $7
+	;cp $7 ;7인치
+	cp $3	;3m
 	jp nc,asm_f5689
 	add a
 	add a
@@ -371,12 +373,15 @@ PetitCup::
 	ld b,a
 	ld a,[hli]
 	add b
-	cp $51
+	;cp $51 ;6인치9피트
+	cp $19 ;2.1m
 	jp nc,asm_f5689
 	ld a,[hli]
-	sub $b9
+	;sub $b9
+	sub $ca
 	ld a,[hl]
-	sbc $1
+	;sbc $1	;$01b9=44.1파운드
+	sbc $0	;$00ca=20.1kg
 	jp nc,asm_f569b
 	pop af
 	pop bc
@@ -544,29 +549,29 @@ PointerTable_f56ee::
 	dw Text_f575b
 
 Text_f56f4::
-	db "LVs of 3<pkmn>:50-55"
-	next "Sum of LVs:155 MAX"
-	next "MEW can't attend.@"
+	db "포켓몬 3마리의 레벨『50-55"
+	next "레벨의 합『155가 최대"
+	next "뮤는 데리고 갈 수 없습니다!@"
 
 Text_f5728::
-	db "LVs of 3<pkmn>:15-20"
-	next "Sum of LVs:50 MAX"
-	next "MEW can't attend.@"
+	db "포켓몬 3마리의 레벨『15-20"
+	next "레벨의 합『50이 최대"
+	next "뮤는 데리고 갈 수 없습니다!@"
 
 Text_f575b::
-	db "3 Basic <pkmn>.LV25-30"
-	next "Sum of LVs:80 MAX"
-	next "6′8″ and 44lb MAX@"
+	db "진화안한 포켓몬의 레벨『25-30"
+	next "레벨의 합『50이 최대"
+	next "2m 20kg 이 최대@"
 
 Text_f5791::
-	db "View"
-	next "Rules@"
+	db "규칙을"
+	next "보자@"
 
 Text_f579c::
-	db "# Cup"
-	next "Pika Cup"
-	next "Petit Cup"
-	next "CANCEL@"
+	db "포켓몬컵"
+	next "피카츄컵"
+	next "페티트컵"
+	next "그만두다@"
 
 Colosseum3MonsText::
 	TX_FAR _Colosseum3MonsText
@@ -904,7 +909,7 @@ TextTerminator_f5a16:
 	db "@"
 
 TradeCenterText:
-	db "TRADE CENTER"
-	next "COLOSSEUM"
-	next "COLOSSEUM2"
-	next "CANCEL@"
+	db "트레이드센터"
+	next "콜로세움"
+	next "콜로세움2"
+	next "그만두다@"

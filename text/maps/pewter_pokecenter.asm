@@ -1,27 +1,29 @@
 _PewterPokecenterText2::
-	text "What!?"
+	text "뭐!?"
 
-	para "TEAM ROCKET is"
-	line "at MT.MOON? Huh?"
-	cont "I'm on the phone!"
+	para "로켓단이 달맞이산에?"
+	line "당장 전화하지!"
 
-	para "Scram!"
+	para "달칵!"
 	done
 
+
+
 _PewterPokecenterText3::
-	text "#MON CENTERS"
-	line "are wonderful!"
+	text "포켓몬 센터는 정말멋져!"
 
-	para "They heal #MON"
-	line "completely."
 
-	para "Even conditions"
-	line "like sleep, burn,"
-	cont "poison and others"
-	cont "are cured."
+
+	para "포켓몬을 완전히"
+	line "회복시켜주거든"
+
+ 
+
+	para "잠듦이나 화상, 독같은"
+	line "상태이상도 말이야!"
 	done
 
 _PewterJigglypuffText::
-	text "JIGGLYPUFF: Puu"
-	line "pupuu!"
+	text "푸린『푸푸린푸!"
 	done
+

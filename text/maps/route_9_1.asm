@@ -1,136 +1,164 @@
 _Route9BattleText1::
-	text "You have #MON"
-	line "with you!"
-	cont "You're mine!"
+	text "너 포켓몬을 데리고있군!"
+	line "넌 내꺼야!"
 	done
 
+ 
+
 _Route9EndBattleText1::
-	text "You"
-	line "deceived me!"
+	text "잘도 속였구나!"
 	prompt
 
+
+
 _Route9AfterBattleText1::
-	text "You need light to"
-	line "get through that"
-	cont "dark tunnel ahead."
+	text "저 캄캄한 동굴을 통과하려면"
+	line "빛이 있어야되"
 	done
 
 _Route9BattleTextAJ::
-	text "I aim to be the"
-	line "ultimate trainer!"
+	text "난 궁극의 트레이너를"
+	line "목표로 하고있다!"
 	done
+
+ 
 
 _Route9EndBattleTextAJ::
-	text "My"
-	line "SANDSHREW lost?"
+	text "내 모래두지가 졌다고?"
 	prompt
+
+
 
 _Route9AfterBattleTextAJ::
-	text "I'll restart my"
-	line "100-win streak"
-	cont "with SANDSHREW."
+	text "이걸로 모래두지로 하는"
+	line "100연승도 재시작이군"
 	done
+
+ 
 
 _Route9BattleText3::
-	text "I'm taking ROCK"
-	line "TUNNEL to go to"
-	cont "LAVENDER..."
+	text "보라타운으로 가려고"
+	line "돌산 터널로……"
 	done
+
 
 _Route9EndBattleText3::
-	text "Can't"
-	line "measure up!"
+	text "전투력의 상태가!?"
 	prompt
+
+
 
 _Route9AfterBattleText3::
-	text "Are you off to"
-	line "ROCK TUNNEL too?"
+	text "너도 돌산터널로 향하는거니?"
 	done
+
+
 
 _Route9BattleText4::
-	text "Don't you dare"
-	line "condescend me!"
+	text "날 깔보면 큰코다칠걸!"
 	done
+
+
 
 _Route9EndBattleText4::
-	text "No!"
-	line "You're too much!"
+	text "제길!"
+	line "너무 쎄잖아!"
 	prompt
+
+ 
 
 _Route9AfterBattleText4::
-	text "You're obviously"
-	line "talented! Good"
-	cont "luck to you!"
+	text "넌 재능이 있는게 틀림없어!"
+	line "행운을 빌게!"
 	done
+
+ 
 
 _Route9BattleText5::
-	text "Bwahaha!"
-	line "Great! I was"
-	cont "bored, eh!"
+	text "하하하!"
+	line "좋지! 마침 지루했거든!"
 	done
+
+ 
 
 _Route9EndBattleText5::
-	text "Keep it"
-	line "coming, eh!"
+	text "좋아 다시간다!"
 
-	para "Oh wait. I'm out"
-	line "of #MON!"
+
+
+	para "응?"
+	line "포켓몬을 다 써버렸잖아!"
 	prompt
+
+
 
 _Route9AfterBattleText5::
-	text "You sure had guts"
-	line "standing up to me"
-	cont "there, eh?"
+	text "이 몸 앞에 서다니"
+	line "너 제법 깡이 있는 녀석이구나?"
 	done
+
+ 
 
 _Route9BattleText6::
-	text "Hahaha!"
-	line "Aren't you a"
-	cont "little toughie!"
+	text "하하하!"
+	line "드센 꼬맹이로구나!"
+
 	done
 
+ 
+
 _Route9EndBattleText6::
-	text "What's"
-	line "that?"
+	text "방금건 대체?"
 	prompt
 
+
+
 _Route9AfterBattleText6::
-	text "Hahaha! Kids"
-	line "should be tough!"
+	text "하하하!"
+	line "애들은 기운이 넘쳐야지!"
 	done
 
 _Route9BattleText7::
-	text "I got up early"
-	line "every day to"
-	cont "raise my #MON"
-	cont "from cocoons!"
+	text "고치에서 포켓몬을 키우려고"
+	line "매일 아침 일찍 일어났다구!"
 	done
+
+ 
 
 _Route9EndBattleText7::
-	text "WHAT?"
+	text "뭐?"
 
-	para "What a total"
-	line "waste of time!"
+
+
+	para "시간낭비였잖아!"
 	prompt
+
+
 
 _Route9AfterBattleText7::
-	text "I have to collect"
-	line "more than bugs to"
-	cont "get stronger..."
+	text "강해지려면 더 많은 벌레가"
+	line "아니라 다른걸 채집해야될까……"
 	done
+
 
 _Route9BattleText8::
-	text "Hahahaha!"
-	line "Come on, dude!"
+	text "하하하하!"
+	line "자 덤벼봐라!"
 	done
+
+ 
 
 _Route9EndBattleText8::
-	text "Hahahaha!"
-	line "You beat me fair!"
+	text "하하하하!"
+	line "정정당당한 승부였다!"
 	prompt
 
+ 
+
 _Route9AfterBattleText8::
-	text "Hahahaha!"
-	line "Us hearty guys"
-	cont "always laugh!"
+	text "하하하하!"
+	line "우리같이 따스한 사람들은"
+	cont "언제나 웃고다니지!"
 	done
+
+  

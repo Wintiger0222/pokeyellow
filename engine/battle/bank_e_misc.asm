@@ -35,7 +35,9 @@ FormatMovesString:
 	jr z, .done
 	jr .printMoveNameLoop
 .printDashLoop
+setcharmap legacy_char
 	ld a, "-"
+setcharmap hangul_char
 	ld [de], a
 	inc de
 	inc b

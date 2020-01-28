@@ -1,56 +1,68 @@
 _SilphCo4Text_19de0::
-	text "Sssh! Can't you"
-	line "see I'm hiding?"
+	text "쉿!"
+	line "숨어있는거 안보여?"
 	done
 
+ 
+
 _SilphCo4Text_19de5::
-	text "Huh? TEAM ROCKET"
-	line "is gone?"
+	text "응? 로켓단은"
+	line "이미 떠났다고?"
 	done
 
 _SilphCo4BattleText2::
-	text "TEAM ROCKET has"
-	line "taken command of"
-	cont "SILPH CO.!"
+	text "로켓단이 실프주식회사를"
+	line "완전히 장악했어!"
 	done
 
 _SilphCo4EndBattleText2::
-	text "Arrgh!"
+	text "아악!"
 	prompt
+
+
 
 _SilphCo4AfterBattleText2::
-	text "Fwahahaha!"
-	line "My BOSS has been"
-	cont "after this place!"
+	text "후하하하!"
+	line "보스는 이미 이층을 떠났지!"
 	done
+
+ 
 
 _SilphCo4BattleText3::
-	text "My #MON are my"
-	line "loyal soldiers!"
+	text "내 포켓몬은"
+	line "정예병이다!"
 	done
+
+ 
 
 _SilphCo4EndBattleText3::
-	text "Darn!"
-	line "You weak #MON!"
+	text "젠장!"
+	line "망할 약골 포켓몬같으니!"
 	prompt
+
+
 
 _SilphCo4AfterBattleText3::
-	text "The doors are"
-	line "electronically"
-	cont "locked! A CARD"
-	cont "KEY opens them!"
+	text "이문은 과학의 힘으로"
+	line "닫혀있다!"
+	cont "카드키로만 열수있지!"
 	done
+
+  
 
 _SilphCo4BattleText4::
-	text "Intruder spotted!"
+	text "침입자 발견!"
 	done
 
+
+
 _SilphCo4EndBattleText4::
-	text "Who"
-	line "are you?"
+	text "넌 대체?"
 	prompt
 
+
+
 _SilphCo4AfterBattleText4::
-	text "I better tell the"
-	line "BOSS on 11F!"
+	text "보스가 11층에 있다는건"
+	line "말해 줄 수 없어!"
 	done

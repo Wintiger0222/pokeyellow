@@ -1,24 +1,24 @@
 _PewterHouse1Text1::
-	text "NIDORAN: Bowbow!@@"
+	text "니드런『니드니드!@@"
 
 _PewterHouse1Text2::
-	text "NIDORAN sit!"
+	text "니드런 앉아!"
 	done
 
 _PewterHouse1Text3::
-	text "Our #MON's an"
-	line "outsider, so it's"
-	cont "hard to handle."
+	text "우리 손님은 포켓몬이라"
+	line "대응하기가 힘들어"
 
-	para "An outsider is a"
-	line "#MON that you"
-	cont "get in a trade."
+	para "아 그러니까 교환으로 얻은"
+	line "포켓몬을 말하는거야"
 
-	para "It grows fast, but"
-	line "it may ignore an"
-	cont "unskilled trainer"
-	cont "in battle!"
+	para "성장은 훨씬 빠르지만"
+	line "미숙한 트레이너라고 생각하면"
+	cont "전투중에 무시하는 일도있지!"
 
-	para "If only we had"
-	line "some BADGEs..."
+	para "우리가 뱃지를 좀"
+	line "가지고 있었더라면……"
 	done
+
+ 
+

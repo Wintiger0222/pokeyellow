@@ -12,7 +12,7 @@ Trade_PrintPlayerMonInfoText:
 	coord hl, 5, 2
 	ld de,wcf4b
 	call PlaceString
-	coord hl, 8, 4
+	coord hl, 10, 4
 	ld de,wTradedPlayerMonOT
 	call PlaceString
 	coord hl, 8, 6
@@ -34,7 +34,7 @@ Trade_PrintEnemyMonInfoText:
 	coord hl, 5, 12
 	ld de,wcd6d
 	call PlaceString
-	coord hl, 8, 14
+	coord hl, 10, 14
 	ld de,wTradedEnemyMonOT
 	call PlaceString
 	coord hl, 8, 16
@@ -45,5 +45,5 @@ Trade_PrintEnemyMonInfoText:
 Trade_MonInfoText:
 	db "──",$74,$F2
 	db $4e ; next
-	next "OT/"
+	next "어버이/"
 	next $73,"№",$F2,"@"

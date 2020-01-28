@@ -1,20 +1,20 @@
 _SchoolText1::
-	text "Whew! I'm trying"
-	line "to memorize all"
-	cont "my notes."
+	text "휴우!"
+	line "공책의 내용을"
+	cont "전부 외우려는 중이야!"
 	done
 
 _SchoolText3::
-	text "Sis says #MON"
-	line "will become tame"
-	cont "if you treat them"
-	cont "nicely."
+	text "누나는 포켓몬을 정성들여"
+	line "돌봐주면 날 따르게"
+	cont "될거라고 말했어"
 	done
+
 
 _SchoolText2::
-	text "Okay!"
+	text "좋아!"
 
-	para "Be sure to read"
-	line "the blackboard"
-	cont "carefully!"
+	para "조심해서 칠판을 읽어줘!"
 	done
+
+

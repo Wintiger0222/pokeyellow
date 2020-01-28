@@ -1,59 +1,58 @@
 _Museum2FText1::
-	text "MOON STONE?"
+	text "달의 돌?"
 
-	para "What's so special"
-	line "about it?"
+	para "뭐 때문에"
+	line "특별한거야?"
 	done
 
 _Museum2FText2::
-	text "July 20, 1969!"
+	text "1969년 7월 20일!"
 
-	para "The 1st lunar"
-	line "landing!"
+	para "인류 최초의"
+	line "달착륙!"
 
-	para "I bought a color"
-	line "TV to watch it!"
+	para "난 컬러TV를 사서"
+	line "그걸 봤었지!"
 	done
 
 _Museum2FText3::
-	text "We have a space"
-	line "exhibit now."
+	text "저희 박물관은 현재"
+	line "우주 특별전을 전시중입니다"
 	done
 
 _Museum2FText4::
-	text "I want a PIKACHU!"
-	line "It's so cute!"
+	text "피카츄 가지고 싶어!"
+	line "귀여워!"
 
-	para "I asked my Daddy"
-	line "to catch me one!"
+	para "아빠한테"
+	line "한 마리 잡아달라고 할거야!"
 	done
 
 _Museum2FText5::
-	text "Yeah, a PIKACHU"
-	line "soon, I promise!"
+	text "오냐 피카츄 하나"
+	line "약속하마!"
 	done
 
 _Museum2FPikachuText1::
-	text "Your PIKACHU looks"
-	line "untamed."
-	cont "May I have it for"
-	cont "my daughter?"
+	text "네 피카츄"
+	line "전혀 길들여지지 않아 보이네"
+	cont "혹시 내 딸에게 줄수 있겠니?"
 	done
 
 _Museum2FPikachuText2::
-	text "I'd like to get"
-	line "that PIKACHU off"
-	cont "you, but it's too"
-	cont "attached to you."
+	text "생각같아서는"
+	line "너한테서 피카츄를"
+	cont "떼놓고 싶지만"
+	cont "그러기에는 착 붙어있구나"
 	done
 
 _Museum2FText6::
-	text "SPACE SHUTTLE"
-	line "COLUMBIA"
+	text "스페이스 셔틀"
+	line "콜롬비아"
 	done
 
 _Museum2FText7::
-	text "Meteorite that"
-	line "fell on MT.MOON."
-	cont "(MOON STONE?)"
+	text "달맞이산에"
+	line "떨어진 운석"
+	cont "(달의 돌?)"
 	done

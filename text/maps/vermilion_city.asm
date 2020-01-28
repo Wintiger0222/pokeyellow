@@ -1,167 +1,151 @@
 _VermilionCityText1::
-	text "We're careful"
-	line "about pollution!"
+	text "오염문제는"
+	line "신경써야해!"
 
-	para "We've heard GRIMER"
-	line "multiplies in"
-	cont "toxic sludge!"
+	para "우리가 들은 정보로는"
+	line "질퍽이는 독성 진흙에서 증식해!"
 	done
 
 _VermilionCityText_198a7::
-	text "Did you see S.S."
-	line "ANNE moored in"
-	cont "the harbor?"
+	text "항구에 상트앙느호가"
+	line "정박하고 있는거 봤나요?"
 	done
 
 _VermilionCityText_198ac::
-	text "So, S.S.ANNE has"
-	line "departed!"
+	text "이제 상트앙느호는"
+	line "출항했죠!"
 
-	para "She'll be back in"
-	line "about a year."
+	para "그 사람은 이제"
+	line "일년정도 있어야 돌아올거고요"
 	done
 
 _SSAnneWelcomeText4::
-	text "Welcome to S.S."
-	line "ANNE!"
+	text "상트앙느호에 오신것을"
+	line "환영합니다!"
 	done
 
 _SSAnneWelcomeText9::
-	text "Welcome to S.S."
-	line "ANNE!"
+	text "상트앙느호에 오신것을"
+	line "환영합니다!"
 
-	para "Excuse me, do you"
-	line "have a ticket?"
+	para "실례지만,"
+	line "티켓을 확인해도 될까요?"
 	prompt
 
 _SSAnneFlashedTicketText::
-	text "<PLAYER> flashed"
-	line "the S.S.TICKET!"
+	text $52, "은(는)"
+	line "상트앙느호 티켓을 보여줬다!"
 
-	para "Great! Welcome to"
-	line "S.S.ANNE!"
+	para "멋지군요! 상트앙느호에"
+	line "오신걸 환영합니다!"
 	done
 
 _SSAnneNoTicketText::
-	text "<PLAYER> doesn't"
-	line "have the needed"
-	cont "S.S.TICKET."
+	text $52, "는(은)"
+	line "상트앙느호 티켓을"
+	cont "가지고 있지 않다"
 
-	para "Sorry!"
+	para "죄송합니다!"
 
-	para "You need a ticket"
-	line "to get aboard."
+	para "승선하시려면"
+	line "티켓이 있어야 합니다"
 	done
 
 _SSAnneNotHereText::
-	text "The ship set sail."
+	text "배는 이미 떠났습니다"
 	done
 
 _VermilionCityText4::
-	text "I'm putting up a"
-	line "building on this"
-	cont "plot of land."
-
-	para "My #MON is"
-	line "tamping the land."
+	text "이곳에 빌딩을 세울 계획을"
+	line "추진중이란다"
+	
+	para "내 포켓몬이"
+	line "땅을 평평하게 다지는중이지"
 	done
 
 _VermilionCityText5::
-	text "MACHOP: Guoh!"
-	line "Gogogoh!@@"
+	text "알통몬『알통!"
+	line "알통!@@"
 
 _VermilionCityText15::
 	text ""
-	para "A MACHOP is"
-	line "stomping the land"
-	cont "flat."
+	para "알통몬이 지면을 평평하게"
+	line "다지고 있다"
 	done
 
 _VermilionCityText6::
-	text "S.S.ANNE is a"
-	line "famous luxury"
-	cont "cruise ship."
+	text "상트앙느호는"
+	line "유명한 호화 여객선"
 
-	para "We visit VERMILION"
-	line "once a year."
+	para "일년에 1번씩"
+	line "갈색시티에 방문하죠"
 	done
 
 _OfficerJennyText1::
-	text "I just caught a"
-	line "SQUIRTLE that was"
-	cont "always getting"
-	cont "into mischief."
+	text "내가 잡은 꼬부기는"
+	line "말썽꾸러기라 감당이 안 돼"
 
-	para "I think it needs a"
-	line "good trainer to"
-	cont "set it straight."
+	para "아무래도 괜찮은 트레이너한테"
+	line "보내서 버릇 좀 고쳐야겠어"
 	done
 
 _OfficerJennyText2::
-	text "You have the"
-	line "THUNDERBADGE!?"
+	text "오렌지 배지가"
+	line "있다고!?"
 
-	para "You must be a"
-	line "good trainer!"
+	para "너라면"
+	line "트레이너로서 괜찮겠는데!"
 
-	para "I just caught a"
-	line "SQUIRTLE that was"
-	cont "always getting"
-	cont "into mischief."
+	para "내가 잡은 꼬부기는"
+	line "말썽꾸러기라 감당이 안 돼"
 
-	para "Would you take"
-	line "good care of it?"
+	para "이 아이를"
+	line "잘 돌봐 줄수 있겠어?"
 	done
 
 _OfficerJennyText3::
-	text "OK! Please treat"
-	line "SQUIRTLE right!@@"
+	text "좋았어! 꼬부기를"
+	line "잘 지도해줘!@@"
 
 _OfficerJennyText4::
-	text "Oh... What am I"
-	line "to do now?"
+	text "어……"
+	line "난 이제 뭐 한담?"
 	done
 
 _OfficerJennyText5::
-	text "How is SQUIRTLE"
-	line "doing?"
+	text "꼬부기는"
+	line "어떡게 지내?"
 	done
 
 _VermilionCityText8::
-	text "VERMILION CITY"
-	line "The Port of"
-	cont "Exquisite Sunsets"
+	text "이곳는 갈색시티"
+	line "갈색은 오렌지 저녁노을의 색깔"
 	done
 
 _VermilionCityText9::
-	text "NOTICE!"
+	text "……알립니다!"
 
-	para "ROUTE 12 may be"
-	line "blocked off by a"
-	cont "sleeping #MON."
+	para "12번 도로에서 잠자고 있는"
+	line "포켓몬이 길을 막고 있습니다"
+	cont ""
 
-	para "Detour through"
-	line "ROCK TUNNEL to"
-	cont "LAVENDER TOWN."
+	para "보라타운쪽은 돌산터널을 통해"
+	line "우회바랍니다"
 
-	para "VERMILION POLICE"
+	para "갈색시티 경찰"
 	done
 
 _VermilionCityText12::
-	text "#MON FAN CLUB"
-	line "All #MON fans"
-	cont "welcome!"
+	text "여기는 포켓몬 애호가 클럽"
+	line "포켓몬을 좋아하면 누구든지 환영"
 	done
 
 _VermilionCityText13::
-	text "VERMILION CITY"
-	line "#MON GYM"
-	cont "LEADER: LT.SURGE"
-
-	para "The Lightning "
-	line "American!"
+	text "갈색시티 포켓몬 체육관"
+	line "관장 마티스"
+	cont "번개 아메리칸"
 	done
-
+;이명이 진짜로 '번개 아메리칸';;;
 _VermilionCityText14::
-	text "VERMILION HARBOR"
+	text "갈색시티 항구 입구"
 	done

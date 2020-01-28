@@ -1,165 +1,154 @@
 _VermilionGymText_5cb6d::
-	text "Ten-hut! Welcome"
-	line "to VERMILION GYM!"
+	text "차렷!"
+	line "웰컴 투 갈색시티!"
 
-	para "Will you look at"
-	line "that, a pint-size"
-	cont "challenger!"
+	para "렛츠 씨 어디"
+	line "키드!"
 
-	para "Hahaha! You've got"
-	line "big and brassy"
-	cont "nerves to take me"
-	cont "on with your puny"
-	cont "power!"
+	para "하하하!"
+	line "유의 푸어한 힘으로"
+	cont "날 꽤나 바더하게 해서"
+	cont "배드 소리나 듣겠군!"
 
-	para "A #MON battle"
-	line "is war! I'll show"
-	cont "you, civilian!"
+	para "포켓몬 배틀은 워!"
+	line "노말 퍼슨인 자네한테 보여주지!"
 
-	para "I'll shock you"
-	line "into surrender!"
+	para "자네는 곧"
+	line "기브 업할것이다!"
 	done
-
+;해당 캐릭 자체가 역대 주인공들을 '키드'로 호칭하기때문에 이건 바꾸시면 캐붕입니다.
 _VermilionGymText_5cb72::
-	text "A little word of"
-	line "advice, kid!"
+	text "어드바이스 좀 하지"
+	line "키드 트레이너!"
 
-	para "Electricity is"
-	line "sure powerful!"
+	para "일렉트릭은"
+	line "베리 스트롱!"
 
-	para "But, it's useless"
-	line "against ground-"
-	cont "type #MON!"
+	para "하지만 그라운드타입"
+	line "포켓몬에겐 이펙트가 없지!"
 	done
 
 _VermilionGymText_5cb77::
-	text "The THUNDERBADGE"
-	line "cranks up your"
-	cont "#MON's SPEED!"
+	text "오렌지배지를 지니고 있으면"
+	line "유의 포켓몬 스피드 업!"
 
-	para "It also lets your"
-	line "#MON FLY any-"
-	cont "time, kid!"
+	para "그뿐 아니라 유의 포켓몬은"
+	line "언제건 공중날기켄 유즈!"
 
-	para "You're special,"
-	line "kid! Take this!"
+	para "특별한 키드에게!"
+	line "디스를 수여하마!"
 	done
 
 _ReceivedTM24Text::
-	text $52, " received "
+	text $52, "는(은)"
 	line "@"
 	TX_RAM wcf4b
-	text "!@@"
+	text "를(을) 얻었다!@@"
 
 _TM24ExplanationText::
 	db $0
-	para "TM24 contains"
-	line "THUNDERBOLT!"
+	para "기술머신24에 있는 테크날라지는"
+	line "10만볼트!"
 
-	para "Teach it to an"
-	line "electric #MON!"
+	para "이건 일렉트릭 포켓몬한테"
+	line "가르치도록!"
 	done
 
 _TM24NoRoomText::
-	text "Yo kid, make room"
-	line "in your pack!"
+	text "이 이상은"
+	line "들 수 없어!"
 	done
 
 _ReceivedThunderbadgeText::
-	text "Whoa!"
+	text "오!"
 
-	para "You're the real"
-	line "deal, kid!"
-
-	para "Fine then, take"
-	line "the THUNDERBADGE!"
+	para "이제보니 노말내기가 아닌"
+	line "키드였어!"
+;추천 대체어, 보통내기가 아닌 / 한 가닥 하는
+	para "오케이!"
+	line "오렌지배지를 가져가라!"
 	prompt
 
 _VermilionGymBattleText1::
-	text "When I was in the"
-	line "Army, LT.SURGE"
-	cont "was my strict CO!"
+	text "군대에 있을적에는"
+	line "마티스 소령님이"
+	cont "직속상관이였어!"
 	done
 
 _VermilionGymEndBattleText1::
-	text "Stop!"
-	line "You're very good!"
+	text "정지!"
+	line "아주 좋군!"
 	prompt
 
 _VermilionGymAfterBattleText1::
-	text "The door won't"
-	line "open?"
+	text "문이"
+	line "안 열린다고?"
 
-	para "LT.SURGE always"
-	line "was cautious!"
+	para "마티스관장님은 군대에서도"
+	line "조심성 많기로 유명하셨지!"
 	done
 
 _VermilionGymBattleText2::
-	text "I'm a lightweight,"
-	line "but I'm good with"
-	cont "electricity!"
+	text "내가 저체중이긴 해도"
+	line "전기타입은 잘 다룬다고!"
 	done
 
 _VermilionGymEndBattleText2::
-	text "Fried!"
+	text "감전!"
 	prompt
 
 _VermilionGymAfterBattleText2::
-	text "OK, I'll talk!"
+	text "알았어 말할게!"
 
-	para "LT.SURGE said he"
-	line "hid door switches"
-	cont "inside something!"
+	para "마티스 소령님 말로는"
+	line "문을 여는 스위치를"
+	cont "이곳 어딘가에 숨겼대!"
 	done
 
 _VermilionGymBattleText3::
-	text "This is no place"
-	line "for kids!"
+	text "여긴 꼬마가 올곳이"
+	line "아니다!"
 	done
 
 _VermilionGymEndBattleText3::
-	text "Wow!"
-	line "Surprised me!"
+	text "와!"
+	line "놀라움 그 자체!"
 	prompt
 
 _VermilionGymAfterBattleText3::
-	text "LT.SURGE set up"
-	line "double locks!"
-	cont "Here's a hint!"
+	text "소령님 말로는"
+	line "이중으로 잠그셨대!"
+	cont "여기 힌트!"
 
-	para "When you open the"
-	line "1st lock, the 2nd"
-	cont "lock is right"
-	cont "next to it!"
+	para "첫번째 잠금장치를 열면"
+	line "두번재 잠금장치는"
+	cont "바로 오른쪽에서 찾으면 돼!"
 	done
 
 _VermilionGymText_5cbf4::
-	text "Yo! Champ in"
-	line "making!"
+	text "요!"
+	line "미래의 챔피언!"
 
-	para "LT.SURGE has a"
-	line "nickname. People"
-	cont "refer to him as"
-	cont "the Lightning"
-	cont "American!"
+	para "마티스 소령에겐"
+	line "별명이 있는데 말이야"
+	cont "사람들이 말하기로는"
+	cont "번개 아메리칸이라고 한다지!"
 
-	para "He's an expert on"
-	line "electric #MON!"
+	para "그로 말할것 같으면"
+	line "전기 포켓몬 전문가!"
 
-	para "Birds and water"
-	line "#MON are at"
-	cont "risk! Beware of"
-	cont "paralysis too!"
+	para "비행과 물타입 포켓몬에게는"
+	line "위험 그 자체!"
+	cont "마비도 주의하라고!"
 
-	para "LT.SURGE is very"
-	line "cautious!"
+	para "마티스 소령은"
+	line "조심성이 많아!"
 
-	para "You'll have to"
-	line "break a code to"
-	cont "get to him!"
+	para "그 사람한테 접근하려면"
+	line "암호를 해제해야만 한다고!"
 	done
 
 _VermilionGymText_5cbf9::
-	text "Whew! That match"
-	line "was electric!"
+	text "휘유!"
+	line "짜릿한 매치였다!"
 	done

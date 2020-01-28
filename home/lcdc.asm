@@ -1,5 +1,9 @@
 LCDC::
 	push af
+	ld a,[rSVBK]
+	ld [H_LOADEDWRAMBANK],a
+	ld a,$01
+	ld [rSVBK],a
 	ld a, [hLCDCPointer] ; doubles as enabling byte
 	and a
 	jr z, .noLCDCInterrupt
@@ -16,5 +20,7 @@ LCDC::
 	ld [hl], a
 	pop hl
 .noLCDCInterrupt
+	ld a,[H_LOADEDWRAMBANK]
+	ld [rSVBK],a
 	pop af
 	reti

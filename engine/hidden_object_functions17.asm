@@ -177,10 +177,10 @@ LinkCableHelpText2:
 	db "@"
 
 HowToLinkText:
-	db   "HOW TO LINK"
-	next "COLOSSEUM"
-	next "TRADE CENTER"
-	next "STOP READING@"
+	db   "통신케이블 클럽"
+	next "콜로세움"
+	next "트레이드센터"
+	next "그만두다@"
 
 LinkCableInfoTexts:
 	dw LinkCableInfoText1
@@ -294,14 +294,14 @@ ViridianSchoolBlackboardText2:
 	db "@"
 
 StatusAilmentText1:
-	db   " SLP"
-	next " PSN"
-	next " PAR@"
+	db   " 잠듦"
+	next " 독"
+	next " 마비@"
 
 StatusAilmentText2:
-	db   " BRN"
-	next " FRZ"
-	next " QUIT@@"
+	db   " 화상"
+	next " 감전"
+	next " 그만두다@@"
 
 ViridianBlackboardStatusPointers:
 	dw ViridianBlackboardSleepText

@@ -1,3 +1,5 @@
+newcharmap common_char
+
 charmap "ガ", $05
 charmap "ギ", $06
 charmap "グ", $07
@@ -157,7 +159,7 @@ charmap "<TARGET>", $59
 charmap "<USER>", $5A
 charmap "′", $71
 charmap "″", $73
-charmap "…", $75
+
 
 charmap "┌", $79
 charmap "─", $7A
@@ -195,8 +197,7 @@ charmap "W", $96
 charmap "X", $97
 charmap "Y", $98
 charmap "Z", $99
-charmap "(", $9A
-charmap ")", $9B
+
 charmap ":", $9C
 charmap ";", $9D
 charmap "[", $9E
@@ -234,19 +235,18 @@ charmap "'s", $BD
 charmap "'t", $BE
 charmap "'v", $BF
 charmap "'", $E0
-charmap "-", $E3
+
 charmap "'r", $E4
 charmap "'m", $E5
-charmap "?", $E6
-charmap "!", $E7
-charmap ".", $E8
+
+
 charmap "▷", $EC
 charmap "▶", $ED
 charmap "♂", $EF
 charmap "¥", $F0
 charmap "×", $F1
 charmap "/", $F3
-charmap ",", $F4
+
 charmap "♀", $F5
 charmap "0", $F6
 charmap "1", $F7
@@ -258,3 +258,18 @@ charmap "6", $FC
 charmap "7", $FD
 charmap "8", $FE
 charmap "9", $FF
+
+PUSHC
+newcharmap legacy_char, common_char
+charmap "?", $E6
+charmap "!", $E7
+charmap "(", $9A
+charmap ")", $9B
+charmap "-", $E3
+charmap "…", $75
+charmap ",", $F4
+charmap ".", $E8
+POPC
+newcharmap hangul_char, common_char
+INCLUDE "charmap_han.asm"
+

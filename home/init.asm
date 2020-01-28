@@ -20,6 +20,8 @@ rLCDC_DEFAULT EQU %11100011
 
 	di
 
+	callba CheckHash
+
 	xor a
 	ld [rIF], a
 	ld [rIE], a
@@ -37,6 +39,8 @@ rLCDC_DEFAULT EQU %11100011
 
 	ld a, rLCDC_ENABLE_MASK
 	ld [rLCDC], a
+	ld a,1
+	ld [H_LOADEDWRAMBANK],a
 	call DisableLCD
 
 	ld sp, wStack
@@ -50,6 +54,24 @@ rLCDC_DEFAULT EQU %11100011
 	ld a, b
 	or c
 	jr nz, .loop
+	
+.WRAM2Clear
+	ld a,$02
+	ld [rSVBK],a
+	ld hl, $d000 ; start of WRAM
+	ld bc, $1000 ; size of WRAM
+
+.loop2
+	ld [hl], 0
+	inc hl
+	dec bc
+	ld a, b
+	or c
+	jr nz, .loop2
+
+.ToWRAM1
+	ld a,$01
+	ld [rSVBK],a
 
 	call ClearVram
 
@@ -80,7 +102,8 @@ rLCDC_DEFAULT EQU %11100011
 	ld [rWY], a
 	ld a, 7
 	ld [rWX], a
-
+	ld a,%00000011
+	ld [hVEnable],a
 	ld a, CONNECTION_NOT_ESTABLISHED
 	ld [hSerialConnectionStatus], a
 
@@ -96,7 +119,14 @@ rLCDC_DEFAULT EQU %11100011
 	call StopAllSounds
 
 	ei
+	;speed switch
+	ld hl,$FF4D
+	bit 7,[hl]
+	jr nz,.speedkeepgoing ;2배속이면, 속도 변경 X
+	set 0,[hl]
+	stop
 
+.speedkeepgoing
 	predef LoadSGB
 
 	ld a, BANK(SFX_Shooting_Star)

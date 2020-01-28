@@ -27,6 +27,7 @@ DisplayTitleScreen:
 	ld [hSCY], a
 	ld a, $90
 	ld [hWY], a
+	callba GBCOnlyScreen2
 	call ClearScreen
 	call DisableLCD
 	call LoadFontTilePatterns
@@ -66,6 +67,10 @@ DisplayTitleScreen:
 	call LoadScreenTilesFromBuffer2
 	ld a, vBGMap0 / $100
 	call TitleScreenCopyTileMapToVRAM
+	push af
+	ld a,%00000001 ; Legacy Mode
+	ld [hVEnable],a
+	pop af
 	ld b, SET_PAL_TITLE_SCREEN
 	call RunPaletteCommand
 	call GBPalNormal
@@ -126,10 +131,10 @@ DisplayTitleScreen:
 	jr .titleScreenCopyrightTilesLoop
 
 .tileScreenCopyrightTiles
-	db $e0,$e1,$e2,$e3,$e1,$e2,$ee,$e5,$e6,$e7,$e8,$e9,$ea,$eb,$ec,$ed,$ff ; ©1995-1999 GAME FREAK inc.
+	db $e0,$e1,$e2,$e3,$fd,$e4,$ee,$e5,$e6,$e7,$e8,$e9,$ea,$eb,$ec,$ed,$ff ; ©1995-1999 GAME FREAK inc.
 
 .finishedBouncingPokemonLogo
-	call LoadScreenTilesFromBuffer1
+	callba _LoadScreenTilesFromBuffer1OnlyVBK0 ;수정 요함
 	ld c, 36
 	call DelayFrames
 	ld a, SFX_INTRO_WHOOSH
@@ -179,6 +184,10 @@ DisplayTitleScreen:
 	inc a
 	ld [H_AUTOBGTRANSFERENABLED], a
 	call ClearScreen
+	push af
+	ld a,%00000011 ; Normal(Korean) Mode
+	ld [hVEnable],a
+	pop af
 	ld a, vBGMap0 / $100
 	call TitleScreenCopyTileMapToVRAM
 	ld a, vBGMap1 / $100
@@ -241,14 +250,15 @@ LoadCopyrightTiles:
 	ld hl, vChars2 + $600
 	lb bc, BANK(NintendoCopyrightLogoGraphics), (TextBoxGraphics + $10 - NintendoCopyrightLogoGraphics) / $10 ; bug: overflows into text box graphics and copies the "A" tile
 	call CopyVideoData
+	callba GBCOnlyScreen2
 	coord hl, 2, 7
 	ld de, CopyrightTextString
 	jp PlaceString
-
+	ret 
 CopyrightTextString:
-	db   $60,$61,$62,$63,$61,$62,$7c,$7f,$65,$66,$67,$68,$69,$6a			 ; ©1995-1999  Nintendo
-	next $60,$61,$62,$63,$61,$62,$7c,$7f,$6b,$6c,$6d,$6e,$6f,$70,$71,$72	 ; ©1995-1999  Creatures inc.
-	next $60,$61,$62,$63,$61,$62,$7c,$7f,$73,$74,$75,$76,$77,$78,$79,$7a,$7b ; ©1995-1999  GAME FREAK inc.
+	db   $60,$61,$62,$63,$71,$72,$7c,$7f,$65,$66,$67,$68,$69,$6a			 ; ©1995-1999  Nintendo
+	next $60,$61,$62,$63,$71,$72,$7c,$7f,$6b,$6c,$6d,$6e,$6f,$70,$7a,$7b	 ; ©1995-1999  Creatures inc.
+	next $60,$61,$62,$63,$71,$72,$7c,$7f,$73,$74,$75,$76,$77,$78,$79,$7a,$7b ; ©1995-1999  GAME FREAK inc.
 	db   "@"
 
 TitleScreen_PlayPikachuPCM:
@@ -337,8 +347,8 @@ CopyFixedLengthText:
 	ld bc, NAME_LENGTH
 	jp CopyData
 
-NintenText: db "NINTEN@"
-SonyText:   db "SONY@"
+NintenText: db "닌텐도@"
+SonyText:   db "소니@"
 
 IncrementResetCounter:
 	ld hl, wTitleScreenScene + 2

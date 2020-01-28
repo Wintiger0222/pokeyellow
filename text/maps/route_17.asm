@@ -1,195 +1,183 @@
 _Route17BattleText1::
-	text "There's no money"
-	line "in fighting kids!"
+	text "무일푼에게"
+	line "자비란 없다!"
 	done
 
 _Route17EndBattleText1::
-	text "Burned"
-	line "out!"
+	text "하얗게"
+	line "불타버렸다!"
 	prompt
 
 _Route17AfterBattleText1::
-	text "Good stuff is"
-	line "lying around on"
-	cont "CYCLING ROAD!"
+	text "자전거 도로는"
+	line "도로 포장이 잘 되어있어!"
 	done
 
 _Route17BattleText2::
-	text "What do you want,"
-	line "kiddo?"
+	text "자네는"
+	line "뭘 찾는건가?"
 	done
 
 _Route17EndBattleText2::
-	text "Whoo!"
+	text "호오우!"
 	prompt
 
 _Route17AfterBattleText2::
-	text "I could belly-"
-	line "bump you outta"
-	cont "here!"
+	text "내가 널 여기서"
+	line "내쫓는수도 있지!"
 	done
 
 _Route17BattleText3::
-	text "You heading to"
-	line "FUCHSIA?"
+	text "연분홍시티쪽으로"
+	line "가는건가?"
 	done
 
 _Route17EndBattleText3::
-	text "Crash and"
-	line "burn!"
+	text "충돌 그리고"
+	line "타올라라!"
 	prompt
 
 _Route17AfterBattleText3::
-	text "I love racing"
-	line "downhill!"
+	text "내리막길 달리기가"
+	line "너무 좋아!"
 	done
 
 _Route17BattleText4::
-	text "We're BIKERs!"
-	line "Highway stars!"
+	text "우리는 바이크족!"
+	line "도로의 유명인사!"
 	done
 
 _Route17EndBattleText4::
-	text "Smoked!"
+	text "연기가 나잖아!"
 	prompt
 
 _Route17AfterBattleText4::
-	text "Are you looking"
-	line "for adventure?"
+	text "모험을"
+	line "찾고 있어?"
 	done
 
 _Route17BattleText5::
-	text "Let VOLTORB"
-	line "electrify you!"
+	text "가랏 찌리리공"
+	line "저녀석 감전시켜버려!"
 	done
+;electrify가 기술명상 송전이 맞지만 1세대 없던게 맞습니다.
 
 _Route17EndBattleText5::
-	text "Grounded"
-	line "out!"
+	text "그라운드"
+	line "아웃!"
 	prompt
 
 _Route17AfterBattleText5::
-	text "I got my VOLTORB"
-	line "at the abandoned"
-	cont "POWER PLANT."
+	text "내 찌리리공은"
+	line "무인발전소에서 잡았어"
 	done
 
 _Route17BattleText6::
-	text "My #MON won't"
-	line "evolve! Why?"
+	text "내 포켓몬이"
+	line "진화하지 않아! 왜일까?"
 	done
 
 _Route17EndBattleText6::
-	text "Why,"
-	line "you!"
+	text "왜 그러는 걸까?"
 	prompt
 
 _Route17AfterBattleText6::
-	text "Maybe some #MON"
-	line "need element"
-	cont "STONEs to evolve."
+	text "아마도 몇몇 포켓몬한테는"
+	line "진화의 돌이 필요한거 같아"
 	done
 
 _Route17BattleText7::
-	text "I need a little"
-	line "exercise!"
+	text "운동을 좀 해야겠어!"
 	done
 
 _Route17EndBattleText7::
-	text "Whew!"
-	line "Good workout!"
+	text "휘유!"
+	line "멋진 움직임이야!"
 	prompt
 
 _Route17AfterBattleText7::
-	text "I'm sure I lost"
-	line "weight there!"
+	text "살이 좀"
+	line "빠졌을거야!"
 	done
 
 _Route17BattleText8::
-	text "Be a rebel!"
+	text "혁명가가 되라!"
 	done
 
 _Route17EndBattleText8::
-	text "Aaaargh!"
+	text "어 안돼!"
 	prompt
 
 _Route17AfterBattleText8::
-	text "Be ready to fight"
-	line "for your beliefs!"
+	text "네 믿음을 위해"
+	line "싸울준비를 해!"
 	done
 
 _Route17BattleText9::
-	text "Nice BIKE!"
-	line "How's it handle?"
+	text "자전거 멋진데!"
+	line "그거 어떡게 다뤄?"
 	done
 
 _Route17EndBattleText9::
-	text "Shoot!"
+	text "이런 젠장!"
 	prompt
 
 _Route17AfterBattleText9::
-	text "The slope makes"
-	line "it hard to steer!"
+	text "경사길에서는"
+	line "페달밟기 힘들어져!"
 	done
 
 _Route17BattleText10::
-	text "Get lost, kid!"
-	line "I'm bushed!"
+	text "꼬맹이는 이제 꺼져!"
+	line "힘들어 죽겠어!"
 	done
 
 _Route17EndBattleText10::
-	text "Are you"
-	line "satisfied?"
+	text "만족 했어?"
 	prompt
 
 _Route17AfterBattleText10::
-	text "I need to catch"
-	line "a few Zs!"
+	text "수면시간을 좀"
+	line "확보할 필요가 있겠어!"
 	done
 
 _Route17Text11::
-	text "It's a notice!"
+	text "…… 알립니다!"
 
-	para "Watch out for"
-	line "discarded items!"
+	para "버려진 아이템을"
+	line "경계하세요!"
 	done
 
 _Route17Text12::
-	text "TRAINER TIPS"
+	text "…… 득이 되는 게시판!"
 
-	para "All #MON are"
-	line "unique."
+	para "모든 포켓몬은"
+	line "각양각색입니다"
 
-	para "Even #MON of"
-	line "the same type and"
-	cont "level grow at"
-	cont "different rates."
+	para "같은 타입인 포켓몬 이더라도"
+	line "레벨이 오를때 성장률이 다릅니다!"
 	done
-
+;종족값 관련이라 현재 영문 대사만으로는 이상해서 일부 의역 들어갔습니다.
 _Route17Text13::
-	text "TRAINER TIPS"
+	text "…… 득이 되는 게시판!"
 
-	para "Press the A or B"
-	line "Button to stay in"
-	cont "place while on a"
-	cont "slope."
+	para "A나 B버튼을 눌러서 경사길에서"
+	line "브레이크를 걸수 있습니다!"
 	done
 
 _Route17Text14::
-	text "ROUTE 17"
-	line "CELADON CITY -"
-	cont "FUCHSIA CITY"
+	text "이곳은 17번 도로"
+	line "무지개시티 …… 연분홍시티"
 	done
 
 _Route17Text15::
-	text "It's a notice!"
+	text "…… 알립니다!"
 
-	para "Don't throw the"
-	line "game, throw #"
-	cont "BALLs instead!"
+	para "게임기를 몬스터볼 대신에"
+	line "던지지마세요!"
 	done
 
 _Route17Text16::
-	text "CYCLING ROAD"
-	line "Slope ends here!"
+	text "자전거 도로"
+	line "경사로가 끝나는 지점!"
 	done

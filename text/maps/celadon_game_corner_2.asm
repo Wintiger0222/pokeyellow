@@ -1,4 +1,4 @@
 _CeladonGameCornerText_48f19::
-	text "Oops! Forgot the"
-	line "COIN CASE!"
+	text "이크! 동전케이스를"
+	line "깜박했다!"
 	done

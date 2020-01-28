@@ -1,42 +1,39 @@
 _MomWakeUpText::
-	text "MOM: Right."
-	line "All boys leave"
-	cont "home someday."
-	cont "It said so on TV."
+	text "엄마『그래"
+	line "남자 아이들은 언젠가"
+	cont "집을 떠나는 법이지"
+	cont "TV에서 그랬단다"
 
-	para "PROF.OAK, next"
-	line "door, is looking"
-	cont "for you."
+	para "옆집의 오박사님께서"
+	line "널 찾으시더구나"
 	done
 
 _MomHealText1::
-	text "MOM: <PLAYER>, if"
-	line "you drive your"
-	cont "#MON too hard,"
-	cont "they'll dislike"
-	cont "you."
+	text "엄마『"
+	db $52, " 만약 네가"
+	line "포켓몬을 너무 험하게 다루면"
+	cont "너를 싫어할 것이란다"
 
-	para "You should take a"
-	line "rest."
+	para "적당히 쉬어가면서"
+	line "하렴"
 	prompt
 
+
 _MomHealText2::
-	text "MOM: Oh good!"
-	line "You and your"
-	cont "#MON are"
-	cont "looking great!"
-	cont "Take care now!"
+	text "엄마『어머!"
+	line "너와 포켓몬 둘다"
+	cont "팔팔해 보이네!"
+	cont "조심해서 다니렴!"
 	done
 
 _StandByMeText::
-	text "There's a movie"
-	line "on TV. Four boys"
-	cont "are walking on"
-	cont "railroad tracks."
+	text "TV에서 영화를 하고 있다"
+	line "남자아이 넷이 "
+	cont "철로를 따라 걷고있다……"
 
-	para "I better go too."
+	para "…… 나도 빨리 가봐야지!"
 	done
 
 _TVWrongSideText::
-	text "Oops, wrong side."
+	text "이쪽에서는 보이지 않아"
 	done

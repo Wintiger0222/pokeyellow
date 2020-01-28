@@ -1,114 +1,128 @@
 _SilphCoPresidentText::
-	text "PRESIDENT: Thank"
-	line "you for saving"
-	cont "SILPH!"
+	text "회장『우리 회사를"
+	line " 구해줘서 고맙네!"
 
-	para "I will never"
-	line "forget you saved"
-	cont "us in our moment"
-	cont "of peril!"
+	para "자네가 우리를 위기의 순간에서"
+	line "구해준걸 절대 잊지않겠네!"
 
-	para "I have to thank"
-	line "you in some way!"
+	para "귀인을 빈손으로 돌려보내면"
+	line "도리에 어긋나겠지!"
 
-	para "Because I am rich,"
-	line "I can give you"
-	cont "anything!"
+ 
 
-	para "Here, maybe this"
-	line "will do!"
+	para "이름난 재벌인만큼 원하는게"
+	line "있다면 뭐든 줄수있다네"
+
+ 
+
+	para "그래!"
+	line "이건 어떤가!"
 	prompt
 
+ 
+
 _ReceivedSilphCoMasterBallText::
-	text $52, " got a"
+	text $52, "는(은)"
 	line "@"
 	TX_RAM wcf4b
-	text "!@@"
+	text "를(을) 얻었더!@@"
 
 _SilphCo10Text_6231c::
-	text "PRESIDENT: You"
-	line "can't buy that"
-	cont "anywhere!"
+	text "회장『이건 어디서도"
+	line "구할 수 없는 물건이지!"
 
-	para "It's our secret"
-	line "prototype MASTER"
-	cont "BALL!"
+	para "비밀리에 제작된 마스터볼의"
+	line "프로토타입이거든!"
 
-	para "It will catch any"
-	line "#MON without"
-	cont "fail!"
+ 
 
-	para "You should be"
-	line "quiet about using"
-	cont "it, though."
+	para "어떤 포켓몬이든 놓치는일 없이"
+	line "잡아내는 물건이지"
+
+ 
+
+	para "다만 쓸때는"
+	line "비밀로 해주게나?"
 	done
 
 _SilphCoMasterBallNoRoomText::
-	text "You have no"
-	line "room for this."
+	text "이 이상 들 수"
+	line "없어!"
 	done
 
 _SilphCo11Text2::
-	text "SECRETARY: Thank"
-	line "you for rescuing"
-	cont "all of us!"
+	text "비서『저희를 구해주셔서"
+	line "감사합니다!"
 
-	para "We admire your"
-	line "courage."
+	para "모두를 대표해 당신의 용기에"
+	line "경의를 표하죠"
 	done
+
+ 
 
 _SilphCo11Text3::
-	text "Ah, <PLAYER>!"
-	line "So we meet again!"
+	text "아 "
+	db $52, "!"
+	line "또만났구나!"
 
-	para "The PRESIDENT and"
-	line "I are discussing"
-	cont "a vital business"
-	cont "proposition."
+	para "보다시피 회장과 난 중요한"
+	line "사업문제로 논의중이라서"
 
-	para "Keep your nose"
-	line "out of grown-up"
-	cont "matters..."
+	para "어른의 사정에 끼어드는건"
+	line "좋지못하단다……"
 
-	para "or, experience a"
-	line "world of pain!"
+	para "아니면 인생의 쓴맛을 "
+	line "겪게될거야!"
 	done
+
+
 
 _SilphCo10Text_62330::
-	text "Arrgh!!"
-	line "I lost again!?"
+	text "으아아!!"
+	line "또 졌단 말인가!?"
 	prompt
+
+ 
 
 _SilphCo10Text_62335::
-	text "Blast it all!"
-	line "You ruined our"
-	cont "plans for SILPH!"
+	text "집어 쳐!"
+	line "잘도 우리 계획을 망쳐 놓았군!"
 
-	para "But, TEAM ROCKET"
-	line "will never fall!"
+ 
 
-	para $52, "! Never"
-	line "forget that all"
-	cont "#MON exist"
-	cont "for TEAM ROCKET!"
+	para "하지만 로켓단은"
+	line "절대로 포기하지않는다!"
 
-	para "I must go, but I"
-	line "shall return!"
+ 
+
+	para $52, "! 모든 포켓몬은"
+	line "로켓단을 위해 존재한다는 사실을"
+	cont "잊지않도록!"
+
+	para "지금은 떠나지만"
+	line "돌아온다는걸 명심해라!"
 	done
+
+ 
 
 _SilphCo11BattleText2::
-	text "Halt! Do you have"
-	line "an appointment"
-	cont "with my BOSS?"
+	text "잠깐! 보스와 약속은"
+	line "잡고 온거겠지?"
 	done
+
+ 
 
 _SilphCo11EndBattleText2::
-	text "Gaah!"
-	line "Demolished!"
+	text "끄악!"
+	line "파산!"
 	prompt
 
+ 
+
 _SilphCo11AfterBattleText2::
-	text "Watch your step,"
-	line "my BOSS likes his"
-	cont "#MON tough!"
+	text "조심하는게 좋을걸"
+	line "보스는 거친 포켓몬을"
+	cont "좋아하거든!"
 	done
+
+ 

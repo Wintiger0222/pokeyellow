@@ -1,129 +1,152 @@
 _RockTunnel2BattleText2::
-	text "Hikers leave twigs"
-	line "as trail markers."
+	text "등산객들은 나뭇가지에"
+	line "길을 표시하지"
 	done
+
+ 
 
 _RockTunnel2EndBattleText2::
-	text "Ohhh!"
-	line "I did my best!"
+	text "오오옷!"
+	line "최선을 다했는데!"
 	prompt
+
+ 
 
 _RockTunnel2AfterBattleText2::
-	text "I want to go "
-	line "home!"
+	text "집에 가고싶어!"
 	done
+
+
 
 _RockTunnel2BattleText3::
-	text "Hahaha! Can you"
-	line "beat my power?"
+	text "하하하!"
+	line "날 감당할수 있겠어?"
 	done
+
+ 
 
 _RockTunnel2EndBattleText3::
-	text "Oops!"
-	line "Out-muscled!"
+	text "이런!"
+	line "압도당했군!"
 	prompt
+
+ 
 
 _RockTunnel2AfterBattleText3::
-	text "I go for power"
-	line "because I hate"
-	cont "thinking!"
+	text "난 생각하는게 싫어서"
+	line "힘으로 모든걸 해결하지!"
 	done
+
+ 
 
 _RockTunnel2BattleText4::
-	text "You have a"
-	line "#DEX?"
-	cont "I want one too!"
+	text "그거 포켓몬 도감이야?"
+	line "나도 갖고싶어!"
 	done
+
+ 
 
 _RockTunnel2EndBattleText4::
-	text "Shoot!"
-	line "I'm so jealous!"
+	text "으악!"
+	line "부럽다아!"
 	prompt
 
+
 _RockTunnel2AfterBattleText4::
-	text "When you finish"
-	line "your #DEX, can"
-	cont "I have it?"
+	text "도감을 다 완성하고 나면"
+	line "내가 가져도 될까?"
 	done
 
+ 
+
 _RockTunnel2BattleText5::
-	text "Do you know about"
-	line "costume players?"
+	text "코스프레라고"
+	line "아니?"
 	done
 
 _RockTunnel2EndBattleText5::
-	text "Well,"
-	line "that's that."
+	text "그런건가-"
 	prompt
 
 _RockTunnel2AfterBattleText5::
-	text "Costume players"
-	line "dress up as"
-	cont "#MON for fun."
+	text "코스프레는 재미로"
+	line "분장을 하는거야"
 	done
 
 _RockTunnel2BattleText6::
-	text "My #MON"
-	line "techniques will"
-	cont "leave you crying!"
+	text "내 포켓몬 테크닉으로"
+	line "눈물바다를 만들어주지!"
 	done
+
+
 
 _RockTunnel2EndBattleText6::
-	text "I give!"
-	line "You're a better"
-	cont "technician!"
+	text "항복!"
+	line "네 테크닉이 더 뛰어나!"
 	prompt
 
+ 
+
 _RockTunnel2AfterBattleText6::
-	text "In mountains,"
-	line "you'll often find"
-	cont "rock-type #MON."
+	text "산에서는 바위타입 포켓몬을 "
+	line "쉽게 발견할수 있지"
 	done
 
+
+
 _RockTunnel2BattleText7::
-	text "I don't often"
-	line "come here, but I"
-	cont "will fight you."
+	text "원래는 안그러는데"
+	line "오늘은 싸우고 싶네!"
 	done
 
 _RockTunnel2EndBattleText7::
-	text "Oh!"
-	line "I lost!"
+	text "으아!"
+	line "졌다!"
 	prompt
+
 
 _RockTunnel2AfterBattleText7::
-	text "I like tiny"
-	line "#MON, big ones"
-	cont "are too scary!"
+	text "난 작은 포켓몬이 좋아"
+	line "큰 녀석들은 너무 무서운걸!"
 	done
+
+ 
 
 _RockTunnel2BattleText8::
-	text "Hit me with your"
-	line "best shot!"
+	text "전력으로 부딪혀라!"
 	done
+
+
 
 _RockTunnel2EndBattleText8::
-	text "Fired"
-	line "away!"
+	text "날아가 버렸군!"
 	prompt
+
+
 
 _RockTunnel2AfterBattleText8::
-	text "I'll raise my"
-	line "#MON to beat"
-	cont "yours, kid!"
+	text "오늘부터 널 쓰러뜨리는걸 목표로"
+	line "포켓몬을 키우겠어 꼬맹이!"
 	done
+
+ 
 
 _RockTunnel2BattleText9::
-	text "I draw #MON"
-	line "when I'm home."
+	text "난 집에 있을때"
+	line "포켓몬을 그려"
 	done
+
+ 
 
 _RockTunnel2EndBattleText9::
-	text "Whew!"
-	line "I'm exhausted!"
+	text "휴우!"
+	line "완전 지쳤다!"
 	prompt
 
+
 _RockTunnel2AfterBattleText9::
-	text "I'm an artist,"
-	line "not a fighter."
+	text "난 예술가지"
+	line "싸움꾼은 아니니까"
 	done
+
+ 

@@ -1,96 +1,107 @@
 _SilphCo2Text_59ded::
-	text "Eeek!"
-	line "No! Stop! Help!"
+	text "히익!"
+	line "안돼! 잠깐! 누가좀!"
 
-	para "Oh, you're not"
-	line "with TEAM ROCKET."
-	cont "I thought..."
-	cont "I'm sorry. Here,"
-	cont "please take this!"
+ 
+
+	para "넌 로켓단이 아니구나"
+	line "난 또……"
+	cont "미안 이거 가지렴!"
 	prompt
-
+	
 _ReceivedTM36Text::
-	text $52, " got"
+	text $52, "는(은)"
 	line "@"
 	TX_RAM wcf4b
-	text "!@@"
+	text "를(을) 얻었다!@@"
+
+
 
 _TM36ExplanationText::
-	text "TM36 is"
-	line "SELFDESTRUCT!"
+	text "기술머신36은"
+	line "자폭!"
 
-	para "It's powerful, but"
-	line "the #MON that"
-	cont "uses it faints!"
-	cont "Be careful."
+	para "강력하지만 사용한"
+	line "포켓몬은 기절해버려!"
+	cont "신중히 사용해"
 	done
 
 _TM36NoRoomText::
-	text "You don't have any"
-	line "room for this."
+	text "더 이상 들 수 없어!"
 	done
 
 _SilphCo2BattleText1::
-	text "Help! I'm a SILPH"
-	line "employee."
+	text "도와줘! 난 실프주식회사"
+	line "직원이야!"
 	done
 
 _SilphCo2EndBattleText1::
-	text "How"
-	line "did you know I"
-	cont "was a ROCKET?"
+	text "내가 로켓단이란걸"
+	line "알고 있었나?"
 	prompt
 
 _SilphCo2AfterBattleText1::
-	text "I work for both"
-	line "SILPH and TEAM"
-	cont "ROCKET!"
+	text "난 실프주식회사"
+	line "직원이자 로켓단이지!"
 	done
 
 _SilphCo2BattleText2::
-	text "It's off limits"
-	line "here! Go home!"
+	text "여긴 제한구역이다!"
+	line "돌아가!"
 	done
+
+ 
 
 _SilphCo2EndBattleText2::
-	text "You're"
-	line "good."
+	text "너 제법이군"
 	prompt
+
+
 
 _SilphCo2AfterBattleText2::
-	text "Can you solve the"
-	line "maze in here?"
+	text "여기 미궁을"
+	line "돌파할수 있을까?"
 	done
+
+ 
 
 _SilphCo2BattleText3::
-	text "No kids are"
-	line "allowed in here!"
+	text "애들은 가라!"
 	done
+
+
 
 _SilphCo2EndBattleText3::
-	text "Tough!"
+	text "강하군!"
 	prompt
+
+
 
 _SilphCo2AfterBattleText3::
-	text "Diamond-shaped"
-	line "tiles are"
-	cont "teleport blocks!"
+	text "다이아몬드 모양 타일들은"
+	line "워프 타일이다!"
 
-	para "They're hi-tech"
-	line "transporters!"
+	para "최첨단 수송장치란말씀!"
 	done
+
+
 
 _SilphCo2BattleText4::
-	text "Hey kid! What are"
-	line "you doing here?"
+	text "어이 꼬맹이!"
+	line "여기서 뭐하는거지?"
 	done
+
+ 
 
 _SilphCo2EndBattleText4::
-	text "I goofed!"
+	text "나란 바보녀석!"
 	prompt
 
+
+
 _SilphCo2AfterBattleText4::
-	text "SILPH CO. will"
-	line "be merged with"
-	cont "TEAM ROCKET!"
+	text "실프주식회사는"
+	line "로켓단에 합병될거다!"
 	done
+
+ 

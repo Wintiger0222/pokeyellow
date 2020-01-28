@@ -1,19 +1,17 @@
 _Route22GateText_1e704::
-	text "Only truly skilled"
-	line "trainers are"
-	cont "allowed through."
+	text "숙련된 트레이너만이"
+	line "통과를 허락받은 길입니다"
 
-	para "You don't have the"
-	line "BOULDERBADGE yet!@@"
+	para "아직 그린배지를"
+	line "가지지 못했군요!@@"
 
 _Route22GateText_1e715::
 	db $0
-	para "The rules are"
-	line "rules. I can't"
-	cont "let you pass."
+	para "죄송합니다"
+	line "통과시켜 줄 수 없습니다"
 	done
 
 _Route22GateText_1e71a::
-	text "Oh! That is the"
-	line "BOULDERBADGE!"
-	cont "Go right ahead!@@"
+	text "오! 그건 그린배지군요!"
+	line "지나가세요!@@"
+

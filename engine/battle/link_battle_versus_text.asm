@@ -4,7 +4,7 @@ DisplayLinkBattleVersusTextBox:
 	coord hl, 3, 4
 	lb bc, 7, 12
 	call TextBoxBorder
-	coord hl, 4, 5
+	coord hl, 4, 6
 	ld de, wPlayerName
 	call PlaceString
 	coord hl, 4, 10

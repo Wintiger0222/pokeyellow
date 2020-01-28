@@ -11,7 +11,7 @@ DisplayTownMap:
 	push af
 	ld b, $0
 	call DrawPlayerOrBirdSprite ; player sprite
-	coord hl, 1, 0
+	coord hl, 0, 1
 	ld de, wcd6d
 	call PlaceString
 	ld hl, wOAMBuffer
@@ -29,7 +29,7 @@ DisplayTownMap:
 
 .townMapLoop
 	coord hl, 0, 0
-	lb bc, 1, 20
+	lb bc, 2, 10
 	call ClearScreenArea
 	ld hl, TownMapOrder
 	ld a, [wWhichTownMapLocation]
@@ -55,7 +55,7 @@ DisplayTownMap:
 	inc de
 	cp $50
 	jr nz, .copyMapName
-	coord hl, 1, 0
+	coord hl, 0, 1
 	ld de, wcd6d
 	call PlaceString
 	ld hl, wOAMBuffer + $10
@@ -125,10 +125,9 @@ LoadTownMap_Nest:
 	push hl
 	call DisplayWildLocations
 	call GetMonName
-	coord hl, 1, 0
+	coord hl, 0, 1
 	call PlaceString
-	ld h, b
-	ld l, c
+	coord hl, 5, 1
 	ld de, MonsNestText
 	call PlaceString
 	call WaitForTextScrollButtonPress
@@ -139,7 +138,7 @@ LoadTownMap_Nest:
 	ret
 
 MonsNestText:
-	db "'s NEST@"
+	db "의 집@"
 
 LoadTownMap_Fly:
 	call ClearSprites
@@ -163,34 +162,34 @@ LoadTownMap_Fly:
 	push af
 	ld [hl], $ff
 	push hl
-	coord hl, 0, 0
+	coord hl, 0, 1
 	ld de, ToText
 	call PlaceString
 	ld a, [wCurMap]
 	ld b, $0
 	call DrawPlayerOrBirdSprite
 	ld hl, wFlyLocationsList
-	coord de, 18, 0
+	coord de, 9, 0
 .townMapFlyLoop
 	ld a, " "
 	ld [de], a
 	push hl
 	push hl
-	coord hl, 3, 0
-	lb bc, 1, 15
+	coord hl, 4, 0
+	lb bc, 2, 5
 	call ClearScreenArea
 	pop hl
 	ld a, [hl]
 	ld b, $4
 	call DrawPlayerOrBirdSprite ; draw bird sprite
-	coord hl, 3, 0
+	coord hl, 4, 1
 	ld de, wcd6d
 	call PlaceString
 	ld c, 15
 	call DelayFrames
-	coord hl, 18, 0
+	coord hl, 9, 0
 	ld [hl], "▶"
-	coord hl, 19, 0
+	coord hl, 9, 1
 	ld [hl], $ee
 	pop hl
 .inputLoop
@@ -230,7 +229,7 @@ LoadTownMap_Fly:
 	ld [hl], a
 	ret
 .pressedUp
-	coord de, 18, 0
+	coord de, 9, 0
 	inc hl
 	ld a, [hl]
 	cp $ff
@@ -242,7 +241,7 @@ LoadTownMap_Fly:
 	ld hl, wFlyLocationsList
 	jp .townMapFlyLoop
 .pressedDown
-	coord de, 19, 0
+	coord de, 9, 1
 	dec hl
 	ld a, [hl]
 	cp $ff
@@ -255,7 +254,7 @@ LoadTownMap_Fly:
 	jr .pressedDown
 
 ToText:
-	db "To@"
+	db "어디에?@"
 
 BuildFlyLocationsList:
 	ld hl, wFlyLocationsList - 1
@@ -406,10 +405,10 @@ DisplayWildLocations:
 	and a ; were any OAM entries written?
 	jr nz, .drawPlayerSprite
 ; if no OAM entries were written, print area unknown text
-	coord hl, 1, 7
-	lb bc, 2, 15
+	coord hl, 4, 7
+	lb bc, 2, 10
 	call TextBoxBorder
-	coord hl, 2, 9
+	coord hl, 6, 9
 	ld de, AreaUnknownText
 	call PlaceString
 	jr .done
@@ -424,7 +423,7 @@ DisplayWildLocations:
 	jp CopyData
 
 AreaUnknownText:
-	db " AREA UNKNOWN@"
+	db " 서식지 불명@"
 
 TownMapCoordsToOAMCoords:
 ; in: lower nybble of a = x, upper nybble of a = y

@@ -1,104 +1,103 @@
 _Route6BattleText1::
-	text "I'm doing this"
-	line "out of love."
-	cont "Leave me alone!"
+	text "사랑을 위해서!"
+	line "나한테 맡겨둬!"
 	done
+
+ 
 
 _Route6EndBattleText1::
-	text "No,"
-	line "this can't be..."
+	text "이런건 계산에"
+	line "없었는데……"
 	prompt
+
 
 _Route6AfterBattleText1::
-	text "My love will leave"
-	line "me in disgust."
+	text "내 사랑은 경멸하며"
+	line "날 떠났어"
 	done
 
+ 
 _Route6BattleText2::
-	text "I'm training for"
-	line "my love. Don't"
-	cont "bother me!"
+	text "사랑을 위한 수련중이야"
+	line "방해하지마!"
 	done
+
 
 _Route6EndBattleText2::
-	text "My"
-	line "textbook never..."
+	text "교과서에 이런건……"
 	prompt
 
+
 _Route6AfterBattleText2::
-	text "Now I understand,"
-	line "#MON isn't"
-	cont "about calculated"
-	cont "numbers."
+	text "이제 포켓몬에게 수학공식이"
+	line "적용되지 않는다는 걸 깨달았어"
 	done
 
 _Route6BattleText3::
-	text "There aren't many"
-	line "bugs out here."
+	text "저기엔 벌레가"
+	line "별로 없어"
 	done
 
+ 
 _Route6EndBattleText3::
-	text "No!"
-	line "You're kidding!"
+	text "아니야!"
+	line "이럴리가 없어!"
 	prompt
 
 _Route6AfterBattleText3::
-	text "I like bugs, so"
-	line "I'm going back to"
-	cont "VIRIDIAN FOREST."
+	text "벌레 잡고 싶어서"
+	line "상록숲으로 돌아가는 중이었어"
 	done
 
 _Route6BattleText4::
-	text "Huh? You want"
-	line "to talk to me?"
+	text "응?"
+	line "그냥 말하고 싶을 뿐이었다고?"
 	done
 
 _Route6EndBattleText4::
-	text "I"
-	line "didn't start it!"
+	text "내 탓은 아니야!"
 	prompt
 
 _Route6AfterBattleText4::
-	text "I should carry"
-	line "more #MON with"
-	cont "me for safety."
+	text "안전을 위해서"
+	line "포켓몬을 좀 더 많이"
+	cont "데리고 다녀야 할까봐"
 	done
 
 _Route6BattleText5::
-	text "Me? Well, OK."
-	line "I'll play!"
+	text "응? 나? 그래!"
+	line "같이 놀자!"
 	done
 
 _Route6EndBattleText5::
-	text "Just"
-	line "didn't work!"
+	text "전혀 통하지 않아!"
 	prompt
 
+
+
 _Route6AfterBattleText5::
-	text "I want to get"
-	line "stronger! What's"
-	cont "your secret?"
+	text "나도 강해지고 싶어!"
+	line "네 비결이 뭐야?"
 	done
 
 _Route6BattleText6::
-	text "I've never seen"
-	line "you around!"
-	cont "Are you good?"
+	text "처음 보는 얼굴인데!"
+	line "배틀 할 줄은 아냐?"
 	done
 
 _Route6EndBattleText6::
-	text "You"
-	line "are too good!"
+	text "굉장히 잘한다!"
 	prompt
 
 _Route6AfterBattleText6::
-	text "Are my #MON"
-	line "weak? Or, am I"
-	cont "just bad?"
+	text "내 포켓몬이 약한걸까"
+	line "내 실력이 나쁜걸까?"
 	done
 
+ 
+
 _Route6Text7::
-	text "UNDERGROUND PATH"
-	line "CERULEAN CITY -"
-	cont "VERMILION CITY"
+	text "여기서부터 지하통로"
+	line "블루시티 …… 갈색시티"
 	done
+
